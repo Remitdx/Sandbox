@@ -1,16 +1,29 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
-// Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+//font-family: 'Heebo', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+//font-family: 'Rock Salt';
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt');
+
+:root {
+  --ff-handwrite: 'Rock Salt';
+  --ff-neutral: 'Heebo', sans-serif;
+
+  --fs-xl: 2.3rem;
+  --fs-l: 1.5rem;
+  --fs-m: 1rem;
+  --fs-s: 0.75rem;
+  --fs-xs: 0.6rem;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-xl: 4.5rem;
+    --fs-l: 2rem;
+    --fs-m: 1.5rem;
+    --fs-s: 1rem;
+    --fs-xs: 0.75rem;
+  }
+}
