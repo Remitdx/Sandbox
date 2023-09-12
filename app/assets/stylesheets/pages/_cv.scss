@@ -1,0 +1,37 @@
+$field-height: 80vh;
+$field-width: 80vw;
+
+.character-field {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url(layer_1.png);
+  height: $field-height;
+  width: $field-width;
+  position: absolute;
+  overflow: hidden;
+}
+
+#character {
+  top: 300px;
+  left: 300px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  rotate: 180deg;
+  transition: top 1s linear 0.2s, left 1s linear 0.2s;
+  z-index: 1;
+}
+
+.character-field{
+
+  span {
+    top: 220px;
+    left: 220px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url(banner.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+}

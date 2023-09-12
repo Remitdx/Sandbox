@@ -1,0 +1,5 @@
+<div data-controller='discovery' class='character-field' data-discovery-target='field' data-action='click->discovery#move'>
+  <span></span>
+  <%= image_tag 'cosmonaut.svg', id: 'character', data: { discovery_target: 'char',
+                                                          action: 'transitionend->discovery#reveal' } %>
+</div>

@@ -1,5 +1,35 @@
-<div class="navigation">
-  <ul>
-    <li><%= link_to "Home", root_path %></li>
-  </ul>
+<div data-controller='dropdown' class='dropdown-navigation'>
+  <div data-action='click->dropdown#toggle' data-dropdown-target='button' class='nav-button'>
+    <i class='fa-solid fa-bars'></i>
+  </div>
+  <div data-action='click->dropdown#toggle' data-dropdown-target='button' class='nav-button d-none'>
+    <i class='fa-solid fa-xmark'></i>
+  </div>
+  <div data-dropdown-target='navigation' class='navigation d-none'>
+    <%= link_to root_path do %>
+      <div class='nav-item'>
+        <h2><%= t('title_home') %></h2>
+      </div>
+    <% end %>
+    <%= link_to root_path do %>
+      <div class='nav-item'>
+        <h2>CV</h2>
+      </div>
+    <% end %>
+    <%= link_to philosophy_path do %>
+      <div class='nav-item'>
+        <h2><%= t('title_philosophy') %></h2>
+      </div>
+    <% end %>
+    <%= link_to projects_path do %>
+      <div class='nav-item'>
+        <h2><%= t('title_project') %></h2>
+      </div>
+    <% end %>
+    <%= link_to contact_path do %>
+      <div class='nav-item'>
+        <h2>Contact</h2>
+      </div>
+    <% end %>
+  </div>
 </div>

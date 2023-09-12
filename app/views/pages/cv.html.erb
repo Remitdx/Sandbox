@@ -1,0 +1,12 @@
+<h1><%= t('title_cv') %></h1>
+<nav>
+  <%= render 'navigation'  %>
+</nav>
+<main>
+  <section>
+    <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
+  </section>
+  <section>
+      <%= render 'fog_of_war'  %>
+  </section>
+</main>
