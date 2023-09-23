@@ -1,59 +1,59 @@
-<h1><%= t('title_philosophy') %></h1>
-<nav>
-  <%= render "navigation"  %>
-</nav>
-<main class="container">
-  <section class="projets">
-    <h2>Projets</h2>
-  </section>
-  <section class="presentation">
-    <h2>Présentation</h2>
-    <p>capable de travailler seul ou en équipe pluridisciplinaire</p>
-  </section>
-  <section class="expertise">
-    <h2>Mes domaines d'expertise</h2>
-    <div class="row">
-      <div class="col-12">
-        <h3>Phase de conception de l'application : </h3>
-        <ul>
-          <li>Analyse et définition du besoin</li>
-          <li>Cadrage du projet (fonctionnalités, délais et estimation budgétaire)</li>
-          <li>Maquettage, design UX/UI</li>
-          <li>Spécifications techniques</li>
-        </ul>
+<main>
+  <nav>
+    <%= render "navigation"  %>
+  </nav>
+  <div class="container">
+    <h1><%= t('title_philosophy') %></h1>
+    <section class="presentation">
+      <h2><%= t('intro.title') %></h2>
+      <p><%= t('intro.text') %></p>
+      <p>capable de travailler seul ou en équipe pluridisciplinaire</p>
+    </section>
+    <section class="expertise">
+      <h2>Mes domaines d'expertise</h2>
+      <div class="row">
+        <div class="col-12">
+          <h3>Phase de conception de l'application : </h3>
+          <ul>
+            <li>Analyse et définition du besoin</li>
+            <li>Cadrage du projet (fonctionnalités, délais et estimation budgétaire)</li>
+            <li>Maquettage, design UX/UI</li>
+            <li>Spécifications techniques</li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <%= render "gears" %>
+          <p class="info">Scroll me !</p>
+        </div>
       </div>
-      <div class="col-12">
-        <%= render "gears" %>
-        <p class="info">Scroll me !</p>
+      <div class="row">
+        <div class="col-12">
+          <h3>Phase de développement :</h3>
+          <ul>
+            <li>Gestion de projet - respect de la qualité, délais et coûts</li>
+            <li>Développement back-end / front-end</li>
+            <li>Méthode agile, sprints et code-review</li>
+            <li>Testing</li>
+            <li>Mise en production en continu</li>
+          </ul>
+          <span>REJOUER L'ANIMATION</span>
+        </div>
+        <div class="col-12">
+          <%= render "wall" %>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <h3>Phase de développement :</h3>
-        <ul>
-          <li>Gestion de projet - respect de la qualité, délais et coûts</li>
-          <li>Développement back-end / front-end</li>
-          <li>Méthode agile, sprints et code-review</li>
-          <li>Testing</li>
-          <li>Mise en production en continu</li>
-        </ul>
-        <span>REJOUER L'ANIMATION</span>
+      <div class="row">
+        <div class="col-12">
+          <h3>Phase de vie de d'application :</h3>
+          <ul>
+            <li>Maintenance</li>
+            <li>Développement de nouvelles fonctionnalités</li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <%= render "van" %>
+        </div>
       </div>
-      <div class="col-12">
-        <%= render "wall" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <h3>Phase de vie de d'application :</h3>
-        <ul>
-          <li>Maintenance</li>
-          <li>Développement de nouvelles fonctionnalités</li>
-        </ul>
-      </div>
-      <div class="col-12">
-        <%= render "van" %>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </main>

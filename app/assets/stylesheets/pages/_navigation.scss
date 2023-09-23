@@ -1,5 +1,6 @@
 $nav-grey: #d4d4d4;
 $nav-deep-blue: #14074d;
+$nav-white: #fff;
 
 @keyframes nav-item-in {
   100% {
@@ -15,33 +16,43 @@ $nav-deep-blue: #14074d;
     right: 110%;
   }
 }
+@keyframes nav-item-out-large-screen {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: - 110%;
+  }
+}
 
 .navigation-wrapper {
   width: 80vw;
-  left: 10vw;
-  opacity: 0.8;
-  position: absolute;
+  right: 10vw;
+  top: 10vw;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: end;
+  z-index: 100;
+
+  .flag {
+    background-color: #fff;
+    height: 6vw;
+    width: auto;
+    margin: 2vw 4px 4px 0;
+    border-radius: 2px;
+  }
 
   .nav-button {
     background-color: $nav-deep-blue;
     width: 10vw;
     height: 10vw;
-    margin: 10vw 0 4px;
+    margin-bottom: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 2px;
-
-    &:hover {
-      background-color: $nav-grey;
-
-      i {
-          color: $nav-deep-blue;
-      }
-    }
 
     i {
       color:$nav-grey;
@@ -103,7 +114,49 @@ $nav-deep-blue: #14074d;
   }
 }
 
-
 @media (min-width: 40em) {
-  // TODO for large screen
+  .navigation-wrapper {
+    width: 20vw;
+    right: 4vw;
+    top: 4vw;
+
+    .flag {
+        height: 2.5vw;
+        width: auto;
+        margin: 0.75vw 6px 6px 0;
+      }
+
+    .nav-button {
+      width: 4vw;
+      height: 4vw;
+      margin-bottom: 4px;
+
+      &:hover {
+        background-color: $nav-grey;
+
+        i {
+          color: $nav-deep-blue;
+        }
+      }
+
+      i {
+        font-size: xx-large;
+      }
+    }
+    .navigation {
+
+      .nav-item:hover {
+        background-color: $nav-white;
+      }
+
+      .close-animation {
+        animation: nav-item-out-large-screen 0.5s ease-in-out forwards;
+      }
+
+      h2 {
+        color: $nav-deep-blue;
+        margin: 0;
+      }
+    }
+  }
 }

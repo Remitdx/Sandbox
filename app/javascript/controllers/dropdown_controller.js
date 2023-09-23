@@ -29,4 +29,26 @@ export default class extends Controller {
       this.navigationTarget.classList.add('d-none');
     }
   }
+
+  french() {
+    const url = window.location.href;
+    let arr = url.split('/')
+    if (arr.indexOf('en') > -1) {
+      arr.splice(index, 1);
+    }
+    arr.splice(arr.indexOf(window.location.hostname), 0, 'fr');
+    const newUrl = arr.join('/');
+    window.location.href = newUrl;
+  }
+
+  english() {
+    const url = window.location.href;
+    let arr = url.split('/')
+    const index = arr.indexOf('fr');
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+    const newUrl = arr.join('/');
+    window.location.href = newUrl;
+  }
 }

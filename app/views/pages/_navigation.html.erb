@@ -1,9 +1,15 @@
 <div class="navigation-wrapper" data-controller='dropdown'>
-  <div data-action='click->dropdown#reveal' data-dropdown-target='button' class='nav-button'>
-    <i class='fa-solid fa-bars'></i>
-  </div>
-  <div data-action='click->dropdown#hide' data-dropdown-target='button' class='nav-button d-none'>
-    <i class='fa-solid fa-xmark'></i>
+  <div class="d-flex">
+    <div class="d-flex">
+      <%= image_tag "flagFR.svg", class: "flag", data: { action: 'click->dropdown#french' } %>
+      <%= image_tag "flagUK.svg", class: "flag", data: { action: 'click->dropdown#english' } %>
+    </div>
+    <div data-action='click->dropdown#reveal' data-dropdown-target='button' class='nav-button'>
+      <i class='fa-solid fa-bars'></i>
+    </div>
+    <div data-action='click->dropdown#hide' data-dropdown-target='button' class='nav-button d-none'>
+      <i class='fa-solid fa-xmark'></i>
+    </div>
   </div>
   <div data-dropdown-target='navigation' class='navigation d-none'>
     <%= link_to root_path do %>
