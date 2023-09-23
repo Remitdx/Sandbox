@@ -36,6 +36,9 @@ export default class extends Controller {
     if (arr.indexOf('en') > -1) {
       arr.splice(index, 1);
     }
+    else if (arr.indexOf('fr') > -1) {
+      arr.splice(index, 1);
+    }
     arr.splice(arr.indexOf(window.location.hostname), 0, 'fr');
     const newUrl = arr.join('/');
     window.location.href = newUrl;

@@ -12,8 +12,8 @@
     <section class="expertise">
       <h2>Mes domaines d'expertise</h2>
       <div class="row">
-        <div class="col-12">
-          <h3>Phase de conception de l'application : </h3>
+        <h3>Phase de conception de l'application : </h3>
+        <div class="col-8">
           <ul>
             <li>Analyse et définition du besoin</li>
             <li>Cadrage du projet (fonctionnalités, délais et estimation budgétaire)</li>
@@ -21,38 +21,34 @@
             <li>Spécifications techniques</li>
           </ul>
         </div>
-        <div class="col-12">
+        <div class="col-4">
           <%= render "gears" %>
           <p class="info">Scroll me !</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <h3>Phase de développement :</h3>
-          <ul>
-            <li>Gestion de projet - respect de la qualité, délais et coûts</li>
-            <li>Développement back-end / front-end</li>
-            <li>Méthode agile, sprints et code-review</li>
-            <li>Testing</li>
-            <li>Mise en production en continu</li>
-          </ul>
-          <span>REJOUER L'ANIMATION</span>
-        </div>
-        <div class="col-12">
-          <%= render "wall" %>
-        </div>
+      <h3>Phase de développement :</h3>
+      <div class="col-8">
+        <%= render "wall" %>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <h3>Phase de vie de d'application :</h3>
-          <ul>
-            <li>Maintenance</li>
-            <li>Développement de nouvelles fonctionnalités</li>
-          </ul>
-        </div>
-        <div class="col-12">
-          <%= render "van" %>
-        </div>
+      <div class="col-4">
+        <ul>
+          <li>Gestion de projet - respect de la qualité, délais et coûts</li>
+          <li>Développement back-end / front-end</li>
+          <li>Méthode agile, sprints et code-review</li>
+          <li>Testing</li>
+          <li>Mise en production en continu</li>
+        </ul>
+        <span>REJOUER L'ANIMATION</span>
+      </div>
+      <h3>Phase de vie de d'application :</h3>
+      <div class="col-4">
+        <ul>
+          <li>Maintenance</li>
+          <li>Développement de nouvelles fonctionnalités</li>
+        </ul>
+      </div>
+      <div class="col-12">
+        <%= render "van" %>
       </div>
     </section>
   </div>
