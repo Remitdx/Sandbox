@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "cv", to: 'pages#cv'
     get "philosophy", to: 'pages#philosophy'
     get "contact", to: "pages#contact"
-    resources :projects, only: %i[index]
+    get "projects", to: "pages#projects"
+    get "projects/cosmonaut", to: "pages#cosmonaut"
   end
 end

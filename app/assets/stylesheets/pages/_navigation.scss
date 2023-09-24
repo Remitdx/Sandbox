@@ -124,12 +124,14 @@ $nav-white: #fff;
         height: 2.5vw;
         width: auto;
         margin: 0.75vw 6px 6px 0;
+        cursor: pointer;
       }
 
     .nav-button {
       width: 4vw;
       height: 4vw;
       margin-bottom: 4px;
+      cursor: pointer;
 
       &:hover {
         background-color: $nav-grey;
