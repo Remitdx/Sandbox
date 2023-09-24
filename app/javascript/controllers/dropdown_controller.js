@@ -33,10 +33,13 @@ export default class extends Controller {
   french() {
     const url = window.location.href;
     let arr = url.split('/')
+    let index = 0;
     if (arr.indexOf('en') > -1) {
+      index = arr.indexOf('en')
       arr.splice(index, 1);
     }
     else if (arr.indexOf('fr') > -1) {
+      index = arr.indexOf('fr')
       arr.splice(index, 1);
     }
     arr.splice(arr.indexOf(window.location.hostname), 0, 'fr');

@@ -1,4 +1,4 @@
-<main>
+<main class='philosophy'>
   <nav>
     <%= render "navigation"  %>
   </nav>
@@ -9,11 +9,13 @@
       <p><%= t('intro.text') %></p>
       <p>capable de travailler seul ou en équipe pluridisciplinaire</p>
     </section>
-    <section class="expertise">
+    <section>
       <h2>Mes domaines d'expertise</h2>
       <div class="row">
-        <h3>Phase de conception de l'application : </h3>
         <div class="col-8">
+          <div class="h3-title">
+            <h3>Conception</h3>
+          </div>
           <ul>
             <li>Analyse et définition du besoin</li>
             <li>Cadrage du projet (fonctionnalités, délais et estimation budgétaire)</li>
@@ -23,32 +25,38 @@
         </div>
         <div class="col-4">
           <%= render "gears" %>
-          <p class="info">Scroll me !</p>
+          <p>Scroll me !</p>
         </div>
-      </div>
-      <h3>Phase de développement :</h3>
-      <div class="col-8">
-        <%= render "wall" %>
-      </div>
-      <div class="col-4">
-        <ul>
-          <li>Gestion de projet - respect de la qualité, délais et coûts</li>
-          <li>Développement back-end / front-end</li>
-          <li>Méthode agile, sprints et code-review</li>
-          <li>Testing</li>
-          <li>Mise en production en continu</li>
-        </ul>
-        <span>REJOUER L'ANIMATION</span>
-      </div>
-      <h3>Phase de vie de d'application :</h3>
-      <div class="col-4">
-        <ul>
-          <li>Maintenance</li>
-          <li>Développement de nouvelles fonctionnalités</li>
-        </ul>
-      </div>
-      <div class="col-12">
-        <%= render "van" %>
+        <div class="col-6">
+          <%= render "wall" %>
+        </div>
+        <div class="col-6">
+          <div class="h3-title">
+            <h3>Développement</h3>
+          </div>
+          <ul>
+            <li>Gestion de projet - respect de la qualité, délais et coûts</li>
+            <li>Développement back-end / front-end</li>
+            <li>Méthode agile, sprints et code-review</li>
+            <li>Testing</li>
+            <li>Mise en production en continu</li>
+          </ul>
+          <span>REJOUER L'ANIMATION</span>
+        </div>
+        <div class="col-12">
+          <div class="h3-title">
+            <h3>Vie de d'application</h3>
+          </div>
+          <ul>
+            <li>Maintenance</li>
+            <li>Documentation</li>
+            <li>Formation/accompagnement client</li>
+            <li>Développement de nouvelles fonctionnalités</li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <%= render "van" %>
+        </div>
       </div>
     </section>
   </div>
