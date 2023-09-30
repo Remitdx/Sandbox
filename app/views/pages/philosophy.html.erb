@@ -2,18 +2,27 @@
   <nav>
     <%= render "navigation"  %>
   </nav>
-  <div class="container">
+  <div class="h1-title">
     <h1><%= t('title_philosophy') %></h1>
-    <section class="presentation">
-      <h2><%= t('intro.title') %></h2>
+  </div>
+  <section class="section-1">
+    <div class="container">
+      <div class="h2-title">
+        <h2><%= t('intro.title') %></h2>
+      </div>
       <p><%= t('intro.text') %></p>
       <p>capable de travailler seul ou en équipe pluridisciplinaire</p>
-    </section>
-    <section>
-      <h2>Mes domaines d'expertise</h2>
-      <div class="row">
-        <div class="col-8">
+    </div>
+  </section>
+  <section class="section-2">
+    <div class="container">
+      <div class="h2-title">
+        <h2>Mes domaines d'expertise</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 order-1 order-md-1">
           <div class="h3-title">
+            <p>Conception</p>
             <h3>Conception</h3>
           </div>
           <ul>
@@ -23,17 +32,16 @@
             <li>Spécifications techniques</li>
           </ul>
         </div>
-        <div class="col-4">
+        <div class="col-8 col-md-4 order-2 order-md-2">
           <%= render "gears" %>
-          <p>Scroll me !</p>
+          <i class="fa-solid fa-quote-left"></i>
           <p class='quote'>engineer spotted !</p>
+          <i class="fa-solid fa-quote-right"></i>
         </div>
-        <div class="col-6">
-          <%= render "wall" %>
-        </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6 order-3 order-md-4">
           <div class="h3-title">
             <h3>Développement</h3>
+            <i class="fa-solid fa-code"></i>
           </div>
           <ul>
             <li>Gestion de projet - respect de la qualité, délais et coûts</li>
@@ -44,7 +52,11 @@
           </ul>
           <span>REJOUER L'ANIMATION</span>
         </div>
-        <div class="col-12">
+        <div class="col-8 col-md-6 order-4 order-md-3">
+          <%= render "wall" %>
+          <p class="quote"><%= t('quote.civil_engineer') %></p>
+        </div>
+        <div class="col-12 order-5 order-md-5">
           <div class="h3-title">
             <h3>Vie de d'application</h3>
           </div>
@@ -55,10 +67,10 @@
             <li>Développement de nouvelles fonctionnalités</li>
           </ul>
         </div>
-        <div class="col-12">
+        <div class="col-12 order-last order-md-last">
           <%= render "van" %>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </main>

@@ -1,9 +1,11 @@
 fr:
   title: 'Ingénieur et développeur full-stack'
-  title_skills: 'Compétences'
   title_home: 'Accueil'
+  title_skills: 'Compétences'
   title_philosophy: 'Philosophie'
   title_project: 'Mes Projets'
+  title_resources: 'Ressources'
+
 
   intro:
     title: 'Présentation'

@@ -1,0 +1,68 @@
+.section-1 {
+  padding: 12px 0;
+  background-color: $pure-white;
+}
+.section-2 {
+  padding: 12px 0;
+  background-color: $cream-white;
+}
+
+.h1-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $sky-blue;
+  height: 80px;
+  width: 100%;
+
+  h1 {
+    font-family: var(--ff-handwrite);
+    letter-spacing: 2px;
+    font-size: var(--fs-xl);
+    color: $deep-blue;
+    margin: 0;
+  }
+}
+
+.h2-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $sky-blue;
+  height: 50px;
+  width: 100%;
+
+  h2 {
+    font-family: var(--ff-handwrite);
+    letter-spacing: 3px;
+    font-size: var(--fs-l);
+    color: $deep-blue;
+    margin: 0;
+  }
+}
+
+.h3-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $sky-blue;
+  height: 30px;
+  width: 100%;
+
+  h3 {
+    font-family: var(--ff-handwrite);
+    letter-spacing: 2px;
+    font-size: var(--fs-m);
+    color: $deep-blue;
+    margin: 0;
+  }
+}
+
+.quote {
+  // TODO
+}
+
+p {
+  font-size: var(--fs-s);
+  color: $deep-blue;
+}

@@ -1,11 +1,15 @@
 en:
   title: 'Engineer and full-stack developer'
-  title_skills: 'Skills'
   title_home: 'Home'
+  title_skills: 'Skills'
   title_philosophy: 'Philosophy'
   title_project: 'My Projects'
+  title_resources: 'Resources'
 
   intro:
     title: 'Intro'
     text: "Hi dear visitor ! My name is Rémi Tondeux. This place is my portfolio but at the same time a sandbox for every project coming to my mind.
       As curiosity won't kill the cat, feel free to explore all sections and maybe discover a bit more about me."
+
+  quote:
+    civil_engineer: 'I use to be a civil engineer'

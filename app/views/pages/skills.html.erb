@@ -1,0 +1,24 @@
+<main>
+  <nav>
+    <%= render 'navigation'  %>
+  </nav>
+  <div class="h1-title">
+    <h1><%= t('title_skills') %></h1>
+  </div>
+  <section class='section-1'>
+    <div class="container">
+      <div class="h2-title">
+        <h2>SKILLS</h2>
+      </div>
+      <i class="fa-solid fa-bullseye"></i>
+    </div>
+  </section>
+  <section class="section-2">
+    <div class="container">
+      <div class="h2-title">
+        <h2>Curriculum vitae</h2>
+      </div>
+      <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
+    </div>
+  </section>
+</main>

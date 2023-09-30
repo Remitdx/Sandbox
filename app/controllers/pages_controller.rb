@@ -2,16 +2,19 @@ class PagesController < ApplicationController
   def home
   end
 
-  def cv
-  end
-
-  def contact
+  def skills
   end
 
   def philosophy
   end
 
   def projects
+  end
+
+  def resources
+  end
+
+  def contact
   end
 
   def cosmonaut

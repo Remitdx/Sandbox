@@ -17,14 +17,14 @@
         <h2><%= t('title_home') %></h2>
       </div>
     <% end %>
-    <%= link_to cv_path do %>
-      <div class='nav-item item2' data-dropdown-target='item'>
-        <h2><%= t('title_skills') %></h2>
-      </div>
-    <% end %>
     <%= link_to philosophy_path do %>
       <div class='nav-item item3' data-dropdown-target='item'>
         <h2><%= t('title_philosophy') %></h2>
+      </div>
+    <% end %>
+    <%= link_to skills_path do %>
+      <div class='nav-item item2' data-dropdown-target='item'>
+        <h2><%= t('title_skills') %></h2>
       </div>
     <% end %>
     <%= link_to projects_path do %>
@@ -32,8 +32,13 @@
         <h2><%= t('title_project') %></h2>
       </div>
     <% end %>
+    <%= link_to resources_path do %>
+      <div class='nav-item item5' data-dropdown-target='item'>
+        <h2><%= t('title_resources') %></h2>
+      </div>
+    <% end %>
     <%= link_to contact_path do %>
-      <div class='nav-item item5' data-dropdown-target='item' data-action='animationend->dropdown#animationend'>
+      <div class='nav-item item6' data-dropdown-target='item' data-action='animationend->dropdown#animationend'>
         <h2>Contact</h2>
       </div>
     <% end %>

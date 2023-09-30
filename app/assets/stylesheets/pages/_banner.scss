@@ -6,17 +6,17 @@
 
   h1 {
     font-family: var(--ff-handwrite);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-size: var(--fs-xl);
-    color: white;
+    color: $pure-white;
     text-shadow: 0 0 2px black;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
   }
 
   p {
-    font-family: var(--ff-neutral);
+    font-family: var(--ff-handwrite);
     font-size: var(--fs-m);
-    color: white;
+    color: $pure-white;
     text-shadow: 0 0 2px black;
   }
 }

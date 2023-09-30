@@ -24,8 +24,8 @@
 
 .navigation-wrapper {
   width: 80vw;
-  right: 10vw;
-  top: 10vw;
+  right: 5vw;
+  top: 5vw;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
   z-index: 100;
 
   .flag {
-    background-color: #fff;
+    background-color: $pure-white;
     height: 6vw;
     width: auto;
     margin: 2vw 4px 4px 0;
@@ -41,7 +41,7 @@
   }
 
   .nav-button {
-    background-color: $nav-deep-blue;
+    background-color: $deep-blue;
     width: 10vw;
     height: 10vw;
     margin-bottom: 4px;
@@ -51,7 +51,7 @@
     border-radius: 2px;
 
     i {
-      color:$nav-grey;
+      color:$cream-white;
       font-size: x-large;
     }
   }
@@ -62,52 +62,55 @@
 
     .nav-item {
       position: relative;
-      background-color: $nav-grey;
-      border: 1px solid $nav-deep-blue;
+      background-color: $cream-white;
+      border: 1px solid $deep-blue;
       border-radius: 2px;
       width: 100%;
       padding: 6px;
       margin: 2px 0;
       text-align: center;
-    }
 
-    .item1 {
-      right: -60%;
-    }
-
-    .item2 {
-      right: -70%;
-    }
-
-    .item3 {
-      right: -80%;
-    }
-
-    .item4 {
-      right: -90%;
-    }
-
-    .item5 {
-      right: -100%;
-    }
-
-    .open-animation {
-      animation: nav-item-in 0.5s ease-in-out forwards;
-    }
-
-    .close-animation {
-      animation: nav-item-out 0.5s ease-in-out forwards;
+      h2 {
+        color: $deep-blue;
+        margin: 0;
+        font-size: var(--fs-m);
+        font-family: var(--ff-handwrite);
+      }
     }
 
     a {
       text-decoration: none;
     }
+    .item1 {
+      right: -100%;
+    }
 
-    h2 {
-      color: $nav-deep-blue;
-      margin: 0;
-      font-size: var(--fs-m);
-      font-family: var(--ff-handwrite);
+    .item2 {
+      right: -120%;
+    }
+
+    .item3 {
+      right: -140%;
+    }
+
+    .item4 {
+      right: -160%;
+    }
+
+    .item5 {
+      right: -180%;
+    }
+
+    .item6 {
+      right: -250%;
+    }
+
+    .open-animation {
+      animation: nav-item-in 0.7s ease-in-out forwards;
+    }
+
+    .close-animation {
+      animation: nav-item-out 0.5s ease-in-out forwards;
     }
   }
 }
@@ -115,8 +118,8 @@
 @media (min-width: 40em) {
   .navigation-wrapper {
     width: 20vw;
-    right: 4vw;
-    top: 4vw;
+    right: 2vw;
+    top: 2vw;
 
     .flag {
         height: 2.5vw;
@@ -132,10 +135,10 @@
       cursor: pointer;
 
       &:hover {
-        background-color: $nav-grey;
+        background-color: $cream-white;
 
         i {
-          color: $nav-deep-blue;
+          color: $deep-blue;
         }
       }
 
@@ -146,7 +149,7 @@
     .navigation {
 
       .nav-item:hover {
-        background-color: $nav-white;
+        background-color: $pure-white;
       }
 
       .close-animation {
@@ -154,7 +157,7 @@
       }
 
       h2 {
-        color: $nav-deep-blue;
+        color: $deep-blue;
         margin: 0;
       }
     }

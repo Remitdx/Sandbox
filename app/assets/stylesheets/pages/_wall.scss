@@ -72,7 +72,9 @@
   position: relative;
   width: 100%;
   padding-top: 100%;
-  border: solid 1px black;
+  border: $deep-blue solid 1px;
+  border-radius: 4px;
+  background-color: $pure-white;
   overflow: hidden;
 
   .brick {
