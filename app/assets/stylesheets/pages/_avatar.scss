@@ -1,0 +1,36 @@
+.avatar-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: $cream-white;
+  border: 0.15rem solid $deep-blue;
+  border-radius: 4.5rem;
+  z-index: -2;
+
+  .avatar {
+    position: relative;
+    height: 8.7rem;
+    width: 8.7rem;
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
+
+@media (min-width: 40em) {
+  .avatar-wrapper {
+    cursor: pointer;
+    height: 14rem;
+    width: 60%;
+    border-radius: 7rem;
+
+    .avatar {
+      height: 13.7rem;
+      width: 13.7rem;
+    }
+  }
+}
