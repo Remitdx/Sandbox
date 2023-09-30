@@ -1,6 +1,5 @@
 section {
   position: relative;
-  z-index: -100;
 }
 
 .section-1 {
@@ -37,24 +36,21 @@ section {
   height: 5rem;
   width: 100%;
 
-  ::before {
-    content: '';
-    position: absolute;
-    background: $sky-blue;
-    height: 0.2rem;
-    left: 10%;
-    width: 80%;
-    top: 2.4rem;
-    opacity: 0.6;
-    z-index: -1;
-  }
-
   h2 {
     font-family: var(--ff-handwrite);
     letter-spacing: 10px;
     font-size: var(--fs-l);
     color: $deep-blue;
     margin: 0;
+  }
+
+  span {
+    position: absolute;
+    background: $sky-blue;
+    height: 0.2rem;
+    width: 60%;
+    top: 2.4rem;
+    opacity: 0.6;
   }
 }
 
@@ -66,19 +62,8 @@ section {
   background: $sky-blue;
   height: 4.5rem;
   width: 100%;
-  z-index: -2;
-
-  h3 {
-    font-family: var(--ff-handwrite);
-    font-weight: 600;
-    letter-spacing: 2px;
-    font-size: var(--fs-m);
-    color: $deep-blue;
-    margin: 0;
-  }
 
   h4 {
-    position: absolute;
     font-family: var(--ff-handwrite);
     font-style: italic;
     font-weight: 200;
@@ -87,8 +72,17 @@ section {
     color: $pure-white;
     opacity: 0.2;
     margin: 0;
-    z-index: -1;
   }
+
+  h3 {
+      position: absolute;
+      font-family: var(--ff-handwrite);
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: var(--fs-m);
+      color: $deep-blue;
+      margin: 0;
+    }
 }
 
 .quote {
@@ -96,6 +90,7 @@ section {
 }
 
 p {
+  font-family: var(--ff-handwrite);
   font-size: var(--fs-s);
   color: $deep-blue;
 }
@@ -106,8 +101,6 @@ p {
 
     ::before {
       content: '';
-      left: 20%;
-      width: 60%;
       top: 3.4rem;
     }
   }
@@ -131,7 +124,7 @@ p {
       letter-spacing: 12px;
       font-size: var(--fs-xl);
       color: $pure-white;
-      opacity: 0.3;
+      opacity: 0.4;
       margin: 0;
     }
   }

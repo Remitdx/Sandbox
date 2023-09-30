@@ -8,8 +8,14 @@ en:
 
   intro:
     title: 'Welcome'
-    text: "Hi dear visitor ! My name is Rémi Tondeux. This place is my portfolio but at the same time a sandbox for every project coming to my mind.
-      As curiosity won't kill the cat, feel free to explore all sections and maybe discover a bit more about me."
+    part1: 'Hi dear visitor ! My name is Rémi Tondeux.'
+    part2: "This place is my portfolio but at the same time a sandbox for every project coming to my mind.
+            As curiosity won't kill the cat, feel free to explore all sections and maybe discover a bit more about me."
+    part3: "J'aime travailler sur tout type de projet, du site vitrine à la solution SaaS complexe. Je suis aussi bien capable de mener un projet en solo
+            ou de m'intégrer dans une équipe pluridisciplinaire en méthologie scrum"
+
+  vision:
+    title: 'Vision'
 
   quote:
     civil_engineer: 'I use to be a civil engineer'

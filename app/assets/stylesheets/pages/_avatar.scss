@@ -1,36 +1,93 @@
+@keyframes roll-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 8.8rem);
+  }
+}
+
+@keyframes roll-left {
+  0% {
+    left: calc(100% - 8.8rem);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes roll-right-large-screen {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 13.8rem);
+  }
+}
+
+@keyframes roll-left-large-screen {
+  0% {
+    left: calc(100% - 13.8rem);
+  }
+  100% {
+    left: 0;
+  }
+}
+
 .avatar-wrapper {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 9rem;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 16px;
   background-color: $cream-white;
-  border: 0.15rem solid $deep-blue;
+  border: 0.1rem solid $deep-blue;
   border-radius: 4.5rem;
-  z-index: -2;
+  perspective: 1000px;
 
   .avatar {
-    position: relative;
-    height: 8.7rem;
-    width: 8.7rem;
+    position: absolute;
+    height: 8.8rem;
+    width: 8.8rem;
     border-radius: 50%;
-    z-index: -1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+
+  .backward {
+    transform: rotateY(180deg);
+  }
+
+  .go-right {
+    animation: roll-right 0.6s ease-in-out 0.1s forwards;
+  }
+
+  .go-left{
+    animation: roll-left 0.6s ease-in-out forwards;
   }
 }
 
-
 @media (min-width: 40em) {
   .avatar-wrapper {
-    cursor: pointer;
     height: 14rem;
     width: 60%;
     border-radius: 7rem;
 
     .avatar {
-      height: 13.7rem;
-      width: 13.7rem;
+      height: 13.8rem;
+      width: 13.8rem;
+      cursor: pointer;
+    }
+
+    .go-right {
+      animation: roll-right-large-screen 0.6s ease-in-out forwards;
+    }
+
+    .go-left {
+      animation: roll-left-large-screen 0.6s ease-in-out forwards;
     }
   }
 }

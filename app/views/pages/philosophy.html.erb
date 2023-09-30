@@ -1,28 +1,31 @@
 <main class='philosophy'>
   <nav>
-    <%= render "navigation"  %>
+    <%= render 'navigation'  %>
   </nav>
-  <div class="h1-title">
+  <div class='h1-title'>
     <h1><%= t('title_philosophy') %></h1>
   </div>
-  <section class="section-1">
-    <div class="container">
-      <div class="h2-title">
+  <section class='section-1'>
+    <div class='container text-center'>
+      <div class='h2-title'>
+        <span></span>
         <h2><%= t('intro.title') %></h2>
       </div>
-      <p><%= t('intro.text') %></p>
-      <%= render "avatar" %>
-      <p>capable de travailler seul ou en équipe pluridisciplinaire</p>
+      <p><%= t('intro.part1') %></p>
+      <p><%= t('intro.part2') %></p>
+      <%= render 'avatar' %>
+      <p><%= t('intro.part3') %></p>
     </div>
   </section>
-  <section class="section-2">
-    <div class="container">
-      <div class="h2-title">
-        <h2>Mes domaines d'expertise</h2>
+  <section class='section-2'>
+    <div class='container'>
+      <div class='h2-title'>
+        <span></span>
+        <h2><%= t('vision.title') %></h2>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 order-1 order-md-1">
-          <div class="h3-title">
+      <div class='row justify-content-center'>
+        <div class='col-12 col-md-8 order-1 order-md-1'>
+          <div class='h3-title'>
             <h4>Conception</h4>
             <h3>Conception</h3>
           </div>
@@ -33,16 +36,16 @@
             <li>Spécifications techniques</li>
           </ul>
         </div>
-        <div class="col-6 col-md-4 order-2 order-md-2">
-          <%= render "gears" %>
-          <i class="fa-solid fa-quote-left"></i>
+        <div class='col-6 col-md-4 order-2 order-md-2'>
+          <%= render 'gears' %>
+          <i class='fa-solid fa-quote-left'></i>
           <p class='quote'>engineer spotted !</p>
-          <i class="fa-solid fa-quote-right"></i>
+          <i class='fa-solid fa-quote-right'></i>
         </div>
-        <div class="col-12 col-md-6 order-3 order-md-4">
-          <div class="h3-title">
-            <h3>Développement</h3>
+        <div class='col-12 col-md-6 order-3 order-md-4'>
+          <div class='h3-title'>
             <h4>Développement</h4>
+            <h3>Développement</h3>
           </div>
           <ul>
             <li>Gestion de projet - respect de la qualité, délais et coûts</li>
@@ -53,12 +56,12 @@
           </ul>
           <span>REJOUER L'ANIMATION</span>
         </div>
-        <div class="col-8 col-md-6 order-4 order-md-3">
-          <%= render "wall" %>
-          <p class="quote"><%= t('quote.civil_engineer') %></p>
+        <div class='col-8 col-md-6 order-4 order-md-3'>
+          <%= render 'wall' %>
+          <p class='quote'><%= t('quote.civil_engineer') %></p>
         </div>
-        <div class="col-12 order-5 order-md-5">
-          <div class="h3-title">
+        <div class='col-12 order-5 order-md-5'>
+          <div class='h3-title'>
             <h3>Vie de d'application</h3>
           </div>
           <ul>
@@ -68,8 +71,8 @@
             <li>Développement de nouvelles fonctionnalités</li>
           </ul>
         </div>
-        <div class="col-12 order-last order-md-last">
-          <%= render "van" %>
+        <div class='col-12 order-last order-md-last'>
+          <%= render 'van' %>
         </div>
       </div>
     </div>

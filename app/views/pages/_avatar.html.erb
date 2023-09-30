@@ -1,4 +1,5 @@
-<div class='avatar-wrapper'>
-  <%= image_tag 'RemBG_2.jpg', class: 'avatar' %>
-  <%= image_tag 'RemLul2.jpg', class: 'avatar d-none' %>
+<div class='avatar-wrapper' data-controller='avatar'>
+  <%= image_tag 'RemBG_2.jpg', class: 'avatar', data: { action: 'click->avatar#bgtolul', avatar_target: 'bg'} %>
+  <%= image_tag 'RemLul2.jpg', class: 'avatar backward', data: { action: 'click->avatar#lultobg animationend->avatar#animationend', avatar_target: 'lul'} %>
+  <span class='disk' data-avatar-target='disk' ></span>
 </div>
