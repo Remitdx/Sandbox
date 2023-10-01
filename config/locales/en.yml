@@ -1,11 +1,15 @@
 en:
+  ## HOME ##
   title: 'Engineer and full-stack developer'
+
+  ## NAVIGATION AND TITLES ##
   title_home: 'Home'
   title_skills: 'Skills'
   title_philosophy: 'Philosophy'
   title_project: 'My Projects'
   title_resources: 'Resources'
 
+  ## PHILOSOPHY ##
   intro:
     title: 'Welcome'
     part1: 'Hi dear visitor ! My name is Rémi Tondeux.'
@@ -17,5 +21,30 @@ en:
   vision:
     title: 'Vision'
 
+  conception:
+    title: 'Conception'
+    step1: 'Analyse et définition du besoin'
+    step2: 'Cadrage du projet (fonctionnalités, délais et estimation budgétaire)'
+    step3: 'Maquettage, design UX/UI'
+    step4: 'Spécifications techniques, modèle de données'
+
+  development:
+    title: 'Development'
+
+
+
   quote:
-    civil_engineer: 'I use to be a civil engineer'
+    gears:
+    civil_engineer: 'I use to be a civil engineer and fortunately nowadays web applications are all about putting bricks together !'
+
+
+  ## SKILLS ##
+
+
+  ## PROJETCS ##
+
+
+  ## RESOURCES ##
+
+
+  ## CONTACT ##

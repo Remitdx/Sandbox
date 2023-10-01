@@ -26,26 +26,28 @@
       <div class='row justify-content-center'>
         <div class='col-12 col-md-8 order-1 order-md-1'>
           <div class='h3-title'>
-            <h4>Conception</h4>
-            <h3>Conception</h3>
+            <h4><%= t('conception.title') %></h4>
+            <h3><%= t('conception.title') %></h3>
           </div>
-          <ul>
-            <li>Analyse et définition du besoin</li>
-            <li>Cadrage du projet (fonctionnalités, délais et estimation budgétaire)</li>
-            <li>Maquettage, design UX/UI</li>
-            <li>Spécifications techniques</li>
-          </ul>
+          <div class="text-center">
+            <p><%= t('conception.step1') %></p>
+            <p><%= t('conception.step2') %></p>
+            <p><%= t('conception.step3') %></p>
+            <p><%= t('conception.step4') %></p>
+          </div>
         </div>
         <div class='col-6 col-md-4 order-2 order-md-2'>
           <%= render 'gears' %>
-          <i class='fa-solid fa-quote-left'></i>
-          <p class='quote'>engineer spotted !</p>
-          <i class='fa-solid fa-quote-right'></i>
+          <div class="d-flex">
+            <i class='fa-solid fa-quote-left'></i>
+            <p class='quote'><%= t('quote.gears') %></p>
+            <i class='fa-solid fa-quote-right'></i>
+          </div>
         </div>
         <div class='col-12 col-md-6 order-3 order-md-4'>
           <div class='h3-title'>
-            <h4>Développement</h4>
-            <h3>Développement</h3>
+            <h4><%= t('development.title') %></h4>
+            <h3><%= t('development.title') %></h3>
           </div>
           <ul>
             <li>Gestion de projet - respect de la qualité, délais et coûts</li>
@@ -58,7 +60,11 @@
         </div>
         <div class='col-8 col-md-6 order-4 order-md-3'>
           <%= render 'wall' %>
-          <p class='quote'><%= t('quote.civil_engineer') %></p>
+          <div class="d-flex">
+            <i class='fa-solid fa-quote-left'></i>
+            <p class='quote'><%= t('quote.civil_engineer') %></p>
+            <i class='fa-solid fa-quote-right'></i>
+          </div>
         </div>
         <div class='col-12 order-5 order-md-5'>
           <div class='h3-title'>

@@ -1,19 +1,49 @@
 fr:
+  ## HOME ##
   title: 'Ingénieur et développeur full-stack'
+
+  ## NAVIGATION AND TITLES ##
   title_home: 'Accueil'
   title_skills: 'Compétences'
   title_philosophy: 'Philosophie'
   title_project: 'Mes Projets'
   title_resources: 'Ressources'
 
-
+  ## PHILOSOPHY ##
   intro:
     title: 'Bienvenue'
     part1: "Bienvenue sur mon site ! Je m'appelle Rémi Tondeux."
     part2: "Cet endroit du web est à la fois mon portfolio et une zone de crash-test pour tous les développements qui me passent par la tête.
             Si vous êtes aussi curieux.se que moi, n'hésitez pas à voyager au travers des différentes sections pour me découvrir."
     part3: "J'aime travailler sur tout type de projet, du site vitrine à la solution SaaS complexe. Je suis aussi bien capable de mener un projet en solo
-            ou de m'intégrer dans une équipe pluridisciplinaire en méthologie scrum"
+            ou de m'intégrer dans une équipe pluridisciplinaire en méthologie scrum."
+
+  vision:
+    title: 'Vision'
+
+  conception:
+    title: 'Conception'
+    step1: 'Analyse et définition du besoin'
+    step2: 'Cadrage du projet (fonctionnalités, délais et estimation budgétaire)'
+    step3: 'Maquettage, design UX/UI'
+    step4: 'Spécifications techniques, modèle de données'
+
+  development:
+    title: 'Développement'
 
   quote:
-      civil_engineer: 'I use to be a civil engineer'
+    gears: 'TODO'
+    civil_engineer: "J'étais ingénieur en construction avant ma reconversion.
+                    Par chance, les applications Web consistent également à assembler des briques !"
+
+
+  ## SKILLS ##
+
+
+  ## PROJETCS ##
+
+
+  ## RESOURCES ##
+
+
+  ## CONTACT ##
