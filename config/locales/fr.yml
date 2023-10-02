@@ -47,7 +47,8 @@ fr:
     gears: "Le design n'est pas seulement à quoi ça ressemble [...]. Le design, c'est comment ça fonctionne. - Steve Jobs"
     civil_engineer: "J'étais ingénieur en construction avant ma reconversion.
                     Par chance, les applications Web consistent également à assembler des briques !"
-
+  button:
+    build_app: 'Créer une app'
 
   ## SKILLS ##
 

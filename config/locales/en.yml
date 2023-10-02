@@ -37,6 +37,8 @@ en:
     gears:
     civil_engineer: 'I use to be a civil engineer and fortunately nowadays web applications are all about putting bricks together !'
 
+  button:
+    build_app: 'Build app !'
 
   ## SKILLS ##
 

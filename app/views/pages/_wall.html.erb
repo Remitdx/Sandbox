@@ -1,4 +1,5 @@
 <div class='wall' data-controller='wall' data-action='click->wall#animate'>
+  <p data-wall-target='btn'><%= t('button.build_app') %></p>
   <%= image_tag 'crane.png', class: 'crane', data: { wall_target: 'crane' } %>
   <%= image_tag 'CSS.png', class: 'brick', data: { wall_target: 'css' } %>
   <%= image_tag 'HTML.png', class: 'brick', data: { wall_target: 'html' } %>

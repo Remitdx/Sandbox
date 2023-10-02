@@ -1,9 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['crane', 'css', 'html', 'ruby', 'rails', 'js', 'postgre']
+  static targets = ['crane', 'css', 'html', 'ruby', 'rails', 'js', 'postgre', 'btn']
 
   animate() {
+    this.btnTarget.classList.add('d-none');
     this.cssTarget.classList.add('css');
     this.htmlTarget.classList.add('html');
     this.rubyTarget.classList.add('ruby');
