@@ -15,7 +15,7 @@ fr:
     part1: "Bienvenue sur mon site ! Je m'appelle Rémi Tondeux."
     part2: "Cet endroit du web est à la fois mon portfolio et une zone de crash-test pour tous les développements qui me passent par la tête.
             Si vous êtes aussi curieux.se que moi, n'hésitez pas à voyager au travers des différentes sections pour me découvrir."
-    part3: "J'aime travailler sur tout type de projet, du site vitrine à la solution SaaS complexe. Je suis aussi bien capable de mener un projet en solo
+    part3: "J'aime travailler sur tout type de projet, du site vitrine à la solution SaaS complexe. Je suis capable de mener un projet en solo
             ou de m'intégrer dans une équipe pluridisciplinaire en méthologie scrum."
 
   vision:
@@ -30,9 +30,21 @@ fr:
 
   development:
     title: 'Développement'
+    step1: 'Gestion de projet / respect de la qualité, délais et coûts'
+    step2: 'Méthode agile, sprints et code-review'
+    step3: 'Développement back-end / front-end'
+    step4: 'Tests unitaires / stratégie de tests'
+    step5: 'Mise en production en continu'
+
+  lifecycle:
+    title: "Vie de l'application"
+    step1: 'Documentation'
+    step2: 'Formation/accompagnement client'
+    step3: 'Maintenance'
+    step4: 'Développement de nouvelles fonctionnalités'
 
   quote:
-    gears: 'TODO'
+    gears: "Le design n'est pas seulement à quoi ça ressemble [...]. Le design, c'est comment ça fonctionne. - Steve Jobs"
     civil_engineer: "J'étais ingénieur en construction avant ma reconversion.
                     Par chance, les applications Web consistent également à assembler des briques !"
 

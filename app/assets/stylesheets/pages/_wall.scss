@@ -76,6 +76,7 @@
   border-radius: 4px;
   background-color: $pure-white;
   overflow: hidden;
+  margin-bottom: 12px;
 
   .brick {
     position: absolute;
@@ -130,6 +131,9 @@
     left: 7%;
     transform: rotateY(90deg);
     transform-origin: 33%;
+  }
+
+  .crane-move{
     animation: craneMove 3.5s linear 5.25s forwards;
   }
 }

@@ -41,7 +41,7 @@
           <div class="d-flex">
             <i class='fa-solid fa-quote-left'></i>
             <p class='quote'><%= t('quote.gears') %></p>
-            <i class='fa-solid fa-quote-right'></i>
+            <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
         <div class='col-12 col-md-6 order-3 order-md-4'>
@@ -49,13 +49,13 @@
             <h4><%= t('development.title') %></h4>
             <h3><%= t('development.title') %></h3>
           </div>
-          <ul>
-            <li>Gestion de projet - respect de la qualité, délais et coûts</li>
-            <li>Développement back-end / front-end</li>
-            <li>Méthode agile, sprints et code-review</li>
-            <li>Testing</li>
-            <li>Mise en production en continu</li>
-          </ul>
+          <div class="text-center">
+            <p><%= t('development.step1') %></p>
+            <p><%= t('development.step2') %></p>
+            <p><%= t('development.step3') %></p>
+            <p><%= t('development.step4') %></p>
+            <p><%= t('development.step5') %></p>
+          </div>
           <span>REJOUER L'ANIMATION</span>
         </div>
         <div class='col-8 col-md-6 order-4 order-md-3'>
@@ -63,19 +63,20 @@
           <div class="d-flex">
             <i class='fa-solid fa-quote-left'></i>
             <p class='quote'><%= t('quote.civil_engineer') %></p>
-            <i class='fa-solid fa-quote-right'></i>
+            <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
         <div class='col-12 order-5 order-md-5'>
           <div class='h3-title'>
-            <h3>Vie de d'application</h3>
+            <h4><%= t('lifecycle.title') %></h4>
+            <h3><%= t('lifecycle.title') %></h3>
           </div>
-          <ul>
-            <li>Maintenance</li>
-            <li>Documentation</li>
-            <li>Formation/accompagnement client</li>
-            <li>Développement de nouvelles fonctionnalités</li>
-          </ul>
+          <div class="text-center">
+            <p><%= t('lifecycle.step1') %></p>
+            <p><%= t('lifecycle.step2') %></p>
+            <p><%= t('lifecycle.step3') %></p>
+            <p><%= t('lifecycle.step4') %></p>
+          </div>
         </div>
         <div class='col-12 order-last order-md-last'>
           <%= render 'van' %>
