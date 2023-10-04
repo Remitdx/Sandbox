@@ -79,18 +79,33 @@ section {
   }
 
   h3 {
-      position: absolute;
-      font-family: var(--ff-handwrite);
-      font-weight: 600;
-      letter-spacing: 2px;
-      font-size: var(--fs-m);
-      color: $deep-blue;
-      margin: 0;
-    }
+    position: absolute;
+    font-family: var(--ff-handwrite);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: var(--fs-m);
+    color: $deep-blue;
+    margin: 0;
+  }
 }
 
-.quote {
-  font-style: italic;
+.quote-wrapper {
+  width: 80%;
+  margin: 0 auto 12px;
+
+  i {
+    color: $deep-blue;
+    font-size: var(--fs-m);
+  }
+
+  p {
+    width: 80%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px 4px $sky-blue;
+    text-align: center;
+    font-style: italic;
+    margin: 0 auto;
+  }
 }
 
 p {

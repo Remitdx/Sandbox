@@ -37,16 +37,16 @@ fr:
     step5: 'Mise en production en continu'
 
   lifecycle:
-    title: "Vie de l'application"
+    title: "Maintenance"
     step1: 'Documentation'
-    step2: 'Formation/accompagnement client'
-    step3: 'Maintenance'
-    step4: 'Développement de nouvelles fonctionnalités'
+    step2: 'Formation / accompagnement client'
+    step3: 'Développement de nouvelles fonctionnalités'
 
   quote:
     gears: "Le design n'est pas seulement à quoi ça ressemble [...]. Le design, c'est comment ça fonctionne. - Steve Jobs"
     civil_engineer: "J'étais ingénieur en construction avant ma reconversion.
                     Par chance, les applications Web consistent également à assembler des briques !"
+    freedom: "Rien n'est plus contagieux que la liberté."
   button:
     build_app: 'Créer une app'
 
