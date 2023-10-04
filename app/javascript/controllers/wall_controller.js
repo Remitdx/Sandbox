@@ -1,16 +1,17 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['crane', 'css', 'html', 'ruby', 'rails', 'js', 'postgre', 'btn']
+  static targets = ['crane', 'css', 'html', 'ruby', 'rails', 'js', 'postgre', 'btn', 'reload']
 
   animate() {
-    this.btnTarget.classList.add('d-none');
-    this.cssTarget.classList.add('css');
-    this.htmlTarget.classList.add('html');
-    this.rubyTarget.classList.add('ruby');
-    this.railsTarget.classList.add('rails');
-    this.jsTarget.classList.add('js');
-    this.postgreTarget.classList.add('postgre');
-    this.craneTarget.classList.add('crane-move');
+    this.btnTarget.classList.toggle('d-none');
+    this.cssTarget.classList.toggle('css');
+    this.htmlTarget.classList.toggle('html');
+    this.rubyTarget.classList.toggle('ruby');
+    this.railsTarget.classList.toggle('rails');
+    this.jsTarget.classList.toggle('js');
+    this.postgreTarget.classList.toggle('postgre');
+    this.craneTarget.classList.toggle('crane-move');
+    this.reloadTarget.classList.toggle('d-none');
   }
 }
