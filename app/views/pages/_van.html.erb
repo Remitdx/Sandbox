@@ -13,8 +13,8 @@
   <div class='btn-wrapper d-none' data-van-target='pause' data-action='click->van#pause'>
     <p><i class='fa-solid fa-pause'></i></p>
   </div>
-  <div class='d-none night' data-van-target='night' data-action='click->van#restart'>
-    <div class='btn-wrapper' data-van-target='reload'>
+  <div class='d-none night' data-van-target='night' data-action='click->van#restart animationend->van#reload'>
+    <div class='d-none btn-wrapper' data-van-target='reload'>
       <p><i class='fa-solid fa-rotate-right'></i></p>
     </div>
   </div>

@@ -34,6 +34,10 @@ export default class extends Controller {
   dropNight() {
     this.nightTarget.classList.remove('d-none');
     this.nightTarget.classList.add('drop-night');
+  }
+
+  reload() {
+    this.reloadTarget.classList.remove('d-none')
     this.reloadTarget.classList.add('night-reload-btn')
   }
 
