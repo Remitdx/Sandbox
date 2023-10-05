@@ -1,14 +1,21 @@
-<div class="background" data-controller='van'>
-  <%= image_tag "layer_1.png", class: "layer-1" %>
-  <%= image_tag "layer_2.png", class: "layer-2" %>
-  <%= image_tag "layer_3.png", class: "layer-3" %>
-  <%= image_tag "layer_4.png", class: "layer-4" %>
-  <%= image_tag "layer_4.png", class: "layer-4-bis" %>
-  <%= image_tag "layer_5.png", class: "layer-5" %>
-  <%= image_tag "layer_5.png", class: "layer-5-bis" %>
-  <%= image_tag "van.png", class: "van" %>
-  <div class="btn-wrapper">
-    <p data-van-target='play'><i class="fa-solid fa-play"></i></p>
-    <p class='d-none' data-van-target='pause'><i class="fa-solid fa-pause"></i></p>
+<div class='background' data-controller='van'>
+  <%= image_tag 'layer_1.png', class: 'layer-1' %>
+  <%= image_tag 'layer_2.png', class: 'layer-2', data: {van_target:'l2' } %>
+  <%= image_tag 'layer_3.png', class: 'layer-3', data: {van_target:'l3' } %>
+  <%= image_tag 'layer_4.png', class: 'layer-4', data: {van_target:'l45' } %>
+  <%= image_tag 'layer_4.png', class: 'layer-4-bis', data: {van_target:'l45' } %>
+  <%= image_tag 'layer_5.png', class: 'layer-5', data: {van_target:'l45' } %>
+  <%= image_tag 'layer_5.png', class: 'layer-5-bis', data: {van_target:'l45' } %>
+  <%= image_tag 'van.png', class: 'van', data: {van_target:'van', action: 'animationend->van#dropNight' } %>
+  <div class='btn-wrapper' data-van-target='play' data-action='click->van#play'>
+    <p><i class='fa-solid fa-play'></i></p>
+  </div>
+  <div class='btn-wrapper d-none' data-van-target='pause' data-action='click->van#pause'>
+    <p><i class='fa-solid fa-pause'></i></p>
+  </div>
+  <div class='d-none night' data-van-target='night' data-action='click->van#restart'>
+    <div class='btn-wrapper' data-van-target='reload'>
+      <p><i class='fa-solid fa-rotate-right'></i></p>
+    </div>
   </div>
 </div>

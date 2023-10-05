@@ -1,25 +1,22 @@
 @keyframes layer-2 {
-  100% {
-    transform: translateX(-10%);
-  }
+  100% { transform: translateX(-10%); }
 }
 
 @keyframes layer-3 {
-  100% {
-    transform: translateX(-20%);
-  }
+  100% { transform: translateX(-20%); }
 }
 
 @keyframes layer-4-5 {
-  100% {
-    transform: translateX(-50%);
-  }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes van {
-  100% {
-    transform: translateX(700%);
-  }
+  100% { transform: translateX(700%); }
+}
+
+@keyframes night {
+  0% { opacity: 0; }
+  100% { opacity: 0.95; }
 }
 
 .background {
@@ -48,6 +45,26 @@
     }
   }
 
+  .night {
+    position: absolute;
+    background: $deep-blue;
+    width: 100%;
+    padding-top: 56.25%;
+    top: 0;
+    opacity: 0;
+
+    .btn-wrapper {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: $cream-white solid 1px;
+      opacity: 0;
+
+      p {
+        color: $cream-white;
+      }
+    }
+  }
 
   .layer-1 {
     position: absolute;
@@ -113,11 +130,13 @@
     height: 18%;
   }
 
-  .van-animate { animation: van 10s linear forwards; }
+  .van-animate { animation: van 10.2s linear forwards; }
   .layer-2-animate { animation: layer-2 10s linear forwards; }
   .layer-3-animate { animation: layer-3 10s linear forwards; }
   .layer-4-5-animate { animation: layer-4-5 10s linear forwards; }
   .paused { animation-play-state: paused; }
+  .drop-night { animation: night 2.5s linear forwards; }
+  .night-reload-btn {animation: night 0.5s linear 2 forwards; }
 }
 
 @media (min-width: 40em) {
