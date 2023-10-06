@@ -51,6 +51,12 @@ fr:
     build_app: 'Créer une app'
 
   ## SKILLS ##
+  skills:
+    back: 'Back-end'
+    front: 'Front-end'
+    devops: 'DevOps'
+    collaboration: 'Collaboration'
+    soft: 'Savoir-être'
 
 
   ## PROJETCS ##
