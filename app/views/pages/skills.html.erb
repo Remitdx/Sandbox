@@ -12,16 +12,26 @@
         <h2><%= t('title_skills') %></h2>
       </div>
       <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 card-skills-wrapper">
           <div class='h3-title'>
             <h4><%= t('skills.back') %></h4>
             <h3><%= t('skills.back') %></h3>
           </div>
+          <div class="card-skills">
+            <% @backskills.each do |k,v| %>
+              <p><%= k %> : <%= v %></p>
+            <% end %>
+          </div>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 card-skills-wrapper">
           <div class='h3-title'>
             <h4><%= t('skills.front') %></h4>
             <h3><%= t('skills.front') %></h3>
+          </div>
+          <div class="card-skills">
+            <% @frontskills.each do |k,v| %>
+              <p><%= k %> : <%= v %></p>
+            <% end %>
           </div>
         </div>
         <div class="col-12 col-md-4">

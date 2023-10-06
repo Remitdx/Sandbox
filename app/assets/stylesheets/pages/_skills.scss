@@ -1,0 +1,11 @@
+.card-skills-wrapper {
+  overflow: hidden;
+
+  .card-skills {
+    background: $cream-white;
+    border: 1px solid $deep-blue;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+}
