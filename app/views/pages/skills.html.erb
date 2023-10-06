@@ -12,46 +12,20 @@
         <h2><%= t('title_skills') %></h2>
       </div>
       <div class="row">
-        <div class="col-12 col-md-4 card-skills-wrapper">
-          <div class='h3-title'>
-            <h4><%= t('skills.back') %></h4>
-            <h3><%= t('skills.back') %></h3>
+        <% @skills.each do |skill| %>
+          <div class="col-12 col-md-4 card-skills-wrapper">
+            <div class='h3-title'>
+              <h4><%= t(skill['title']) %></h4>
+              <h3><%= t(skill['title']) %></h3>
+              <% skill.delete('title')  %>
+            </div>
+            <div class="card-skills">
+              <% skill.each do |k,v| %>
+                <p><%= k %> : <%= v %></p>
+              <% end %>
+            </div>
           </div>
-          <div class="card-skills">
-            <% @backskills.each do |k,v| %>
-              <p><%= k %> : <%= v %></p>
-            <% end %>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 card-skills-wrapper">
-          <div class='h3-title'>
-            <h4><%= t('skills.front') %></h4>
-            <h3><%= t('skills.front') %></h3>
-          </div>
-          <div class="card-skills">
-            <% @frontskills.each do |k,v| %>
-              <p><%= k %> : <%= v %></p>
-            <% end %>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class='h3-title'>
-            <h4><%= t('skills.devops') %></h4>
-            <h3><%= t('skills.devops') %></h3>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class='h3-title'>
-            <h4><%= t('skills.soft') %></h4>
-            <h3><%= t('skills.soft') %></h3>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class='h3-title'>
-            <h4><%= t('skills.collaboration') %></h4>
-            <h3><%= t('skills.collaboration') %></h3>
-          </div>
-        </div>
+        <% end %>
       </div>
       <i class="fa-solid fa-bullseye"></i>
     </div>
