@@ -1,3 +1,35 @@
 .selected {
   background: $sunset;
 }
+
+.card-classic {
+  background: $cream-white;
+  border: 1px solid $deep-blue;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  margin-bottom: 12px;
+
+  p {
+    margin: 0;
+  }
+
+  .bar {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    height: 4px;
+  }
+
+  .bar-bg {
+    background: $sunset;
+    width: 100%;
+  }
+
+  @for $i from 1 through 9 {
+    .slider-#{$i} {
+      background: $cream-white;
+      width: calc((10 - #{$i})*10%);
+    }
+  }
+}

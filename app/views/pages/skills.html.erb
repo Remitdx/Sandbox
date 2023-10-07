@@ -13,14 +13,35 @@
       </div>
       <div data-controller='skills'>
         <div class='d-flex'>
-          <p class='btn selected' data-skills-target='btnclassic' data-action='click->skills#classic'>Classic</p>
+          <p class='btn' data-skills-target='btnclassic' data-action='click->skills#classic'>Classic</p>
           <p class='btn' data-skills-target='btnradar' data-action='click->skills#radar'>Radar</p>
         </div>
-        <div class='d-none' data-skills-target='classic'>
-          <%= render 'skills_classic' %>
-        </div>
-        <div class='d-none' data-skills-target='radar'>
-          <%= render 'skills_radar' %>
+        <div class='row'>
+          <% @skills.each do |skill| %>
+            <div class='col-12 col-md-4'>
+              <div class='h3-title'>
+                <h4><%= t(skill['title']) %></h4>
+                <h3><%= t(skill['title']) %></h3>
+                <% skill.delete('title')  %>
+              </div>
+              <div class='card-classic d-none' data-skills-target='classic'>
+                <div class='row'>
+                  <% skill.each do |k,v| %>
+                    <div class='col-5 text-center'>
+                      <p><%= k %></p>
+                    </div>
+                    <div class='col-7 position-relative'>
+                      <div class='bar bar-bg'></div>
+                      <div class='bar slider-<%= v %>'></div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+              <div class='card-radar d-none' data-skills-target='radar'>
+                <p>to do !</p>
+              </div>
+            </div>
+          <% end %>
         </div>
         <i class='fa-solid fa-bullseye'></i>
     </div>
