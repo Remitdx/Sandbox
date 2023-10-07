@@ -42,6 +42,13 @@ en:
     build_app: 'Build app !'
 
   ## SKILLS ##
+  skills:
+    back: 'Back-end'
+    front: 'Front-end'
+    devops: 'DevOps'
+    collaboration: 'Collaboration'
+    soft: 'Soft skills'
+    management: 'Management'
 
 
   ## PROJETCS ##

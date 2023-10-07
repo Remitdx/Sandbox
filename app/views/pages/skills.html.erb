@@ -2,37 +2,32 @@
   <nav>
     <%= render 'navigation'  %>
   </nav>
-  <div class="h1-title">
+  <div class='h1-title'>
     <h1><%= t('title_skills') %></h1>
   </div>
   <section class='section-1'>
-    <div class="container">
-      <div class="h2-title">
+    <div class='container'>
+      <div class='h2-title'>
         <span></span>
         <h2><%= t('title_skills') %></h2>
       </div>
-      <div class="row">
-        <% @skills.each do |skill| %>
-          <div class="col-12 col-md-4 card-skills-wrapper">
-            <div class='h3-title'>
-              <h4><%= t(skill['title']) %></h4>
-              <h3><%= t(skill['title']) %></h3>
-              <% skill.delete('title')  %>
-            </div>
-            <div class="card-skills">
-              <% skill.each do |k,v| %>
-                <p><%= k %> : <%= v %></p>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <i class="fa-solid fa-bullseye"></i>
+      <div data-controller='skills'>
+        <div class='d-flex'>
+          <p class='btn selected' data-skills-target='btnclassic' data-action='click->skills#classic'>Classic</p>
+          <p class='btn' data-skills-target='btnradar' data-action='click->skills#radar'>Radar</p>
+        </div>
+        <div class='d-none' data-skills-target='classic'>
+          <%= render 'skills_classic' %>
+        </div>
+        <div class='d-none' data-skills-target='radar'>
+          <%= render 'skills_radar' %>
+        </div>
+        <i class='fa-solid fa-bullseye'></i>
     </div>
   </section>
-  <section class="section-2">
-    <div class="container">
-      <div class="h2-title">
+  <section class='section-2'>
+    <div class='container'>
+      <div class='h2-title'>
         <span></span>
         <h2>Curriculum vitae</h2>
       </div>

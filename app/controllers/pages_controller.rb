@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def skills
-    @skills = [back, front, devops, soft, collaboration]
+    @skills = [back, front, devops, soft, collaboration, management]
   end
 
   def philosophy
@@ -46,7 +46,7 @@ class PagesController < ApplicationController
       'CSS' => 6,
       'Scss' => 5,
       'Javascript' => 5,
-      'Hotwire/Stimulus' => 6,
+      'Hotwired' => 6,
       'JQuery' => 4,
       'React' => 2
     }
@@ -78,6 +78,12 @@ class PagesController < ApplicationController
       'Slack' => 6,
       'Outlook' => 6,
       'Discord' => 5
+    }
+  end
+
+  def management
+    {
+      'title' => 'skills.management'
     }
   end
 end
