@@ -66,7 +66,10 @@ class PagesController < ApplicationController
 
   def soft
     {
-      'title' => 'skills.soft'
+      'title' => 'skills.soft',
+      'Punctuality' => 9,
+      'Afterwork partner' => 8,
+      'Leadership' => 7
     }
   end
 
@@ -83,7 +86,10 @@ class PagesController < ApplicationController
 
   def management
     {
-      'title' => 'skills.management'
+      'title' => 'skills.management',
+      'Project management' => 7,
+      'Team management' => 5,
+      'Non-violent communication' => 9
     }
   end
 end

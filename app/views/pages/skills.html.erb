@@ -42,12 +42,16 @@
                   <div class='radar-bg-<%= i %>'></div>
                 <% end %>
                 <% j = 1 %>
+                <% polygon = [] %>
                 <% skill.each do |k,v| %>
+                  <% point = [((Math::cos(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%', ((Math::sin(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%'] %>
                   <div class='label-<%= skill.length %>-<%= j %>'>
                     <p><%= k %></p>
                   </div>
+                  <% polygon << point.join(' ')  %>
                   <% j += 1 %>
                 <% end %>
+                <div class="polygon" style='clip-path: polygon(<%= polygon.join(', ') %>)'></div>
               </div>
             </div>
           <% end %>

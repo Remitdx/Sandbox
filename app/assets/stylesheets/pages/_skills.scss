@@ -68,16 +68,27 @@
   @for $skill from 1 through 12 { // number of skills to display
     @for $j from 1 through $skill { //number of childs
 
-      .label-#{$skill}-#{$j} { // label-6-2
+      .label-#{$skill}-#{$j} {
         position: absolute;
-        --a: calc(360deg/#{$skill}); // --a = 60deg
-        --r: 150px;
-        --x: calc(cos(var(--a)*#{$j})*var(--r)); // cos(120deg)*70%
-        --y: calc(sin(var(--a)*#{$j})*var(--r)); // sin(120deg)*70%
+        --a: calc(360deg/#{$skill});
+        --r: 40%;
+        --x: calc(cos(var(--a)*#{$j})*var(--r));
+        --y: calc(sin(var(--a)*#{$j})*var(--r));
         top: calc(50% + var(--y));
         left: calc(50% + var(--x));
         transform: translate(-50%, -50%);
       }
     }
+  }
+
+  .polygon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: $sunset-round;
+    opacity: 0.6;
   }
 }
