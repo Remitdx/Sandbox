@@ -38,7 +38,16 @@
                 </div>
               </div>
               <div class='card-radar d-none' data-skills-target='radar'>
-                <p>to do !</p>
+                <% for i in 1..5 do %>
+                  <div class='radar-bg-<%= i %>'></div>
+                <% end %>
+                <% j = 1 %>
+                <% skill.each do |k,v| %>
+                  <div class='label-<%= skill.length %>-<%= j %>'>
+                    <p><%= k %></p>
+                  </div>
+                  <% j += 1 %>
+                <% end %>
               </div>
             </div>
           <% end %>

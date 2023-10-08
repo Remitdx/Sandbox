@@ -33,3 +33,51 @@
     }
   }
 }
+
+.card-radar {
+  background: $cream-white;
+  border: 1px solid $deep-blue;
+  width: 100%;
+  padding-top: 100%;
+  margin-bottom: 12px;
+  position: relative;
+
+  p {
+    margin: 0;
+    font-size: var(--fs-xs);
+  }
+
+  @for $i from 1 through 5 {
+    .radar-bg-#{$i} {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc((6 - #{$i})*12%);
+      height: calc((6 - #{$i})*12%);
+      border-radius: 50%;
+      border: 0.5px solid $deep-blue;
+      @if $i % 2 == 1 {
+        background: $pure-white;
+      } @else {
+        background: $cream-white;
+      }
+    }
+  }
+
+  @for $skill from 1 through 12 { // number of skills to display
+    @for $j from 1 through $skill { //number of childs
+
+      .label-#{$skill}-#{$j} { // label-6-2
+        position: absolute;
+        --a: calc(360deg/#{$skill}); // --a = 60deg
+        --r: 150px;
+        --x: calc(cos(var(--a)*#{$j})*var(--r)); // cos(120deg)*70%
+        --y: calc(sin(var(--a)*#{$j})*var(--r)); // sin(120deg)*70%
+        top: calc(50% + var(--y));
+        left: calc(50% + var(--x));
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
