@@ -52,6 +52,9 @@ fr:
 
   ## SKILLS ##
   skills:
+    intro: 'Dans cette section, je vous propose une mise en lumière de mes compétences, bien que celles-ci soient en constante évolution.
+            Cliquez sur ces deux boutons pour les visualiser !'
+    outro: 'Les compétences sont une chose mais la motivation est ce qui permet de gravir les montagnes.'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'

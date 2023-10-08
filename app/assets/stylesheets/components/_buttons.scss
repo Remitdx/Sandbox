@@ -1,0 +1,16 @@
+.btn-white {
+  padding: 6px 12px;
+  background-color: $cream-white;
+  border: $deep-blue solid 1px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $pure-white;
+  }
+}
+
+.btn-big {
+  padding: 16px 24px;
+  margin: 12px;
+}
