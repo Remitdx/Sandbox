@@ -45,7 +45,9 @@ class PagesController < ApplicationController
       'HTML' => 9,
       'CSS' => 8,
       'Scss' => 7,
-      'Javascript' => 6,
+      'Bootstrap' => 8,
+      'Tailwind' => 5,
+      'JavaScript' => 6,
       'Hotwired' => 7,
       'React' => 2,
       'JQuery' => 5
