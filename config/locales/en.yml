@@ -23,10 +23,10 @@ en:
 
   conception:
     title: 'Conception'
-    step1: 'Analyse et définition du besoin'
-    step2: 'Cadrage du projet (fonctionnalités, délais et estimation budgétaire)'
-    step3: 'Maquettage, design UX/UI'
-    step4: 'Spécifications techniques, modèle de données'
+    step1: 'Definition of customer needs'
+    step2: 'Functionalities, deadlines and financial estimation'
+    step3: 'Design UX/UI'
+    step4: 'Technical specifications, database architecture'
 
   development:
     title: 'Development'
@@ -52,15 +52,27 @@ en:
 
   ## SKILLS ##
   skills:
-    intro: 'Dans cette section, je vous propose une mise en lumière de mes compétences, bien que celles-ci soient en constante évolution.
-            Cliquez sur ces deux boutons pour les visualiser !'
-    outro: 'Les compétences sont une chose mais la motivation est ce qui permet de gravir les montagnes.'
+    intro: 'In this section, I aim to highlight my skills, even if they are constantly evolving.
+            Click on these two buttons to display charts !'
+    outro: 'Skills are great but motivation is what makes you climb mountains.'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'
     collaboration: 'Collaboration'
     soft: 'Soft skills'
     management: 'Management'
+    afterwork: 'Afterwork partner'
+    critical: 'Critical thinking'
+    problem: 'Problem solving'
+    adapt: 'Adaptability'
+    creative: 'Creativity'
+    curious: 'Curiosity'
+    project: 'Project management'
+    time: 'Time management'
+    team:  'Team management'
+    communication: 'Non-violent communication'
+    leader:  'Leadership'
+
 
 
   ## PROJETCS ##

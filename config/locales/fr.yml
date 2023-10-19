@@ -55,14 +55,24 @@ fr:
   skills:
     intro: 'Dans cette section, je vous propose une mise en lumière de mes compétences, bien que celles-ci soient en constante évolution.
             Cliquez sur ces deux boutons pour les visualiser !'
-    outro: 'Les compétences sont une chose mais la motivation est ce qui permet de gravir les montagnes.'
+    outro: 'Les compétences sont importantes mais la motivation est ce qui permet de gravir les montagnes.'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'
     collaboration: 'Collaboration'
     soft: 'Savoir-être'
     management: 'Management'
-
+    afterwork: 'Afterwork partner'
+    critical: 'Esprit critique'
+    problem: 'Pragmatique'
+    adapt: 'Adaptable'
+    creative: 'Creatif'
+    curious: 'Curieux'
+    project: 'Gestion de projet'
+    time: 'Ponctualité'
+    team:  "Gestion d'équipe"
+    communication: 'Communication non-violente'
+    leader:  'Leadership'
 
   ## PROJETCS ##
 

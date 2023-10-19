@@ -69,9 +69,12 @@ class PagesController < ApplicationController
   def soft
     {
       'title' => 'skills.soft',
-      'Punctuality' => 9,
-      'Afterwork partner' => 9,
-      'Leadership' => 7
+      'skills.afterwork' => 9,
+      'skills.critical' => 8,
+      'skills.problem' => 9,
+      'skills.adapt' => 7,
+      'skills.creative' => 5,
+      'skills.curious' => 6
     }
   end
 
@@ -82,7 +85,7 @@ class PagesController < ApplicationController
       'Gitlab / Github' => 8,
       'Jira' => 5,
       'Slack' => 8,
-      'Outlook' => 7,
+      'Outlook' => 6,
       'Discord' => 7
     }
   end
@@ -90,9 +93,11 @@ class PagesController < ApplicationController
   def management
     {
       'title' => 'skills.management',
-      'Project management' => 8,
-      'Team management' => 6,
-      'Non-violent communication' => 9
+      'skills.project' => 8,
+      'skills.time' => 9,
+      'skills.team' => 6,
+      'skills.communication' => 8,
+      'skills.leader' => 7
     }
   end
 end
