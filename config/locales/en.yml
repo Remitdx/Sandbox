@@ -20,6 +20,9 @@ en:
 
   vision:
     title: 'Vision'
+    intro: 'A web development project generally consists of three main phases.'
+    intro2: "Although you may be tempted to skip the steps, each one is important!"
+    intro3: "As soon as a step gets botched, the next one will inevitably be more complex..."
 
   conception:
     title: 'Conception'

@@ -28,10 +28,10 @@
               <div class='card-classic d-none' data-skills-target='classic'>
                 <div class='row'>
                   <% skill.each do |k,v| %>
-                    <div class='col-5 text-center'>
-                      <p><%= k %></p>
+                    <div class='col-6 text-center'>
+                      <p><%= k.include?('.') ? t(k) : k  %></p>
                     </div>
-                    <div class='col-7 position-relative'>
+                    <div class='col-6 position-relative'>
                       <div class='bar bar-bg'></div>
                       <div class='bar slider-<%= v %>'></div>
                     </div>
