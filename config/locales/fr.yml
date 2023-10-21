@@ -20,9 +20,9 @@ fr:
 
   vision:
     title: 'Vision'
-    intro: 'Un projet de développement se compose généralement de trois grandes phases.'
-    intro2: "Bien que l'on puisse être tenté de sauter les étapes, chacune est importante !"
-    intro3: "Si l'une d'entre elle est baclée, la suivante sera inévitablement complexifiée ..."
+    intro: "Un projet de développement se compose généralement de trois grandes phases.
+            Bien que l'on puisse être tenté de sauter les étapes, chacune est importante !
+            Si l'une d'entre elle est baclée, la suivante sera inévitablement complexifiée ..."
 
   conception:
     title: 'Conception'

@@ -55,6 +55,7 @@
 
 .h3-title {
   position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +87,7 @@
 }
 
 .quote-wrapper {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto 12px;
 
   i {
@@ -95,13 +96,12 @@
   }
 
   p {
+    text-shadow: 1px 1px $pure-white;
     font-family: var(--ff-handwrite);
     font-size: var(--fs-m);
-    width: 80%;
-    border-radius: 4px;
     text-align: center;
     font-style: italic;
-    margin: 0 auto;
+    margin: 0;
   }
 }
 
@@ -118,25 +118,15 @@ p {
 
   .h3-title {
     height: 5rem;
+    border-radius: 12px 0 12px 0;
 
     h3 {
-      font-family: var(--ff-handwrite);
       font-weight: 600;
-      letter-spacing: 2px;
-      font-size: var(--fs-m);
-      color: $deep-blue;
-      margin: 0;
     }
 
     h4 {
-      position: absolute;
-      font-family: var(--ff-handwrite);
-      font-style: italic;
       letter-spacing: 16px;
       font-size: var(--fs-l);
-      color: $pure-white;
-      opacity: 0.3;
-      margin: 0;
     }
   }
 }
