@@ -1,7 +1,3 @@
-section {
-  position: relative;
-}
-
 .section-1 {
   padding: 12px 0;
   background-color: $pure-white;
@@ -99,9 +95,10 @@ section {
   }
 
   p {
+    font-family: var(--ff-handwrite);
+    font-size: var(--fs-m);
     width: 80%;
     border-radius: 4px;
-    box-shadow: 0 0 20px 4px $sky-blue;
     text-align: center;
     font-style: italic;
     margin: 0 auto;
@@ -109,7 +106,7 @@ section {
 }
 
 p {
-  font-family: var(--ff-handwrite);
+  font-family: var(--ff-neutral);
   font-size: var(--fs-s);
   color: $deep-blue;
 }

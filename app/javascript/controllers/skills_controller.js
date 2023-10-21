@@ -10,8 +10,8 @@ export default class extends Controller {
     this.radarTargets.forEach(element => {
       element.classList.add('d-none');
     });
-    this.btnclassicTarget.classList.add('selected');
-    this.btnradarTarget.classList.remove('selected');
+    this.btnclassicTarget.classList.add('bg-sunset');
+    this.btnradarTarget.classList.remove('bg-sunset-r');
   }
 
   radar() {
@@ -21,7 +21,7 @@ export default class extends Controller {
     this.radarTargets.forEach(element => {
       element.classList.remove('d-none');
     });
-    this.btnclassicTarget.classList.remove('selected');
-    this.btnradarTarget.classList.add('selected');
+    this.btnclassicTarget.classList.remove('bg-sunset');
+    this.btnradarTarget.classList.add('bg-sunset-r');
   }
 }
