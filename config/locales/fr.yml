@@ -4,9 +4,9 @@ fr:
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Accueil'
-  title_skills: 'Compétences'
+  title_cv: 'Curriculum vitae'
   title_philosophy: 'Philosophie'
-  title_project: 'Mes Projets'
+  title_project: 'Projets'
   title_resources: 'Ressources'
 
   ## PHILOSOPHY ##
@@ -49,13 +49,13 @@ fr:
     gears: "Le design n'est pas seulement à quoi ça ressemble [...]. Le design, c'est comment ça fonctionne. - Steve Jobs"
     civil_engineer: "J'étais ingénieur en construction avant ma reconversion.
                     Par chance, les applications Web consistent également à assembler des briques !"
-    freedom: "Rien n'est plus contagieux que la liberté."
 
   button:
     build_app: 'Créer une app'
 
-  ## SKILLS ##
+  ## CURRICULUM VITAE ##
   skills:
+    title: 'Compétences'
     intro: 'Dans cette section, je vous propose une mise en lumière de mes compétences, bien que celles-ci soient en constante évolution.
             Cliquez sur ces deux boutons pour les visualiser !'
     outro: 'Les compétences sont importantes mais la motivation est ce qui permet de gravir les montagnes.'

@@ -12,9 +12,6 @@ class PagesController < ApplicationController
   def projects
   end
 
-  def resources
-  end
-
   def contact
   end
 

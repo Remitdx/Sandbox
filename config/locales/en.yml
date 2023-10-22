@@ -4,9 +4,9 @@ en:
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Home'
-  title_skills: 'Skills'
+  title_cv: 'Curriculum vitae'
   title_philosophy: 'Philosophy'
-  title_project: 'My Projects'
+  title_project: 'Projects'
   title_resources: 'Resources'
 
   ## PHILOSOPHY ##
@@ -48,13 +48,13 @@ en:
   quote:
     gears:
     civil_engineer: 'I use to be a civil engineer and fortunately nowadays web applications are all about putting bricks together !'
-    freedom: 'Freedom is inside of you. You just need to unlock it.'
 
   button:
     build_app: 'Build app !'
 
-  ## SKILLS ##
+  ## CURRICULUM VITAE ##
   skills:
+    title: 'Skills'
     intro: 'In this section, I aim to highlight my skills, even if they are constantly evolving.
             Click on these two buttons to display charts !'
     outro: 'Skills are great but motivation is what makes you climb mountains.'

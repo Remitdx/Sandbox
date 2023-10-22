@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     get "philosophy", to: 'pages#philosophy'
     get "projects", to: "pages#projects"
     get "projects/cosmonaut", to: "pages#cosmonaut"
-    get "resources", to: "pages#resources"
     get "contact", to: "pages#contact"
   end
 end

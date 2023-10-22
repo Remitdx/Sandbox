@@ -13,7 +13,9 @@
       </div>
       <p><%= t('intro.part1') %></p>
       <p><%= t('intro.part2') %></p>
-      <%= render 'avatar' %>
+      <div class="my-3">
+        <%= render 'avatar' %>
+      </div>
       <p><%= t('intro.part3') %></p>
     </div>
   </section>
@@ -44,7 +46,7 @@
             <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
-        <div class='col-6 col-md-5 order-2 order-md-2'>
+        <div class='my-3 col-6 col-md-5 order-2 order-md-2'>
           <%= render 'gears' %>
         </div>
         <div class='col-12 col-md-6 order-3 order-md-4 d-flex flex-column justify-content-between'>
@@ -65,7 +67,7 @@
             <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
-        <div class='col-8 col-md-6 order-4 order-md-3'>
+        <div class='my-3 col-8 col-md-6 order-4 order-md-3'>
           <%= render 'wall' %>
         </div>
         <div class='col-12 order-5 order-md-5'>
@@ -79,13 +81,8 @@
             <p><%= t('lifecycle.step3') %></p>
           </div>
         </div>
-        <div class='col-12 order-last order-md-last'>
+        <div class='my-3 col-12 order-last order-md-last'>
           <%= render 'van' %>
-          <div class="d-flex flex-column quote-wrapper">
-            <i class='fa-solid fa-quote-left'></i>
-            <p><%= t('quote.freedom') %></p>
-            <i class='fa-solid fa-quote-right align-self-end'></i>
-          </div>
         </div>
       </div>
     </div>

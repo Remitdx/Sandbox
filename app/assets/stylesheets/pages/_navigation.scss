@@ -71,7 +71,6 @@
 
       h2 {
         color: $deep-blue;
-        margin: 0;
         font-size: var(--fs-m);
         font-family: var(--ff-handwrite);
       }
@@ -130,7 +129,6 @@
     .nav-button {
       width: 4vw;
       height: 4vw;
-      margin-bottom: 4px;
       cursor: pointer;
 
       &:hover {
@@ -157,7 +155,6 @@
 
       h2 {
         color: $deep-blue;
-        margin: 0;
       }
     }
   }

@@ -1,9 +1,15 @@
+body {
+  h1, h2, h3, h4, p {
+    margin: 0;
+  }
+}
+
 .section-1 {
-  padding: 12px 0;
+  padding: 1rem 0;
   background-color: $pure-white;
 }
 .section-2 {
-  padding: 12px 0;
+  padding: 1rem 0;
   background-color: $cream-white;
 }
 
@@ -20,7 +26,6 @@
     letter-spacing: 1px;
     font-size: var(--fs-xl);
     color: $deep-blue;
-    margin: 0;
   }
 }
 
@@ -38,7 +43,6 @@
     letter-spacing: 10px;
     font-size: var(--fs-l);
     color: $deep-blue;
-    margin: 0;
   }
 
   span {
@@ -55,6 +59,7 @@
 
 .h3-title {
   position: relative;
+  white-space: nowrap;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -62,7 +67,7 @@
   background: $sky-blue;
   height: 4rem;
   width: 100%;
-  margin-bottom: 12px;
+  margin: 1rem 0;
 
   h4 {
     font-family: var(--ff-handwrite);
@@ -72,7 +77,7 @@
     font-size: var(--fs-xl);
     color: $pure-white;
     opacity: 0.2;
-    margin: 0;
+    text-overflow: clip;
   }
 
   h3 {
@@ -82,26 +87,24 @@
     letter-spacing: 2px;
     font-size: var(--fs-m);
     color: $deep-blue;
-    margin: 0;
   }
 }
 
 .quote-wrapper {
   max-width: 80%;
-  margin: 0 auto 12px;
+  margin: 0 auto;
 
   i {
     color: $deep-blue;
-    font-size: var(--fs-m);
+    font-size: var(--fs-s);
   }
 
   p {
     text-shadow: 1px 1px $pure-white;
     font-family: var(--ff-handwrite);
-    font-size: var(--fs-m);
+    font-size: var(--fs-s);
     text-align: center;
     font-style: italic;
-    margin: 0;
   }
 }
 
