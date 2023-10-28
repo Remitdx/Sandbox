@@ -73,8 +73,20 @@ en:
     project: 'Project management'
     time: 'Time management'
     team:  'Team management'
-    communication: 'Non-violent communication'
+    communication: 'Communication'
     leader:  'Leadership'
+
+  education:
+    title: 'Education'
+
+  workexp:
+    title: 'Work experience'
+
+  language:
+    title: 'Languages'
+
+  interest:
+    title: "hobby"
 
 
 
