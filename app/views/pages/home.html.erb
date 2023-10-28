@@ -1,4 +1,7 @@
 <nav>
-  <%= render "navigation"  %>
+  <%= render 'components/navigation'  %>
 </nav>
-<%= render "banner" %>
+<main>
+  <%= render 'banner' %>
+  <%= render 'components/audio_pannel', music: 'nature-theme.mp3' %>
+</main>

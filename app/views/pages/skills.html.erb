@@ -1,6 +1,6 @@
 <main>
   <nav>
-    <%= render 'navigation'  %>
+    <%= render 'components/navigation'  %>
   </nav>
   <div class='h1-title'>
     <h1><%= t('title_cv') %></h1>
@@ -57,7 +57,7 @@
             </div>
           <% end %>
         </div>
-        <div class="d-flex flex-column quote-wrapper">
+        <div class="mt-3 d-flex flex-column quote-wrapper">
           <i class='fa-solid fa-quote-left align-self-start'></i>
           <p><%= t('skills.outro') %></p>
           <i class='fa-solid fa-quote-right align-self-end'></i>
@@ -69,9 +69,33 @@
     <div class='container'>
       <div class='h2-title'>
         <span></span>
-        <h2>Curriculum vitae</h2>
+        <h2><%= t('education.title') %></h2>
       </div>
       <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
+    </div>
+  </section>
+  <section class='section-1'>
+    <div class='container'>
+      <div class='h2-title'>
+        <span></span>
+        <h2><%= t('workexp.title') %></h2>
+      </div>
+    </div>
+  </section>
+  <section class='section-2'>
+    <div class='container'>
+      <div class='h2-title'>
+        <span></span>
+        <h2><%= t('language.title') %></h2>
+      </div>
+    </div>
+  </section>
+  <section class='section-1'>
+    <div class='container'>
+      <div class='h2-title'>
+        <span></span>
+        <h2><%= t('interest.title') %></h2>
+      </div>
     </div>
   </section>
 </main>

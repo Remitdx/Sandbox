@@ -77,6 +77,18 @@ fr:
     communication: 'Communication non-violente'
     leader:  'Leadership'
 
+  education:
+    title: 'Formation'
+
+  workexp:
+    title: 'Parcours professionnel'
+
+  language:
+    title: 'Langues'
+
+  interest:
+    title: "Centres d'intérêt"
+
   ## PROJETCS ##
 
 
