@@ -1,6 +1,8 @@
 en:
   ## HOME ##
   title: 'Engineer and full-stack developer'
+  age: 'years old'
+
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Home'
@@ -8,6 +10,11 @@ en:
   title_philosophy: 'Philosophy'
   title_project: 'Projects'
   title_resources: 'Resources'
+
+  ## FOOTER ##
+  footer:
+    madeby: 'Made by myself'
+    cgu: 'Conditions of use'
 
   ## PHILOSOPHY ##
   intro:
@@ -86,7 +93,7 @@ en:
     title: 'Languages'
 
   interest:
-    title: "hobby"
+    title: "Hobby"
 
 
 

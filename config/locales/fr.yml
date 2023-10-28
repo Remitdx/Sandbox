@@ -1,6 +1,7 @@
 fr:
   ## HOME ##
   title: 'Ingénieur et développeur full-stack'
+  age: 'ans'
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Accueil'
@@ -8,6 +9,11 @@ fr:
   title_philosophy: 'Philosophie'
   title_project: 'Projets'
   title_resources: 'Ressources'
+
+  ## FOOTER ##
+  footer:
+    madeby: 'Réalisé par mes soins'
+    cgu: 'Mentions légales'
 
   ## PHILOSOPHY ##
   intro:

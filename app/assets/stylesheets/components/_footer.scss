@@ -1,0 +1,11 @@
+.footer {
+  background: $sky_blue;
+  min-height: 5vh;
+}
+
+
+@media (min-width: 40em) {
+  .footer {
+    min-height: 8vh;
+  }
+}

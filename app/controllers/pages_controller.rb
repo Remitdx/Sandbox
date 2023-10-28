@@ -1,8 +1,9 @@
 class PagesController < ApplicationController
   def home
+    @age = calculate_age
   end
 
-  def skills
+  def cv
     @skills = [back, front, devops, soft, collaboration, management]
   end
 
@@ -22,6 +23,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def calculate_age
+    ((Time.now - Time.new(1991, 7, 20))/31557600).floor
+  end
 
   def back
     {
