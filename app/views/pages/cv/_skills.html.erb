@@ -1,0 +1,58 @@
+<div class='container text-center'>
+  <div class='h2-title'>
+    <span></span>
+    <h2><%= t('skills.title') %></h2>
+  </div>
+  <div data-controller='skills'>
+    <p><%= t('skills.intro') %></p>
+    <div class='d-flex justify-content-center'>
+      <p class='btn-big btn-white' data-skills-target='btnclassic' data-action='click->skills#classic'>Classic</p>
+      <p class='btn-big btn-white' data-skills-target='btnradar' data-action='click->skills#radar'>Radar</p>
+    </div>
+    <div class='row'>
+      <% @skills.each do |skill| %>
+        <div class='col-12 col-md-4'>
+          <div class='h3-title'>
+            <h4><%= t(skill['title']) %></h4>
+            <h3><%= t(skill['title']) %></h3>
+            <% skill.delete('title')  %>
+          </div>
+          <div class='card-classic d-none' data-skills-target='classic'>
+            <div class='row'>
+              <% skill.each do |k,v| %>
+                <div class='col-6 text-center'>
+                  <p><%= k.include?('.') ? t(k) : k  %></p>
+                </div>
+                <div class='col-6 position-relative'>
+                  <div class='bar bar-bg'></div>
+                  <div class='bar slider-<%= v %>'></div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class='card-radar d-none' data-skills-target='radar'>
+            <% for i in 1..5 do %>
+              <div class='radar-bg-<%= i %>'></div>
+            <% end %>
+            <% j = 1 %>
+            <% polygon = [] %>
+            <% skill.each do |k,v| %>
+              <% point = [((Math::cos(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%', ((Math::sin(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%'] %>
+              <div class='label-<%= skill.length %>-<%= j %>'>
+                <p><%= k.include?('.') ? t(k) : k %></p>
+              </div>
+              <% polygon << point.join(' ')  %>
+              <% j += 1 %>
+            <% end %>
+            <div class="polygon" style='clip-path: polygon(<%= polygon.join(', ') %>)'></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="mt-3 d-flex flex-column quote-wrapper">
+      <i class='fa-solid fa-quote-left align-self-start'></i>
+      <p><%= t('skills.outro') %></p>
+      <i class='fa-solid fa-quote-right align-self-end'></i>
+    </div>
+  </div>
+</div>

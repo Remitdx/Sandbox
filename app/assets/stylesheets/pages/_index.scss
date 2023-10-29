@@ -1,10 +1,8 @@
 // Import page-specific CSS files here.
-@import "avatar";
-@import "banner";
-@import 'causmonaut';
-@import "gears";
-@import "home";
-@import 'philosophy';
-@import 'skills';
-@import "van";
-@import "wall";
+@import 'cv/index';
+@import 'home/index';
+@import 'philosophy/index';
+
+
+// TODO move this stylesheet
+@import 'cosmonaut';
