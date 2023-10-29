@@ -4,7 +4,7 @@ RSpec.describe PagesController do
   describe '#home' do
     subject(:home) { get :home }
 
-    before { :home }
+    before(:each) { :home }
 
     it { is_expected.to have_http_statut(:found) }
     it { expect().to render(banner) }
