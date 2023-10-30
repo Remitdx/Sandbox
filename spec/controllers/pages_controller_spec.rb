@@ -4,12 +4,30 @@ RSpec.describe PagesController do
   describe '#home' do
     subject(:home) { get :home }
 
-    before(:each) { :home }
+    it { expect(response.status).to eq(200) }
+  end
 
-    it { is_expected.to have_http_statut(:found) }
-    it { expect().to render(banner) }
-    it { expect().to render(navigation) }
-    it { expect().to render(footer) }
-    it { expect(age).to be within(30..77) }
+  describe '#cv' do
+    subject(:cv) { get :cv }
+
+    it { expect(response.status).to eq(200) }
+  end
+
+  describe '#philosophy' do
+    subject(:philosophy) { get :philosophy }
+
+    it { expect(response.status).to eq(200) }
+  end
+
+  describe '#projects' do
+    subject(:projects) { get :projects }
+
+    it { expect(response.status).to eq(200) }
+  end
+
+  describe '#contact' do
+    subject(:contact) { get :contact }
+
+    it { expect(response.status).to eq(200) }
   end
 end

@@ -10,7 +10,7 @@
       <p class='btn-big btn-white' data-skills-target='btnradar' data-action='click->skills#radar'>Radar</p>
     </div>
     <div class='row'>
-      <% @skills.each do |skill| %>
+      <% skills.each do |skill| %>
         <div class='col-12 col-md-4'>
           <div class='h3-title'>
             <h4><%= t(skill['title']) %></h4>
