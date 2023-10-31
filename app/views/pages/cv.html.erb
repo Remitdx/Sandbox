@@ -14,6 +14,7 @@
         <span></span>
         <h2><%= t('education.title') %></h2>
       </div>
+      <%= render 'pages/cv/education', education: @education %>
       <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
     </div>
   </section>
@@ -31,6 +32,7 @@
         <span></span>
         <h2><%= t('language.title') %></h2>
       </div>
+      <%= render 'pages/cv/languages', languages: @languages %>
     </div>
   </section>
   <section class='section-1'>
