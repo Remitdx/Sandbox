@@ -1,0 +1,36 @@
+.timeline {
+  margin: 1rem auto;
+  max-width: 80%;
+
+  .items-wrapper {
+    display: flex;
+
+    .item {
+      position: relative;
+      width: 100%;
+    }
+
+    .left {
+      border-right: 2px solid $deep-blue;
+      padding: 2rem 2rem 2rem 0;
+      text-align: end;
+    }
+
+    .left::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $deep-blue;
+      top: 2.5rem;
+      right: -6px;
+    }
+
+    .right {
+      border-left: 2px solid $deep-blue;
+      padding: 2rem 0 2rem 2rem;
+      text-align: start;
+    }
+  }
+}

@@ -11,10 +11,16 @@
         <span></span>
         <h2>Professional</h2>
       </div>
-      <%= link_to 'Centre Mormal', 'https://centremormal.fr/', target: :_blank %>
-      <p>Site vitrine - conception et développement en tant que freelance - 2022</p>
-      <%= link_to 'Mon Projet Anah', 'https://monprojet.anah.gouv.fr/', target: :_blank %>
-      <p>Plateforme digitale- développement fullstack en équipe de 15 en méthode agile - 2023</p>
+      <%= link_to 'https://centremormal.fr/', target: :_blank do %>
+        <div class="card-project cm">
+          <p>Site vitrine - conception et développement en tant que freelance - 2022</p>
+        </div>
+      <% end %>
+      <%= link_to 'https://monprojet.anah.gouv.fr/', target: :_blank do %>
+        <div class="card-project mpa">
+          <p>Plateforme digitale- développement fullstack en équipe de 15 en méthode agile - 2023</p>
+        </div>
+      <% end %>
     </div>
   </section>
   <section class="section-2">

@@ -5,6 +5,7 @@
   <div class='h1-title'>
     <h1><%= t('title_cv') %></h1>
   </div>
+  <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
   <section class='section-1'>
     <%= render 'pages/cv/skills', skills: @skills %>
   </section>
@@ -15,7 +16,6 @@
         <h2><%= t('education.title') %></h2>
       </div>
       <%= render 'pages/cv/education', education: @education %>
-      <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
     </div>
   </section>
   <section class='section-1'>
