@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   def cv
     @skills = Skill.new.my_skills
     @education = Education.new.my_education
+    @experiences = Experience.new.my_experiences
     @languages = Language.new.my_languages
   end
 

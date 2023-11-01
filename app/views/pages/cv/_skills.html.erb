@@ -13,15 +13,15 @@
       <% skills.each do |skill| %>
         <div class='col-12 col-md-4'>
           <div class='h3-title'>
-            <h4><%= t(skill['title']) %></h4>
-            <h3><%= t(skill['title']) %></h3>
+            <h4><%= skill['title'] %></h4>
+            <h3><%= skill['title'] %></h3>
             <% skill.delete('title')  %>
           </div>
           <div class='card-classic d-none' data-skills-target='classic'>
             <div class='row'>
               <% skill.each do |k,v| %>
                 <div class='col-6 text-center'>
-                  <p><%= k.include?('.') ? t(k) : k  %></p>
+                  <p><%= k %></p>
                 </div>
                 <div class='col-6 position-relative'>
                   <div class='bar bar-bg'></div>
@@ -39,7 +39,7 @@
             <% skill.each do |k,v| %>
               <% point = [((Math::cos(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%', ((Math::sin(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%'] %>
               <div class='label-<%= skill.length %>-<%= j %>'>
-                <p><%= k.include?('.') ? t(k) : k %></p>
+                <p><%= k %></p>
               </div>
               <% polygon << point.join(' ')  %>
               <% j += 1 %>

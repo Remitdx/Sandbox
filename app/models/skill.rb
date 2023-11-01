@@ -12,7 +12,7 @@ class Skill
 
   def back
     {
-      'title' => 'skills.back',
+      'title' => I18n.t('skills.back'),
       'Ruby' => 8,
       'Rails' => 9,
       'ActiveRecord' => 7,
@@ -25,7 +25,7 @@ class Skill
 
   def front
     {
-      'title' => 'skills.front',
+      'title' => I18n.t('skills.front'),
       'HTML' => 9,
       'CSS' => 8,
       'Scss' => 7,
@@ -40,7 +40,7 @@ class Skill
 
   def devops
     {
-      'title' => 'skills.devops',
+      'title' => I18n.t('skills.devops'),
       'Gitlab CI' => 4,
       'Docker' => 2,
       'Kubernetes' => 1,
@@ -52,19 +52,19 @@ class Skill
 
   def soft
     {
-      'title' => 'skills.soft',
-      'skills.afterwork' => 9,
-      'skills.critical' => 8,
-      'skills.problem' => 9,
-      'skills.adapt' => 7,
-      'skills.creative' => 5,
-      'skills.curious' => 6
+      'title' => I18n.t('skills.soft'),
+      I18n.t('skills.afterwork') => 9,
+      I18n.t('skills.critical') => 8,
+      I18n.t('skills.problem') => 9,
+      I18n.t('skills.adapt') => 7,
+      I18n.t('skills.creative') => 5,
+      I18n.t('skills.curious') => 6
     }
   end
 
   def collaboration
     {
-      'title' => 'skills.collaboration',
+      'title' => I18n.t('skills.collaboration'),
       'Git' => 6,
       'Gitlab / Github' => 8,
       'Jira' => 5,
@@ -76,12 +76,12 @@ class Skill
 
   def management
     {
-      'title' => 'skills.management',
-      'skills.project' => 8,
-      'skills.time' => 9,
-      'skills.team' => 6,
-      'skills.communication' => 8,
-      'skills.leader' => 7
+      'title' => I18n.t('skills.management'),
+      I18n.t('skills.project') => 8,
+      I18n.t('skills.time') => 9,
+      I18n.t('skills.team') => 6,
+      I18n.t('skills.communication') => 8,
+      I18n.t('skills.leader') => 7
     }
   end
 end

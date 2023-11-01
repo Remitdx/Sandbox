@@ -85,12 +85,40 @@ fr:
 
   education:
     title: 'Formation'
+    bac: 'Baccalauréat'
+    hei: "Hautes Etudes d'Ingénieur"
+    wagon: 'Le Wagon bootcamp'
 
   workexp:
     title: 'Parcours professionnel'
+    first:
+      job: 'Ingénieur commercial'
+      description: 'Développer un outil de rédaction de documents contractuels (Word, Excel, programmation VBA).'
+      place: 'Lille - France'
+    second:
+      job: 'Ingénieur travaux'
+      description: "Piloter les travaux CVSE sur le chantier d'une extension de l'aéroport de Genève."
+      place: 'Genève - Suisse'
+    third:
+      job: "Ingénieur d'affaires"
+      description: "Gérer des projets de construction de datacenters (Hôpital d'Annecy, Ville de Lausanne, SOS Surveillance)."
+      place: 'Lyon/Lausanne - France/Suisse'
+    fourth:
+      job: 'Chef de projet adjoint'
+      description: "Co-piloter le projet de construction de la Vaudoise aréna (223M CHF) et représenter les intérêts du maître d'ouvrage."
+      place: 'Lausanne - Suisse'
+    fifth:
+      job: 'Développeur full-stack'
+      description: "Conception et développement de sites web vitrines ou dynamiques. Conception d'API. Testing. Methode agile."
+      place: 'Mobile et/ou à distance'
 
   language:
     title: 'Langues'
+    french: 'Français'
+    english: 'Anglais'
+    german: 'Allemand'
+    italian: 'Italien'
+    spanish: 'Espagnol'
 
   interest:
     title: "Centres d'intérêt"

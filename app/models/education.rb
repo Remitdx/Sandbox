@@ -6,9 +6,9 @@ class Education
 
   def my_education
     {
-      2009 => 'education.bac',
-      2014 => 'education.hei',
-      2021 => 'education.wagon'
+      2009 => I18n.t('education.bac'),
+      2014 => I18n.t('education.hei'),
+      2021 => I18n.t('education.wagon')
     }
   end
 end
