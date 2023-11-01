@@ -1,9 +1,10 @@
 .timeline {
   margin: 1rem auto;
-  max-width: 80%;
+  max-width: 100%;
 
   .items-wrapper {
     display: flex;
+    align-items: stretch;
 
     .item {
       position: relative;
@@ -31,6 +32,13 @@
       border-left: 2px solid $deep-blue;
       padding: 2rem 0 2rem 2rem;
       text-align: start;
+    }
+
+    .card-timeline {
+      border: 1px solid $deep-blue;
+      border-radius: 4px;
+      padding: 4px;
+      text-align: center;
     }
   }
 }
