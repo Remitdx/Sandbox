@@ -1,3 +1,33 @@
-<% experiences.each do |k,v| %>
-  <p><%= k %><%= v %></p>
-<% end %>
+<div class='timeline'>
+  <% i = 1 %>
+  <% experiences.each do |k,v| %>
+    <div class='items-wrapper'>
+      <% if i.odd? %>
+        <div class='item left'>
+          <p><%= v['start'].year %></p>
+        </div>
+        <div class='item right'>
+          <div class="card-work">
+            <h5><%= v['job'] %></h5>
+            <h5><%= v['company'] %></h5>
+            <h6><%= v['place'] %></h6>
+            <p><%= v['description'] %></p>
+          </div>
+        </div>
+      <% else %>
+        <div class='item left'>
+          <div class="card-work">
+            <h5><%= v['job'] %></h5>
+            <h5><%= v['company'] %></h5>
+            <h6><%= v['place'] %></h6>
+            <p><%= v['description'] %></p>
+          </div>
+        </div>
+        <div class='item right'>
+          <p><%= v['start'].year %></p>
+        </div>
+      <% end %>
+    </div>
+    <% i += 1 %>
+  <% end %>
+</div>
