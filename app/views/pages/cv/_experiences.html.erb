@@ -1,4 +1,4 @@
-<div data-controller='work' data-action='scroll->work#reveal' class='timeline'>
+<div class='timeline'>
   <% i = 1 %>
   <% experiences.each do |k,v| %>
     <div class='items-wrapper'>
@@ -6,21 +6,25 @@
         <div class='item left'>
           <p><%= v['start'].year %></p>
         </div>
-        <div class='item right'>
+        <div data-controller='work' data-action='click->work#toggle' class='item right'>
           <div data-work-target='card' class="card-work">
             <h5><%= v['job'] %></h5>
+            <i data-work-target='down' class="fa-solid fa-circle-chevron-down"></i>
             <h5><%= v['company'] %></h5>
             <h6><%= v['place'] %></h6>
             <p><%= v['description'] %></p>
+            <i data-work-target='up' class="fa-solid fa-circle-chevron-up d-none"></i>
           </div>
         </div>
       <% else %>
-        <div class='item left'>
+        <div data-controller='work' data-action='click->work#toggle' class='item left'>
           <div data-work-target='card' class="card-work">
             <h5><%= v['job'] %></h5>
+            <i data-work-target='down' class="fa-solid fa-circle-chevron-down"></i>
             <h5><%= v['company'] %></h5>
             <h6><%= v['place'] %></h6>
             <p><%= v['description'] %></p>
+            <i data-work-target='up' class="fa-solid fa-circle-chevron-up d-none"></i>
           </div>
         </div>
         <div class='item right'>
