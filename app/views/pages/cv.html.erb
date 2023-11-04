@@ -40,16 +40,9 @@
     <div class='container'>
       <div class='h2-title'>
         <span></span>
-        <h2><%= t('interest.title') %></h2>
+        <h2><%= t('hobby.title') %></h2>
       </div>
-      <i class="fa-solid fa-route"></i>
-      <i class="fa-solid fa-mountain-sun"></i>
-      <i class="fa-solid fa-person-hiking"></i>
-      <i class="fa-solid fa-hand-fist"></i>
-      <i class="fa-solid fa-gamepad"></i>
-      <i class="fa-solid fa-leaf"></i>
-      <i class="fa-solid fa-basketball"></i>
-      <i class="fa-solid fa-handshake-angle"></i>
+      <%= render 'pages/cv/hobbies', hobbies: @hobbies %>
     </div>
   </section>
 </main>

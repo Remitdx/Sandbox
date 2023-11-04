@@ -1,0 +1,70 @@
+.wheel-wrapper {
+  position: relative;
+
+  .wheel {
+    position: relative;
+    background-color: $cream-white;
+    border: 1px solid $deep-blue;
+    border-radius: 50%;
+    width: 90%;
+    aspect-ratio: 1/1;
+    margin: 1rem auto;
+    rotate: 1deg;
+    transition: transform 0.4s ease-in-out;
+
+    .minilogo {
+      background-color: $sky-blue;
+      border-radius: 50%;
+      position: absolute;
+      padding: 8px;
+
+      i {
+        font-size: var(--fs-m);
+      }
+    }
+
+    @for $i from 1 through 8 {
+      .pos-#{$i} {
+        --a: calc(360deg/8);
+        --r: 42%;
+        --x: calc(cos(var(--a)*#{$i})*var(--r));
+        --y: calc(sin(var(--a)*#{$i})*var(--r));
+        top: calc(50% + var(--y));
+        left: calc(50% + var(--x));
+        --angle: calc(var(--a)*#{$i} + 90deg);
+        transform: translate(-50%, -50%) rotateZ(var(--angle));
+      }
+    }
+  }
+
+  .text-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+
+    h5 {
+      font-size: var(--fs-m);
+      font-family: var(--ff-handwrite);
+    }
+
+    p {
+      font-family: var(--ff-neutral);
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .wheel-wrapper{
+
+    .wheel {
+      width: 85vh;
+    }
+
+    .text-area {
+      width: 60vh;
+    }
+  }
+}

@@ -8,6 +8,7 @@ class PagesController < ApplicationController
     @education = Education.new.my_education
     @experiences = Experience.new.my_experiences
     @languages = Language.new.my_languages
+    @hobbies = Hobby.new.my_hobbies
   end
 
   def philosophy

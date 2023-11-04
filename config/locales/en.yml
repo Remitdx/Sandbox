@@ -120,9 +120,32 @@ en:
     italian: 'Italian'
     spanish: 'Spanish'
 
-  interest:
+  hobby:
     title: "Hobby"
-
+    roadtrip:
+      title: 'Roadtrip'
+      description: "Avec ou sans mon van, j'adore partir à l'aventure, découvrir de nouveaux lieux au fil et faire de belles rencontres"
+    moutain:
+      title: 'Montagne'
+      description: '"La montagne, ça vous gagne !" Ce slogan est complétement valide, les apercevoir me donne toujours le sourire'
+    trail:
+      title: 'Trail running'
+      description:
+    politic:
+      title: 'Politique'
+      description:
+    videogames:
+      title: 'Jeux vidéo'
+      description:
+    ecology:
+      title: 'Ecologie'
+      description:
+    sports:
+      title: 'Sports'
+      description:
+    volonteering:
+      title: 'Bénévolats'
+      description:
 
 
   ## PROJETCS ##
