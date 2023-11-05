@@ -8,7 +8,8 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    const newAngle = (parseInt(angle.match(/-?\d*/)) - 45);
+    let newAngle = (parseInt(angle.match(/-?\d*/)) - 45);
+    newAngle = newAngle - newAngle % 45;
     this.wheelTarget.style.rotate = `${newAngle}deg`;
   }
 
@@ -27,7 +28,8 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    const newAngle = (parseInt(angle.match(/-?\d*/)) + 45);
+    let newAngle = (parseInt(angle.match(/-?\d*/)) + 45);
+    newAngle = newAngle - newAngle % 45;
     this.wheelTarget.style.rotate = `${newAngle}deg`;
   }
 
