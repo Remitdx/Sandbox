@@ -3,9 +3,7 @@
   <% steps.each do |k,v| %>
     <div class='items-wrapper'>
       <% if i.odd? %>
-        <div class='item left'>
-          <p><%= k %></p>
-        </div>
+        <div class='item left'></div>
         <div class='item right'>
           <div>
             <p><%= v %></p>
@@ -17,9 +15,7 @@
             <p><%= v %></p>
           </div>
         </div>
-        <div class='item right'>
-          <p><%= k %></p>
-        </div>
+        <div class='item right'></div>
       <% end %>
     </div>
     <% i += 1 %>

@@ -46,7 +46,7 @@ en:
     step4: 'Unit test/ Tests strategy'
     step5: 'Continuous integration'
 
-  lifecycle:
+  maintenance:
     title: "Maintenance"
     step1: 'Documentation'
     step2: 'Training / Customer support'

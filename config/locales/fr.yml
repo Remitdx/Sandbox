@@ -45,7 +45,7 @@ fr:
     step4: 'Tests unitaires / stratégie de tests'
     step5: 'Mise en production en continu'
 
-  lifecycle:
+  maintenance:
     title: "Maintenance"
     step1: 'Documentation'
     step2: 'Formation / accompagnement client'
