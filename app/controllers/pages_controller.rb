@@ -12,6 +12,9 @@ class PagesController < ApplicationController
   end
 
   def philosophy
+    @conception = Step.new.conception_steps
+    @development = Step.new.development_steps
+    @maintenance = Step.new.maintenance_steps
   end
 
   def projects

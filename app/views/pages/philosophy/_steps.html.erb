@@ -1,0 +1,27 @@
+<div class='timeline'>
+  <% i = 1 %>
+  <% steps.each do |k,v| %>
+    <div class='items-wrapper'>
+      <% if i.odd? %>
+        <div class='item left'>
+          <p><%= k %></p>
+        </div>
+        <div class='item right'>
+          <div>
+            <p><%= v %></p>
+          </div>
+        </div>
+      <% else %>
+        <div class='item left'>
+          <div>
+            <p><%= v %></p>
+          </div>
+        </div>
+        <div class='item right'>
+          <p><%= k %></p>
+        </div>
+      <% end %>
+    </div>
+    <% i += 1 %>
+  <% end %>
+</div>

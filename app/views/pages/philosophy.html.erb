@@ -34,60 +34,37 @@
             <h4><%= t('conception.title') %></h4>
             <h3><%= t('conception.title') %></h3>
           </div>
-          <div class="stepper-wrapper d-flex">
-            <div class="stepper p-3 d-flex flex-column justify-content-around">
-              <span class="btn btn-primary"></span>
-              <span class="btn btn-success"></span>
-              <span class="btn btn-warning"></span>
-              <span class="btn btn-danger"></span>
-            </div>
-            <div class="p-3 card-stepper">
-              <p><%= t('conception.step1') %></p>
-              <p><%= t('conception.step2') %></p>
-              <p><%= t('conception.step3') %></p>
-              <p><%= t('conception.step4') %></p>
-            </div>
-          </div>
+          <%= render 'pages/philosophy/steps', steps: @conception %>
+        </div>
+        <div class='my-3 col-8 col-md-5 order-2 order-md-2 d-flex flex-column justify-content-between'>
+          <%= render 'pages/philosophy/gears' %>
           <div class="d-flex flex-column quote-wrapper">
             <i class='fa-solid fa-quote-left'></i>
             <p><%= t('quote.gears') %></p>
             <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
-        <div class='my-3 col-6 col-md-5 order-2 order-md-2'>
-          <%= render 'pages/philosophy/gears' %>
-        </div>
         <div class='col-12 col-md-6 order-3 order-md-4 d-flex flex-column justify-content-between'>
           <div class='h3-title'>
             <h4><%= t('development.title') %></h4>
             <h3><%= t('development.title') %></h3>
           </div>
-          <div class="text-center">
-            <p><%= t('development.step1') %></p>
-            <p><%= t('development.step2') %></p>
-            <p><%= t('development.step3') %></p>
-            <p><%= t('development.step4') %></p>
-            <p><%= t('development.step5') %></p>
-          </div>
+          <%= render 'pages/philosophy/steps', steps: @development %>
+        </div>
+        <div class='my-3 col-10 col-md-6 order-4 order-md-3 d-flex flex-column justify-content-between'>
+          <%= render 'pages/philosophy/wall' %>
           <div class="d-flex flex-column quote-wrapper">
             <i class='fa-solid fa-quote-left'></i>
             <p><%= t('quote.civil_engineer') %></p>
             <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
-        <div class='my-3 col-8 col-md-6 order-4 order-md-3'>
-          <%= render 'pages/philosophy/wall' %>
-        </div>
         <div class='col-12 order-5 order-md-5'>
           <div class='h3-title'>
             <h4><%= t('lifecycle.title') %></h4>
             <h3><%= t('lifecycle.title') %></h3>
           </div>
-          <div class="text-center">
-            <p><%= t('lifecycle.step1') %></p>
-            <p><%= t('lifecycle.step2') %></p>
-            <p><%= t('lifecycle.step3') %></p>
-          </div>
+          <%= render 'pages/philosophy/steps', steps: @maintenance %>
         </div>
         <div class='my-3 col-12 order-last order-md-last'>
           <%= render 'pages/philosophy/van' %>
