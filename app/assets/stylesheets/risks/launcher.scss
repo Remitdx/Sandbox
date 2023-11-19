@@ -1,0 +1,30 @@
+.launcher {
+  height: 100vh;
+
+  .box {
+    border: 3px dashed black;
+    border-radius: 16px;
+    padding: 8px;
+    margin: 8px;
+  }
+
+  .h-35 { height: 35vh;}
+  .h-55 { height: 55vh;}
+
+  .player-select {
+    width: 100%;
+  }
+
+  .option-select {
+    width: 100%;
+  }
+
+  .map-select {
+    width: 80%;
+  }
+
+  .launch-select {
+    width: 20%;
+  }
+
+}
