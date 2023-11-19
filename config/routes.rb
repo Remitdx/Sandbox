@@ -9,5 +9,9 @@ Rails.application.routes.draw do
     get 'projects', to: 'pages#projects'
     get 'projects/cosmonaut', to: 'pages#cosmonaut'
     get 'contact', to: 'pages#contact'
+
+    scope '/projects' do
+      resources :risks, only: [:new, :create, :show]
+    end
   end
 end
