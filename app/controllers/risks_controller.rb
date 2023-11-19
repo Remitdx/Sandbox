@@ -8,6 +8,6 @@ class RisksController < ApplicationController
   end
 
   def show
-    @risk = Risk.find(params[:id])
+    @risk = RiskGame::Risk.find(params[:id])
   end
 end

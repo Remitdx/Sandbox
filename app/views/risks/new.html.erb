@@ -1,6 +1,6 @@
 <main class='launcher container text-center'>
   <h1>Risk new</h1>
-  <div class="d-flex h-35">
+  <div class='d-flex h-35'>
     <div class='box player-select'>
       <h2>Add players</h2>
     </div>
@@ -8,12 +8,12 @@
       <h2>Select options</h2>
     </div>
   </div>
-  <div class="d-flex h-55">
+  <div class='d-flex h-55'>
     <div class='box map-select'>
       <h2>Choose map</h2>
     </div>
-    <div class="box launch-select">
-      <%= link_to 'Lauch game', risks_path, data: { turbo_method: :post } %>
-    </div>
+    <%= link_to risks_path, class: 'box launch-select', data: { turbo_method: :post } do %>
+      <h2>Launch game</h2>
+    <% end %>
   </div>
 </main>
