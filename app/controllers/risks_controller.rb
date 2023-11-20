@@ -1,5 +1,7 @@
 class RisksController < ApplicationController
   def new
+    @players = RiskGame::Player.where(risk_id: params[:id])
+
   end
 
   def create

@@ -5,6 +5,7 @@ class CreateDices < ActiveRecord::Migration[7.0]
       t.integer :faces
       t.boolean :locked
       t.string :color
+      t.belongs_to :action, index: true
 
       t.timestamps
     end

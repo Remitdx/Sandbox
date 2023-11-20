@@ -4,6 +4,7 @@ class CreateTiles < ActiveRecord::Migration[7.0]
       t.string :field
       t.boolean :built
       t.string :resource
+      t.belongs_to :map, index: true
 
       t.timestamps
     end

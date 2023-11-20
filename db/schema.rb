@@ -16,8 +16,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
 
   create_table "actions", force: :cascade do |t|
     t.string "type"
+    t.bigint "unit_id"
+    t.bigint "tile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["tile_id"], name: "index_actions_on_tile_id"
+    t.index ["unit_id"], name: "index_actions_on_unit_id"
   end
 
   create_table "dices", force: :cascade do |t|
@@ -25,22 +29,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
     t.integer "faces"
     t.boolean "locked"
     t.string "color"
+    t.bigint "action_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["action_id"], name: "index_dices_on_action_id"
   end
 
   create_table "maps", force: :cascade do |t|
     t.string "weather"
     t.integer "maxplayer"
     t.integer "size"
+    t.bigint "risk_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["risk_id"], name: "index_maps_on_risk_id"
   end
 
   create_table "players", force: :cascade do |t|
     t.string "pseudo"
+    t.bigint "risk_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["risk_id"], name: "index_players_on_risk_id"
   end
 
   create_table "risks", force: :cascade do |t|
@@ -52,8 +62,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
     t.string "field"
     t.boolean "built"
     t.string "resource"
+    t.bigint "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["map_id"], name: "index_tiles_on_map_id"
   end
 
   create_table "units", force: :cascade do |t|
@@ -61,8 +73,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
     t.integer "health"
     t.integer "crit"
     t.integer "moral"
+    t.bigint "player_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_units_on_player_id"
   end
 
 end
