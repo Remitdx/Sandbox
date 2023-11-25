@@ -1,4 +1,4 @@
-module RiskGame
+module Games
   class Tile < ApplicationRecord
   end
 end

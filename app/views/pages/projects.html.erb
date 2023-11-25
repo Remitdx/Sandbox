@@ -29,8 +29,7 @@
         <span></span>
         <h2>Games</h2>
       </div>
-      <%= link_to 'Cosmonaut', projects_cosmonaut_path %>
-      <%= link_to 'Risk', new_risk_path %>
+      <%= link_to 'Risk', games_risks_path, data: { turbo_method: :post }  %>
     </div>
   </section>
 </main>

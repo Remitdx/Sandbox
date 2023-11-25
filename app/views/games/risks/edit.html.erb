@@ -3,8 +3,12 @@
   <div class='d-flex h-35'>
     <div class='box player-select'>
       <h2>Add players</h2>
-      <%= render 'players/index'%>
-      <%= render 'players/new' %>
+      <%= render 'games/players/index', players: @players %>
+      <% if @players.size < 4 %>
+        <%= render 'games/players/new', player: @player, risk: @risk %>
+      <% else %>
+        <p>La Partie est complète ! (4 joueurs maximum)</p>
+      <% end %>
     </div>
     <div class='box option-select'>
       <h2>Select options</h2>
@@ -14,7 +18,7 @@
     <div class='box map-select'>
       <h2>Choose map</h2>
     </div>
-    <%= link_to risks_path, class: 'box launch-select', data: { turbo_method: :post } do %>
+    <%= link_to games_risk_path(@risk), class: 'box launch-select', data: { 'turbo_method': :patch } do %>
       <h2>Launch game</h2>
     <% end %>
   </div>

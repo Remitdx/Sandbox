@@ -1,4 +1,4 @@
-module RiskGame
+module Games
   class Risk < ApplicationRecord
     has_many :players, dependent: :destroy
   end

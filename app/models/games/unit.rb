@@ -1,4 +1,4 @@
-module RiskGame
+module Games
   class Unit < ApplicationRecord
   end
 end

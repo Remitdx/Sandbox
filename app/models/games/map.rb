@@ -1,4 +1,4 @@
-module RiskGame
+module Games
   class Map < ApplicationRecord
   end
 end

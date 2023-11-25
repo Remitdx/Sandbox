@@ -7,11 +7,11 @@ Rails.application.routes.draw do
     get 'cv', to: 'pages#cv'
     get 'philosophy', to: 'pages#philosophy'
     get 'projects', to: 'pages#projects'
-    get 'projects/cosmonaut', to: 'pages#cosmonaut'
     get 'contact', to: 'pages#contact'
 
-    scope '/projects' do
-      resources :risks, only: [:new, :create, :show]
+    namespace :games do
+      resources :risks, only: [:create, :edit, :update, :show]
+      resources :players, only: [:create]
     end
   end
 end
