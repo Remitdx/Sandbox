@@ -1,5 +1,5 @@
-  <%= simple_form_for(player) do |f| %>
-    <%= f.input :pseudo %>
-    <%= f.hidden_field :risk_id, :value => risk.id %>
-    <%= f.submit "Add", class:"btn btn-primary" %>
-  <% end %>
+<%= simple_form_for(player) do |f| %>
+  <%= f.input :pseudo %>
+  <%= f.hidden_field :risk_id, :value => risk.id %>
+  <%= f.submit "Add", class:"btn btn-primary" %>
+<% end %>

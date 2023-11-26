@@ -1,5 +1,6 @@
 module Games
   class Player < ApplicationRecord
+    has_many :units, dependent: :destroy
     belongs_to :risk
 
     validates :pseudo,

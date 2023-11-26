@@ -1,0 +1,5 @@
+<%= simple_form_for(map) do |f| %>
+  <%= f.hidden_field :size, :value => risk.players.count %>
+  <%= f.hidden_field :risk_id, :value => risk.id %>
+  <%= f.submit "Generate map", class:"btn btn-primary" %>
+<% end %>

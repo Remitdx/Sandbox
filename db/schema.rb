@@ -54,6 +54,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
   end
 
   create_table "risks", force: :cascade do |t|
+    t.integer "mode"
+    t.integer "complexity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
