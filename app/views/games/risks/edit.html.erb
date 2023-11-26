@@ -1,7 +1,7 @@
-<main class='launcher container text-center'>
+<main data-controller='launcher' class='launcher container text-center'>
   <div class='d-flex h-35'>
-    <div class='box option-select'>
-      <h2>Select options</h2>
+    <div class='box option-select d-flex flex-column justify-content-around'>
+      <%= render 'options' %>
     </div>
     <div class='box player-select'>
       <h2>Add players</h2>

@@ -1,0 +1,11 @@
+<h2>Select options</h2>
+<div class='d-flex justify-content-center'>
+  <% Games::Risk::MODE.each do |k, v| %>
+    <span data-action='click->launcher#select' class='btn btn-primary m-1'><%= v %></span>
+  <% end%>
+</div>
+<div class='d-flex justify-content-center'>
+  <% Games::Risk::COMPLEXITY.each do |k, v| %>
+    <span class='btn btn-primary m-1'><%= v %></span>
+  <% end%>
+</div>
