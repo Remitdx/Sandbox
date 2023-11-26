@@ -1,6 +1,18 @@
 .tile {
   display: inline-block;
   border: 1px solid black;
-  width: 12px;
+  width: 5%;
   aspect-ratio: 1/1;
+}
+
+.woods {
+  background-color: rgb(5, 94, 64);
+}
+
+.field {
+  background-color: rgb(248, 236, 69);
+}
+
+.mountains {
+  background-color: rgb(115, 121, 119);
 }

@@ -6,7 +6,7 @@ module Games
     def generate_tiles
       n = size * rand(12..15)
       n.times do
-        Games::Tile.create(map_id: self.id )
+        Games::Tile.create(map_id: self.id, field: Games::Tile::FIELD[[1,2,3].sample])
       end
     end
   end
