@@ -7,7 +7,7 @@
       <h2>Add players</h2>
       <%= render 'games/players/index', players: @players %>
       <% if @players.size < 4 %>
-        <%= render 'games/players/new', player: @player, risk: @risk %>
+        <%= render 'games/players/new', player: @empty_player, risk: @risk %>
       <% else %>
         <p>La Partie est complète ! (4 joueurs maximum)</p>
       <% end %>
@@ -16,7 +16,8 @@
   <div class='d-flex h-65'>
     <div class='box map-select'>
       <h2>Choose map</h2>
-      <%= render 'games/maps/new', map: @map, risk: @risk %>
+      <%= render 'games/maps/new', map: @empty_map, risk: @risk %>
+      <%= render 'games/maps/show', map: @map if @map.present? %>
     </div>
     <%= link_to games_risk_path(@risk), class: 'box launch-select', data: { 'turbo_method': :patch } do %>
       <h2>Launch game</h2>

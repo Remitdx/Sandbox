@@ -7,8 +7,9 @@ class Games::RisksController < ApplicationController
   def edit
     @risk = Games::Risk.find_by(id: params[:id])
     @players = Games::Player.where(risk_id: params[:id])
-    @player = Games::Player.new
-    @map = Games::Map.new
+    @map = Games::Map.where(risk_id: params[:id]).first
+    @empty_player = Games::Player.new
+    @empty_map = Games::Map.new
   end
 
   def update
@@ -18,5 +19,6 @@ class Games::RisksController < ApplicationController
 
   def show
     @risk = Games::Risk.find(params[:id])
+    @map = Games::Map.find_by(risk_id: params[:id])
   end
 end
