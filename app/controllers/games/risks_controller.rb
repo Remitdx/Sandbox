@@ -14,6 +14,7 @@ class Games::RisksController < ApplicationController
 
   def update
     # TODO: save games options
+    # TODO: risk.valid?
     redirect_to games_risk_path(params[:id])
   end
 
