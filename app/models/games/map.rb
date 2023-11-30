@@ -4,7 +4,7 @@ module Games
     belongs_to :risk
 
     def generate_tiles
-      n = size * rand(12..15)
+      n = size * rand(12..18)
       n.times do
         Games::Tile.create(map_id: self.id, field: Games::Tile::FIELD[[1,2,3].sample])
       end
