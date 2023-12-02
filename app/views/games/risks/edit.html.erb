@@ -1,25 +1,21 @@
 <main data-controller='launcher' class='launcher container text-center'>
   <div class='d-flex h-35'>
-    <div data-launcher-target='options' class='box option-select d-flex flex-column justify-content-around'>
+    <div class='box option-select d-flex flex-column justify-content-around'>
       <%= render 'options' %>
     </div>
-    <div data-launcher-target='players' class='box player-select'>
-      <h2>Add players</h2>
+    <div class='box player-select d-flex flex-column justify-content-around'>
+      <h2> <%= @players.size > 1 ? 'Players' : 'Player' %> in game : <%= @players.size %> / 6</h2>
       <%= render 'games/players/index', players: @players %>
-      <% if @players.size < 4 %>
-        <%= render 'games/players/new', player: @empty_player, risk: @risk %>
-      <% else %>
-        <p>La Partie est complète ! (4 joueurs maximum)</p>
-      <% end %>
+      <%= render 'games/players/new', player: @empty_player, risk: @risk if @players.size < 6 %>
     </div>
   </div>
   <div class='d-flex h-65'>
-    <div data-launcher-target='map' class='box map-select'>
+    <div class='box map-select'>
       <h2>Choose map</h2>
-      <%= render 'games/maps/new', map: @empty_map, risk: @risk %>
+      <%= render 'games/maps/new', map: @empty_map, risk: @risk if @players.present? %>
       <%= render 'games/maps/show', map: @map if @map.present? %>
     </div>
-    <div data-launcher-target='launch' class="box">
+    <div class='box'>
       <%= link_to games_risk_path(@risk), data: { 'turbo_method': :patch } do %>
         <h2>Launch game</h2>
       <% end %>

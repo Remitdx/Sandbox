@@ -6,6 +6,11 @@ class Games::PlayersController < ApplicationController
     redirect_to edit_games_risk_path(player_params[:risk_id])
   end
 
+  def destroy
+    Games::Player.find(params[:id]).destroy
+    redirect_to edit_games_risk_path(player_params[:risk_id])
+  end
+
   private
 
   def player_params

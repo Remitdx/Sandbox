@@ -5,14 +5,22 @@
   aspect-ratio: 1/1;
 }
 
-.woods {
-  background-color: rgb(5, 94, 64);
+.wood {
+  background-color: rgb(0, 211, 141);
 }
 
 .field {
-  background-color: rgb(248, 236, 69);
+  background-color: rgb(255, 246, 127);
 }
 
-.mountains {
-  background-color: rgb(115, 121, 119);
+.rock {
+  background-color: rgb(177, 177, 177);
+}
+
+.clay {
+  background-color: rgb(255, 149, 50)
+}
+
+.water {
+  background-color: rgb(160, 255, 255);
 }

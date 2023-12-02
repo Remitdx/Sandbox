@@ -4,8 +4,10 @@ module Games
 
     FIELD = {
       1 => 'field',
-      2 => 'woods',
-      3 => 'mountains'
+      2 => 'wood',
+      3 => 'rock',
+      4 => 'water',
+      5 => 'clay'
     }
   end
 end

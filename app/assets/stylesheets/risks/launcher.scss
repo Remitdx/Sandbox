@@ -13,6 +13,10 @@
 
   .player-select {
     width: 67%;
+
+    .player {
+      padding: 2px, 6px;
+    }
   }
 
   .option-select {
@@ -26,5 +30,4 @@
   .launch-select {
     width: 20%;
   }
-
 }

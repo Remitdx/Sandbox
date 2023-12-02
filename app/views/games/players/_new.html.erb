@@ -1,5 +1,7 @@
 <%= simple_form_for(player) do |f| %>
-  <%= f.input :pseudo, label: false, placeholder: 'Pseudo' %>
-  <%= f.hidden_field :risk_id, :value => risk.id %>
-  <%= f.submit "Add", class:"btn btn-primary" %>
+  <div class="d-flex justify-content-center">
+    <%= f.input :pseudo, label: false, placeholder: 'Pseudo' %>
+    <%= f.hidden_field :risk_id, :value => risk.id %>
+    <%= f.submit 'Add', class:'btn btn-primary' %>
+  </div>
 <% end %>

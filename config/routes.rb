@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     namespace :games do
       resources :risks, only: [:create, :edit, :update, :show]
-      resources :players, only: [:create]
+      resources :players, only: [:create, :destroy]
       resources :maps, only: [:create]
     end
   end

@@ -4,8 +4,8 @@ module Games
     belongs_to :risk
 
     validates :pseudo,
-              presence: true,
-              uniqueness: { scope: :risk_id, message: "Pseudo déja utilisé dans la partie" },
-              format: { with: /\A\w{1,20}\z/, message: "1 à 20 charactères alphanumériques" }
+                presence: true,
+                uniqueness: { scope: :risk_id, message: 'Pseudo already taken' },
+                format: { with: /\A\S{2,16}\z/, message: 'Length from 2 to 16' }
   end
 end

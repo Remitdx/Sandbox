@@ -1,11 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['options', 'players', 'map', 'launch']
+  static targets = ['options', 'player', 'map', 'launch']
 
-  // TODO: Launcher implementation
+  launch() {
 
-  connect() {
-   console.log(this.playersTarget)
   }
 }

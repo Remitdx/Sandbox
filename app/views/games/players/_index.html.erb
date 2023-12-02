@@ -1,3 +1,8 @@
-<% players.each do |player| %>
-  <p> <%= player.pseudo %> </p>
-<% end%>
+<div class="row">
+  <% players.each do |player| %>
+    <div class="col-4">
+      <span class="player"> <%= player.pseudo %> </span>
+      <span> <%= link_to 'X', games_player_path(player), data: { turbo_method: :delete } %> </span>
+    </div>
+  <% end%>
+</div>
