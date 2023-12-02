@@ -1,4 +1,4 @@
-<main data-controller='launcher' class='launcher container text-center'>
+<main class='launcher container text-center'>
   <div class='d-flex h-35'>
     <div class='box option-select d-flex flex-column justify-content-around'>
       <%= render 'options' %>
@@ -10,14 +10,20 @@
     </div>
   </div>
   <div class='d-flex h-65'>
-    <div class='box map-select'>
-      <h2>Choose map</h2>
-      <%= render 'games/maps/new', map: @empty_map, risk: @risk if @players.present? %>
-      <%= render 'games/maps/show', map: @map if @map.present? %>
+    <div class='d-flex flex-column justify-content-center box map-select'>
+      <% if @players.size > 1 %>
+        <%= render 'games/maps/new', map: @empty_map, risk: @risk %>
+        <%= render 'games/maps/show', map: @map if @map.present? %>
+      <% else %>
+        <h2>Game map</h2>
+        <p>available after players selection</p>
+      <% end%>
     </div>
-    <div class='box'>
-      <%= link_to games_risk_path(@risk), data: { 'turbo_method': :patch } do %>
-        <h2>Launch game</h2>
+    <div class='box launch-select'>
+      <% if @players.size > 1 && @map.present? %>
+        <%= link_to games_risk_path(@risk), data: { 'turbo_method': :patch } do %>
+          <h2>Launch game</h2>
+        <% end %>
       <% end %>
     </div>
   </div>
