@@ -29,5 +29,12 @@
 
   .launch-select {
     width: 20%;
+
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
