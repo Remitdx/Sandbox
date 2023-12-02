@@ -39,6 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
     t.string "weather"
     t.integer "maxplayer"
     t.integer "size"
+    t.integer "lines"
+    t.integer "columns"
     t.bigint "risk_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

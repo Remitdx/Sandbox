@@ -1,26 +1,32 @@
-.tile {
-  display: inline-block;
-  border: 1px solid black;
-  width: 5%;
-  aspect-ratio: 1/1;
-}
+.map-container {
+  width: 90%;
+  margin: 1rem auto;
 
-.wood {
-  background-color: rgb(0, 211, 141);
-}
 
-.field {
-  background-color: rgb(255, 246, 127);
-}
+  .tile {
+    display: inline-block;
+    border: 1px solid black;
+    width: 4%;
+    aspect-ratio: 1/1;
+  }
 
-.rock {
-  background-color: rgb(177, 177, 177);
-}
+  .wood {
+    background-color: rgb(0, 211, 141);
+  }
 
-.clay {
-  background-color: rgb(255, 149, 50)
-}
+  .field {
+    background-color: rgb(255, 246, 127);
+  }
 
-.water {
-  background-color: rgb(160, 255, 255);
+  .rock {
+    background-color: rgb(177, 177, 177);
+  }
+
+  .clay {
+    background-color: rgb(255, 149, 50)
+  }
+
+  .water {
+    background-color: rgb(160, 255, 255);
+  }
 }
