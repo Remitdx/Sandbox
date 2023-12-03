@@ -4,8 +4,11 @@ class Games::MapsController < ApplicationController
   def create
     @map = Games::Map.new(map_params)
     @map.roll_dimensions
-    flash[:notice] = "New map generated !" if @map.save!
-    @map.generate_tiles
+    Games::Map.transaction do
+      flash[:notice] = "New map generated !" if @map.save!
+      @map.generate_tiles
+    rescue ActiveRecord::StandardError
+    end
     redirect_to edit_games_risk_path(map_params[:risk_id])
   end
 

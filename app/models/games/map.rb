@@ -11,8 +11,10 @@ module Games
     end
 
     def generate_tiles
-      (lines*columns).times do
-        Games::Tile.create(map_id: self.id, field: Games::Tile::FIELD[[1, 2, 3, 5].sample])
+      for y in 1..lines do
+        for x in 1..columns do
+          Games::Tile.create!(map_id: self.id, field: Games::Tile::FIELD[[1, 2, 3, 5].sample], x: x, y: y)
+        end
       end
     end
   end

@@ -1,5 +1,9 @@
 <div class="map-container">
-  <% map.tiles.each do |tile| %>
-    <span class='tile <%= tile.field %>'></span>
+  <% map.each do |line| %>
+    <div class="line">
+      <% line.each do |tile| %>
+        <span class='tile <%= tile.field %>'></span>
+      <% end %>
+    </div>
   <% end %>
 </div>

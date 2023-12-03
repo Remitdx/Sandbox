@@ -66,6 +66,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
     t.string "field"
     t.boolean "built"
     t.string "resource"
+    t.integer "x"
+    t.integer "y"
     t.bigint "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
