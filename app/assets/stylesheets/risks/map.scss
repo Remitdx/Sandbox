@@ -10,31 +10,36 @@
     justify-content: center;
     margin-bottom: -0.5%;
 
-    .tile {
-      display: block;
+    a {
       width: 5%;
-      aspect-ratio: 1/1;
-      clip-path: polygon(5% 75%, 5% 25%, 50% 0%, 95% 25%, 95% 75%, 50% 100%);
-    }
 
-    .wood {
-      background-color: rgb(0, 211, 141);
-    }
+      .tile {
+        position: relative;
+        display: block;
+        aspect-ratio: 1/1;
+        clip-path: polygon(5% 75%, 5% 25%, 50% 0%, 95% 25%, 95% 75%, 50% 100%);
+        cursor: pointer;
+      }
 
-    .field {
-      background-color: rgb(255, 246, 127);
-    }
+      .wood {
+        background-color: rgb(0, 211, 141);
+      }
 
-    .rock {
-      background-color: rgb(177, 177, 177);
-    }
+      .field {
+        background-color: rgb(255, 246, 127);
+      }
 
-    .clay {
-      background-color: rgb(255, 149, 50)
-    }
+      .rock {
+        background-color: rgb(177, 177, 177);
+      }
 
-    .water {
-      background-color: rgb(160, 255, 255);
+      .clay {
+        background-color: rgb(255, 149, 50)
+      }
+
+      .water {
+        background-color: rgb(160, 255, 255);
+      }
     }
   }
 }

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :risks, only: [:create, :edit, :update, :show]
       resources :players, only: [:create, :destroy]
       resources :maps, only: [:create]
+      resources :tiles, only: [:show]
     end
   end
 end
