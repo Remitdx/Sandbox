@@ -7,7 +7,7 @@ module Games
 
     def roll_dimensions
       self.lines = rand((size)..(size + 3))
-      self.columns = rand(10..22)
+      self.columns = rand(10..20)
     end
 
     def generate_tiles

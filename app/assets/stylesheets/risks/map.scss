@@ -1,32 +1,40 @@
 .map-container {
   width: 90%;
-  margin: 1rem auto;
+  margin: 0 auto;
 
+  .line:nth-child(odd) { margin-left: 2.5%; }
+  .line:nth-child(even) { margin-right: 2.5%; }
 
-  .tile {
-    display: inline-block;
-    border: 1px solid black;
-    width: 4%;
-    aspect-ratio: 1/1;
-  }
+  .line {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -0.5%;
 
-  .wood {
-    background-color: rgb(0, 211, 141);
-  }
+    .tile {
+      display: block;
+      width: 5%;
+      aspect-ratio: 1/1;
+      clip-path: polygon(5% 75%, 5% 25%, 50% 0%, 95% 25%, 95% 75%, 50% 100%);
+    }
 
-  .field {
-    background-color: rgb(255, 246, 127);
-  }
+    .wood {
+      background-color: rgb(0, 211, 141);
+    }
 
-  .rock {
-    background-color: rgb(177, 177, 177);
-  }
+    .field {
+      background-color: rgb(255, 246, 127);
+    }
 
-  .clay {
-    background-color: rgb(255, 149, 50)
-  }
+    .rock {
+      background-color: rgb(177, 177, 177);
+    }
 
-  .water {
-    background-color: rgb(160, 255, 255);
+    .clay {
+      background-color: rgb(255, 149, 50)
+    }
+
+    .water {
+      background-color: rgb(160, 255, 255);
+    }
   }
 }
