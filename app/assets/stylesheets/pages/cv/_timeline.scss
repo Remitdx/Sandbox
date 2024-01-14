@@ -12,7 +12,7 @@
     }
 
     .left {
-      border-right: 2px solid $deep-blue;
+      border-right: 2px solid $major-dark;
       padding: 2rem 2rem 2rem 0;
       text-align: end;
     }
@@ -23,13 +23,13 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background-color: $deep-blue;
+      background-color: $major-dark;
       top: 2.5rem;
       right: -6px;
     }
 
     .right {
-      border-left: 2px solid $deep-blue;
+      border-left: 2px solid $major-dark;
       padding: 2rem 0 2rem 2rem;
       text-align: start;
     }
@@ -37,7 +37,7 @@
     .card-work {
       height: 4.5rem;
       overflow: hidden;
-      border: 1px solid $deep-blue;
+      border: 1px solid $major-dark;
       border-radius: 4px;
       padding: 4px;
       text-align: center;

@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: $deep-blue solid 1px;
+    border: $major-dark solid 1px;
     border-radius: 4px;
     cursor: pointer;
 
@@ -47,7 +47,7 @@
 
   .night {
     position: absolute;
-    background: $deep-blue;
+    background: $major-dark;
     width: 100%;
     padding-top: 56.25%;
     top: 0;
@@ -57,11 +57,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border: $cream-white solid 1px;
+      border: $bg-cream-tone solid 1px;
       opacity: 0;
 
       p {
-        color: $cream-white;
+        color: $bg-cream-tone;
       }
     }
   }
@@ -145,7 +145,7 @@
     .btn-wrapper {
       width: 5vw;
       height: 5vw;
-      border: $deep-blue solid 2px;
+      border: $major-dark solid 2px;
 
       p {
         margin: 1vw 0 0;

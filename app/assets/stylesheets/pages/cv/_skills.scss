@@ -1,5 +1,5 @@
 .card-classic {
-  background: $cream-white;
+  background: $bg-cream-tone;
   border-radius: 2px;
   box-shadow: 0 1px 2px 2px $shadow;
   display: flex;
@@ -20,14 +20,14 @@
 
   @for $i from 1 through 9 {
     .slider-#{$i} {
-      background: $cream-white;
+      background: $bg-cream-tone;
       width: calc((10 - #{$i})*10%);
     }
   }
 }
 
 .card-radar {
-  background: $cream-white;
+  background: $bg-cream-tone;
   border-radius: 26px;
   box-shadow: 0 1px 2px 2px $shadow;
   width: 100%;
@@ -47,11 +47,11 @@
       width: calc((6 - #{$i})*12%);
       height: calc((6 - #{$i})*12%);
       border-radius: 50%;
-      border: 0.5px solid $deep-blue;
+      border: 0.5px solid $major-dark;
       @if $i % 2 == 1 {
-        background: $pure-white;
+        background: $bg-clear-tone;
       } @else {
-        background: $cream-white;
+        background: $bg-cream-tone;
       }
     }
   }

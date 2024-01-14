@@ -53,9 +53,9 @@
   position: relative;
   width: 100%;
   padding-top: 100%;
-  border: $deep-blue solid 1px;
+  border: $major-dark solid 1px;
   border-radius: 4px;
-  background-color: $pure-white;
+  background-color: $bg-clear-tone;
   overflow: hidden;
   margin-bottom: 1rem;
 
@@ -65,12 +65,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 6px 12px;
-    background-color: $cream-white;
-    border: $deep-blue solid 1px;
+    background-color: $bg-cream-tone;
+    border: $major-dark solid 1px;
     border-radius: 4px;
     cursor: pointer;
     &:hover {
-      background-color: $pure-white;
+      background-color: $bg-clear-tone;
     }
   }
 

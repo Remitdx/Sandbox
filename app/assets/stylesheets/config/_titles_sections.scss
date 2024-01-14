@@ -5,19 +5,19 @@ body {
 }
 
 .section-1 {
-  padding: 1rem 0;
-  background-color: $pure-white;
+  padding: 3rem 0;
+  background-color: $bg-clear-tone;
 }
 .section-2 {
-  padding: 1rem 0;
-  background-color: $cream-white;
+  padding: 3rem 0;
+  background-color: $bg-cream-tone;
 }
 
 .h1-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $sky-blue;
+  background: $major-light;
   height: 10rem;
   width: 100%;
 
@@ -25,7 +25,7 @@ body {
     font-family: var(--ff-handwrite);
     letter-spacing: 1px;
     font-size: var(--fs-xl);
-    color: $deep-blue;
+    color: $major-dark;
   }
 }
 
@@ -43,12 +43,12 @@ body {
     font-family: var(--ff-handwrite);
     letter-spacing: 8px;
     font-size: var(--fs-l);
-    color: $deep-blue;
+    color: $major-dark;
   }
 
   span {
     position: absolute;
-    background: $sky-blue;
+    background: $major-light;
     height: 0.2rem;
     width: 60%;
     top: 50%;
@@ -65,7 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $sky-blue;
+  background: $major-light;
   height: 4rem;
   width: 100%;
   margin: 1rem 0;
@@ -76,7 +76,7 @@ body {
     font-weight: 200;
     letter-spacing: 12px;
     font-size: var(--fs-xl);
-    color: $pure-white;
+    color: $bg-clear-tone;
     opacity: 0.2;
     text-overflow: clip;
   }
@@ -87,7 +87,7 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     font-size: var(--fs-m);
-    color: $deep-blue;
+    color: $major-dark;
   }
 }
 
@@ -96,12 +96,12 @@ body {
   margin: 0 auto;
 
   i {
-    color: $deep-blue;
+    color: $major-dark;
     font-size: var(--fs-s);
   }
 
   p {
-    text-shadow: 1px 1px $pure-white;
+    text-shadow: 1px 1px $bg-clear-tone;
     font-family: var(--ff-handwrite);
     font-size: var(--fs-s);
     text-align: center;
@@ -112,7 +112,7 @@ body {
 p {
   font-family: var(--ff-neutral);
   font-size: var(--fs-s);
-  color: $deep-blue;
+  color: $major-dark;
 }
 
 @media (min-width: 40em) {
