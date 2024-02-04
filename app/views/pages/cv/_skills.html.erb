@@ -12,11 +12,8 @@
     <div class='row'>
       <% skills.each do |skill| %>
         <div class='col-12 col-md-4'>
-          <div class='h3-title'>
-            <h4><%= skill['title'] %></h4>
-            <h3><%= skill['title'] %></h3>
-            <% skill.delete('title')  %>
-          </div>
+          <%= render(H3titleComponent.new(title: skill['title'])) %>
+          <% skill.delete('title')  %>
           <div class='card-classic d-none' data-skills-target='classic'>
             <div class='row'>
               <% skill.each do |k,v| %>

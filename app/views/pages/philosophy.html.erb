@@ -30,10 +30,7 @@
       </div>
       <div class='row justify-content-center'>
         <div class='col-12 col-md-7 order-1 order-md-1 d-flex flex-column justify-content-between'>
-          <div class='h3-title'>
-            <h4><%= t('conception.title') %></h4>
-            <h3><%= t('conception.title') %></h3>
-          </div>
+          <%= render(H3titleComponent.new(title: t('conception.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @conception %>
         </div>
         <div class='my-3 col-8 col-md-5 order-2 order-md-2 d-flex flex-column justify-content-between'>
@@ -45,10 +42,7 @@
           </div>
         </div>
         <div class='col-12 col-md-6 order-3 order-md-4 d-flex flex-column justify-content-between'>
-          <div class='h3-title'>
-            <h4><%= t('development.title') %></h4>
-            <h3><%= t('development.title') %></h3>
-          </div>
+          <%= render(H3titleComponent.new(title: t('development.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @development %>
         </div>
         <div class='my-3 col-10 col-md-6 order-4 order-md-3 d-flex flex-column justify-content-between'>
@@ -60,10 +54,7 @@
           </div>
         </div>
         <div class='col-12 order-5 order-md-5'>
-          <div class='h3-title mb-4'>
-            <h4><%= t('maintenance.title') %></h4>
-            <h3><%= t('maintenance.title') %></h3>
-          </div>
+          <%= render(H3titleComponent.new(title: t('maintenance.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @maintenance %>
         </div>
         <div class='my-3 col-12 order-last order-md-last'>
