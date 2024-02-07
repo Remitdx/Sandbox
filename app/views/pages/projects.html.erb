@@ -2,15 +2,10 @@
   <%= render 'components/navigation' %>
 </nav>
 <main>
-  <div class="h1-title">
-    <h1><%= t('title_project') %></h1>
-  </div>
+  <%= render(Titles::H1titleComponent.new(title: t('title_project'))) %>
   <section class="section-1">
+    <%= render(Titles::H2titleComponent.new(title: "Professional")) %>
     <div class="container">
-      <div class="h2-title">
-        <span></span>
-        <h2>Professional</h2>
-      </div>
       <%= link_to 'https://centremormal.fr/', target: :_blank do %>
         <div class="card-project cm">
           <p>Site vitrine - conception et développement en tant que freelance - 2022</p>
@@ -24,11 +19,8 @@
     </div>
   </section>
   <section class="section-2">
+    <%= render(Titles::H2titleComponent.new(title: 'Games')) %>
     <div class="container">
-      <div class="h2-title">
-        <span></span>
-        <h2>Games</h2>
-      </div>
       <%= link_to 'Risk', games_risks_path, data: { turbo_method: :post } %>
     </div>
   </section>

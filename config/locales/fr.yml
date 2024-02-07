@@ -88,6 +88,7 @@ fr:
     bac: 'Baccalauréat'
     hei: "Hautes Etudes d'Ingénieur"
     wagon: 'Le Wagon bootcamp'
+    opquast: 'Opquast - Assurance qualité Web - 850/1000'
 
   workexp:
     title: 'Parcours professionnel'

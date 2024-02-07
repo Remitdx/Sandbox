@@ -2,46 +2,33 @@
   <%= render 'components/navigation'  %>
 </nav>
 <main>
-  <div class='h1-title'>
-    <h1><%= t('title_cv') %></h1>
-  </div>
+  <%= render(Titles::H1titleComponent.new(title: t('title_cv'))) %>
   <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
   <section class='section-1'>
+    <%= render(Titles::H2titleComponent.new(title: t('skills.title'))) %>
     <%= render 'pages/cv/skills', skills: @skills %>
   </section>
   <section class='section-2'>
+    <%= render(Titles::H2titleComponent.new(title: t('education.title'))) %>
     <div class='container'>
-      <div class='h2-title'>
-        <span></span>
-        <h2><%= t('education.title') %></h2>
-      </div>
       <%= render 'pages/cv/education', education: @education %>
     </div>
   </section>
   <section class='section-1'>
+    <%= render(Titles::H2titleComponent.new(title: t('workexp.title'))) %>
     <div class='container'>
-      <div class='h2-title'>
-        <span></span>
-        <h2><%= t('workexp.title') %></h2>
-      </div>
       <%= render 'pages/cv/experiences', experiences: @experiences %>
     </div>
   </section>
   <section class='section-2'>
+    <%= render(Titles::H2titleComponent.new(title: t('language.title'))) %>
     <div class='container'>
-      <div class='h2-title'>
-        <span></span>
-        <h2><%= t('language.title') %></h2>
-      </div>
       <%= render 'pages/cv/languages', languages: @languages %>
     </div>
   </section>
   <section class='section-1'>
+    <%= render(Titles::H2titleComponent.new(title: t('hobby.title'))) %>
     <div class='container'>
-      <div class='h2-title'>
-        <span></span>
-        <h2><%= t('hobby.title') %></h2>
-      </div>
       <%= render 'pages/cv/hobbies', hobbies: @hobbies %>
     </div>
   </section>

@@ -2,15 +2,10 @@
   <%= render 'components/navigation'  %>
 </nav>
 <main>
-  <div class='h1-title'>
-    <h1><%= t('title_philosophy') %></h1>
-  </div>
+  <%= render(Titles::H1titleComponent.new(title: t('title_philosophy'))) %>
   <section class='section-1'>
     <div class='container text-center'>
-      <div class='h2-title'>
-        <span></span>
-        <h2><%= t('intro.title') %></h2>
-      </div>
+      <%= render(Titles::H2titleComponent.new(title: t('intro.title'))) %>
       <p><%= t('intro.part1') %></p>
       <p><%= t('intro.part2') %></p>
       <div class="my-3">
@@ -21,16 +16,13 @@
   </section>
   <section class='section-2'>
     <div class='container'>
-      <div class='h2-title'>
-        <span></span>
-        <h2><%= t('vision.title') %></h2>
-      </div>
+      <%= render(Titles::H2titleComponent.new(title: t('vision.title'))) %>
       <div class="text-center">
         <p><%= t('vision.intro') %></p>
       </div>
       <div class='row justify-content-center'>
         <div class='col-12 col-md-7 order-1 order-md-1 d-flex flex-column justify-content-between'>
-          <%= render(H3titleComponent.new(title: t('conception.title'))) %>
+          <%= render(Titles::H3titleComponent.new(title: t('conception.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @conception %>
         </div>
         <div class='my-3 col-8 col-md-5 order-2 order-md-2 d-flex flex-column justify-content-between'>
@@ -42,7 +34,7 @@
           </div>
         </div>
         <div class='col-12 col-md-6 order-3 order-md-4 d-flex flex-column justify-content-between'>
-          <%= render(H3titleComponent.new(title: t('development.title'))) %>
+          <%= render(Titles::H3titleComponent.new(title: t('development.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @development %>
         </div>
         <div class='my-3 col-10 col-md-6 order-4 order-md-3 d-flex flex-column justify-content-between'>
@@ -54,7 +46,7 @@
           </div>
         </div>
         <div class='col-12 order-5 order-md-5'>
-          <%= render(H3titleComponent.new(title: t('maintenance.title'))) %>
+          <%= render(Titles::H3titleComponent.new(title: t('maintenance.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @maintenance %>
         </div>
         <div class='my-3 col-12 order-last order-md-last'>
