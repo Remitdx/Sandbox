@@ -3,7 +3,6 @@
 </nav>
 <main>
   <%= render(Titles::H1titleComponent.new(title: t('title_cv'))) %>
-  <%= link_to 'CV en PDF', '/RT_CV_RoR.pdf', target: :_blank %>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: t('skills.title'))) %>
     <%= render 'pages/cv/skills', skills: @skills %>

@@ -5,11 +5,9 @@ body {
 }
 
 .section-1 {
-  padding: 3rem 0;
   background-color: $bg-clear-tone;
 }
 .section-2 {
-  padding: 3rem 0;
   background-color: $bg-cream-tone;
 }
 
@@ -32,6 +30,7 @@ body {
 .h2-title {
   position: relative;
   height: 5rem;
+  margin: 3rem 0;
   width: 100%;
 
   h2 {
