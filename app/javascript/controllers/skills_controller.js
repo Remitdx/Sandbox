@@ -10,8 +10,11 @@ export default class extends Controller {
     this.radarTargets.forEach(element => {
       element.classList.add('d-none');
     });
-    this.btnclassicTarget.classList.add('bg-complementary');
-    this.btnradarTarget.classList.remove('bg-complementary');
+    this.btnclassicTarget.firstElementChild.classList.add('btn-complementary');
+    this.btnclassicTarget.firstElementChild.classList.remove('btn-dark');
+    this.btnradarTarget.firstElementChild.classList.remove('btn-complementary');
+    this.btnradarTarget.firstElementChild.classList.add('btn-dark');
+
   }
 
   radar() {
@@ -21,7 +24,10 @@ export default class extends Controller {
     this.radarTargets.forEach(element => {
       element.classList.remove('d-none');
     });
-    this.btnclassicTarget.classList.remove('bg-complementary');
-    this.btnradarTarget.classList.add('bg-complementary');
+    this.btnclassicTarget.firstElementChild.classList.remove('btn-complementary');
+    this.btnclassicTarget.firstElementChild.classList.add('btn-dark');
+    this.btnradarTarget.firstElementChild.classList.add('btn-complementary');
+    this.btnradarTarget.firstElementChild.classList.remove('btn-dark');
+
   }
 }
