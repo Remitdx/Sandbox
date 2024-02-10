@@ -23,6 +23,9 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def uikit
+  end
+
   private
 
   def calculate_age

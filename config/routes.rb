@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'philosophy', to: 'pages#philosophy'
     get 'projects', to: 'pages#projects'
     get 'contact', to: 'pages#contact'
+    get 'uikit', to: 'pages#uikit'
 
     namespace :games do
       resources :risks, only: [:create, :edit, :update, :show]

@@ -10,7 +10,7 @@
     font-size: var(--fs-xl);
     color: $bg-clear-tone;
     text-shadow: 0 0 2px black;
-    margin-bottom: 6px;
+    margin-bottom: 0.8rem;
   }
 
   p {
@@ -24,11 +24,10 @@
 @media (min-width: 40em) {
   .banner {
     background-position: center;
-    background-size: cover;
-    padding-left: 40px;
+    padding-left: 3rem;
 
     h1 {
-      margin-bottom: 18px;
+      margin-bottom: 1rem;
     }
   }
 }
