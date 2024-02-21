@@ -9,6 +9,7 @@ fr:
   title_philosophy: 'Philosophie'
   title_project: 'Projets'
   title_resources: 'Ressources'
+  title_uikit: 'UI Kit'
 
   ## FOOTER ##
   footer:
