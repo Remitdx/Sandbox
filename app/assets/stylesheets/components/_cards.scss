@@ -2,21 +2,15 @@
   background: $bg-cream-tone;
   border-radius: 24px;
   border: 1px solid $major-dark;
-  //box-shadow: 0 1px 2px 2px $shadow;
+  box-shadow: 1px 1px 3px 1px $shadow;
   padding: 12px;
+  margin: var(--space-xxxs);
 }
 
 .h-1 {
-  height: 200px;
-}
-
-.h-2 {
-  height: 400px;
+  height: 6rem;
 }
 
 .w-1 {
-  width: 200px;
-}
-.w-2 {
-  width: 400px;
+  width: 6rem;
 }
