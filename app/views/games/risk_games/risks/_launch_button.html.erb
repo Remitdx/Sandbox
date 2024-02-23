@@ -1,5 +1,5 @@
 <% if @players.size > 1 && @map.present? %>
-  <%= link_to games_risk_path(@risk), data: { 'turbo_method': :patch } do %>
+  <%= link_to games_risk_games_risk_path(@risk), data: { 'turbo_method': :patch } do %>
     <h2>Launch game</h2>
   <% end %>
 <% else %>

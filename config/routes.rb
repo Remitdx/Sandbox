@@ -11,10 +11,14 @@ Rails.application.routes.draw do
     get 'uikit', to: 'pages#uikit'
 
     namespace :games do
-      resources :risks, only: [:create, :edit, :update, :show]
-      resources :players, only: [:create, :destroy]
-      resources :maps, only: [:create]
-      resources :tiles, only: [:show]
+      namespace :risk_games do
+        resources :risks, only: [:create, :edit, :update, :show]
+        resources :players, only: [:create, :destroy]
+        resources :maps, only: [:create]
+        resources :tiles, only: [:show]
+      end
+
+      resources :dices
     end
   end
 end

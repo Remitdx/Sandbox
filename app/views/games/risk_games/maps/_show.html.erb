@@ -2,7 +2,7 @@
   <% map.each do |line| %>
     <div class="line">
       <% line.each do |tile| %>
-        <%= link_to games_tile_path(tile), target: :_blank do %>
+        <%= link_to games_risk_games_tile_path(tile), target: :_blank do %>
           <span class='tile <%= tile.field %>'></span>
         <% end %>
       <% end %>
