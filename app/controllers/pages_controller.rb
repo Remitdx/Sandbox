@@ -4,17 +4,17 @@ class PagesController < ApplicationController
   end
 
   def cv
-    @skills = Skill.new.my_skills
-    @education = Education.new.my_education
-    @experiences = Experience.new.my_experiences
-    @languages = Language.new.my_languages
-    @hobbies = Hobby.new.my_hobbies
+    @skills = Pages::Skill.new.my_skills
+    @education = Pages::Education.new.my_education
+    @experiences = Pages::Experience.new.my_experiences
+    @languages = Pages::Language.new.my_languages
+    @hobbies = Pages::Hobby.new.my_hobbies
   end
 
   def philosophy
-    @conception = Step.new.conception_steps
-    @development = Step.new.development_steps
-    @maintenance = Step.new.maintenance_steps
+    @conception = Pages::Step.new.conception_steps
+    @development = Pages::Step.new.development_steps
+    @maintenance = Pages::Step.new.maintenance_steps
   end
 
   def projects

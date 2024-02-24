@@ -22,7 +22,7 @@
     <%= render(Titles::H2titleComponent.new(title: 'Games')) %>
     <div class="container">
       <%= link_to 'Risk', games_risk_games_risks_path, data: { turbo_method: :post } %>
-      <%= link_to 'Dices', games_dices_path %>
+      <%= link_to 'Roll Dices', games_rolls_path, data: { turbo_method: :post } %>
     </div>
   </section>
 </main>

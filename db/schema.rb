@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_24_080512) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,6 +58,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_15_182616) do
   create_table "risks", force: :cascade do |t|
     t.integer "mode"
     t.integer "complexity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roll_dices", force: :cascade do |t|
+    t.integer "value"
+    t.integer "faces"
+    t.string "color"
+    t.bigint "roll_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["roll_id"], name: "index_roll_dices_on_roll_id"
+  end
+
+  create_table "rolls", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
