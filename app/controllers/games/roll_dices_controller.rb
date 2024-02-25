@@ -1,9 +1,6 @@
 module Games
   class RollDicesController < ApplicationController
-    before_action :set_dice, only: [:show, :edit, :update, :destroy]
-
-    def show
-    end
+    before_action :set_dice, only: [:edit, :update, :destroy]
 
     def new
       @dice = Games::RollDice.new
@@ -14,26 +11,33 @@ module Games
       @dice = Games::RollDice.new(dice_params)
       @dice.roll_id = params[:roll_id]
       if @dice.save
-        redirect_to games_roll_path(@dice.roll_id), notice: "Dice was successfully created."
+        respond_to do |format|
+          format.html { redirect_to games_roll_path(@dice.roll_id), notice: "Dice was successfully created." }
+          format.turbo_stream
+        end
       else
-        render :new
+        render :new, status: :unprocessable_entity
       end
     end
 
     def edit
+      @roll = Games::Roll.find(params[:roll_id])
     end
 
     def update
       if @dice.update(dice_params)
         redirect_to games_roll_path(@dice.roll_id), notice: "Dice was successfully updated."
       else
-        render :new
+        render :edit, status: :unprocessable_entity
       end
     end
 
     def destroy
       @dice.destroy
-      redirect_to games_roll_path, notice: "Quote was successfully destroyed."
+      respond_to do |format|
+        format.html { redirect_to games_roll_path, notice: "Dice was successfully destroyed." }
+        format.turbo_stream
+      end
     end
 
     private

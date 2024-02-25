@@ -1,2 +1,3 @@
-<h2>new</h2>
-<%= render 'form', roll: @roll, dice: @dice %>
+<%= turbo_frame_tag 'new_dice' do %>
+  <%= render 'form', roll: @roll, dice: @dice %>
+<% end %>

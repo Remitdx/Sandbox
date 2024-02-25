@@ -1,2 +1,3 @@
-<h2>edit</h2>
-<%= render 'form', roll: @roll, dice: @dice %>
+<%= turbo_frame_tag "dice_#{@dice.id}" do %>
+  <%= render 'form', roll: @roll, dice: @dice %>
+<% end %>

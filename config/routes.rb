@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       resources :rolls, only: [:create, :show] do
         resources :roll_dices, only: [:new, :create, :edit, :update]
       end
-      resources :roll_dices, only: [:show, :destroy]
+      resources :roll_dices, only: [:destroy]
     end
   end
 end

@@ -7,7 +7,7 @@ module Games
 
     def show
       @roll = Games::Roll.find(params[:id])
-      @dices = Games::RollDice.where(roll_id: @roll)
+      @dices = Games::RollDice.where(roll_id: @roll).ordered
     end
   end
 end

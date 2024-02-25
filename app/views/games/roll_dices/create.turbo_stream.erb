@@ -1,0 +1,2 @@
+<%= turbo_stream.prepend 'dices', partial: 'games/roll_dices/roll_dice', locals: { roll_dice: @dice } %>
+<%= turbo_stream.update 'new_dice', '' %>
