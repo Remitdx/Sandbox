@@ -25,7 +25,7 @@ module Games
     end
 
     def update
-      if @dice.update(dice_params)
+      if @dice.update(dice_params.merge(value: nil))
         redirect_to games_roll_path(@dice.roll_id), notice: "Dice was successfully updated."
       else
         render :edit, status: :unprocessable_entity

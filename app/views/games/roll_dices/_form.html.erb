@@ -2,6 +2,8 @@
   <%= simple_form_for [roll, dice], url: dice.id.present? ? games_roll_roll_dice_path(dice) : games_roll_roll_dices_path do |f| %>
     <%= f.input :faces, input_html: { autofocus: true } %>
     <%= f.input :color, collection: Games::RollDice::COLORS %>
-    <%= f.button :submit, dice.id.present? ? "Edit dice" : 'Add dice', class: 'btn-cta btn-complementary' %>
+    <%= f.button :submit, class: 'btn-cta btn-dark' do %>
+      <i class="fa-solid fa-plus"></i>
+    <% end %>
   <% end %>
 </div>

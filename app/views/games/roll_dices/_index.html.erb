@@ -1,14 +1,7 @@
-<p>Add dice with your own needs and roll them ! </p>
-<%= link_to new_games_roll_roll_dice_path(@roll), data: { turbo_frame: 'new_dice' } do %>
-  <%= render(Buttons::CtaComponent.new(title: 'New dice', classes: 'btn-complementary' )) %>
-<% end %>
+<div class="row">
+  <%= turbo_frame_tag 'new_dice', class: 'col-6 col-md-3' %>
+</div>
 
-<%= turbo_frame_tag 'new_dice' %>
-
-<%= turbo_frame_tag 'dices' do %>
+<%= turbo_frame_tag 'dices', class: 'row' do %>
   <%= render dices %>
-<% end %>
-
-<%= link_to games_roll_path(@roll), data: { turbo_method: :put } do %>
-  <%= render(Buttons::CtaComponent.new(title: 'Roll those dices !', classes: 'btn-big btn-complementary' )) %>
 <% end %>

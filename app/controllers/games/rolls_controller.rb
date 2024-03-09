@@ -15,7 +15,10 @@ module Games
       Games::RollDice.transaction do
         @dices.each { |dice| dice.save }
       end
-      redirect_to games_roll_path(@roll)
+      respond_to do |format|
+        format.html { redirect_to games_roll_path(@roll) }
+        format.turbo_stream
+      end
     end
 
     private
