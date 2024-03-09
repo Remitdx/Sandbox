@@ -8,3 +8,7 @@
 <%= turbo_frame_tag 'dices' do %>
   <%= render dices %>
 <% end %>
+
+<%= link_to games_roll_path(@roll), data: { turbo_method: :put } do %>
+  <%= render(Buttons::CtaComponent.new(title: 'Roll those dices !', classes: 'btn-big btn-complementary' )) %>
+<% end %>

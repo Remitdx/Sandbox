@@ -1,6 +1,7 @@
 fr:
   ## HOME ##
-  title: 'Ingénieur et développeur full-stack'
+  title1_html: 'Ingénieur et développeur full-stack'
+  title2_html: "<strong><i class='fa-regular fa-gem'></i> Ruby on Rails</strong> adepte, sage artisan d'internet"
   age: 'ans'
 
   ## NAVIGATION AND TITLES ##

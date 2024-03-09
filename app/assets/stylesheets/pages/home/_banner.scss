@@ -19,6 +19,10 @@
     color: $bg-clear-tone;
     text-shadow: 0 0 2px black;
   }
+
+  strong {
+    color: #C60000; // RoR color
+  }
 }
 
 @media (min-width: 40em) {

@@ -1,13 +1,17 @@
 <%= turbo_frame_tag "dice_#{roll_dice.id}" do %>
-  <div class='d-flex justify-content-between'>
-    <%= roll_dice.value if roll_dice.value.present? %>
-    <%= roll_dice.faces if roll_dice.faces.present? %>
-    <%= roll_dice.color if roll_dice.color.present? %>
-    <%= link_to edit_games_roll_roll_dice_path(roll_dice.roll_id, roll_dice) do %>
-      <%= render(Buttons::CtaComponent.new(title: 'Edit', classes: 'btn-complementary' )) %>
-    <% end %>
-    <%= link_to games_roll_dice_path(roll_dice), data: { turbo_method: :delete } do %>
-      <%= render(Buttons::CtaComponent.new(title: 'Delete', classes: 'btn-complementary' )) %>
-    <% end %>
+  <div class='d-flex justify-content-between dice-wrap'>
+    <div>
+      <%= roll_dice.value if roll_dice.value.present? %>
+      <%= roll_dice.faces if roll_dice.faces.present? %>
+      <%= roll_dice.color if roll_dice.color.present? %>
+    </div>
+    <div>
+      <%= link_to edit_games_roll_roll_dice_path(roll_dice.roll_id, roll_dice) do %>
+        <%= render(Buttons::CtaComponent.new(title: 'Edit', classes: 'btn-complementary' )) %>
+      <% end %>
+      <%= link_to games_roll_dice_path(roll_dice), data: { turbo_method: :delete } do %>
+        <%= render(Buttons::CtaComponent.new(title: 'Delete', classes: 'btn-complementary' )) %>
+      <% end %>
+    </div>
   </div>
 <% end %>

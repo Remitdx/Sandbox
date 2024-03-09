@@ -1,5 +1,7 @@
-<%= simple_form_for [roll, dice], url: dice.id.present? ? games_roll_roll_dice_path(dice) : games_roll_roll_dices_path do |f| %>
-  <%= f.input :faces, input_html: { autofocus: true } %>
-  <%= f.input :color, collection: Games::RollDice::COLORS %>
-  <%= f.button :submit, dice.id.present? ? "Edit dice" : 'Add dice', class: 'btn-cta btn-complementary' %>
-<% end %>
+<div class="dice-wrap">
+  <%= simple_form_for [roll, dice], url: dice.id.present? ? games_roll_roll_dice_path(dice) : games_roll_roll_dices_path do |f| %>
+    <%= f.input :faces, input_html: { autofocus: true } %>
+    <%= f.input :color, collection: Games::RollDice::COLORS %>
+    <%= f.button :submit, dice.id.present? ? "Edit dice" : 'Add dice', class: 'btn-cta btn-complementary' %>
+  <% end %>
+</div>

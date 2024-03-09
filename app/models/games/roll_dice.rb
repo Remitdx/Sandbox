@@ -8,5 +8,9 @@ module Games
     validates :color, presence: true, inclusion: { in: COLORS }
 
     scope :ordered, -> { order(id: :desc) }
+
+    def roll_dice
+      self.value = rand(1..(self.faces))
+    end
   end
 end
