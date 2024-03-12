@@ -1,7 +1,7 @@
 <%= render(Titles::H1titleComponent.new(title: "Let's Roll Dices !" )) %>
 <div class="section-1">
   <div class="container">
-    <p>Add dice with your own needs and roll them ! </p>
+    <p class= 'py-3'>Add all the dices you need and roll them all! </p>
     <div class="d-flex py-3 justify-content-around">
       <%= link_to new_games_roll_roll_dice_path(@roll), data: { turbo_frame: 'new_dice' } do %>
         <%= render(Buttons::CtaComponent.new(title: 'New dice', classes: 'btn-big btn-dark' )) %>
