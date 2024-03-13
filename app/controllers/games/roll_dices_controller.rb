@@ -1,7 +1,10 @@
 module Games
   class RollDicesController < ApplicationController
+    include Games
+
     before_action :set_dice, only: [:edit, :update, :destroy]
     before_action :set_roll, only: [:new, :edit, :update, :create]
+    before_action :set_scores, only: [:update, :create, :destroy]
 
     def new
       @dice = Games::RollDice.new
@@ -25,7 +28,10 @@ module Games
 
     def update
       if @dice.update(dice_params.merge(value: nil))
-        redirect_to games_roll_path(@dice.roll_id)
+        respond_to do |format|
+          format.html { redirect_to games_roll_path(@dice.roll_id) }
+          format.turbo_stream
+        end
       else
         render :edit, status: :unprocessable_entity
       end
@@ -47,6 +53,10 @@ module Games
 
     def set_roll
       @roll = Games::Roll.find(params[:roll_id])
+    end
+
+    def set_scores
+      @scores = Games::RollDicesController.reset_scores
     end
 
     def dice_params

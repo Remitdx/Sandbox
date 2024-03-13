@@ -1,3 +1,13 @@
+.scores {
+  border-radius: 1rem;
+  border: 2px dashed $major-dark;
+  padding: 0.5rem;
+
+  p {
+    font-family: var(--ff-geek);
+  }
+}
+
 .a-none {
   text-decoration: none;
   color: $major-dark;

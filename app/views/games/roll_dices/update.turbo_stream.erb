@@ -1,0 +1,2 @@
+<%= turbo_stream.update "dice_#{@dice.id}", partial: 'games/roll_dices/roll_dice', locals: { roll_dice: @dice } %>
+<%= turbo_stream.update 'scores', partial: 'games/rolls/scores', locals: { scores: @scores } %>

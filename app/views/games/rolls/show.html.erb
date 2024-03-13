@@ -6,14 +6,10 @@
       <%= link_to games_roll_path(@roll), data: { turbo_method: :put } do %>
         <%= render(Buttons::CtaComponent.new(title: 'Roll', classes: 'btn-big btn-complementary' )) %>
       <% end %>
-      <div class="results">
-        <p>Red score : </p>
-        <p>Blue score : </p>
-        <p>Yellow score : </p>
-        <p>Green score : </p>
-        <p>Total score : </p>
-      </div>
+      <%= render 'games/rolls/scores', scores: @scores %>
     </div>
-    <%= render 'games/roll_dices/index', dices: @dices %>
+    <%= turbo_frame_tag 'dices', class: 'row' do %>
+      <%= render 'games/roll_dices/index', dices: @dices %>
+    <% end %>
   </div>
 </div>

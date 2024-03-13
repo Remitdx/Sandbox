@@ -1,6 +1,6 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Press+Start+2P&display=swap');
 //font-family: 'Heebo', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
@@ -10,6 +10,7 @@
 :root {
   --ff-handwrite: 'Handlee', cursive;
   --ff-neutral: 'Heebo', sans-serif;
+  --ff-geek: 'Press Start 2P';
 
   --fs-xl: 2.4rem; // h1
   --fs-l: 1.6rem; // h2
