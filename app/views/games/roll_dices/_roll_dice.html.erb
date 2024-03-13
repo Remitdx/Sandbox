@@ -1,17 +1,17 @@
 <%= turbo_frame_tag "dice_#{roll_dice.id}", class: 'col-6 col-md-2 my-3' do %>
-  <div class='dice-wrap border-<%= roll_dice.color %>'>
-    <div class='d-flex justify-content-around'>
+  <div class='dice-wrap p-relative'>
+    <div class='dice border-<%= roll_dice.color %> p-absolute'>
+      <%= roll_dice.value if roll_dice.value.present? %>
+      <span>/</span>
+      <%= roll_dice.faces if roll_dice.faces.present? %>
+    </div>
+    <div class='p-absolute edit-delete'>
       <%= link_to edit_games_roll_roll_dice_path(roll_dice.roll_id, roll_dice) do %>
         <%= render(Buttons::CtaComponent.new(title: '<i class="fa-regular fa-pen-to-square"></i>', classes: 'btn-dark' )) %>
       <% end %>
       <%= link_to games_roll_dice_path(roll_dice), data: { turbo_method: :delete } do %>
         <%= render(Buttons::CtaComponent.new(title: '<i class="fa-solid fa-trash-can"></i>', classes: 'btn-dark' )) %>
       <% end %>
-    </div>
-    <div>
-      <%= roll_dice.value if roll_dice.value.present? %>
-      <span>/</span>
-      <%= roll_dice.faces if roll_dice.faces.present? %>
     </div>
   </div>
 <% end %>

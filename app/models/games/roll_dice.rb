@@ -4,8 +4,10 @@ module Games
 
     COLORS = %w(red blue yellow green)
 
-    validates :faces, presence: true
-    validates :color, presence: true, inclusion: { in: COLORS }
+    validates :faces, presence: true,
+                      numericality: { greater_than_or_equal_to: 2 }
+    validates :color, presence: true,
+                      inclusion: { in: COLORS }
 
     scope :ordered, -> { order(id: :desc) }
 

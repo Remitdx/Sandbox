@@ -1,7 +1,56 @@
+.a-none {
+  text-decoration: none;
+  color: $major-dark;
+  &:hover {
+    color: $complementary;
+  }
+}
+
 .dice-wrap {
   height:15rem;
-  border: 1px solid black;
-  padding: 1rem;
+  background-color: $bg-cream-tone;
+  border: 1px solid $complementary-lighter;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  &:hover {
+    .edit-delete {
+      opacity: 1;
+    }
+  }
+}
+
+.dice-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-l);
+}
+
+.dice {
+  width: calc(100% - 1rem);
+  aspect-ratio: 1;
+}
+
+.edit-delete {
+  background-color: $bg-cream-tone;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.5rem;
 }
 
 .border-red {

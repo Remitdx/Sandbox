@@ -10,9 +10,10 @@ module Games
     def create
       @dice = Games::RollDice.new(dice_params)
       @dice.roll_id = params[:roll_id]
+      @roll = Games::Roll.find(params[:roll_id])
       if @dice.save
         respond_to do |format|
-          format.html { redirect_to games_roll_path(@dice.roll_id), notice: "Dice was successfully created." }
+          format.html { redirect_to games_roll_path(@dice.roll_id) }
           format.turbo_stream
         end
       else
@@ -26,7 +27,7 @@ module Games
 
     def update
       if @dice.update(dice_params.merge(value: nil))
-        redirect_to games_roll_path(@dice.roll_id), notice: "Dice was successfully updated."
+        redirect_to games_roll_path(@dice.roll_id)
       else
         render :edit, status: :unprocessable_entity
       end
@@ -35,7 +36,7 @@ module Games
     def destroy
       @dice.destroy
       respond_to do |format|
-        format.html { redirect_to games_roll_path, notice: "Dice was successfully destroyed." }
+        format.html { redirect_to games_roll_path }
         format.turbo_stream
       end
     end

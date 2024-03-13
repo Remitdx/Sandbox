@@ -1,9 +1,14 @@
-<div class="dice-wrap">
+<div class='dice-wrap' >
   <%= simple_form_for [roll, dice], url: dice.id.present? ? games_roll_roll_dice_path(dice) : games_roll_roll_dices_path do |f| %>
-    <%= f.input :faces, input_html: { autofocus: true } %>
-    <%= f.input :color, collection: Games::RollDice::COLORS %>
-    <%= f.button :submit, class: 'btn-cta btn-dark' do %>
-      <i class="fa-solid fa-plus"></i>
-    <% end %>
+    <%= f.input :faces, error: false, input_html: { min: 2, step: 1, autofocus: true } %>
+    <%= f.input :color, error: false, collection: Games::RollDice::COLORS %>
+    <div class="d-flex justify-content-between">
+      <%= button_tag(type: 'submit', class: 'btn-cta btn-dark') do %>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
+      <%= link_to games_roll_path(@roll), class:'btn-cta btn-light' do %>
+        <i class="fa-solid fa-rotate-left"></i>
+      <% end %>
+    </div>
   <% end %>
 </div>
