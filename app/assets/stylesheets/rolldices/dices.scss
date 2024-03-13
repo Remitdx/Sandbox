@@ -29,6 +29,13 @@
 .dice {
   width: calc(100% - 1rem);
   aspect-ratio: 1;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  .text-big {
+    font-size: var(--fs-l);
+  }
 }
 
 .edit-delete {
@@ -40,6 +47,9 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  top: 0;
+  left: 0;
+  margin: 0.5rem;
 }
 
 .p-relative {
@@ -48,23 +58,24 @@
 
 .p-absolute {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0.5rem;
 }
 
 .border-red {
   border: 4px solid red;
+  background-color: rgb(255, 171, 171);
 }
 
 .border-blue {
   border: 4px solid blue;
+  background-color: rgb(188, 188, 255);
 }
 
 .border-green {
   border: 4px solid green;
+  background-color: rgb(186, 255, 186);
 }
 
 .border-yellow {
   border: 4px solid yellow;
+  background-color: rgb(255, 255, 141);
 }

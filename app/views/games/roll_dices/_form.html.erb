@@ -1,7 +1,7 @@
 <div class='dice-wrap' >
   <%= simple_form_for [roll, dice], url: dice.id.present? ? games_roll_roll_dice_path(roll, dice) : games_roll_roll_dices_path do |f| %>
-    <%= f.input :faces, error: false, input_html: { min: 2, step: 1, autofocus: true } %>
-    <%= f.input :color, error: false, collection: Games::RollDice::COLORS %>
+    <%= f.input :faces, required: false, error: false, input_html: { min: 2, step: 1, autofocus: true } %>
+    <%= f.input :color, required: false, error: false, collection: Games::RollDice::COLORS %>
     <div class="d-flex justify-content-between">
       <%= button_tag(type: 'submit', class: 'btn-cta btn-dark') do %>
         <i class="fa-solid fa-check"></i>
