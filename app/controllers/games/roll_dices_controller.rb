@@ -1,16 +1,15 @@
 module Games
   class RollDicesController < ApplicationController
     before_action :set_dice, only: [:edit, :update, :destroy]
+    before_action :set_roll, only: [:new, :edit, :update, :create]
 
     def new
       @dice = Games::RollDice.new
-      @roll = Games::Roll.find(params[:roll_id])
     end
 
     def create
       @dice = Games::RollDice.new(dice_params)
       @dice.roll_id = params[:roll_id]
-      @roll = Games::Roll.find(params[:roll_id])
       if @dice.save
         respond_to do |format|
           format.html { redirect_to games_roll_path(@dice.roll_id) }
@@ -22,7 +21,6 @@ module Games
     end
 
     def edit
-      @roll = Games::Roll.find(params[:roll_id])
     end
 
     def update
@@ -45,6 +43,10 @@ module Games
 
     def set_dice
       @dice = RollDice.find(params[:id])
+    end
+
+    def set_roll
+      @roll = Games::Roll.find(params[:roll_id])
     end
 
     def dice_params
