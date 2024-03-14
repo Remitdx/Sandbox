@@ -1,7 +1,7 @@
 en:
   ## HOME ##
   title1_html: 'Engineer and full-stack developer'
-  title2_html: '<strong><i class="fa-regular fa-gem"></i> Ruby on Rails</strong> lover, wise internet builder'
+  title2_html: '<strong><i class="fa-regular fa-gem"></i> Ruby on Rails</strong> lover, Internet builder'
   age: 'years old'
 
 
@@ -66,7 +66,6 @@ en:
     title: 'Skills'
     intro: 'In this section, I aim to highlight my skills, even if they are constantly evolving.
             Click on these two buttons to display charts !'
-    outro: 'Skills are great but motivation is what makes you climb mountains.'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'

@@ -1,7 +1,7 @@
 fr:
   ## HOME ##
   title1_html: 'Ingénieur et développeur full-stack'
-  title2_html: "<strong><i class='fa-regular fa-gem'></i> Ruby on Rails</strong> adepte, sage artisan d'internet"
+  title2_html: "<strong><i class='fa-regular fa-gem'></i> Ruby on Rails</strong> adepte, artisan d'Internet"
   age: 'ans'
 
   ## NAVIGATION AND TITLES ##
@@ -66,7 +66,6 @@ fr:
     title: 'Compétences'
     intro: 'Dans cette section, je vous propose une mise en lumière de mes compétences, bien que celles-ci soient en constante évolution.
             Cliquez sur ces deux boutons pour les visualiser !'
-    outro: 'Les compétences sont importantes mais la motivation est ce qui permet de gravir les montagnes.'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'
