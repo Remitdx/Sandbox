@@ -43,11 +43,16 @@
             <i class='fa-solid fa-quote-right align-self-end'></i>
           </div>
         </div>
-        <div class='col-12 order-5 order-md-5'>
+        <div class='col-12 col-md-10 order-5 order-md-5'>
           <%= render(Titles::H3titleComponent.new(title: t('maintenance.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @maintenance %>
+          <div class="d-flex flex-column quote-wrapper">
+            <i class='fa-solid fa-quote-left'></i>
+            <p><%= t('quote.keep_calm') %></p>
+            <i class='fa-solid fa-quote-right align-self-end'></i>
+          </div>
         </div>
-        <div class='my-3 col-12 order-last order-md-last'>
+        <div class='my-3 col-12 col-md-10 order-last order-md-last'>
           <%= render 'pages/philosophy/van' %>
         </div>
       </div>

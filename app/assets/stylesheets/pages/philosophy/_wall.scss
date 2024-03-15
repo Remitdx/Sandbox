@@ -83,40 +83,40 @@
   .ruby {
     top: 80%;
     left: -20%;
-    animation: rubyMove 0.6s ease-in forwards;
+    animation: rubyMove 0.4s ease-in forwards;
   }
 
   .postgre {
     top: -20%;
     left: 55%;
-    animation: postgreMove 0.6s ease-in 0.7s forwards;
+    animation: postgreMove 0.4s ease-in 0.45s forwards;
   }
 
   .rails {
     top: 80%;
     left: 120%;
-    animation: railsMove 0.6s ease-in 1.4s forwards;
+    animation: railsMove 0.4s ease-in 0.9s forwards;
   }
 
   .html {
     top: 60%;
     left: 42.5%;
     transform: scale(0);
-    animation: htmlcssMove 0.6s linear 2.1s forwards;
+    animation: htmlcssMove 0.4s linear 1.35s forwards;
   }
 
   .css {
     top: 60%;
     left: 67.5%;
     transform: scale(0);
-    animation: htmlcssMove 0.6s linear 2.3s forwards;
+    animation: htmlcssMove 0.4s linear 1.45s forwards;
   }
 
   .js {
     top: 39%;
     left: 25%;
     opacity: 0;
-    animation: jsMove 2.9s linear 3s forwards;
+    animation: jsMove 2s linear 1.9s forwards;
   }
 
   .crane {
@@ -128,7 +128,7 @@
     transform-origin: 33%;
   }
 
-  .crane-move { animation: craneMove 3.5s linear 3s forwards; }
+  .crane-move { animation: craneMove 2.4s linear 1.9s forwards; }
 
-  .fade-in { animation: fadeIn 8s linear forwards; }
+  .fade-in { animation: fadeIn 5.4s linear forwards; }
 }
