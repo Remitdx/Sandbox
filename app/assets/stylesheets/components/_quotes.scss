@@ -1,17 +1,64 @@
 .quote-wrapper {
-  max-width: 80%;
-  margin: 0 auto;
 
   i {
     color: $major-dark;
+  }
+
+  .first-quote {
+    font-size: var(--fs-xl);
+  }
+
+  .last-quote {
     font-size: var(--fs-s);
   }
 
-  p {
-    text-shadow: 1px 1px $bg-clear-tone;
+  .quote {
+    padding: 0.2rem;
     font-family: var(--ff-handwrite);
-    font-size: var(--fs-s);
+    font-size: var(--fs-m);
     text-align: center;
     font-style: italic;
+  }
+
+  .author {
+    font-size: var(--fs-s);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    position: relative;
+  }
+
+  .author::before {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: $major-dark;
+    top: 0.5rem;
+    left: -3rem;
+  }
+
+  .author::after {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: $major-dark;
+    top: 0.5rem;
+    right: -3rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .author::before {
+    width: 5rem;
+    top: 0.6rem;
+    left: -5.5rem;
+  }
+
+  .author::after {
+    width: 5rem;
+    top: 0.6rem;
+    right: -5.5rem;
   }
 }

@@ -1,6 +1,5 @@
 .paragraph-wrapper {
-  text-align: start;
-  width: 55%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -8,4 +7,10 @@ p {
   font-family: var(--ff-neutral);
   font-size: var(--fs-s);
   color: $major-dark;
+}
+
+@media (min-width: 40em) {
+  .paragraph-wrapper {
+    width: 60%;
+  }
 }

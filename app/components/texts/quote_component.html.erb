@@ -1,0 +1,6 @@
+<div class='quote-wrapper d-flex flex-column align-items-center'>
+  <i class='fa-solid fa-quote-left first-quote'></i>
+  <p class='quote'><%= @quote %></p>
+  <i class='fa-solid fa-quote-right last-quote'></i>
+  <p class=<%='author' if @author.present? %>><%= @author %></p>
+</div>
