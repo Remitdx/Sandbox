@@ -1,0 +1,14 @@
+.section-1 {
+  background-color: $bg-clear-tone;
+  padding-bottom: 3rem;
+}
+.section-2 {
+  background-color: $bg-cream-tone;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 40em) {
+  .section-1, .section-2 {
+    padding-bottom: 6rem;
+  }
+}

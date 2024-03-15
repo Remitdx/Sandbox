@@ -1,0 +1,17 @@
+.quote-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+
+  i {
+    color: $major-dark;
+    font-size: var(--fs-s);
+  }
+
+  p {
+    text-shadow: 1px 1px $bg-clear-tone;
+    font-family: var(--ff-handwrite);
+    font-size: var(--fs-s);
+    text-align: center;
+    font-style: italic;
+  }
+}
