@@ -1,6 +1,7 @@
 <div class='container text-center'>
   <div data-controller='skills'>
-    <p><%= t('skills.intro') %></p>
+    <%= render(Texts::ParagraphComponent.new(text: t('skills.intro1'))) %>
+    <%= render(Texts::ParagraphComponent.new(text: t('skills.intro2'))) %>
     <div class='mt-4 d-flex justify-content-center'>
       <div class='mx-2' data-skills-target='btnclassic' data-action='click->skills#classic'>
         <%= render(Buttons::CtaComponent.new(title: 'Classic', classes: 'btn-dark btn-big' )) %>

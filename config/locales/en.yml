@@ -64,8 +64,8 @@ en:
   ## CURRICULUM VITAE ##
   skills:
     title: 'Skills'
-    intro: 'In this section, I aim to highlight my skills, even if they are constantly evolving.
-            Click on these two buttons to display charts !'
+    intro1: 'In this section, I aim to highlight my skills, even if they are constantly evolving.'
+    intro2: 'Click on these two buttons to display charts !'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'

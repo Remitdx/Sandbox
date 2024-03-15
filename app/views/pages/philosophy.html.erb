@@ -4,22 +4,20 @@
 <main>
   <%= render(Titles::H1titleComponent.new(title: t('title_philosophy'))) %>
   <section class='section-1'>
-    <div class='container text-center'>
+    <div class='container'>
       <%= render(Titles::H2titleComponent.new(title: t('intro.title'))) %>
-      <p><%= t('intro.part1') %></p>
-      <p><%= t('intro.part2') %></p>
+      <%= render(Texts::ParagraphComponent.new(text: t('intro.part1'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('intro.part2'))) %>
       <div class="my-3">
         <%= render 'pages/philosophy/avatar' %>
       </div>
-      <p><%= t('intro.part3') %></p>
+      <%= render(Texts::ParagraphComponent.new(text: t('intro.part3'))) %>
     </div>
   </section>
   <section class='section-2'>
     <div class='container'>
       <%= render(Titles::H2titleComponent.new(title: t('vision.title'))) %>
-      <div class="text-center">
-        <p><%= t('vision.intro') %></p>
-      </div>
+      <%= render(Texts::ParagraphComponent.new(text: t('vision.intro'))) %>
       <div class='row justify-content-center'>
         <div class='col-12 col-md-7 order-1 order-md-1 d-flex flex-column justify-content-between'>
           <%= render(Titles::H3titleComponent.new(title: t('conception.title'))) %>
