@@ -61,7 +61,6 @@
 
     .nav-item {
       position: relative;
-      background-color: $bg-cream-tone;
       border: 1px solid $major-dark;
       border-radius: 2px;
       width: 100%;
@@ -70,9 +69,25 @@
       text-align: center;
 
       h2 {
-        color: $major-dark;
         font-size: var(--fs-m);
         font-family: var(--ff-handwrite);
+      }
+    }
+
+    .non-selected {
+      background-color: $bg-cream-tone;
+      border: 1px solid $major-dark;
+
+      h2 {
+        color: $major-dark;
+      }
+    }
+
+    .selected {
+      background-color: $major-dark;
+      border: 1px solid $bg-cream-tone;
+      h2 {
+        color: $bg-cream-tone;
       }
     }
 
@@ -129,6 +144,7 @@
     .nav-button {
       width: 4vw;
       height: 4vw;
+      border: 1px solid $major-dark;
       cursor: pointer;
 
       &:hover {
@@ -145,8 +161,12 @@
     }
     .navigation {
 
-      .nav-item:hover {
+      .non-selected:hover {
         background-color: $bg-clear-tone;
+      }
+
+      .selected:hover {
+        background-color: $major-dark-lighter;
       }
 
       .close-animation {
