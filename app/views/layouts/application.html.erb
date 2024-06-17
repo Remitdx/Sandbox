@@ -2,19 +2,20 @@
 <html>
   <head>
     <title>PortfolioV3</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="alternate" hreflang="fr" href="/fr" />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <!-- <link rel='alternate' hreflang="fr" href="/fr" />
     <link rel="alternate" hreflang="en" href="/" /> -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
     <%= javascript_importmap_tags %>
     <%= favicon_link_tag asset_path('favicon.png') %>
   </head>
 
-  <body>
-    <%= render "components/flashes" %>
+  <body data-controller='console' data-action='keydown.enter->console#open'>
+    <%= render 'components/flashes' %>
     <%= yield %>
+    <%= render 'layouts/console' %>
   </body>
 </html>

@@ -1,0 +1,14 @@
+<nav>
+  <%= render 'components/navigation'  %>
+</nav>
+<main>
+  <%= render(Titles::H1titleComponent.new(title: t('title_featureflags'))) %>
+  <section class='section-1'>
+    <%= render(Titles::H2titleComponent.new(title: t('hobby.title'))) %>
+    <div class='container'>
+    </div>
+  </section>
+</main>
+<footer>
+  <%= render 'components/footer'  %>
+</footer>

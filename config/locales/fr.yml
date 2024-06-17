@@ -11,6 +11,7 @@ fr:
   title_project: 'Projets'
   title_resources: 'Ressources'
   title_uikit: 'UI Kit'
+  title_featureflags: 'Feature Flags'
 
   ## FOOTER ##
   footer:

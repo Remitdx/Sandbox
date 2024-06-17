@@ -1,0 +1,7 @@
+<div class='blur d-none' data-console-target='blur'></div>
+<div class='d-none' data-console-target='console'>
+  <p>formobject?</p>
+  <%= form_with url: "/search", class: 'console', method: :get do |form| %>
+    <%= form.text_field :query %>
+  <% end %>
+</div>

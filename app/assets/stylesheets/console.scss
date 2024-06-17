@@ -1,0 +1,22 @@
+.blur {
+  position: fixed;
+  filter: blur(8px);
+    -webkit-filter: blur(8px);
+  backdrop-filter: sepia(60%);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.console {
+  position: fixed;
+  top: calc(50vh - 50px);
+  left: calc(50vw - 300px);
+  width: 600px;
+  height: 100px;
+  padding: 12px;
+  color: antiquewhite;
+  background-color: black;
+  border: 4px solid white;
+}

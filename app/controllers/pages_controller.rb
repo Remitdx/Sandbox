@@ -26,6 +26,9 @@ class PagesController < ApplicationController
   def uikit
   end
 
+  def featureflags
+  end
+
   private
 
   def calculate_age

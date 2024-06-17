@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get 'projects', to: 'pages#projects'
     get 'contact', to: 'pages#contact'
     get 'uikit', to: 'pages#uikit'
+    get 'featureflags', to: 'pages#featureflags'
+    get 'search', to: 'application#search'
 
     namespace :games do
       namespace :risk_games do
