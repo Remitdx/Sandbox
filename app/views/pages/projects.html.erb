@@ -3,25 +3,33 @@
 </nav>
 <main>
   <%= render(Titles::H1titleComponent.new(title: t('title_project'))) %>
-  <section class="section-1">
-    <%= render(Titles::H2titleComponent.new(title: "Professional")) %>
-    <div class="container">
-      <%= link_to 'https://centremormal.fr/', target: :_blank do %>
-        <div class="card-project cm">
+  <section class='section-1'>
+    <%= render(Titles::H2titleComponent.new(title: 'Professional')) %>
+    <div class='container'>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <%= render(Titles::H3titleComponent.new(title: 'Centre Mormal')) %>
+          <%= link_to 'https://centremormal.fr/', target: :_blank do %>
+            <div class='card-project cm'></div>
+          <% end %>
           <p>Site vitrine - conception et développement en tant que freelance - 2022</p>
         </div>
-      <% end %>
-      <%= link_to 'https://monprojet.anah.gouv.fr/', target: :_blank do %>
-        <div class="card-project mpa">
+        <div class="col-12 col-md-6">
+          <%= render(Titles::H3titleComponent.new(title: 'Mon Projet Anah')) %>
+          <%= link_to 'https://monprojet.anah.gouv.fr/', target: :_blank do %>
+            <div class='card-project mpa'></div>
+          <% end %>
           <p>Plateforme digitale- développement fullstack en équipe de 15 en méthode agile - 2023</p>
         </div>
-      <% end %>
+      </div>
     </div>
   </section>
-  <section class="section-2">
+  <section class='section-2'>
     <%= render(Titles::H2titleComponent.new(title: 'Games')) %>
-    <div class="container">
+    <div class='container'>
+      <p>Do you like tactic games ? Need to try this !</p>
       <%= link_to 'Risk', games_risk_games_risks_path, data: { turbo_method: :post } %>
+      <p>Forgot your dices ? Nevermind all you need is here !</p>
       <%= link_to 'Roll Dices', games_rolls_path, data: { turbo_method: :post } %>
     </div>
   </section>

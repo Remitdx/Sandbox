@@ -6,12 +6,21 @@ class ApplicationController < ActionController::Base
   end
 
   def search
-    raise
+    find_path(params[:query])
   end
 
   private
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def find_path(query)
+    case query
+    when 'admin'
+      redirect_to featureflags_path
+    else
+      redirect_back_or_to root_path
+    end
   end
 end
