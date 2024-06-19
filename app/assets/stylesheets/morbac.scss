@@ -1,0 +1,13 @@
+.morbac-wrapper {
+  width: 40%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+
+  .morbac-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    border: 1px solid black;
+  }
+}

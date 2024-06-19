@@ -24,6 +24,8 @@ Rails.application.routes.draw do
         resources :roll_dices, only: [:new, :create, :edit, :update]
       end
       resources :roll_dices, only: [:destroy]
+
+      resources :morbacs, only: [:create, :update, :show]
     end
   end
 end

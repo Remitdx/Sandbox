@@ -1,8 +1,8 @@
-<%= render(Titles::H1titleComponent.new(title: "Dices roller" )) %>
-<div class="section-1">
-  <div class="container">
+<%= render(Titles::H1titleComponent.new(title: 'Dices roller' )) %>
+<div class='section-1'>
+  <div class='container'>
     <p class= 'text-center pt-3'>Add dices, roll'em ! </p>
-    <div class="d-flex py-3 justify-content-around align-items-center">
+    <div class='d-flex py-3 justify-content-around align-items-center'>
       <%= link_to games_roll_path(@roll), data: { turbo_method: :put } do %>
         <%= render(Buttons::CtaComponent.new(title: 'Roll', classes: 'btn-big btn-complementary' )) %>
       <% end %>
