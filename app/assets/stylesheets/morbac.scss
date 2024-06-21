@@ -2,6 +2,13 @@
   width: 40%;
   aspect-ratio: 1;
   margin: 0 auto;
+  text-align: center;
+
+  .instruction {
+    p {
+      font-family: var(--ff-geek);
+    }
+  }
 
   .morbac-tile {
     display: flex;
@@ -9,5 +16,13 @@
     align-items: center;
     aspect-ratio: 1;
     border: 1px solid black;
+  }
+
+  a {
+    color: $major-dark;
+    text-decoration: none;
+    i {
+      font-size: var(--fs-l);
+    }
   }
 }

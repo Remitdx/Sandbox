@@ -28,15 +28,19 @@ module Games
 
     def compute_turns(morbac, index) # return [value, gameover]
       array1 = player_turn(morbac, index)
+      return [morbac.value, morbac.gameover] if array1 == []
+
       array2 = player_win?(array1) ? array1 : ai_turn(array1)
       gameover = ai_win?(array2) ? 1 : 2
-      gameover = player_win?(array2) ? 0 : 2 # TODO 33 crush 32 result
+      gameover = player_win?(array2) ? 0 : gameover
 
       [array2, gameover]
     end
 
-    def player_turn(morbac, index) # return array modified or unchanged
-      morbac.value[index] = 0 if morbac.value[index] > 1
+    def player_turn(morbac, index) # return array modified or []
+      return [] if morbac.value[index] < 2
+
+      morbac.value[index] = 0
       morbac.value
     end
 
@@ -53,7 +57,10 @@ module Games
 
     def ai_turn(array) # return array modified
     possible_plays = array.each_index.select { |index| array[index] == 5 }
-    play = possible_plays.shuffle.first
+    return array if possible_plays == []
+
+    play = possible_plays.shuffle.first # dumb AI picking random available spot
+
     array[play] = 1
     array
     end
