@@ -48,7 +48,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_19_142344) do
   end
 
   create_table "morbacs", force: :cascade do |t|
-    t.string "value", default: ["2", "2", "2", "2", "2", "2", "2", "2", "2"], array: true
+    t.integer "value", default: [5, 5, 5, 5, 5, 5, 5, 5, 5], array: true
+    t.integer "gameover", default: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
