@@ -18,9 +18,9 @@
           <%= link_to games_morbac_path(pos: i), class: 'col-4', data: { turbo_method: :patch } do %>
             <div class='morbac-tile'>
               <% if t == 0 %>
-                <i class='fa-regular fa-circle'></i>
+                <i class='fa-regular fa-circle player-sign'></i>
               <% elsif t == 1 %>
-                <i class='fa-solid fa-xmark'></i>
+                <i class='fa-solid fa-xmark ai-sign'></i>
               <% end %>
             </div>
           <% end %>

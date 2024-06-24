@@ -15,14 +15,21 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
-    border: 1px solid black;
+    border: 1px solid $major-dark;
   }
 
   a {
-    color: $major-dark;
     text-decoration: none;
     i {
       font-size: var(--fs-l);
+    }
+
+    .player-sign {
+      color: $major-dark;
+    }
+
+    .ai-sign {
+      color: $complementary;
     }
   }
 }
