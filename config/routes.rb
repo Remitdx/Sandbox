@@ -26,6 +26,7 @@ Rails.application.routes.draw do
       resources :roll_dices, only: [:destroy]
 
       resources :morbacs, only: [:create, :update, :show], :path => 'tictactoe'
+      resources :puissance4s, only: [:create, :update, :show]
     end
   end
 end

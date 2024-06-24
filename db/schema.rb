@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_19_142344) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_24_102835) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +60,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_19_142344) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["risk_id"], name: "index_players_on_risk_id"
+  end
+
+  create_table "puissance4s", force: :cascade do |t|
+    t.integer "gameover"
+    t.integer "grid", array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "risks", force: :cascade do |t|
