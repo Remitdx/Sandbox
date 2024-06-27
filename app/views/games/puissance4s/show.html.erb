@@ -5,14 +5,12 @@
       <div class='instruction pt-3'>
         <% case @puissance_4.gameover %>
         <% when 0 %>
-          <p>Player has won !</p>
-        <% when 1 %>
-          <p>AI has won !</p>
+          <p><%= @puissance_4.players.first %> has won !</p>
         <% when 2 %>
-          <p>Play Puissance 4</p>
+          <p>Time to play <%= @puissance_4.players.first %> !</p>
         <% end %>
       </div>
-      <div class='d-flex'>
+      <div class='d-flex justify-content-center py-3'>
         <% i = 0 %>
         <% @puissance_4.grid.each do |column| %>
           <%= link_to games_puissance4_path(column: i), class: 'column', data: { turbo_method: :patch } do %>
@@ -29,6 +27,7 @@
         <% i +=1 %>
         <% end %>
       </div>
+      <%= link_to 'Reset', games_puissance4_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
     </div>
   <div>
 <div>

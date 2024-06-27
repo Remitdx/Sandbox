@@ -21,26 +21,50 @@ module Games
     def update
       @puissance_4 = Games::Puissance4.find(params[:id])
 
-      grid1 = player_turn(@puissance_4, params[:column].to_i)
-      # modify array with player's turn
-      gameover = win?(grid1) ? 0 : 2
-      # check if player wins
-      @puissance_4.update(grid: grid1, gameover: gameover)
+      if @puissance_4.gameover == 2 || params[:reset]
+        computed_score = params[:reset] ? reset_game : compute_turns(@puissance_4, params[:column].to_i)
+
+        @puissance_4.update(grid: computed_score[0], gameover: computed_score[1], players: computed_score[2])
+      end
 
       redirect_to games_puissance4_path(@puissance_4)
     end
 
     private
 
-    def valid_play?(puissance_4, column)
-      puissance_4.grid[column].include?(0)
+    def reset_game
+      [
+        [
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0]
+        ],
+        2,
+        ['Player 1', 'Player 2']
+      ]
+    end
+
+    def compute_turns(puissance_4, column)
+      grid = player_turn(puissance_4, column)
+      gameover = win?(grid) ? 0 : 2
+      players = gameover == 2 ? puissance_4.players.rotate : puissance_4.players
+
+      [grid, gameover, players]
     end
 
     def player_turn(puissance_4, column)
-      return [] unless valid_play?(puissance_4, column)
+      return [puissance_4.grid] unless valid_play?(puissance_4, column)
 
-      puissance_4.grid[column][puissance_4.grid[column].index(0)] = 1
+      puissance_4.grid[column][puissance_4.grid[column].index(0)] = puissance_4.players.first == 'Player 1' ? 1 : -1
       puissance_4.grid
+    end
+
+    def valid_play?(puissance_4, column)
+      puissance_4.grid[column].include?(0)
     end
 
     def win?(grid)

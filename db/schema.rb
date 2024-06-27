@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_24_102835) do
   create_table "puissance4s", force: :cascade do |t|
     t.integer "gameover"
     t.integer "grid", array: true
+    t.string "players", default: ["Player 1", "Player 2"], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
