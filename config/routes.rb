@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
       resources :morbacs, only: [:create, :update, :show], :path => 'tictactoe'
       resources :puissance4s, only: [:create, :update, :show]
+      get 'pong', to: 'pong#play'
     end
   end
 end
