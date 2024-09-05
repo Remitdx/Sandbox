@@ -5,14 +5,14 @@ module Games
       has_many :maps, dependent: :destroy
 
       MODE = {
-        1 =>  ['versus AI', 'disabled'],
-        2 =>  ['Multiplayer', '']
+        1 =>  [ "versus AI", "disabled" ],
+        2 =>  [ "Multiplayer", "" ]
       }
 
       COMPLEXITY = {
-        1 =>  ['Simple', ''],
-        2 =>  ['Normal', 'disabled'],
-        3 =>  ['Hardcore', 'disabled']
+        1 =>  [ "Simple", "" ],
+        2 =>  [ "Normal", "disabled" ],
+        3 =>  [ "Hardcore", "disabled" ]
       }
     end
   end

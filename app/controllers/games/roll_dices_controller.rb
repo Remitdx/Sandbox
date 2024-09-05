@@ -2,9 +2,9 @@ module Games
   class RollDicesController < ApplicationController
     include Games
 
-    before_action :set_dice, only: [:edit, :update, :destroy]
-    before_action :set_roll, only: [:new, :edit, :update, :create]
-    before_action :set_scores, only: [:update, :create, :destroy]
+    before_action :set_dice, only: [ :edit, :update, :destroy ]
+    before_action :set_roll, only: [ :new, :edit, :update, :create ]
+    before_action :set_scores, only: [ :update, :create, :destroy ]
 
     def new
       @dice = Games::RollDice.new

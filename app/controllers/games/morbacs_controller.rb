@@ -23,18 +23,18 @@ module Games
     private
 
     def reset_game
-      [[5, 5, 5, 5, 5, 5, 5, 5, 5], 2]
+      [ [ 5, 5, 5, 5, 5, 5, 5, 5, 5 ], 2 ]
     end
 
     def compute_turns(morbac, index) # return [value, gameover]
       array1 = player_turn(morbac, index)
-      return [morbac.value, morbac.gameover] if array1 == []
+      return [ morbac.value, morbac.gameover ] if array1 == []
 
       array2 = player_win?(array1) ? array1 : ai_turn(array1)
       gameover = ai_win?(array2) ? 1 : 2
       gameover = player_win?(array2) ? 0 : gameover
 
-      [array2, gameover]
+      [ array2, gameover ]
     end
 
     def player_turn(morbac, index) # return array modified or []

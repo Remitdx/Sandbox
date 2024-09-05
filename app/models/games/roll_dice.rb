@@ -2,7 +2,7 @@ module Games
   class RollDice < ApplicationRecord
     belongs_to :roll
 
-    COLORS = %w(red blue yellow green)
+    COLORS = %w[red blue yellow green]
 
     validates :faces, presence: true,
                       numericality: { greater_than_or_equal_to: 2 }

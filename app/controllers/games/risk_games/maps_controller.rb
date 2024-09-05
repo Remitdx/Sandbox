@@ -1,7 +1,7 @@
 module Games
   module RiskGames
     class MapsController < ApplicationController
-      before_action :destroy_previous_map, only: [:create]
+      before_action :destroy_previous_map, only: [ :create ]
 
       def create
         @map = Games::RiskGames::Map.new(map_params)

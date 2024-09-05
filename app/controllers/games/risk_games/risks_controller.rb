@@ -1,7 +1,7 @@
 module Games
   module RiskGames
     class RisksController < ApplicationController
-      before_action :prepare_map, only: [:edit, :show]
+      before_action :prepare_map, only: [ :edit, :show ]
 
       def create
         @risk = Games::RiskGames::Risk.create

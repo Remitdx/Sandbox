@@ -2,7 +2,7 @@ module Games
   class RollsController < ApplicationController
     include Games
 
-    before_action :set_roll, :set_dices, only: [:show, :update]
+    before_action :set_roll, :set_dices, only: [ :show, :update ]
 
     def create
       @roll = Games::Roll.create
@@ -28,22 +28,22 @@ module Games
     private
 
     def scores_calculation(dices)
-      red, blue, yellow, green, total = [0, 0, 0, 0, 0]
+      red, blue, yellow, green, total = [ 0, 0, 0, 0, 0 ]
       dices.each do |dice|
         return Games::RollsController.reset_scores if dice.value.nil?
         total += dice.value
         case dice.color
-        when 'red'
+        when "red"
           red += dice.value
-        when 'blue'
+        when "blue"
           blue += dice.value
-        when 'yellow'
+        when "yellow"
           yellow += dice.value
-        when 'green'
+        when "green"
           green += dice.value
         end
       end
-      [red, blue, yellow, green, total]
+      [ red, blue, yellow, green, total ]
     end
 
     def set_roll

@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def find_path(query)
     case query
-    when 'admin'
+    when "admin"
       redirect_to featureflags_path
     else
       redirect_back_or_to root_path

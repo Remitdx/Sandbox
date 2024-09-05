@@ -14,7 +14,7 @@ module Games
       def generate_tiles
         for y in 1..lines do
           for x in 1..columns do
-            Games::RiskGames::Tile.create!(map_id: self.id, field: Games::RiskGames::Tile::FIELD[[1, 2, 3, 5].sample], x: x, y: y)
+            Games::RiskGames::Tile.create!(map_id: self.id, field: Games::RiskGames::Tile::FIELD[[ 1, 2, 3, 5 ].sample], x: x, y: y)
           end
         end
       end

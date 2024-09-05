@@ -2,13 +2,13 @@ module Games
   class Puissance4sController < ApplicationController
     def create
       puissance_4 = Games::Puissance4.create(grid: [
-                                                    [0, 0, 0, 0, 0, 0],
-                                                    [0, 0, 0, 0, 0, 0],
-                                                    [0, 0, 0, 0, 0, 0],
-                                                    [0, 0, 0, 0, 0, 0],
-                                                    [0, 0, 0, 0, 0, 0],
-                                                    [0, 0, 0, 0, 0, 0],
-                                                    [0, 0, 0, 0, 0, 0]
+                                                    [ 0, 0, 0, 0, 0, 0 ],
+                                                    [ 0, 0, 0, 0, 0, 0 ],
+                                                    [ 0, 0, 0, 0, 0, 0 ],
+                                                    [ 0, 0, 0, 0, 0, 0 ],
+                                                    [ 0, 0, 0, 0, 0, 0 ],
+                                                    [ 0, 0, 0, 0, 0, 0 ],
+                                                    [ 0, 0, 0, 0, 0, 0 ]
                                                   ],
                                             gameover: 2)
       redirect_to games_puissance4_path(puissance_4)
@@ -35,31 +35,31 @@ module Games
     def reset_game
       [
         [
-          [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0],
-          [0, 0, 0, 0, 0, 0]
+          [ 0, 0, 0, 0, 0, 0 ],
+          [ 0, 0, 0, 0, 0, 0 ],
+          [ 0, 0, 0, 0, 0, 0 ],
+          [ 0, 0, 0, 0, 0, 0 ],
+          [ 0, 0, 0, 0, 0, 0 ],
+          [ 0, 0, 0, 0, 0, 0 ],
+          [ 0, 0, 0, 0, 0, 0 ]
         ],
         2,
-        ['Player 1', 'Player 2']
+        [ "Player 1", "Player 2" ]
       ]
     end
 
     def compute_turns(puissance_4, column)
+      return [ puissance_4.grid, puissance_4.gameover, puissance_4.players ] unless valid_play?(puissance_4, column)
+
       grid = player_turn(puissance_4, column)
       gameover = win?(grid) ? 0 : 2
-      players = gameover == 2 ? puissance_4.players.rotate : puissance_4.players
+      player = gameover == 2 ? puissance_4.players.rotate : puissance_4.players
 
-      [grid, gameover, players]
+      [ grid, gameover, player ]
     end
 
     def player_turn(puissance_4, column)
-      return [puissance_4.grid] unless valid_play?(puissance_4, column)
-
-      puissance_4.grid[column][puissance_4.grid[column].index(0)] = puissance_4.players.first == 'Player 1' ? 1 : -1
+      puissance_4.grid[column][puissance_4.grid[column].index(0)] = puissance_4.players.first == "Player 1" ? 1 : -1
       puissance_4.grid
     end
 
