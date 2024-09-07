@@ -1,9 +1,10 @@
 // Import your components CSS files here.
 @import 'alert';
-@import 'buttons';
+@import 'buttons/buttons';
 @import 'cards';
 @import 'footer';
 @import 'navigation';
-@import 'paragraphs';
-@import 'quotes';
-@import 'titles';
+@import 'texts/paragraphs';
+@import 'texts/quotes';
+@import 'titles/titles';
+@import 'scrollanimations/appearing';

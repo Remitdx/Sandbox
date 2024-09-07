@@ -153,5 +153,8 @@ fr:
 
   ## PROJETCS ##
 
+  project:
+    professionals: 'Professionnels'
+    games: 'Jeux'
 
   ## CONTACT ##

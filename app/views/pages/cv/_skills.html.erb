@@ -7,7 +7,7 @@
         <%= render(Buttons::CtaComponent.new(title: 'Classic', classes: 'btn-dark btn-big' )) %>
       </div>
       <div class='mx-2' data-skills-target='btnradar' data-action='click->skills#radar'>
-        <%= render(Buttons::CtaComponent.new(title: 'Radar', classes: 'btn-dark btn-big' )) %>
+        <%= render(Buttons::CtaComponent.new(title: 'Radar', classes: 'btn-complementary btn-big' )) %>
       </div>
     </div>
     <div class='row'>
@@ -28,7 +28,7 @@
               <% end %>
             </div>
           </div>
-          <div class='card-radar d-none' data-skills-target='radar'>
+          <div class='card-radar' data-skills-target='radar'>
             <% for i in 1..5 do %>
               <div class='radar-bg-<%= i %>'></div>
             <% end %>

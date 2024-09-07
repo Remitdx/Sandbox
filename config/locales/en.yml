@@ -153,6 +153,8 @@ en:
 
 
   ## PROJETCS ##
-
+  project:
+    professionals: 'Professionals'
+    games: 'Games'
 
   ## CONTACT ##
