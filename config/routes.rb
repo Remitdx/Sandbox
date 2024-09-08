@@ -20,6 +20,8 @@ Rails.application.routes.draw do
         resources :tiles, only: [ :show ]
       end
 
+      resources :dikkeneks, only: [ :index, :create, :show, :edit, :update ]
+
       resources :rolls, only: [ :create, :show, :update ] do
         resources :roll_dices, only: [ :new, :create, :edit, :update ]
       end
@@ -27,7 +29,6 @@ Rails.application.routes.draw do
 
       resources :morbacs, only: [ :create, :update, :show ], path: "tictactoe"
       resources :puissance4s, only: [ :create, :update, :show ]
-      get "pong", to: "pong#play"
     end
   end
 end
