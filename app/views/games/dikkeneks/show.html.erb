@@ -1,0 +1,10 @@
+<div class="container">
+  <div><%= @characters %></div>
+  <div>
+    <% @dikkenek.quotes.each do |quote| %>
+    <div class="quote">
+      <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
+    </div>
+    <% end %>
+  </div>
+</div>
