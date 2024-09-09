@@ -1,4 +1,8 @@
-<h1>Dikkenek</h1>
-<div class="podium-wrapper"></div>
-<div class="last-games"></div>
-<%= link_to 'Jouer', games_dikkeneks_path, data: { turbo_method: :post } %>
+<div class="section-1">
+  <div class="container">
+    <h1>Dikkenek</h1>
+    <div class="podium-wrapper"></div>
+    <div class="last-games"></div>
+    <%= render 'games/dikkeneks/new', dikkenek: @dikkenek  %>
+  </div>
+</div>

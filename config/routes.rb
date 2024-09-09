@@ -20,7 +20,7 @@ Rails.application.routes.draw do
         resources :tiles, only: [ :show ]
       end
 
-      resources :dikkeneks, only: [ :index, :create, :show, :edit, :update ]
+      resources :dikkeneks, only: [ :index, :create, :show, :update ]
 
       resources :rolls, only: [ :create, :show, :update ] do
         resources :roll_dices, only: [ :new, :create, :edit, :update ]
