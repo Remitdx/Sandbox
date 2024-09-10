@@ -1,5 +1,7 @@
 <div>
+  <div>STEPPER</div>
   <% @dikkenek.quotes.each do |quote| %>
     <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
   <% end %>
 </div>
+<div>SUBMIT ALL</div>
