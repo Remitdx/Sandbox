@@ -3,7 +3,7 @@
   <% when 0 %>
     <%= render 'games/dikkeneks/game_instructions', pseudo: @dikkenek.pseudo %>
   <% when 1 %>
-    <%= render 'games/dikkeneks/game_in_progress', dikkenek: @dikkenek %>
+    <%= render 'games/dikkeneks/game_in_progress', dikkenek: @dikkenek, characters: @characters %>
   <% when 2 %>
     <%= render 'games/dikkeneks/game_results', dikkenek: @dikkenek %>
   <% end %>

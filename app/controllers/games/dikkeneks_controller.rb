@@ -15,14 +15,15 @@ module Games
     end
 
     def show
-      @characters = Games::Dikkeneks::Data::CHARACTERS
+      @characters = Games::Dikkeneks::Data::CHARACTERS.sort
       @dikkenek = Games::Dikkenek.find(params[:id])
     end
 
     def update
       @dikkenek = Games::Dikkenek.find(params[:id])
-      @dikkenek.gameover += 1
-      # calcul du resultat if @dikkenek == 2
+      @dikkenek.gameover += 1 unless @dikkenek.gameover == 2
+      @dikkenek.answers = formated_answers if @dikkenek.gameover == 2
+      # @dikkenek.score = compute_score if @dikkenek.gameover == 2
       @dikkenek.save
       redirect_to games_dikkenek_path(@dikkenek)
     end
@@ -35,6 +36,23 @@ module Games
 
     def dikkenek_params
       params.require(:games_dikkenek).permit(:pseudo, :answer)
+    end
+
+    def compute_score
+      raise
+      # return the computed score
+      # author is good ?
+      # accuracy about scene ? not linear
+      # time spent ?
+    end
+
+    def formated_answers
+      # return the answer in a great format to save it later
+      answers = []
+      for i in 1..10
+        answers.push({ author: params[:"characters-#{i}"], scene: params[:"scene-#{i}"] })
+      end
+      answers
     end
   end
 end

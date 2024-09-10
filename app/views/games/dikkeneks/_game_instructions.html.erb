@@ -1,4 +1,12 @@
-<h2>Consignes</h2>
-<p>Bienvenue <%= pseudo %></p>
-<p>10 citations, trouve le personnage et le moment dans le film. Attention le jeu est chronometré !</p>
-<%= link_to 'Jouer', games_dikkenek_path(@dikkenek), class: "btn-cta btn-dark", data: { turbo_method: :put } %>
+<h2>Tchao <%= pseudo %></h2>
+<p>Je vais te dire, moi, c'que tu dois faire toi !</p>
+<p>10 citations tirées au sort parmis plus de 800 grâce à internet, tu dois trouver :</p>
+<ul>
+  <li>le personnage qui prononce ces mots</li>
+  <li>le moment dans le film </li>
+</ul>
+<p>Une fois tes réponses collectées et encodées dans la machine, ça part directement dans un système de calcul de scoring.</p>
+<p>Réponds vite pour marquer plus de points.</p>
+<p>Une pondération est faite en fonction de la notoriété des citations, c'est le pot belge comme on dit !</p>
+<div class="py-3"></div>
+<%= link_to 'Jouer', games_dikkenek_path(@dikkenek), class: "btn-cta btn-big btn-dark", data: { turbo_method: :put } %>

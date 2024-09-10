@@ -1,7 +1,27 @@
 <div>
   <div>STEPPER</div>
-  <% @dikkenek.quotes.each do |quote| %>
-    <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
-  <% end %>
+  <div class="d-flex quotes-wrapper">
+    <%= form_with url: games_dikkenek_path(dikkenek), method: :put do |form| %>
+      <% i = 1 %>
+      <% dikkenek.quotes.each do |quote| %>
+        <div id="quote-<%= i %>" class="card-quote">
+          <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
+          <div class="d-flex justify-content-around">
+            <% characters.each do |character| %>
+              <div class="d-flex flex-column align-items-center">
+                <%= form.label :"characters-#{i}", character %>
+                <%= image_tag "dikkenek/#{character}.jpg", class: 'dikkenek-avatar' %>
+                <%= form.radio_button :"characters-#{i}", character, required: true %>
+              </div>
+            <% end %>
+          </div>
+          <div>
+            <%= form.range_field :"scene-#{i}", in: 1..78 %>
+          </div>
+        </div>
+        <% i +=1 %>
+      <% end %>
+      <%= form.submit "Valider", class: "btn-cta btn-big btn-dark" %>
+    <% end %>
+  </div>
 </div>
-<div>SUBMIT ALL</div>

@@ -36,11 +36,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_150757) do
   end
 
   create_table "dikkeneks", force: :cascade do |t|
-    t.integer "gameover"
-    t.text "quotes"
-    t.integer "answers", array: true
-    t.integer "score"
     t.string "pseudo"
+    t.text "quotes"
+    t.integer "gameover"
+    t.text "answers"
+    t.integer "score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
