@@ -1,8 +1,22 @@
 <div class="section-1">
-  <div class="container">
+  <div class="container dikkenek-hero">
     <h1>Dikkenek</h1>
-    <div class="podium-wrapper"></div>
-    <div class="last-games"></div>
+    <div class="card">
+      <h3>Meilleurs joueurs</h3>
+      <% @podium.each do |player| %>
+        <div>
+          <p><%= player.pseudo %> > <%= player.score %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="card">
+      <h3>Dernières parties</h3>
+      <% @last_played.each do |player| %>
+        <div>
+          <p><%= player.pseudo %> > <%= player.score %></p>
+        </div>
+      <% end %>
+    </div>
     <%= render 'games/dikkeneks/new', dikkenek: @dikkenek  %>
   </div>
 </div>
