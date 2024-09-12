@@ -4,7 +4,7 @@
     <%= form_with url: games_dikkenek_path(dikkenek), method: :put do |form| %>
       <% i = 1 %>
       <% dikkenek.quotes.each do |quote| %>
-        <div id="quote-<%= i %>" class="card-quote">
+        <div id="quote-<%= i %>" class="card-quote <%= "d-none" unless i == 1 %>">
           <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
           <div class="d-flex justify-content-around">
             <% characters.each do |character| %>

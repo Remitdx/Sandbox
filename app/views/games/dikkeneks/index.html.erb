@@ -1,22 +1,29 @@
-<div class="section-1">
-  <div class="container dikkenek-hero">
+<div class="dikkenek-hero">
+  <div class="container text-center h-full d-flex flex-column justify-content-around">
     <h1>Dikkenek</h1>
-    <div class="card">
-      <h3>Meilleurs joueurs</h3>
-      <% @podium.each do |player| %>
-        <div>
-          <p><%= player.pseudo %> > <%= player.score %></p>
-        </div>
-      <% end %>
+    <div class="new-game">
+      <%= render 'games/dikkeneks/new', dikkenek: @dikkenek  %>
     </div>
-    <div class="card">
-      <h3>Dernières parties</h3>
-      <% @last_played.each do |player| %>
-        <div>
-          <p><%= player.pseudo %> > <%= player.score %></p>
-        </div>
-      <% end %>
+    <div>
+      <div class="card-dikkenek">
+        <h2>Hall of Fame</h2>
+        <p>Les Kings de Dikkenek ont fait leurs preuves.</p>
+        <p>La crème de la crème parmis les fans !</p>
+        <% @podium.each do |player| %>
+          <div>
+            <p><strong><%= player.pseudo %> ~ <%= player.score %> points</strong></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-dikkenek">
+        <h2>Dernières tentatives</h2>
+        <p>Ils ont remis la petite soeur !</p>
+        <% @last_played.each do |player| %>
+          <div>
+            <p><strong><%= player.pseudo %> ~ <%= player.score %> points</strong></p>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <%= render 'games/dikkeneks/new', dikkenek: @dikkenek  %>
   </div>
 </div>
