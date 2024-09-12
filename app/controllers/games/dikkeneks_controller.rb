@@ -12,7 +12,7 @@ module Games
       if @dikkenek.save
         redirect_to games_dikkenek_path(@dikkenek)
       else
-        render index:, status: :unprocessable_entity
+        # render index:, status: :unprocessable_entity
       end
     end
 
