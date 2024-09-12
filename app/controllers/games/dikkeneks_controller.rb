@@ -1,10 +1,9 @@
 module Games
   class DikkeneksController < ApplicationController
-    require "json"
     def index
       @dikkenek = Games::Dikkenek.new
-      @podium = Games::Dikkenek.order(score: :desc).first(3)
-      @last_played = Games::Dikkenek.last(3).reverse
+      @podium = Games::Dikkenek.where.not(score: nil).order(score: :desc).first(3)
+      @last_played = Games::Dikkenek.where.not(score: nil).last(3).reverse
     end
 
     def create
