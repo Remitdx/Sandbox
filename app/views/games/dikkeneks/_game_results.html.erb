@@ -20,7 +20,7 @@
       <% difficulty += @dikkenek.quotes[i][:difficulty] %>
     <% end %>
     <p>Indice de difficulté de la sélection : <%= (difficulty / 10).round(1) %> / 5</p>
-    <p>Précision : <%= 100 - (accuracy / 10).round(1) %> %</p>
+    <p>Précision : <%= (100 - (accuracy / 10)).round(1) %> %</p>
     <p>Temps de réponse : <%= (@dikkenek.answers.last[:delay].to_f / 1000).round(2) %> secondes</p>
   </div>
   <div class="mt-3">

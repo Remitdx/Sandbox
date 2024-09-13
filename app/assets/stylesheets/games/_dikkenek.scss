@@ -57,12 +57,33 @@
       transform: scale(1.1);
     }
 
-    .dikkedek-range {
+    .dikkenek-range {
       width: 100%;
+
+      ::-webkit-slider-runnable-track {
+        color: blue;
+      }
+
+      ::-webkit-slider-thumb {
+        color: red;
+      }
     }
 
     .dikkenek-stepper {
       height: 10vh;
+
+      .step {
+        height: 6vw;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: $major-dark;
+        color: $bg-cream-tone;
+      }
+
+      .active {
+        border: 4px solid $complementary;
+        transform: scale(1.2);
+      }
     }
 
     .dikkenek-quotes-wrapper {
@@ -70,7 +91,7 @@
     }
 
     i {
-      font-size: var(--fs-l);
+      font-size: var(--fs-xl);
     }
 }
 

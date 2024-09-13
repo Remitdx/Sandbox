@@ -1,35 +1,39 @@
 <div class="dikkenek-progress d-flex flex-column justify-content-between align-items-center" data-controller="dikkenek">
-  <div class="dikkenek-stepper">STEPPER</div>
-  <div class="d-flex justify-content-between align-items-center">
-    <div><i class="fa-solid fa-circle-arrow-left" data-action="click->dikkenek#previous"></i></div>
-    <div class="dikkenek-quotes-wrapper">
-      <%= form_with url: games_dikkenek_path(dikkenek), method: :put do |form| %>
-        <% i = 1 %>
-        <% dikkenek.quotes.each do |quote| %>
-          <div id="quote-<%= i %>" class="card-quote d-flex flex-column justify-content-between align-items-center <%= "d-none" unless i == 1 %>" data-dikkenek-target="quote">
-            <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
-            <div class="row">
-              <% characters.each do |character| %>
-                <div class="col-md-1 col-4">
-                  <div class="d-flex flex-column align-items-center">
-                    <%= form.label :"characters-#{i}", character %>
-                    <%= image_tag "dikkenek/#{character}.jpg", class: 'dikkenek-avatar', data: { action: "click->dikkenek#radioButtons", dikkenek_target: "characters" } %>
-                    <%= form.radio_button :"characters-#{i}", character, required: true, class: "d-none" %>
-                  </div>
+  <div class="dikkenek-stepper d-flex">
+    <% for i in 1..10 do %>
+      <span class="step <%= "active" if i == 1 %>" data-dikkenek-target="steps"><%= i %></span><span><%= i == 10 ? "" : "-" %></span>
+    <% end%>
+  </div>
+  <div class="dikkenek-quotes-wrapper">
+    <%= form_with url: games_dikkenek_path(dikkenek), method: :put do |form| %>
+      <% i = 1 %>
+      <% dikkenek.quotes.each do |quote| %>
+        <div id="quote-<%= i %>" class="card-quote d-flex flex-column justify-content-between align-items-center <%= "d-none" unless i == 1 %>" data-dikkenek-target="quotes">
+          <%= render(Texts::QuoteComponent.new(quote: quote[:quote])) %>
+          <div class="row">
+            <% characters.each do |character| %>
+              <div class="col-md-1 col-4">
+                <div class="d-flex flex-column align-items-center">
+                  <%= form.label :"characters-#{i}", character %>
+                  <%= image_tag "dikkenek/#{character}.jpg", class: 'dikkenek-avatar', data: { action: "click->dikkenek#radioButtons", dikkenek_target: "characters" } %>
+                  <%= form.radio_button :"characters-#{i}", character, required: true, class: "d-none" %>
                 </div>
-              <% end %>
-            </div>
-            <div>
-              <%= form.range_field :"scene-#{i}", in: 1..607, class: "dikkenek-range" %>
-            </div>
+              </div>
+            <% end %>
           </div>
-          <% i +=1 %>
-        <% end %>
-        <%= form.hidden_field :start_at, value:'0', data: { dikkenek_target: 'start' } %>
-        <%= form.hidden_field :submit_at, value: '0', data: { dikkenek_target: 'end' } %>
-        <%= form.submit "Valider", class: "btn-cta btn-dikkenek", data: { action: "click->dikkenek#submitForm" } %>
+          <div>
+            <%= form.range_field :"scene-#{i}", in: 1..607, class: "dikkenek-range" %>
+          </div>
+        </div>
+        <% i +=1 %>
       <% end %>
-    </div>
-    <div><i class="fa-solid fa-circle-arrow-right" data-action="click->dikkenek#next"></i></div>
+      <%= form.hidden_field :start_at, value:'0', data: { dikkenek_target: 'start' } %>
+      <%= form.hidden_field :submit_at, value: '0', data: { dikkenek_target: 'end' } %>
+      <div class="d-flex justify-content-between align-items-center">
+        <i class="fa-solid fa-circle-arrow-left" data-action="click->dikkenek#previous"></i>
+        <%= form.submit "Valider", class: "btn-cta btn-dikkenek", data: { action: "click->dikkenek#submitForm" } %>
+        <i class="fa-solid fa-circle-arrow-right" data-action="click->dikkenek#next"></i>
+      </div>
+    <% end %>
   </div>
 </div>

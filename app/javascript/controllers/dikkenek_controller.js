@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["start", "end", "characters", "quotes"]
+  static targets = ["start", "end", "quotes", "steps", "characters"]
 
   radioButtons(e) {
     e.target.nextElementSibling.checked = true;
@@ -14,11 +14,19 @@ export default class extends Controller {
   }
 
   previous() {
-    console.log('PREVIOUS');
+    let index = this.stepsTargets.findIndex(step => step.classList.contains("active"));
+    this.stepsTargets[index].classList.remove("active");
+    this.stepsTargets[(index + 9) % 10].classList.add("active");
+    this.quotesTargets[index].classList.add("d-none");
+    this.quotesTargets[(index + 9) % 10].classList.remove("d-none");
   }
 
   next() {
-    console.log('NEXT');
+    let index = this.stepsTargets.findIndex(step => step.classList.contains("active"));
+    this.stepsTargets[index].classList.remove("active");
+    this.stepsTargets[(index + 1) % 10].classList.add("active");
+    this.quotesTargets[index].classList.add("d-none");
+    this.quotesTargets[(index + 1) % 10].classList.remove("d-none");
   }
 
   connect() {
