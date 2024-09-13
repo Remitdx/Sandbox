@@ -1,4 +1,4 @@
-.dikkenek-hero{
+.dikkenek-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(dikkenek/Dikkenek.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -50,6 +50,30 @@
   margin: 0 auto;
 }
 
+.dikkenek-progress {
+
+  .dikkenek-selected {
+      border: 3px solid $complementary;
+      transform: scale(1.1);
+    }
+
+    .dikkedek-range {
+      width: 100%;
+    }
+
+    .dikkenek-stepper {
+      height: 10vh;
+    }
+
+    .dikkenek-quotes-wrapper {
+      height: 90vh;
+    }
+
+    i {
+      font-size: var(--fs-l);
+    }
+}
+
 .btn-dikkenek {
   width: 100%;
   padding: 16px;
@@ -58,8 +82,8 @@
   font-size: var(--fs-m);
 }
 
-.dikkenek-avatar{
-  width: 80px;
+.dikkenek-avatar {
+  width: 60px;
   aspect-ratio: 1/1;
   border-radius: 10%;
   margin-bottom: 4px;
