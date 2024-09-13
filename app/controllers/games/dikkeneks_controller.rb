@@ -45,10 +45,10 @@ module Games
       for i in 0..9
         if dikkenek.quotes[i][:author] == dikkenek.answers[i][:author]
           gap = (dikkenek.quotes[i][:scene].to_i - dikkenek.answers[i][:scene].to_i).abs
-          score += (100 - gap) * (1 + dikkenek.quotes[i][:difficulty] / 10)
+          score += (608 - gap) * (1 + dikkenek.quotes[i][:difficulty] / 10)
         end
       end
-      score * 35000/dikkenek.answers.last[:delay]
+      score * 40000/dikkenek.answers.last[:delay]
     end
 
     def formated_answers
