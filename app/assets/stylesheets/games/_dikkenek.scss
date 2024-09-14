@@ -59,14 +59,6 @@
 
     .dikkenek-range {
       width: 100%;
-
-      ::-webkit-slider-runnable-track {
-        color: blue;
-      }
-
-      ::-webkit-slider-thumb {
-        color: red;
-      }
     }
 
     .dikkenek-stepper {
@@ -87,12 +79,17 @@
     }
 
     .dikkenek-quotes-wrapper {
-      height: 90vh;
+      height: 80vh;
     }
 
-    i {
-      font-size: var(--fs-xl);
+    .dikkenek-submit {
+      height: 10vh;
+
+      i {
+        font-size: var(--fs-xl);
+      }
     }
+
 }
 
 .btn-dikkenek {

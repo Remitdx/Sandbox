@@ -49,7 +49,7 @@ module Games
                 author: "Claudy", scene: 20, difficulty: 5 },
                 { quote: "Une fois que la bête est décédée, elle se dirige... enfin on la dirige, étant donné qu'elle ne marche plus...",
                 author: "Claudy", scene: 21, difficulty: 2 },
-                { quote: "Ecoute fieu, tu commences par me faire chier avec ta torche, hein ? Ça fait depuis le début que tu m'emmerdes. Tu m'as déjà fourré la gueule là-bas. Ça va suffire maintenant ?",
+                { quote: "Ecoute fieu, tu commences par me faire chier avec ta torche, hein ? Ça fait depuis le début que tu m'emmerdes. Tu m'as déjà fourré la gueule là-bas. Ça va suffir maintenant ?",
                 author: "Claudy", scene: 22, difficulty: 2 },
                 { quote: "J'ai l'impression qu'on m'a donné les deux clowns de l'I.A.D. là, le fond du panier.",
                 author: "Claudy", scene: 23, difficulty: 1 },
