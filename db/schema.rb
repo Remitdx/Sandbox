@@ -41,6 +41,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_150757) do
     t.integer "gameover"
     t.text "answers"
     t.integer "score"
+    t.integer "good_answers"
+    t.float "accuracy"
+    t.float "difficulty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

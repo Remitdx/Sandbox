@@ -6,6 +6,10 @@ class CreateDikkeneks < ActiveRecord::Migration[7.0]
       t.integer :gameover
       t.text :answers
       t.integer :score
+      t.integer :good_answers
+      t.float :accuracy
+      t.float :difficulty
+
 
       t.timestamps
     end
