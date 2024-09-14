@@ -11,7 +11,8 @@ export default class extends Controller {
         }
     });
     e.target.classList.add("dikkenek-selected");
-    // function to color step in stepper when answer has been done and unlock submit if all done
+    const index = e.target.parentElement.parentElement.parentElement.id.match(/\d+/)[0] - 1;
+    this.stepsTargets[index].classList.add("checked")
   }
 
   stepper(e) {

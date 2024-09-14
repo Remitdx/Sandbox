@@ -76,6 +76,10 @@
         border: 4px solid $complementary;
         transform: scale(1.2);
       }
+
+      .checked {
+        background-color: greenyellow;
+      }
     }
 
     .dikkenek-quotes-wrapper {

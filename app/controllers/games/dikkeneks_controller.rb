@@ -48,7 +48,7 @@ module Games
           score += (608 - gap) * (1 + dikkenek.quotes[i][:difficulty] / 10)
         end
       end
-      score * 40000/dikkenek.answers.last[:delay]
+      score * 35000/dikkenek.answers.last[:delay]
     end
 
     def formated_answers
