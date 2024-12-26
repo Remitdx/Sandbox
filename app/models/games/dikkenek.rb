@@ -10,7 +10,7 @@ module Games
       self.format_answers(params)
       self.compute_score
       self.average_accuracy
-      self.good_answers
+      self.how_many_good_answers
     end
 
 
@@ -57,7 +57,7 @@ module Games
       self.answers = answers.push({ delay: params[:submit_at].to_i - params[:start_at].to_i })
     end
 
-    def good_answers
+    def how_many_good_answers
       return nil if answers.empty? || quotes.empty?
 
       good = 0

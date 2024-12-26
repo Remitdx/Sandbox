@@ -7,7 +7,7 @@ module Games
     end
 
     def create
-      @dikkenek = Games::Dikkenek.new(pseudo: dikkenek_params[:pseudo], gameover: 0)
+      @dikkenek = Games::Dikkenek.new(pseudo: dikkenek_params[:pseudo].capitalize, gameover: 0)
       @dikkenek.pick_10_quotes
       @dikkenek.average_difficulty
       if @dikkenek.save
