@@ -7,23 +7,27 @@
           <p><%= v['start'].year %></p>
         </div>
         <div data-controller='work' data-action='click->work#toggle' class='item right'>
-          <div data-work-target='card' class="card-work">
+          <div class="card-work appearing-wrapper">
             <h5><%= v['job'] %></h5>
+            <div class="details hidden" data-work-target='card'>
+              <h5><%= v['company'] %></h5>
+              <h6><%= v['place'] %></h6>
+              <p><%= v['description'] %></p>
+            </div>
             <i data-work-target='down' class="fa-solid fa-circle-chevron-down"></i>
-            <h5><%= v['company'] %></h5>
-            <h6><%= v['place'] %></h6>
-            <p><%= v['description'] %></p>
             <i data-work-target='up' class="fa-solid fa-circle-chevron-up d-none"></i>
           </div>
         </div>
       <% else %>
         <div data-controller='work' data-action='click->work#toggle' class='item left'>
-          <div data-work-target='card' class="card-work">
+          <div class="card-work appearing-wrapper">
             <h5><%= v['job'] %></h5>
+            <div class="details hidden" data-work-target='card'>
+              <h5><%= v['company'] %></h5>
+              <h6><%= v['place'] %></h6>
+              <p><%= v['description'] %></p>
+            </div>
             <i data-work-target='down' class="fa-solid fa-circle-chevron-down"></i>
-            <h5><%= v['company'] %></h5>
-            <h6><%= v['place'] %></h6>
-            <p><%= v['description'] %></p>
             <i data-work-target='up' class="fa-solid fa-circle-chevron-up d-none"></i>
           </div>
         </div>

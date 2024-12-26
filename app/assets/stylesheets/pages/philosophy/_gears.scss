@@ -1,12 +1,12 @@
 @keyframes gearRotationRight {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(900deg);
   }
 }
 
 @keyframes gearRotationLeft {
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(-900deg);
   }
 }
 
@@ -21,7 +21,8 @@
 
   .gear-1 {
     position: absolute;
-    animation: gearRotationRight 10s linear infinite;
+    animation: gearRotationRight linear;
+    animation-timeline: scroll();
     rotate: 0;
     top: 0%;
     left: 0%;
@@ -31,7 +32,8 @@
 
   .gear-2 {
     position: absolute;
-    animation: gearRotationLeft 10s linear infinite;
+    animation: gearRotationLeft linear;
+    animation-timeline: scroll();
     rotate: -18deg;
     top: 21%;
     left: 41%;
@@ -40,7 +42,8 @@
   }
 
   .gear-3 {
-    animation: gearRotationRight 10s linear infinite;
+    animation: gearRotationRight linear;
+    animation-timeline: scroll();
     position: absolute;
     rotate: -6deg;
     top: 55%;
