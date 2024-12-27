@@ -4,12 +4,12 @@
   .wheel {
     position: relative;
     background-color: $bg-cream-tone;
-    border: 1px solid $major-dark;
     border-radius: 50%;
+    box-shadow: 0 1px 2px 2px $shadow;
     width: 75%;
     aspect-ratio: 1/1;
     margin: 1rem auto;
-    rotate: 0deg;
+    rotate: 30deg;
     transition: all 0.5s ease-in-out;
 
     .minilogo {
@@ -23,9 +23,9 @@
       }
     }
 
-    @for $i from 1 through 8 {
+    @for $i from 1 through 6 {
       .pos-#{$i} {
-        --a: calc(360deg/8);
+        --a: calc(360deg/6);
         --r: 42%;
         --x: calc(cos(var(--a)*#{$i})*var(--r));
         --y: calc(sin(var(--a)*#{$i})*var(--r));

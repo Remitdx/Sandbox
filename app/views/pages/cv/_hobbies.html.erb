@@ -1,8 +1,14 @@
 <div data-controller='wheel'>
-  <div class='d-flex justify-content-center'>
-    <div data-action='click->wheel#previous' class='btn btn-primary'><<</div>
-    <div data-action='click->wheel#random' class='btn btn-success'>Random</div>
-    <div data-action='click->wheel#next' class='btn btn-danger'>>></div>
+  <div class='d-flex justify-content-center align-items-center'>
+    <div data-action='click->wheel#previous' class='btn'>
+      <%= render(Buttons::CtaComponent.new(title: '<<', classes: 'btn-complementary' )) %>
+    </div>
+    <div data-action='click->wheel#random' class='btn'>
+      <%= render(Buttons::CtaComponent.new(title: 'Random', classes: 'btn-light btn-big' )) %>
+    </div>
+    <div data-action='click->wheel#next' class='btn'>
+      <%= render(Buttons::CtaComponent.new(title: '>>', classes: 'btn-complementary' )) %>
+    </div>
   </div>
   <div data-action='transitionend->wheel#text' class='wheel-wrapper'>
     <div data-wheel-target='wheel' class='wheel'>
@@ -19,23 +25,16 @@
         <i class='fa-solid fa-person-hiking'></i>
       </div>
       <div class='minilogo pos-5'>
-        <i class='fa-solid fa-mountain-sun'></i>
-      </div>
-      <div class='minilogo pos-6'>
         <i class='fa-solid fa-route'></i>
       </div>
-      <div class='minilogo pos-7'>
+      <div class='minilogo pos-6'>
         <i class='fa-solid fa-handshake-angle'></i>
-      </div>
-      <div class='minilogo pos-8'>
-        <i class='fa-solid fa-basketball'></i>
       </div>
     </div>
     <div class='text-area'>
       <% hobbies.each do |k,v| %>
       <div data-wheel-target='text' class='d-none'>
-        <h5><%= v.first %></h5>
-        <p><%= v.last %></p>
+        <h5><%= v %></h5>
       </div>
       <% end %>
     </div>

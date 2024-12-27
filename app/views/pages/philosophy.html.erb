@@ -19,28 +19,28 @@
       <%= render(Titles::H2titleComponent.new(title: t('vision.title'))) %>
       <%= render(Texts::ParagraphComponent.new(text: t('vision.intro'))) %>
       <div class='row justify-content-center'>
-        <div class='col-12 col-md-7 order-1 order-md-1 d-flex flex-column justify-content-between'>
+        <div class='col-12 col-md-7 order-1 order-md-1 d-flex flex-column justify-content-between pt-3'>
           <%= render(Titles::H3titleComponent.new(title: t('conception.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @conception %>
         </div>
-        <div class='my-3 col-10 col-md-5 order-2 order-md-2 d-flex flex-column justify-content-between'>
+        <div class='my-3 col-10 col-md-5 order-2 order-md-2 d-flex flex-column justify-content-between pt-3'>
           <%= render 'pages/philosophy/gears' %>
           <%= render(Texts::QuoteComponent.new(quote: t('quote.gears'), author: 'Steve Jobs')) %>
         </div>
-        <div class='col-12 col-md-6 order-3 order-md-4 d-flex flex-column justify-content-between'>
+        <div class='col-12 col-md-6 order-3 order-md-4 d-flex flex-column justify-content-between pt-3'>
           <%= render(Titles::H3titleComponent.new(title: t('development.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @development %>
         </div>
-        <div class='my-3 col-10 col-md-6 order-4 order-md-3 d-flex flex-column justify-content-between'>
+        <div class='my-3 col-10 col-md-6 order-4 order-md-3 d-flex flex-column justify-content-between pt-3'>
           <%= render 'pages/philosophy/wall' %>
           <%= render(Texts::QuoteComponent.new(quote: t('quote.civil_engineer'))) %>
         </div>
-        <div class='col-12 col-md-10 order-5 order-md-5'>
+        <div class='col-12 col-md-10 order-5 order-md-5 pt-3'>
           <%= render(Titles::H3titleComponent.new(title: t('maintenance.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @maintenance %>
           <%= render(Texts::QuoteComponent.new(quote: t('quote.keep_calm'))) %>
         </div>
-        <div class='my-3 col-12 col-md-10 order-last order-md-last'>
+        <div class='my-3 col-12 col-md-10 order-last order-md-last pt-3'>
           <%= render 'pages/philosophy/van' %>
         </div>
       </div>

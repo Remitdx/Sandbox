@@ -8,8 +8,7 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    let newAngle = (parseInt(angle.match(/-?\d*/)) - 45);
-    newAngle = newAngle - newAngle % 45;
+    let newAngle = (parseInt(angle.match(/-?\d*/)) - 60);
     this.wheelTarget.style.rotate = `${newAngle}deg`;
   }
 
@@ -18,8 +17,9 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    let newAngle = (parseInt(angle.match(/-?\d*/)) + (Math.random() + 0.1) * 450);
-    newAngle = newAngle - newAngle%45;
+    const random = Math.floor(1 + Math.random() * 5) * 60;
+    let newAngle = parseInt(angle.match(/-?\d*/)) + random;
+    console.log(random, newAngle);
     this.wheelTarget.style.rotate = `${newAngle}deg`;
   }
 
@@ -28,17 +28,15 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    let newAngle = (parseInt(angle.match(/-?\d*/)) + 45);
-    newAngle = newAngle - newAngle % 45;
+    let newAngle = (parseInt(angle.match(/-?\d*/)) + 60);
     this.wheelTarget.style.rotate = `${newAngle}deg`;
   }
 
   text() {
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    const i = parseInt(angle.match(/-?\d*/))%360;
-    let a = i/45;
-    a = (a < 0 ? a + 8 : a);
-    console.log(i, a);
+    const i = (parseInt(angle.match(/-?\d*/)) + 30) % 360;
+    let a = i / 60;
+    a = (a < 0 ? a + 6 : a);
     this.textTargets[a].classList.remove('d-none');
   }
 }
