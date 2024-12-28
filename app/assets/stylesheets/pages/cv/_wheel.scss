@@ -4,8 +4,8 @@
   .wheel {
     position: relative;
     background-color: $bg-cream-tone;
+    background-size: cover;
     border-radius: 50%;
-    box-shadow: 0 1px 2px 2px $shadow;
     width: 75%;
     aspect-ratio: 1/1;
     margin: 1rem auto;
@@ -13,13 +13,14 @@
     transition: all 0.5s ease-in-out;
 
     .minilogo {
-      background-color: $major-light;
       border-radius: 50%;
       position: absolute;
       padding: 8px;
 
       i {
         font-size: var(--fs-m);
+        color: $bg-clear-tone;
+        text-shadow: 0 0 2px black;
       }
     }
 
@@ -37,6 +38,8 @@
     }
   }
 
+  .ecology { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(cv/ecology.jpg); }
+
   .text-area {
     position: absolute;
     top: 50%;
@@ -48,10 +51,8 @@
     h5 {
       font-size: var(--fs-m);
       font-family: var(--ff-handwrite);
-    }
-
-    p {
-      font-family: var(--ff-neutral);
+      color: $bg-clear-tone;
+      text-shadow: 0 0 2px black;
     }
   }
 }

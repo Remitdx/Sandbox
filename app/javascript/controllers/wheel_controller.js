@@ -19,7 +19,6 @@ export default class extends Controller {
     const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
     const random = Math.floor(1 + Math.random() * 5) * 60;
     let newAngle = parseInt(angle.match(/-?\d*/)) + random;
-    console.log(random, newAngle);
     this.wheelTarget.style.rotate = `${newAngle}deg`;
   }
 
