@@ -1,16 +1,38 @@
 .wheel-wrapper {
   position: relative;
 
+  .wheel-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    border-radius: 50%;
+    width: 75%;
+    aspect-ratio: 1/1;
+  }
+
+  .ecology { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(cv/ecology.jpg); }
+  .roadtrip { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(cv/roadtrip.jpg); }
+  .volunteering { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(cv/volunteering.jpg); }
+  .politic { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(cv/politic.jpg); }
+  .trail { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(cv/trail.jpg); }
+  .videogame { background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(cv/videogame.jpg); }
+  .default  {
+    background-color: $major-light;
+    border: 1px solid $major-dark;
+    box-shadow: 0 1px 2px 2px $shadow;
+  }
+
   .wheel {
     position: relative;
-    background-color: $bg-cream-tone;
-    background-size: cover;
     border-radius: 50%;
     width: 75%;
     aspect-ratio: 1/1;
     margin: 1rem auto;
     rotate: 30deg;
     transition: all 0.5s ease-in-out;
+
 
     .minilogo {
       border-radius: 50%;
@@ -38,8 +60,6 @@
     }
   }
 
-  .ecology { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(cv/ecology.jpg); }
-
   .text-area {
     position: absolute;
     top: 50%;
@@ -60,7 +80,7 @@
 @media (min-width: 40em) {
   .wheel-wrapper{
 
-    .wheel {
+    .wheel, .wheel-background {
       width: 85vh;
     }
 

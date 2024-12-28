@@ -10,8 +10,14 @@
       <%= render(Buttons::CtaComponent.new(title: '>>', classes: 'btn-complementary' )) %>
     </div>
   </div>
-  <div data-action='transitionend->wheel#text' class='wheel-wrapper'>
-    <div data-wheel-target='wheel' class='wheel ecology'>
+  <div class='wheel-wrapper'>
+    <div data-wheel-target='background' class="wheel-background d-none roadtrip"></div>
+    <div data-wheel-target='background' class="wheel-background trail"></div>
+    <div data-wheel-target='background' class="wheel-background d-none politic"></div>
+    <div data-wheel-target='background' class="wheel-background d-none videogame"></div>
+    <div data-wheel-target='background' class="wheel-background d-none ecology"></div>
+    <div data-wheel-target='background' class="wheel-background d-none volunteering"></div>
+    <div data-wheel-target='wheel' class='wheel'>
       <div class='minilogo pos-1'>
         <i class='fa-solid fa-leaf'></i>
       </div>
