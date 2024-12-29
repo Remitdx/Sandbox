@@ -1,0 +1,45 @@
+.dikkenek-progress {
+
+  .dikkenek-selected {
+      border: 3px solid $complementary;
+      transform: scale(1.1);
+    }
+
+    .dikkenek-range {
+      width: 100%;
+    }
+
+    .dikkenek-stepper {
+      height: 10vh;
+
+      .step {
+        height: 6vw;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: $major-dark;
+        color: $bg-cream-tone;
+      }
+
+      .active {
+        border: 4px solid $complementary;
+        transform: scale(1.2);
+      }
+
+      .checked {
+        background-color: greenyellow;
+      }
+    }
+
+    .dikkenek-quotes-wrapper {
+      height: 80vh;
+    }
+
+    .dikkenek-submit {
+      height: 10vh;
+
+      i {
+        font-size: var(--fs-xl);
+      }
+    }
+
+}

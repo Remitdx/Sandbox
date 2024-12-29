@@ -1,0 +1,21 @@
+.h-full {
+  height: 100vh;
+}
+
+.dikkenek-avatar {
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 10%;
+  margin: 2px;
+}
+
+.btn-large {
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+
+  .dikkenek-avatar {
+    width: 60px;
+  }
+}

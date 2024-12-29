@@ -1,0 +1,21 @@
+.claudy-instructions {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)), url(dikkenek/Instructions.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+
+  h2 {
+    color: $bg-cream-tone;
+    font-size: var(--fs-l);
+    margin-bottom: 16px;
+  }
+}
+
+.instructions {
+  padding: 8px;
+  height: 60vh;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
