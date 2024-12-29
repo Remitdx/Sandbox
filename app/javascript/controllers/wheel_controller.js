@@ -1,10 +1,15 @@
 import { Controller } from "@hotwired/stimulus"
 
-const findIndice = (newAngle) => {
-  const i = (newAngle + 30) % 360;
+const findIndice = (angle) => {
+  const i = (angle + 30) % 360;
   let a = i / 60;
-  a = (a < 0 ? a + 6 : a);
-  return a;
+  const indice = (a < 0 ? a + 6 : a);
+  return indice;
+}
+
+const authorizedAngle = (angle) => {
+  const diff = (angle + 30) % 60;
+  return (angle - diff);
 }
 
 export default class extends Controller {
@@ -22,8 +27,11 @@ export default class extends Controller {
     this.backgroundTargets.forEach(element => {
       element.classList.add('d-none');
     });
-    const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    let newAngle = (parseInt(angle.match(/-?\d*/)) - 60);
+
+    let angle = parseInt(getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate').match(/-?\d*/));
+    angle = authorizedAngle(angle)
+
+    let newAngle = angle - 60;
     const indice = findIndice(newAngle);
 
     this.wheelTarget.style.rotate = `${newAngle}deg`;
@@ -39,10 +47,12 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
 
-    const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
+    let angle = parseInt(getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate').match(/-?\d*/));
+    angle = authorizedAngle(angle)
+
     const random = Math.floor(1 + Math.random() * 5) * 60;
-    let newAngle = parseInt(angle.match(/-?\d*/)) + random;
-    const indice = findIndice(newAngle)
+    let newAngle = angle + random;
+    const indice = findIndice(newAngle);
 
     this.wheelTarget.style.rotate = `${newAngle}deg`;
     this.textTargets[indice].classList.remove('d-none');
@@ -57,9 +67,11 @@ export default class extends Controller {
       element.classList.add('d-none');
     });
 
-    const angle = getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate');
-    let newAngle = (parseInt(angle.match(/-?\d*/)) + 60);
-    const indice = findIndice(newAngle)
+    let angle = parseInt(getComputedStyle(this.wheelTarget, null).getPropertyValue('rotate').match(/-?\d*/));
+    angle = authorizedAngle(angle)
+
+    let newAngle = angle + 60;
+    const indice = findIndice(newAngle);
 
 
     this.wheelTarget.style.rotate = `${newAngle}deg`;
