@@ -9,10 +9,6 @@
     font-size: var(--fs-xl);
   }
 
-  .h-full {
-    height: 100%;
-  }
-
   .new-game {
     width: 85%;
     margin: 0 auto;
@@ -26,6 +22,10 @@
     border-radius: 8px;
     padding: 8px;
   }
+}
+
+.h-full {
+  height: 100vh;
 }
 
 .claudy-instructions {
@@ -96,6 +96,29 @@
 
 }
 
+.dikkenek-result {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(dikkenek/Dikkenek.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .red {
+    color: red;
+  }
+
+  .green {
+    color: rgb(0, 180, 0);
+  }
+
+  .border-red {
+    border: 2px solid red;
+  }
+
+  .border-green {
+    border: 2px solid rgb(0, 180, 0);
+  }
+}
+
 .btn-dikkenek {
   width: 100%;
   padding: 16px;
@@ -105,8 +128,15 @@
 }
 
 .dikkenek-avatar {
-  width: 60px;
+  width: 50px;
   aspect-ratio: 1/1;
   border-radius: 10%;
-  margin-bottom: 4px;
+  margin: 2px;
+}
+
+@media (min-width: 40em) {
+
+  .dikkenek-avatar {
+    width: 60px;
+  }
 }
