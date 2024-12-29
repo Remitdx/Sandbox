@@ -5,17 +5,17 @@
   }
 
   .first-quote {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-l);
   }
 
   .last-quote {
-    font-size: var(--fs-s);
+    font-size: var(--fs-xs);
   }
 
   .quote {
     padding: 0.2rem;
     font-family: var(--ff-handwrite);
-    font-size: var(--fs-m);
+    font-size: var(--fs-s);
     text-align: center;
     font-style: italic;
   }

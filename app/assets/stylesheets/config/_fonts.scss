@@ -15,8 +15,9 @@
   --fs-xl: 2.4rem; // h1
   --fs-l: 1.6rem; // h2
   --fs-m: 1.375rem; // h3 and h2-nav
-  --fs-s: 0.875rem; // p
-  --fs-xs: 0.6rem;
+  --fs-s: 0.925rem; // quotes
+  --fs-xs: 0.875rem; // p
+  --fs-xxs: 0.725rem; // radar skill card p
 }
 
 @media (min-width: 40em) {
@@ -25,6 +26,7 @@
     --fs-l: 2.8rem;
     --fs-m: 1.875rem;
     --fs-s: 1.125rem;
-    --fs-xs: 0.75rem;
+    --fs-xs: 1rem;
+    --fs-xxs: 0.725rem;
   }
 }

@@ -38,10 +38,12 @@
         <div class='col-12 col-md-10 order-5 order-md-5 pt-3'>
           <%= render(Titles::H3titleComponent.new(title: t('maintenance.title'))) %>
           <%= render 'pages/philosophy/steps', steps: @maintenance %>
-          <%= render(Texts::QuoteComponent.new(quote: t('quote.keep_calm'))) %>
         </div>
-        <div class='my-3 col-12 col-md-10 order-last order-md-last pt-3'>
+        <div class='my-3 col-12 col-md-10 order-last order-md-last'>
           <%= render 'pages/philosophy/van' %>
+          <div class="pt-3">
+            <%= render(Texts::QuoteComponent.new(quote: t('quote.keep_calm'))) %>
+          </div>
         </div>
       </div>
     </div>
