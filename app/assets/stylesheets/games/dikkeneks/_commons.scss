@@ -2,6 +2,10 @@
   height: 100vh;
 }
 
+.full-height {
+  height: 100%;
+}
+
 .dikkenek-avatar {
   width: 50px;
   aspect-ratio: 1/1;
@@ -11,6 +15,15 @@
 
 .btn-large {
   width: 100%;
+}
+
+.card-dikkenek {
+  width: 85%;
+  margin: 8px auto;
+  background-color: $bg-cream-tone;
+  opacity: 0.8;
+  border-radius: 8px;
+  padding: 8px;
 }
 
 @media (min-width: 40em) {

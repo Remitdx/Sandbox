@@ -3,7 +3,7 @@ module Games
     def index
       @dikkenek = Games::Dikkenek.new
       @podium = Games::Dikkenek.where.not(score: nil).order(score: :desc).first(3)
-      @last_played = Games::Dikkenek.where.not(score: nil).last(3).reverse
+      @last_played = Games::Dikkenek.where.not(score: nil).last(3)
     end
 
     def create

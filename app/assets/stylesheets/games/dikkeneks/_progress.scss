@@ -1,45 +1,69 @@
 .dikkenek-progress {
 
-  .dikkenek-selected {
-      border: 3px solid $complementary;
-      transform: scale(1.1);
-    }
-
-    .dikkenek-range {
-      width: 100%;
-    }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(dikkenek/Dikkenek.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 
     .dikkenek-stepper {
-      height: 10vh;
+      height: 15vh;
 
       .step {
         height: 6vw;
         aspect-ratio: 1/1;
         border-radius: 50%;
-        background-color: $major-dark;
-        color: $bg-cream-tone;
+        background-color: $bg-cream-tone;
+        color: $major-dark;
       }
 
       .active {
-        border: 4px solid $complementary;
-        transform: scale(1.2);
+        border: 2px solid $complementary;
       }
 
       .checked {
         background-color: greenyellow;
       }
-    }
 
-    .dikkenek-quotes-wrapper {
-      height: 80vh;
-    }
-
-    .dikkenek-submit {
-      height: 10vh;
-
-      i {
-        font-size: var(--fs-xl);
+      .tick {
+        color: $bg-cream-tone;
       }
     }
 
+    .dikkenek-quotes-wrapper {
+      height: 70vh;
+      opacity: 1;
+
+      .dikkenek-selected {
+        border: 3px solid $complementary;
+        transform: scale(1.1);
+      }
+
+      .quote {
+        height: 25%;
+      }
+
+      input[type='range'] {
+        width: 80%;
+        height: 10%;
+      }
+    }
+
+    .dikkenek-submit {
+      height: 15vh;
+
+      i {
+        font-size: var(--fs-xxl);
+        color: $bg-cream-tone;
+      }
+    }
+
+  @media (min-width: 40em) {
+
+    .dikkenek-stepper {
+
+      .step {
+        height: 6vh;
+      }
+    }
+  }
 }

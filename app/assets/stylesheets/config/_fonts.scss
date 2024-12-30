@@ -12,6 +12,7 @@
   --ff-neutral: 'Heebo', sans-serif;
   --ff-geek: 'Press Start 2P';
 
+  --fs-xxl: 3rem; // buttons next previous dikkenek game
   --fs-xl: 2.4rem; // h1
   --fs-l: 1.6rem; // h2
   --fs-m: 1.375rem; // h3 and h2-nav
@@ -22,7 +23,8 @@
 
 @media (min-width: 40em) {
   :root {
-    --fs-xl: 5rem;
+    --fs-xxl: 5.5rem;
+    --fs-xl: 4.5rem;
     --fs-l: 2.8rem;
     --fs-m: 1.875rem;
     --fs-s: 1.125rem;
