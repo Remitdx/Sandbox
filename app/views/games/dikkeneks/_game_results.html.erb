@@ -11,8 +11,10 @@
         <% else %>
           <div class="d-flex justify-content-between align-items-center">
             <p><%= dikkenek.quotes[i][:quote].slice(0..60) %></p>
-            <%= image_tag "dikkenek/#{dikkenek.quotes[i][:author]}.jpg", class: 'dikkenek-avatar border-green' %>
-            <%= image_tag "dikkenek/#{dikkenek.answers[i][:author]}.jpg", class: 'dikkenek-avatar border-red' %>
+            <div class="d-flex">
+              <%= image_tag "dikkenek/#{dikkenek.quotes[i][:author]}.jpg", class: 'dikkenek-avatar border-green' %>
+              <%= image_tag "dikkenek/#{dikkenek.answers[i][:author]}.jpg", class: 'dikkenek-avatar border-red' %>
+            </div>
           </div>
         <% end %>
       <% end %>
