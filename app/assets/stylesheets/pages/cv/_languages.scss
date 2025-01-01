@@ -1,30 +1,156 @@
+@keyframes uk-roll {
+  0% {
+    left: 0;
+    rotate: -800deg;
+  }
+  100% {
+    left: 80%;
+    rotate: 0deg;
+  }
+}
+
+@keyframes fr-roll {
+  0% {
+    left: 0;
+    rotate: -900deg;
+  }
+
+  100% {
+    left: 90%;
+    rotate: 0deg;
+  }
+}
+
+@keyframes it-roll {
+  0% {
+    left: 0;
+    rotate: -400deg;
+  }
+
+  100% {
+    left: 40%;
+    rotate: 0deg;
+  }
+}
+
+@keyframes de-roll {
+  0% {
+    left: 0;
+    rotate: -250deg;
+  }
+
+  100% {
+    left: 25%;
+    rotate: 0deg;
+  }
+}
+
+@keyframes esp-roll {
+  0% {
+    left: 0;
+    rotate: -100deg;
+  }
+
+  100% {
+    left: 10%;
+    rotate: 0deg;
+  }
+}
+
 .wrapper-languages {
+  width: 80%;
+  margin: 0 auto;
 
   .flag {
-    height: 80px;
+    position: absolute;
+    height: 40px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    border: 2px solid $major-dark;
+    border-radius: 50%;
   }
 
   .uk {
-    background-image: url(flags/flagUK.svg);
+    background-image: url(flags/UK.png);
+    animation: uk-roll linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
   }
 
   .it {
-    background-image: url(flags/flagIT.jpg);
+    background-image: url(flags/IT.png);
+    animation: it-roll linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
   }
 
   .fr {
-    background-image: url(flags/flagFR.svg);
+    background-image: url(flags/FR.png);
+    animation: fr-roll linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
   }
 
   .esp {
-    background-image: url(flags/flagESP.jpg);
+    background-image: url(flags/ESP.jpg);
+    animation: esp-roll linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
   }
 
   .de {
-    background-image: url(flags/flagDE.jpg);
+    background-image: url(flags/DE.png);
+    animation: de-roll linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 40%;
+  }
+
+  .level {
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 2px;
+    background: $sunset;
+
+  .level::before {
+    content: 'test';
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background-color: red;
+      top: 0.5rem;
+      right: -3rem;
+    }
+
+    .level::after {
+      content: 'after';
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background-color: greenyellow;
+      top: 0.5rem;
+      right: -3rem;
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .wrapper-languages {
+    width: 60%;
+
+    .flag {
+      height: 60px;
+    }
+
+    .level {
+      top: 60px;
+    }
   }
 }
