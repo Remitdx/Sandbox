@@ -1,26 +1,30 @@
 .wrapper-languages {
-  background: $bg-clear-tone;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px 2px $shadow;
-  display: flex;
-  padding: 12px;
-  height: 160px;
 
-  .bar {
-    position: absolute;
-    left: calc(50%-8px);
-    width: 16px;
+  .flag {
+    height: 80px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
-  .bar-bg {
-    background: $sunset;
-    height: 100px;
+  .uk {
+    background-image: url(flags/flagUK.svg);
   }
 
-  @for $i from 1 through 9 {
-    .slider-#{$i} {
-      background: $bg-clear-tone;
-      height: calc((10 - #{$i})*10px);
-    }
+  .it {
+    background-image: url(flags/flagIT.jpg);
+  }
+
+  .fr {
+    background-image: url(flags/flagFR.svg);
+  }
+
+  .esp {
+    background-image: url(flags/flagESP.jpg);
+  }
+
+  .de {
+    background-image: url(flags/flagDE.jpg);
   }
 }

@@ -7,7 +7,6 @@ class PagesController < ApplicationController
     @skills = Pages::Skill.new.my_skills
     @education = Pages::Education.new.my_education
     @experiences = Pages::Experience.new.my_experiences
-    @languages = Pages::Language.new.my_languages
     @hobbies = Pages::Hobby.new.my_hobbies
   end
 
