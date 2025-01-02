@@ -118,25 +118,40 @@
     width: 100%;
     height: 2px;
     background: $sunset;
+  }
 
   .level::before {
-    content: 'test';
-      position: absolute;
-      width: 2px;
-      height: 20px;
-      background-color: red;
-      top: 0.5rem;
-      right: -3rem;
-    }
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(255,218, 0);
+    top: -2px;
+    left: 0;
+  }
 
-    .level::after {
-      content: 'after';
-      position: absolute;
-      width: 2px;
-      height: 20px;
-      background-color: greenyellow;
-      top: 0.5rem;
-      right: -3rem;
+  .level::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 2px solid rgb(255, 38, 0);
+    border-style: solid solid none none;
+    rotate: 45deg;
+    top: -2px;
+    right: 0;
+  }
+
+  .texts {
+    position: relative;
+    top:60px;
+
+    p {
+      border: 1px solid $major-dark;
+      border-radius: 2px;
+      background-color: $bg-clear-tone;
+      padding: 4px 8px;
     }
   }
 }
@@ -151,6 +166,18 @@
 
     .level {
       top: 60px;
+    }
+
+    .level::after {
+      width: 10px;
+      height: 10px;
+      top: -4px;
+      right: 0;
+    }
+
+    .texts {
+      position: relative;
+      top: 90px;
     }
   }
 }
