@@ -4,7 +4,7 @@
       <%= render(Buttons::CtaComponent.new(title: '<<', classes: 'btn-complementary' )) %>
     </div>
     <div data-action='click->wheel#random' class='btn'>
-      <%= render(Buttons::CtaComponent.new(title: 'Random', classes: 'btn-light btn-big' )) %>
+      <%= render(Buttons::CtaComponent.new(title: I18n.t("hobby.button"), classes: 'btn-light btn-big' )) %>
     </div>
     <div data-action='click->wheel#next' class='btn'>
       <%= render(Buttons::CtaComponent.new(title: '>>', classes: 'btn-complementary' )) %>

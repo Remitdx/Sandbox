@@ -116,16 +116,20 @@ en:
       description: "Conception et développement de sites web vitrines ou dynamiques. Conception d'API. Testing. Methode agile."
       place: 'Mobile et/ou à distance'
 
-  language:
-    title: 'Languages'
-    french: 'French'
-    english: 'English'
-    german: 'German'
-    italian: 'Italian'
-    spanish: 'Spanish'
+  languages:
+    title: "Languages"
+    intro1: "Speaking a foreign language when meeting stranger people is more than being polite,
+             it's being openned towards other's world."
+    intro2: 'By simple words, even clumsy ones, you could receive wonderful smiles.'
+    intro3: 'It a proof that you actually values their culture and history. Interaction could become memorable.'
+    intro4: 'Speaking foreign languages, even just a little, is a celebration of sharing humanity beyond
+            borders and differences.'
+    hello: "I can say hello"
+    native: "Native speaker"
 
   hobby:
     title: "Hobby"
+    button: "Random"
     roadtrip:
       title: 'Roadtrip, travel'
     trail:

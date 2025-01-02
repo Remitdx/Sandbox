@@ -116,16 +116,22 @@ fr:
       description: "Conception et développement de sites web vitrines ou dynamiques. Conception d'API. Testing. Methode agile."
       place: 'Mobile et/ou à distance'
 
-  language:
-    title: 'Langues'
-    french: 'Français'
-    english: 'Anglais'
-    german: 'Allemand'
-    italian: 'Italien'
-    spanish: 'Espagnol'
+  languages:
+    title: "Langues"
+    intro1: "Parler une langue étrangère lorsque l'on rencontre des personnes de nouveaux horizons
+            est plus qu'un simple acte de politesse, c'est une ouverture vers l'autre."
+    intro2: 'Ces simples mots, bien que parfois maladroits, sont souvent accueillis avec des sourires et une chaleur
+            inattendue.'
+    intro3: "On montre que l'on valorise sa culture et son histoire. Cela peut transformer une simple interaction
+            en un échange riche et mémorable."
+    intro4: "Parler une langue étrangère, ne serait-ce qu'un peu, c'est célébrer notre humanité
+            au-delà des frontières et des différences."
+    hello: "Je bredouille"
+    native: "Langue maternelle"
 
   hobby:
     title: "Centres d'intérêt"
+    button: "Au hasard"
     roadtrip:
       title: 'Roadtrip, voyages'
     trail:
