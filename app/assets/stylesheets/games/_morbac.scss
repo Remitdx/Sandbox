@@ -1,21 +1,33 @@
+@keyframes ai-play {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1.2;
+    opacity: 1;
+  }
+}
+
+.instruction {
+  p {
+    font-family: var(--ff-geek);
+  }
+}
+
 .morbac-wrapper {
   width: 30%;
   aspect-ratio: 1;
   margin: 0 auto;
-  text-align: center;
-
-  .instruction {
-    p {
-      font-family: var(--ff-geek);
-    }
-  }
+  border: 2px solid $major-dark;
 
   .morbac-tile {
     display: flex;
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
-    border: 1px solid $major-dark;
+    background-color: $bg-clear-tone;
+    border: 2px solid $major-dark;
   }
 
   a {
@@ -30,6 +42,10 @@
 
     .ai-sign {
       color: $complementary;
+    }
+
+    .ai-last-play {
+      animation: ai-play 0.6s linear forwards
     }
   }
 }

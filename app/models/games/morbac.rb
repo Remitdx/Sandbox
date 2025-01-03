@@ -9,12 +9,13 @@ module Games
 
     def compute_turns(index) # return self modified
       array = player_turn(self, index)
+      self.lastplay = 0
       return self if array == []
 
       self.value = player_win?(array) ? array : ai_turn(array)
       gameover = ai_win?(self.value) ? 1 : 2
       self.gameover = player_win?(self.value) ? 0 : gameover
-      self
+      self # remove lastplay if win
     end
 
     private
@@ -43,6 +44,7 @@ module Games
 
     play = possible_plays.shuffle.first # dumb AI picking random available spot
 
+    self.lastplay = play
     array[play] = 1
     array
     end

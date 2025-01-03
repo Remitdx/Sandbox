@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_08_150757) do
+ActiveRecord::Schema[8.0].define(version: 2024_09_08_150757) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
 
   create_table "actions", force: :cascade do |t|
     t.string "type"
@@ -63,6 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_150757) do
   create_table "morbacs", force: :cascade do |t|
     t.integer "value", default: [5, 5, 5, 5, 5, 5, 5, 5, 5], array: true
     t.integer "gameover", default: 2
+    t.integer "lastplay"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -127,5 +128,4 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_150757) do
     t.datetime "updated_at", null: false
     t.index ["player_id"], name: "index_units_on_player_id"
   end
-
 end

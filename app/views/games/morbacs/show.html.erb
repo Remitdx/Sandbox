@@ -1,18 +1,18 @@
 <%= render(Titles::H1titleComponent.new(title: 'Tic Tac Toe' )) %>
-<div class='section-1'>
-  <div class='container'>
-    <div class='morbac-wrapper'>
-      <div class='instruction pt-3'>
-        <% case @morbac.gameover %>
-        <% when 0 %>
-          <p>Player has won !</p>
-        <% when 1 %>
-          <p>AI has won !</p>
-        <% when 2 %>
-          <p><%= @morbac.value.sum == 4 ? "It's a tie !" : 'Play Tic Tac Toe' %></p>
-        <% end %>
-      </div>
-      <div class='row g-0 py-3'>
+<div class='section-2'>
+  <div class='container text-center'>
+    <div class='instruction pt-3'>
+      <% case @morbac.gameover %>
+      <% when 0 %>
+        <p>Player has won !</p>
+      <% when 1 %>
+        <p>AI has won !</p>
+      <% when 2 %>
+        <p><%= @morbac.value.sum == 4 ? "It's a tie !" : 'Play Tic Tac Toe' %></p>
+      <% end %>
+    </div>
+    <div class='morbac-wrapper my-3'>
+      <div class='row g-0'>
         <% i = 0 %>
         <% @morbac.value.each do |t| %>
           <%= link_to games_morbac_path(pos: i), class: 'col-4', data: { turbo_method: :patch } do %>
@@ -20,14 +20,14 @@
               <% if t == 0 %>
                 <i class='fa-regular fa-circle player-sign'></i>
               <% elsif t == 1 %>
-                <i class='fa-solid fa-xmark ai-sign'></i>
+                <i class='fa-solid fa-xmark ai-sign <%= 'ai-last-play' if i == @morbac.lastplay %>'></i>
               <% end %>
             </div>
           <% end %>
           <% i += 1 %>
         <% end %>
       </div>
-      <%= link_to 'Reset', games_morbac_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
     </div>
+    <%= link_to 'Reset', games_morbac_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
   </div>
 </div>
