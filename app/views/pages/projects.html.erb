@@ -39,6 +39,12 @@
       <%= link_to 'Dikkenek', games_dikkeneks_path %>
     </div>
   </section>
+  <section class='section-1'>
+    <%= render(Titles::H2titleComponent.new(title: "Open source")) %>
+    <div class="container">
+      <p><%= t('project.opensource') %></p>
+    </div>
+  </section>
 </main>
 <footer>
   <%= render 'components/footer'  %>
