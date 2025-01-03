@@ -42,7 +42,7 @@ module Games
     possible_plays = array.each_index.select { |index| array[index] == 5 }
     return array if possible_plays == []
 
-    play = possible_plays.shuffle.first # dumb AI picking random available spot
+    play = deny_player_direct_win(array, possible_plays)
 
     self.lastplay = play
     array[play] = 1
@@ -58,6 +58,14 @@ module Games
       array[2] + array[5] + array[8] == 3 ||
       array[0] + array[4] + array[8] == 3 ||
       array[2] + array[4] + array[6] == 3
+    end
+
+    def deny_player_direct_win(array, possible_plays)
+      a = []
+      [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]].each do |line|
+        a = line if array[line[0]] + array[line[1]] + array[line[2]] == 5
+      end
+      return a == [] ? possible_plays.shuffle!.first : (a & possible_plays).first
     end
   end
 end
