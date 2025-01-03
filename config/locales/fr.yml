@@ -11,7 +11,7 @@ fr:
   title_project: 'Projets'
   title_resources: 'Ressources'
   title_uikit: 'UI Kit'
-  title_featureflags: 'Feature Flags'
+  title_featureflags: 'Tour de Contrôle'
 
   ## FOOTER ##
   footer:
@@ -152,3 +152,9 @@ fr:
     games: 'Jeux'
 
   ## CONTACT ##
+
+  ## FEATURES FLAGS ##
+
+  featureflags:
+    events: "Evènements"
+    features: "Fonctionnalités"

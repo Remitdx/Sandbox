@@ -150,3 +150,9 @@ en:
     games: 'Games'
 
   ## CONTACT ##
+
+  ## FEATURES FLAGS ##
+
+  featureflags:
+    events: "Events"
+    features: "Features"

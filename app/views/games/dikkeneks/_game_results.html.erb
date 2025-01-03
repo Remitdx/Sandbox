@@ -1,5 +1,17 @@
-<div class="container dikkenek-results h-full d-flex flex-column justify-content-between align-items-center">
-  <h2 class="pt-3"><%= dikkenek.score %> points</h2>
+<div class="container dikkenek-results h-full d-flex flex-column flex-md-row justify-content-around align-items-center">
+  <div class="card-dikkenek d-flex flex-column justify-content-between align-items-center py-4">
+    <h2><%= dikkenek.score %> points</h2>
+    <div class="py-4">
+      <p>Détails computés par le système de scoring :</p>
+      <p>Personnages trouvés : <span class="<%= dikkenek.good_answers < 7 ? "red" : "green" %>"><%= dikkenek.good_answers %></span> / 10 </p>
+      <p>Indice de difficulté de la sélection : <%= dikkenek.difficulty %> / 5</p>
+      <p>Précision : <span class="<%= dikkenek.accuracy < 60 ? "red" : "green" %>"><%= dikkenek.accuracy %></span> %</p>
+      <p>Temps de réponse : <span class="<%= dikkenek.answers.last[:delay].to_f > 40000 ? "red" : "green"%>"><%= (dikkenek.answers.last[:delay].to_f / 1000).round(2) %></span> secondes</p>
+    </div>
+    <div class="mt-3">
+      <%= link_to "Retour à l'acceuil", games_dikkeneks_path, class: "btn-cta btn-dark" %>
+    </div>
+  </div>
   <div class="d-flex justify-content-center">
     <div class="d-flex flex-column">
       <% for i in 0...10 do %>
@@ -19,15 +31,5 @@
         <% end %>
       <% end %>
     </div>
-  </div>
-  <div>
-    <p>Détails computés par le système de scoring :</p>
-    <p>Personnages trouvés : <span class="<%= dikkenek.good_answers < 7 ? "red" : "green" %>"><%= dikkenek.good_answers %></span> / 10 </p>
-    <p>Indice de difficulté de la sélection : <%= dikkenek.difficulty %> / 5</p>
-    <p>Précision : <span class="<%= dikkenek.accuracy < 60 ? "red" : "green" %>"><%= dikkenek.accuracy %></span> %</p>
-    <p>Temps de réponse : <span class="<%= dikkenek.answers.last[:delay].to_f > 40000 ? "red" : "green"%>"><%= (dikkenek.answers.last[:delay].to_f / 1000).round(2) %></span> secondes</p>
-  </div>
-  <div class="mt-3">
-    <%= link_to "Retour à l'acceuil", games_dikkeneks_path, class: "btn-cta btn-dark" %>
   </div>
 </div>

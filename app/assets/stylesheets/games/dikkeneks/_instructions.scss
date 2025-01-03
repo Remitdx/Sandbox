@@ -19,3 +19,10 @@
   width: 80%;
   margin: 0 auto;
 }
+
+@media (min-width: 40em) {
+
+  .instructions {
+    width: 50%;
+  }
+}

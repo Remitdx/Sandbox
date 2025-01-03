@@ -14,3 +14,13 @@
     margin: 0 auto;
   }
 }
+
+@media (min-width: 40em) {
+
+  .dikkenek-hero {
+
+    .new-game {
+      width: 40vw;
+    }
+  }
+}

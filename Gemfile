@@ -58,8 +58,8 @@ gem "view_component"
 gem "mutex_m"
 gem "logger"
 gem "base64"
-gem 'bigdecimal'
-gem 'benchmark'
+gem "bigdecimal"
+gem "benchmark"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
