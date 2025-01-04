@@ -1,3 +1,15 @@
+@keyframes shake {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    box-shadow: 0 0 0 $shadow;
+  }
+  10%, 50%, 90% {
+    box-shadow: 2px 2px 0 $shadow;
+  }
+  30%, 70% {
+    box-shadow: -2px -2px 0 $shadow;
+  }
+}
+
 .scores {
   border-radius: 1rem;
   border: 2px dashed $major-dark;
@@ -42,9 +54,13 @@
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
+  animation: shake 0.7s linear;
 
   .text-big {
+    opacity: 0;
+    transform: scale(0);
     font-size: var(--fs-l);
+    animation: appearing 0.5s linear 0.4s forwards;
   }
 }
 
