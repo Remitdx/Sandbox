@@ -15,8 +15,13 @@
   }
 }
 
+.side-text {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .morbac-wrapper {
-  width: 30%;
+  width: 80%;
   aspect-ratio: 1;
   margin: 0 auto;
   border: 2px solid $major-dark;
@@ -45,7 +50,7 @@
     }
 
     .ai-last-play {
-      animation: ai-play 0.6s linear forwards
+      animation: ai-play 0.5s linear forwards
     }
   }
 }

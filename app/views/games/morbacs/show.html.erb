@@ -1,33 +1,47 @@
 <%= render(Titles::H1titleComponent.new(title: 'Tic Tac Toe' )) %>
 <div class='section-2'>
-  <div class='container text-center'>
-    <div class='instruction pt-3'>
-      <% case @morbac.gameover %>
-      <% when 0 %>
-        <p>Player has won !</p>
-      <% when 1 %>
-        <p>AI has won !</p>
-      <% when 2 %>
-        <p><%= @morbac.value.sum == 4 ? "It's a tie !" : 'Play Tic Tac Toe' %></p>
-      <% end %>
-    </div>
-    <div class='morbac-wrapper my-3'>
-      <div class='row g-0'>
-        <% i = 0 %>
-        <% @morbac.value.each do |t| %>
-          <%= link_to games_morbac_path(pos: i), class: 'col-4', data: { turbo_method: :patch } do %>
-            <div class='morbac-tile'>
-              <% if t == 0 %>
-                <i class='fa-regular fa-circle player-sign'></i>
-              <% elsif t == 1 %>
-                <i class='fa-solid fa-xmark ai-sign <%= 'ai-last-play' if i == @morbac.lastplay %>'></i>
-              <% end %>
-            </div>
+  <div class='container'>
+    <div class="row align-items-center">
+      <div class="col-12 col-md-4 side-text mt-3">
+        <p>Le jeu se joue au clic. Essayez de battre l'IA codée par mes soins.</p>
+        <p>Elle se défend bien mais n'est pas pour autant totalement infaillible !</p>
+      </div>
+      <div class="col-12 col-md-4 text-center py-3">
+        <div class='instruction pt-3'>
+          <% case @morbac.gameover %>
+          <% when 0 %>
+            <p>Player has won !</p>
+          <% when 1 %>
+            <p>AI has won !</p>
+          <% when 2 %>
+            <p><%= @morbac.value.sum == 4 ? "It's a tie !" : 'Play Tic Tac Toe' %></p>
           <% end %>
-          <% i += 1 %>
-        <% end %>
+        </div>
+        <div class='morbac-wrapper my-3'>
+          <div class='row g-0'>
+            <% i = 0 %>
+            <% @morbac.value.each do |t| %>
+              <%= link_to games_morbac_path(pos: i), class: 'col-4', data: { turbo_method: :patch } do %>
+                <div class='morbac-tile'>
+                  <% if t == 0 %>
+                    <i class='fa-regular fa-circle player-sign'></i>
+                  <% elsif t == 1 %>
+                    <i class='fa-solid fa-xmark ai-sign <%= 'ai-last-play' if i == @morbac.lastplay %>'></i>
+                  <% end %>
+                </div>
+              <% end %>
+              <% i += 1 %>
+            <% end %>
+          </div>
+        </div>
+        <div class="py-3">
+          <%= link_to 'Reset', games_morbac_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 side-text">
+        <p>En effet, il existe l'algorythme du "minMax" permettant à l'IA de ne jamais perdre.</p>
+        <p>Je n'ai pas souhaité l'implémenter ici pour garder une dose de fun !</p>
       </div>
     </div>
-    <%= link_to 'Reset', games_morbac_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
   </div>
 </div>

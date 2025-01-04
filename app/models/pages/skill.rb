@@ -32,10 +32,10 @@ module Pages
         "Scss" => 7,
         "Bootstrap" => 8,
         "Tailwind" => 5,
-        "JavaScript" => 6,
-        "Hotwired" => 7,
+        "JavaScript" => 7,
+        "Hotwire" => 9,
         "React" => 2,
-        "JQuery" => 5
+        "JQuery" => 6
       }
     end
 
