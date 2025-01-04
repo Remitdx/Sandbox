@@ -152,6 +152,16 @@ fr:
     games: 'Jeux'
     opensource: "J'adore l'esprit. Vivement une belle collaboration !"
 
+  rolldice:
+    title: "Simulateur de dés"
+    text1: "Ajoute autant de dés que nécessaire et lance les !"
+    roll: "Lancer"
+    red: "Score rouge"
+    blue: "Score bleu"
+    green: "Score vert"
+    yellow: "Score jaune"
+    total: "Score total"
+
   morbac:
     text1: "Le jeu se joue au clic. Essayez de battre l'IA codée par mes soins."
     text2: "Elle se défend bien mais n'est pas pour autant totalement infaillible !"

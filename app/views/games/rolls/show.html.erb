@@ -1,13 +1,13 @@
 <nav>
   <%= render 'components/navigation'  %>
 </nav>
-<%= render(Titles::H1titleComponent.new(title: 'Dices roller' )) %>
+<%= render(Titles::H1titleComponent.new(title: t('rolldice.title') )) %>
 <div class='section-1'>
   <div class='container'>
-    <p class= 'text-center pt-3'>Add dices, roll'em ! </p>
+    <p class= 'text-center pt-3'><%= t('rolldice.text1') %></p>
     <div class='d-flex py-3 justify-content-around align-items-center'>
       <%= link_to games_roll_path(@roll), data: { turbo_method: :put } do %>
-        <%= render(Buttons::CtaComponent.new(title: 'Roll', classes: 'btn-big btn-complementary' )) %>
+        <%= render(Buttons::CtaComponent.new(title: t('rolldice.roll'), classes: 'btn-big btn-complementary' )) %>
       <% end %>
       <%= render 'games/rolls/scores', scores: @scores %>
     </div>

@@ -150,6 +150,16 @@ en:
     games: 'Games'
     opensource: "Love the spirit around it. I can't wait to start contributing !"
 
+  rolldice:
+    title: "Dices roller"
+    text1: "Add the dices you need and roll them !"
+    roll: "Roll"
+    red: "Red score"
+    blue: "Blue score"
+    green: "Green score"
+    yellow: "Yellow score"
+    total: "Total score"
+
   morbac:
     text1: "Click to play. Try to beat my handmade AI."
     text2: "It fight well but, do not worry, it is not fully optimised !"
