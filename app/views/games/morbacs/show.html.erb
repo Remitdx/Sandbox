@@ -1,10 +1,13 @@
+<nav>
+  <%= render 'components/navigation'  %>
+</nav>
 <%= render(Titles::H1titleComponent.new(title: 'Tic Tac Toe' )) %>
 <div class='section-2'>
   <div class='container'>
     <div class="row align-items-center">
       <div class="col-12 col-md-4 side-text mt-3">
-        <p>Le jeu se joue au clic. Essayez de battre l'IA codée par mes soins.</p>
-        <p>Elle se défend bien mais n'est pas pour autant totalement infaillible !</p>
+        <p><%= t('morbac.text1') %></p>
+        <p><%= t('morbac.text2') %></p>
       </div>
       <div class="col-12 col-md-4 text-center py-3">
         <div class='instruction pt-3'>
@@ -39,8 +42,8 @@
         </div>
       </div>
       <div class="col-12 col-md-4 side-text">
-        <p>En effet, il existe l'algorythme du "minMax" permettant à l'IA de ne jamais perdre.</p>
-        <p>Je n'ai pas souhaité l'implémenter ici pour garder une dose de fun !</p>
+        <p><%= t('morbac.text3') %></p>
+        <p><%= t('morbac.text4') %></p>
       </div>
     </div>
   </div>

@@ -152,6 +152,12 @@ fr:
     games: 'Jeux'
     opensource: "J'adore l'esprit. Vivement une belle collaboration !"
 
+  morbac:
+    text1: "Le jeu se joue au clic. Essayez de battre l'IA codée par mes soins."
+    text2: "Elle se défend bien mais n'est pas pour autant totalement infaillible !"
+    text3: "En effet, il existe l'algorythme du 'minMax' permettant à l'IA de ne jamais perdre."
+    text4: "Je n'ai pas souhaité l'implémenter ici pour garder une dose de fun !"
+
   ## CONTACT ##
 
   ## FEATURES FLAGS ##

@@ -42,7 +42,7 @@ export default class extends Controller {
       index = arr.indexOf('fr')
       arr.splice(index, 1);
     }
-    arr.splice(arr.indexOf(window.location.hostname), 0, 'fr');
+    arr.splice(arr.indexOf(window.location.host) + 1, 0, 'fr');
     const newUrl = arr.join('/');
     window.location.href = newUrl;
   }
