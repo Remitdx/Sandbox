@@ -16,9 +16,10 @@
   }
 
   .column {
-    width: 12% ;
+    width: 10% ;
     display: flex;
     flex-direction: column-reverse;
+    border: 1px solid $major-dark;
   }
 
   .cell {
@@ -26,10 +27,21 @@
     justify-content: center;
     align-items: center;
     aspect-ratio: 1;
+    background-color: $bg-cream-tone;
     border: 1px solid $major-dark;
 
-    i {
-        font-size: var(--fs-l);
-      }
+    span {
+      width: 75%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+    }
+
+    .player-1 {
+      background-color: $major-dark;
+    }
+
+    .player-2 {
+      background-color: $complementary;
+    }
   }
 }

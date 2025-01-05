@@ -15,7 +15,7 @@ module Games
       self.value = player_win?(array) ? array : ai_turn(array)
       gameover = ai_win?(self.value) ? 1 : 2
       self.gameover = player_win?(self.value) ? 0 : gameover
-      self # remove lastplay if win
+      self
     end
 
     private

@@ -1,16 +1,18 @@
 <nav>
   <%= render 'components/navigation'  %>
 </nav>
-<%= render(Titles::H1titleComponent.new(title: 'Puissance 4' )) %>
+<%= render(Titles::H1titleComponent.new(title: t('connect4.title') )) %>
 <div class='section-1'>
   <div class='container'>
     <div class='p4-wrapper'>
       <div class='instruction pt-3'>
         <% case @puissance_4.gameover %>
         <% when 0 %>
-          <p><%= @puissance_4.players.first %> has won !</p>
+          <p><%= @puissance_4.players.first %> <%= t('connect4.won') %></p>
+        <% when 1 %>
+          <p><%= t('connect4.tie') %> </p>
         <% when 2 %>
-          <p>Time to play <%= @puissance_4.players.first %> !</p>
+          <p><%= t('connect4.turn')%> <%= @puissance_4.players.first %> !</p>
         <% end %>
       </div>
       <div class='d-flex justify-content-center py-3'>
@@ -20,9 +22,9 @@
             <% column.each do |cell| %>
               <div class='cell'>
                 <% if cell == -1 %>
-                  <i class='fa-regular fa-circle player-sign'></i>
+                  <span class='player-2'></span>
                 <% elsif cell == 1 %>
-                  <i class='fa-solid fa-xmark ai-sign'></i>
+                  <span class='player-1'></span>
                 <% end %>
               </div>
             <% end %>

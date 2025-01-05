@@ -168,6 +168,12 @@ fr:
     text3: "En effet, il existe l'algorythme du 'minMax' permettant à l'IA de ne jamais perdre."
     text4: "Je n'ai pas souhaité l'implémenter ici pour garder une dose de fun !"
 
+  connect4:
+    title: "Puissance 4"
+    won: "a gagné !"
+    tie: "Egalité !"
+    turn: "A ton tour"
+
   ## CONTACT ##
 
   ## FEATURES FLAGS ##
