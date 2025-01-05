@@ -23,9 +23,9 @@
             <% column.each do |cell| %>
               <div class='cell'>
                 <% if cell == -1 %>
-                  <span class="<%= 'token' if i == @puissance_4.lastplay[0] && j == @puissance_4.lastplay[1] %> p2"></span>
+                  <span class="<%= "token-#{j}" if i == @puissance_4.lastplay[0] && j == @puissance_4.lastplay[1] %> p2"></span>
                 <% elsif cell == 1 %>
-                  <span class="<%= 'token' if i == @puissance_4.lastplay[0] && j == @puissance_4.lastplay[1] %> p1"></span>
+                  <span class="<%= "token-#{j}" if i == @puissance_4.lastplay[0] && j == @puissance_4.lastplay[1] %> p1"></span>
                 <% end %>
               </div>
               <% j += 1 %>

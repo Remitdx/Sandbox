@@ -1,11 +1,74 @@
-@keyframes token-fall {
+
+@keyframes token-fall-0 {
   0% {
     position: absolute;
-    top: -300px;
+    top: -72vw;
   }
-
-  100% {
-    top: 0;
+}
+@keyframes token-fall-1 {
+  0% {
+    position: absolute;
+    top: -60vw;
+  }
+}
+@keyframes token-fall-2 {
+  0% {
+    position: absolute;
+    top: -48vw;
+  }
+}
+@keyframes token-fall-3 {
+  0% {
+    position: absolute;
+    top: -36vw;
+  }
+}
+@keyframes token-fall-4 {
+  0% {
+    position: absolute;
+    top: -24vw;
+  }
+}
+@keyframes token-fall-5 {
+  0% {
+    position: absolute;
+    top: -12vw;
+  }
+}
+@keyframes token-fall-md-0 {
+  0% {
+    position: absolute;
+    top: -36vw;
+  }
+}
+@keyframes token-fall-md-1 {
+  0% {
+    position: absolute;
+    top: -30vw;
+  }
+}
+@keyframes token-fall-md-2 {
+  0% {
+    position: absolute;
+    top: -24vw;
+  }
+}
+@keyframes token-fall-md-3 {
+  0% {
+    position: absolute;
+    top: -18vw;
+  }
+}
+@keyframes token-fall-md-4 {
+  0% {
+    position: absolute;
+    top: -12vw;
+  }
+}
+@keyframes token-fall-md-5 {
+  0% {
+    position: absolute;
+    top: -6vw;
   }
 }
 
@@ -33,7 +96,7 @@
   }
 
   .connect4 {
-    width: 80%;
+    width: 84vw;
     margin: 0 auto;
     border: 1px solid $major-dark;
 
@@ -54,7 +117,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      aspect-ratio: 1;
+      aspect-ratio: 1/1;
       border: 1px solid $major-dark;
 
       span {
@@ -71,8 +134,29 @@
         background-color: $complementary;
       }
 
-      .token {
-        animation: token-fall 0.5s linear forwards;
+      .token-0 {
+        top: 0;
+        animation: token-fall-0 0.6s linear forwards;
+      }
+      .token-1 {
+        top: 0;
+        animation: token-fall-1 0.5s linear forwards;
+      }
+      .token-2 {
+        top: 0;
+        animation: token-fall-2 0.4s linear forwards;
+      }
+      .token-3 {
+        top: 0;
+        animation: token-fall-3 0.3s linear forwards;
+      }
+      .token-4 {
+        top: 0;
+        animation: token-fall-4 0.2s linear forwards;
+      }
+      .token-5 {
+        top: 0;
+        animation: token-fall-5 0.1s linear forwards;
       }
     }
   }
@@ -82,7 +166,33 @@
   .connect4-wrapper {
 
     .connect4 {
-        width: 33%;
+      width: 42vw;
+
+      .cell {
+        .token-0 {
+          animation: token-fall-md-0 0.6s linear forwards;
+        }
+
+        .token-1 {
+          animation: token-fall-md-1 0.5s linear forwards;
+        }
+
+        .token-2 {
+          animation: token-fall-md-2 0.4s linear forwards;
+        }
+
+        .token-3 {
+          animation: token-fall-md-3 0.3s linear forwards;
+        }
+
+        .token-4 {
+          animation: token-fall-md-4 0.2s linear forwards;
+        }
+
+        .token-5 {
+          animation: token-fall-md-5 0.1s linear forwards;
+        }
+      }
     }
   }
 }
