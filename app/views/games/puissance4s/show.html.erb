@@ -4,35 +4,39 @@
 <%= render(Titles::H1titleComponent.new(title: t('connect4.title') )) %>
 <div class='section-1'>
   <div class='container'>
-    <div class='p4-wrapper'>
-      <div class='instruction pt-3'>
+    <div class='connect4-wrapper d-flex flex-column justify-content-around align-items-center py-3'>
+      <div class='instruction'>
         <% case @puissance_4.gameover %>
         <% when 0 %>
-          <p><%= @puissance_4.players.first %> <%= t('connect4.won') %></p>
+          <p class="<%= @puissance_4.players.first %>"><%= t("connect4.won.#{@puissance_4.players.first}") %></p>
         <% when 1 %>
           <p><%= t('connect4.tie') %> </p>
         <% when 2 %>
-          <p><%= t('connect4.turn')%> <%= @puissance_4.players.first %> !</p>
+          <p class="<%= @puissance_4.players.first %>"><%= t("connect4.turn.#{@puissance_4.players.first}")%> !</p>
         <% end %>
       </div>
-      <div class='d-flex justify-content-center py-3'>
+      <div class='connect4 my-4 d-flex'>
         <% i = 0 %>
         <% @puissance_4.grid.each do |column| %>
           <%= link_to games_puissance4_path(column: i), class: 'column', data: { turbo_method: :patch } do %>
+            <% j = 0 %>
             <% column.each do |cell| %>
               <div class='cell'>
                 <% if cell == -1 %>
-                  <span class='player-2'></span>
+                  <span class="<%= 'token' if i == @puissance_4.lastplay[0] && j == @puissance_4.lastplay[1] %> p2"></span>
                 <% elsif cell == 1 %>
-                  <span class='player-1'></span>
+                  <span class="<%= 'token' if i == @puissance_4.lastplay[0] && j == @puissance_4.lastplay[1] %> p1"></span>
                 <% end %>
               </div>
+              <% j += 1 %>
             <% end %>
           <% end %>
-        <% i +=1 %>
+          <% i += 1 %>
         <% end %>
       </div>
-      <%= link_to 'Reset', games_puissance4_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
+      <div>
+        <%= link_to 'Reset', games_puissance4_path(reset: true), class:'btn-cta btn-light', data: { turbo_method: :patch } %>
+      </div>
     </div>
   <div>
 <div>

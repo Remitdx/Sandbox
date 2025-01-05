@@ -170,9 +170,13 @@ fr:
 
   connect4:
     title: "Puissance 4"
-    won: "a gagné !"
+    won:
+      p1: "Le joueur 1 a gagné !"
+      p2: "Le joueur 2 a gagné !"
     tie: "Egalité !"
-    turn: "A ton tour"
+    turn:
+      p1: "A ton tour joueur 1"
+      p2: "A ton tour joueur 2"
 
   ## CONTACT ##
 

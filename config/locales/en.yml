@@ -168,9 +168,13 @@ en:
 
   connect4:
     title: "Connect 4"
-    won:  "has won !"
+    won:
+      p1: "Player 1 has won !"
+      p2: "Player 2 has won !"
     tie: "It's a tie !"
-    turn: "Time to play"
+    turn:
+      p1: "Time to play Player 1"
+      p2: "Time to play Player 2"
 
   ## CONTACT ##
 

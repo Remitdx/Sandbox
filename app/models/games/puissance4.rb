@@ -23,16 +23,22 @@ module Games
         [ 0, 0, 0, 0, 0, 0 ],
         [ 0, 0, 0, 0, 0, 0 ]]
       self.gameover = 2
-      self.players = [ "Player 1", "Player 2" ]
+      self.players = [ "p1", "p2" ]
     end
 
     def compute_turns(column)
       return [ self.grid, self.gameover, self.players ] unless valid_play?(self, column)
 
       self.grid = player_turn(self, column)
-      gameover = end?(grid) ? 1 : 2
-      self.gameover = win?(grid) ? 0 : gameover
-      self.players = gameover == 2 ? self.players.rotate : self.players
+      gameover_state = end?(grid) ? 1 : 2
+      self.gameover = win?(grid) ? 0 : gameover_state
+      self.players = self.gameover == 2 ? self.players.rotate : self.players
+
+      self
+    end
+
+    def register_last_play(column)
+      self.lastplay = [column, self.grid[column].index(0) -1 ]
 
       self
     end
@@ -40,7 +46,7 @@ module Games
     private
 
     def player_turn(puissance_4, column)
-      puissance_4.grid[column][puissance_4.grid[column].index(0)] = puissance_4.players.first == "Player 1" ? 1 : -1
+      puissance_4.grid[column][puissance_4.grid[column].index(0)] = puissance_4.players.first == "p1" ? 1 : -1
       puissance_4.grid
     end
 

@@ -1,9 +1,17 @@
-.p4-wrapper {
-  width: 60%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+@keyframes token-fall {
+  0% {
+    position: absolute;
+    top: -300px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.connect4-wrapper {
+  width: 100%;
+  min-height: 50vh;
 
   .instruction {
     p {
@@ -15,33 +23,66 @@
     text-decoration: none;
   }
 
-  .column {
-    width: 10% ;
-    display: flex;
-    flex-direction: column-reverse;
-    border: 1px solid $major-dark;
+  .p1 {
+    color: $major-dark;
   }
 
-  .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1;
-    background-color: $bg-cream-tone;
+  .p2 {
+    color: $complementary;
+    text-shadow: 0 0 1px black;
+  }
+
+  .connect4 {
+    width: 80%;
+    margin: 0 auto;
     border: 1px solid $major-dark;
 
-    span {
-      width: 75%;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
+    .column {
+      width: 100% ;
+      display: flex;
+      flex-direction: column-reverse;
+      border: 1px solid $major-dark;
+      background-color: $bg-cream-tone;
+
+      &:hover {
+        background-color: rgb(205, 205, 205);
+      }
     }
 
-    .player-1 {
-      background-color: $major-dark;
-    }
+    .cell {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1;
+      border: 1px solid $major-dark;
 
-    .player-2 {
-      background-color: $complementary;
+      span {
+        width: 75%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+
+      .p1 {
+        background-color: $major-dark;
+      }
+
+      .p2 {
+        background-color: $complementary;
+      }
+
+      .token {
+        animation: token-fall 0.5s linear forwards;
+      }
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .connect4-wrapper {
+
+    .connect4 {
+        width: 33%;
     }
   }
 }
