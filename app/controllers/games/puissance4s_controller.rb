@@ -11,7 +11,6 @@ module Games
 
     def update
       @puissance_4 = Games::Puissance4.find(params[:id])
-      @puissance_4.lastplay = [nil, nil]
 
       if @puissance_4.gameover == 2 || params[:reset]
         params[:reset] ? @puissance_4.reset_game : @puissance_4.compute_turns(params[:column].to_i)

@@ -38,7 +38,7 @@ module Games
     end
 
     def register_last_play(column)
-      self.lastplay = [column, self.grid[column].index(0) -1 ]
+      self.lastplay = [column, self.grid[column].index(0).nil? ? 5 : self.grid[column].index(0) - 1]
 
       self
     end
