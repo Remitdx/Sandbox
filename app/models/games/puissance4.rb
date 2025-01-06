@@ -1,5 +1,10 @@
 module Games
   class Puissance4 < ApplicationRecord
+
+    validates :grid, :players, :gameover, presence: true
+    validates :grid, length: { is: 7 }
+    validates :players, length: { is: 2 }
+
     def self.new_grid
       [
         [ 0, 0, 0, 0, 0, 0 ],
@@ -23,10 +28,11 @@ module Games
         [ 0, 0, 0, 0, 0, 0 ] ]
       self.gameover = 2
       self.players = [ "p1", "p2" ]
+      self
     end
 
     def compute_turns(column)
-      return [ self.grid, self.gameover, self.players ] unless valid_play?(self, column)
+      return self unless valid_play?(self, column)
 
       self.grid = player_turn(self, column)
       gameover_state = end?(grid) ? 1 : 2

@@ -24,7 +24,8 @@ module Games
     end
 
     describe '#reset_game' do
-      morbac = Morbac.new.reset_game
+      subject(:morbac) { Morbac.new.reset_game }
+
       it { expect(morbac.value).to be == [ 5, 5, 5, 5, 5, 5, 5, 5, 5 ] }
       it { expect(morbac.gameover).to be == 2  }
     end
