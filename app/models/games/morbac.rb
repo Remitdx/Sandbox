@@ -1,5 +1,9 @@
 module Games
   class Morbac < ApplicationRecord
+
+    # validations !!! value must be 9 length, etc ..
+    # + tests rspec ofc
+
     def reset_game
       self.value = [ 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
       self.gameover = 2
@@ -8,7 +12,7 @@ module Games
 
     def compute_turns(index) # return self modified
       array = player_turn(self, index)
-      self.lastplay = 0
+      self.lastplay = nil
       return self if array == []
 
       self.value = player_win?(array) ? array : ai_turn(array)
