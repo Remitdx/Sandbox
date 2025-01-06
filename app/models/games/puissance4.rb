@@ -1,6 +1,5 @@
 module Games
   class Puissance4 < ApplicationRecord
-
     def self.new_grid
       [
         [ 0, 0, 0, 0, 0, 0 ],
@@ -21,7 +20,7 @@ module Games
         [ 0, 0, 0, 0, 0, 0 ],
         [ 0, 0, 0, 0, 0, 0 ],
         [ 0, 0, 0, 0, 0, 0 ],
-        [ 0, 0, 0, 0, 0, 0 ]]
+        [ 0, 0, 0, 0, 0, 0 ] ]
       self.gameover = 2
       self.players = [ "p1", "p2" ]
     end
@@ -38,7 +37,7 @@ module Games
     end
 
     def register_last_play(column)
-      self.lastplay = [column, self.grid[column].index(0).nil? ? 5 : self.grid[column].index(0) - 1]
+      self.lastplay = [ column, self.grid[column].index(0).nil? ? 5 : self.grid[column].index(0) - 1 ]
 
       self
     end

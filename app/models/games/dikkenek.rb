@@ -13,7 +13,6 @@ module Games
       self.how_many_good_answers
     end
 
-
     def average_difficulty
       return nil if quotes.empty?
 

@@ -1,6 +1,5 @@
 module Games
   class Morbac < ApplicationRecord
-
     def reset_game
       self.value = [ 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
       self.gameover = 2
@@ -62,18 +61,18 @@ module Games
 
     def deny_player_direct_win(array, possible_plays)
       a = []
-      [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]].each do |line|
+      [ [ 0, 1, 2 ], [ 3, 4, 5 ], [ 6, 7, 8 ], [ 0, 3, 6 ], [ 1, 4, 7 ], [ 2, 5, 8 ], [ 0, 4, 8 ], [ 2, 4, 6 ] ].each do |line|
         a = line if array[line[0]] + array[line[1]] + array[line[2]] == 5
       end
-      return a == [] ? possible_plays.shuffle!.first : (a & possible_plays).first
+      a == [] ? possible_plays.shuffle!.first : (a & possible_plays).first
     end
 
     def play_to_win(array, possible_plays)
       a = []
-      [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]].each do |line|
+      [ [ 0, 1, 2 ], [ 3, 4, 5 ], [ 6, 7, 8 ], [ 0, 3, 6 ], [ 1, 4, 7 ], [ 2, 5, 8 ], [ 0, 4, 8 ], [ 2, 4, 6 ] ].each do |line|
         a = line if array[line[0]] + array[line[1]] + array[line[2]] == 7
       end
-      return a == [] ? deny_player_direct_win(array, possible_plays) : (a & possible_plays).first
+      a == [] ? deny_player_direct_win(array, possible_plays) : (a & possible_plays).first
     end
   end
 end
