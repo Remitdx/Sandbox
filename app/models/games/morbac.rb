@@ -1,8 +1,9 @@
 module Games
   class Morbac < ApplicationRecord
 
-    # validations !!! value must be 9 length, etc ..
-    # + tests rspec ofc
+    validates :value, presence: true
+    validates :value, length: { is: 9 }
+    validates :gameover, presence: true
 
     def reset_game
       self.value = [ 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
