@@ -1,12 +1,21 @@
+// LIGHT MODE //
+
 $bg-clear-tone: #fbfcff;
 $bg-cream-tone: #fcf9f2;
+
 $major-dark: #011c5b;
 $major-dark-lighter: #01226f;
 $major-light: #8caefd;
 $major-light-darker: #749dfd;
 $complementary: #fbb40e;
 $complementary-lighter: #fcc33e;
-$shadow: #a8a8a8;
 
+$shadow: #a8a8a8;
 $sunset: linear-gradient(90deg, rgba(255, 218, 0, 1) 0%, rgba(255, 38, 0, 1) 100%);
 $sunset-round: radial-gradient(circle, rgba(255, 218, 0, 1) 0%, rgba(255, 38, 0, 1) 50%);
+
+// DARK MODE //
+$dm-light-grey: #1C1D22;
+$dm-light-grey: #2A2B30;
+
+$dm-light-grey: #BCBCBC;
