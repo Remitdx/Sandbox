@@ -161,10 +161,14 @@ en:
     total: "Total score"
 
   morbac:
+    title: "Tic tac toe"
     text1: "Click to play. Try to beat my handmade AI."
     text2: "It fight well but, do not worry, it is not fully optimised !"
     text3: "Indeed, there is the 'minMax' algorithm allowing the AI ​​to never lose."
     text4: "I did not want to implement it here to keep a dose of fun!"
+
+  escapegame:
+    title: "Escape from here"
 
   connect4:
     title: "Connect 4"
