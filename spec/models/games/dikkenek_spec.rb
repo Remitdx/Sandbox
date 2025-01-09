@@ -80,12 +80,12 @@ module Games
     end
 
     describe '#end_game' do
-      let(:params) { {:"characters-1" => "Claudy", "scene-1" => "152", :"characters-2" => "Sylvie", "scene-2" => "349",
+      let(:params) { { :"characters-1" => "Claudy", "scene-1" => "152", :"characters-2" => "Sylvie", "scene-2" => "349",
                       :"characters-3" => "Greg", "scene-3" => "45", :"characters-4" => "Sylvie", "scene-4" => "381",
                       :"characters-5" => "Claudy", "scene-5" => "495", :"characters-6" => "Sylvie", "scene-6" => "39",
                       :"characters-7" => "Aziz", "scene-7" => "304", :"characters-8" => "Aziz", "scene-8" => "304",
                       :"characters-9" => "Aziz", "scene-9" => "304", :"characters-10" => "Aziz", "scene-10" => "304",
-                      :start_at => "1736236610122", :submit_at => "1736236660698"}
+                      :start_at => "1736236610122", :submit_at => "1736236660698" }
                     }
 
       subject(:dikkenek) { Dikkenek.new(gameover: 2).pick_10_quotes.average_difficulty.end_game(params) }

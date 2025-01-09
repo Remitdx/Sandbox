@@ -5,7 +5,7 @@ module Pages
     describe '#my_experiences' do
       subject(:experiences) { Experience.new.my_experiences }
 
-      it { is_expected.to be_a_kind_of(Hash)}
+      it { is_expected.to be_a_kind_of(Hash) }
     end
   end
 end

@@ -2,22 +2,21 @@ module Games
   require 'rails_helper'
 
   RSpec.describe Morbac, type: :model do
-
     describe 'validations' do
       context 'valid morbac' do
-        subject(:valid_morbac) { Morbac.new(value: [ 5, 5, 0, 5, 5, 1, 5, 5, 5 ], gameover: 2)}
+        subject(:valid_morbac) { Morbac.new(value: [ 5, 5, 0, 5, 5, 1, 5, 5, 5 ], gameover: 2) }
 
         it { is_expected.to be_valid }
       end
 
       context 'not 9-length value' do
-        subject(:unvalid_morbac) { Morbac.new(value: [ 5, 5, 0, 5, 5, 1 ], gameover: 2)}
+        subject(:unvalid_morbac) { Morbac.new(value: [ 5, 5, 0, 5, 5, 1 ], gameover: 2) }
 
         it { is_expected.to_not be_valid }
       end
 
       context 'gameover missing' do
-        subject(:unvalid_morbac) { Morbac.new(value: [ 5, 5, 0, 5, 5, 1, 5, 5, 5 ], gameover: nil)}
+        subject(:unvalid_morbac) { Morbac.new(value: [ 5, 5, 0, 5, 5, 1, 5, 5, 5 ], gameover: nil) }
 
         it { is_expected.to_not be_valid }
       end

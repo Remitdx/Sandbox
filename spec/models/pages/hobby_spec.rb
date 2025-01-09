@@ -5,7 +5,7 @@ module Pages
     describe '#my_hobbies' do
       subject(:hobbies) { Hobby.new.my_hobbies }
 
-      it { is_expected.to be_a_kind_of(Hash)}
+      it { is_expected.to be_a_kind_of(Hash) }
     end
   end
 end

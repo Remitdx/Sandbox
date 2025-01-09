@@ -1,6 +1,5 @@
 module Games
   class Escape < ApplicationRecord
-
     serialize :parameters, type: Array
 
     def pick_game_parameters

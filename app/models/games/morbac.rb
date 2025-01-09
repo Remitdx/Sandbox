@@ -1,6 +1,5 @@
 module Games
   class Morbac < ApplicationRecord
-
     validates :value, presence: true
     validates :value, length: { is: 9 }
     validates :gameover, presence: true

@@ -5,7 +5,7 @@ module Pages
     describe '#my_education' do
       subject(:education) { Education.new.my_education }
 
-      it { is_expected.to be_a_kind_of(Hash)}
+      it { is_expected.to be_a_kind_of(Hash) }
     end
   end
 end

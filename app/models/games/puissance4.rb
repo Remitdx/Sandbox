@@ -1,6 +1,5 @@
 module Games
   class Puissance4 < ApplicationRecord
-
     validates :grid, :players, :gameover, presence: true
     validates :grid, length: { is: 7 }
     validates :players, length: { is: 2 }
