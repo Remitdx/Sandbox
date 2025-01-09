@@ -56,8 +56,8 @@
           6,
           6,
           60,
-          1,
-          1,
+          5,
+          5,
           null,
           null,
           6,
@@ -100,6 +100,42 @@
         "lines": [
           1,
           1,
+          1,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -108,7 +144,6 @@
         "lines": [
           1,
           1,
-          null,
           1,
           1,
           1,
@@ -195,7 +230,6 @@
         "lines": [
           1,
           1,
-          null,
           1,
           1,
           1,
@@ -2458,6 +2492,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1736365768
+    "timestamp": 1736415209
   }
 }

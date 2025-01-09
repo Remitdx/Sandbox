@@ -1,1 +1,18 @@
-<h1>INTRO</h1>
+<div class="intro-wrapper">
+  <div class="aside">
+    <%= render(Games::ArrowButtons::ArrowBtnComponent.new(controller:"escape", actions:"keydown@window->escape#move")) %>
+  </div>
+  <div class="intro-grid">
+    <% i = 0 %>
+    <% j = 0 %>
+    <% map.each do |column| %>
+      <% column.each do |sprite| %>
+        <div id="<%= "#{i}-#{j}" %>" class="grid-item"><%= sprite %></div>
+        <% j += 1 %>
+      <% end %>
+      <% i += 1 %>
+    <% end %>
+  </div>
+  <div class="aside">
+  </div>
+</div>

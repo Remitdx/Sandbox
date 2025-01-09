@@ -7,6 +7,7 @@ module Games
 
     def show
       @escape = Games::Escape.find(params[:id])
+      @map = @escape.intro_map
     end
 
     def update

@@ -1,0 +1,33 @@
+.arrow-buttons {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/2;
+
+  .button {
+    position: absolute;
+    background-color: $dm-dark-grey;
+    width: 30%;
+    height: 45%;
+    border-radius: 4px;
+    box-shadow: 4px 2px 4px $dm-light-grey;
+    color: $dm-light-grey;
+  }
+
+  .up {
+    left: 33%;
+  }
+
+  .left {
+    top: 50%;
+  }
+
+  .down {
+    top: 50%;
+    left: 33%;
+  }
+
+  .right {
+    top: 50%;
+    left: 66%
+  }
+}
