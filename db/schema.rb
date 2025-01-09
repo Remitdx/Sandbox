@@ -49,8 +49,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_08_194029) do
   end
 
   create_table "escapes", force: :cascade do |t|
-    t.integer "gameover"
-    t.integer "result"
+    t.integer "step"
+    t.integer "score"
+    t.text "parameters"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,9 +1,10 @@
-<nav>
-  <%= render 'components/navigation'  %>
-</nav>
-<%= render(Titles::H1titleComponent.new(title: t('escapegame.title') )) %>
-<div class='section-2'>
-  <div class='container'>
-
-  </div>
+<div class="escape_window">
+  <% case @escape.step %>
+  <% when 0 %>
+    <%= render 'games/escapes/intro', escape: @escape %>
+  <% when 1 %>
+    <%= render 'games/escapes/in_progress', escape: @escape %>
+  <% when 2 %>
+    <%= render 'games/escapes/results', escape: @escape %>
+  <% end %>
 </div>

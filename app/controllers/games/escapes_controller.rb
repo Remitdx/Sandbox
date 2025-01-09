@@ -1,7 +1,7 @@
 module Games
   class EscapesController < ApplicationController
     def create
-      escape = Games::Escape.create()
+      escape = Games::Escape.create(step: 0)
       redirect_to games_escape_path(escape)
     end
 

@@ -168,7 +168,6 @@ en:
     text4: "I did not want to implement it here to keep a dose of fun!"
 
   escapegame:
-    title: "Escape from here"
 
   connect4:
     title: "Connect 4"
