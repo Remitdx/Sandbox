@@ -1,6 +1,6 @@
-<div class="arrow-buttons">
-  <button <%="data-#{@controller}-target=up" if @controller.present? %> <%="data-action=#{@actions}" if @actions.present? %> class='button up'><i class="fa-solid fa-arrow-up"></i></button>
-  <button <%="data-#{@controller}-target=down" if @controller.present? %> <%="data-action=#{@actions}" if @actions.present? %> class='button down'><i class="fa-solid fa-arrow-down"></i></button>
-  <button <%="data-#{@controller}-target=left" if @controller.present? %> <%="data-action=#{@actions}" if @actions.present? %> class='button left'><i class="fa-solid fa-arrow-left"></i></button>
-  <button <%="data-#{@controller}-target=right" if @controller.present? %> <%="data-action=#{@actions}" if @actions.present? %> class='button right'><i class="fa-solid fa-arrow-right"></i></button>
+<div class="arrow-buttons" data-action="keydown@window-><%=@controller%>#move keyup@window-><%=@controller%>#keyup">
+  <button <%="data-#{@controller}-target=up" if @controller.present? %> class='button up'><i class="fa-solid fa-arrow-up"></i></button>
+  <button <%="data-#{@controller}-target=down" if @controller.present? %> class='button down'><i class="fa-solid fa-arrow-down"></i></button>
+  <button <%="data-#{@controller}-target=left" if @controller.present? %> class='button left'><i class="fa-solid fa-arrow-left"></i></button>
+  <button <%="data-#{@controller}-target=right" if @controller.present? %> class='button right'><i class="fa-solid fa-arrow-right"></i></button>
 </div>
