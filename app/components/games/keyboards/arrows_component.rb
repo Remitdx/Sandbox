@@ -1,6 +1,6 @@
 module Games
-  module ArrowButtons
-    class ArrowBtnComponent < ViewComponent::Base
+  module Keyboards
+    class ArrowsComponent < ViewComponent::Base
       def initialize(controller: {}, actions: {})
         @controller = controller
         @actions = actions

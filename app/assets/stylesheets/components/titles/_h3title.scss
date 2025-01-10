@@ -1,48 +1,3 @@
-.h1-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $major-light;
-  height: 10rem;
-  width: 100%;
-
-  h1 {
-    font-family: var(--ff-handwrite);
-    letter-spacing: 1px;
-    font-size: var(--fs-xl);
-    color: $major-dark;
-  }
-}
-
-.h2-title {
-  position: relative;
-  padding: 3rem 0;
-  width: 100%;
-
-  h2 {
-    position: absolute;
-    white-space: nowrap;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: var(--ff-handwrite);
-    letter-spacing: 8px;
-    font-size: var(--fs-l);
-    color: $major-dark;
-  }
-
-  span {
-    position: absolute;
-    background: $major-light;
-    height: 0.2rem;
-    width: 60%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.6;
-  }
-}
-
 .h3-title {
   position: relative;
   white-space: nowrap;
@@ -77,10 +32,6 @@
 }
 
 @media (min-width: 40em) {
-
-  .h2-title {
-    padding: 6rem 0;
-  }
 
   .h3-title {
     height: 5rem;

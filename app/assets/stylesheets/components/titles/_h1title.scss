@@ -1,0 +1,15 @@
+.h1-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $major-light;
+  height: 10rem;
+  width: 100%;
+
+  h1 {
+    font-family: var(--ff-handwrite);
+    letter-spacing: 1px;
+    font-size: var(--fs-xl);
+    color: $major-dark;
+  }
+}

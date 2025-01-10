@@ -1,6 +1,6 @@
 <div class="intro-wrapper">
   <div class="aside">
-    <%= render(Games::ArrowButtons::ArrowBtnComponent.new(controller:"escape")) %>
+    <%= render(Games::Keyboards::ArrowsComponent.new(controller:"escape")) %>
   </div>
   <div class="intro-grid">
     <% i = 0 %>
@@ -8,6 +8,7 @@
     <% map.each do |column| %>
       <% column.each do |sprite| %>
         <div id="<%= "#{i}-#{j}" %>" class="grid-item"><%= sprite %></div>
+        <%= render(Games::Maps::SpriteComponent.new(type:sprite)) %>
         <% j += 1 %>
       <% end %>
       <% i += 1 %>
