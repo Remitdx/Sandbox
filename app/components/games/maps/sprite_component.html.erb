@@ -1,3 +1,11 @@
-<div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
-  <div class="<%= @type == 0 ? Games::Escape.set_up_biome.sample : "" %>"></div>
-</div>
+<% if @type == 2 %>
+  <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
+    <%= form_with url: games_escape_path(@model), method: :put do |form| %>
+      <%= form.submit "", class: "d-none", data: { escape_target: "submit" } %>
+    <% end %>
+  </div>
+<% else %>
+  <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
+      <div class="<%= @type == 0 ? Games::Escape.set_up_biome.sample : "" %>"></div>
+  </div>
+<% end %>

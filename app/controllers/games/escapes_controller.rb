@@ -11,6 +11,7 @@ module Games
     end
 
     def update
+      raise
       @escape = Games::Escape.find(params[:id])
     end
   end

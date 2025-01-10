@@ -1,13 +1,13 @@
 <div class="intro-wrapper">
   <div class="aside">
-    <%= render(Games::Keyboards::ArrowsComponent.new(controller:"escape")) %>
+    <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"escape")) %>
   </div>
   <div data-escape-target="grid" class="intro-grid">
     <% i = 0 %>
     <% map.each do |column| %>
       <% j = 0 %>
       <% column.each do |sprite| %>
-        <%= render(Games::Maps::SpriteComponent.new(type:sprite, x: i, y: j)) %>
+        <%= render(Games::Maps::SpriteComponent.new(type: sprite, x: i, y: j, model: escape)) %>
         <% j += 1 %>
       <% end %>
       <% i += 1 %>

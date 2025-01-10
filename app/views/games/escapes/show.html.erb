@@ -1,7 +1,7 @@
 <div data-controller="escape" class="escape-window">
   <% case @escape.step %>
   <% when 0 %>
-    <%= render 'games/escapes/intro', map: @map %>
+    <%= render 'games/escapes/intro', map: @map, escape: @escape %>
   <% when 1 %>
     <%= render 'games/escapes/in_progress', escape: @escape %>
   <% when 2 %>

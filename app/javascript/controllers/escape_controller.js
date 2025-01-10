@@ -7,7 +7,7 @@ const getCoordinates = (element) => {
 }
 
 export default class extends Controller {
-  static targets = ['up', 'down', 'left', 'right', 'grid', 'character']
+  static targets = ['up', 'down', 'left', 'right', 'grid', 'character', 'submit']
 
   move(event) {
     if (event.key == "ArrowUp" || event.key == "ArrowDown" || event.key == "ArrowLeft" || event.key == "ArrowRight") {
@@ -53,6 +53,12 @@ export default class extends Controller {
         }
         break;
     };
+
+    const newCoordinates = getCoordinates(this.characterTarget);
+    console.log(newCoordinates);
+    if (newCoordinates[0] == 2 && newCoordinates[1] == 11) {
+      this.submitTarget.click();
+    }
   }
 
   keyup(event) {
