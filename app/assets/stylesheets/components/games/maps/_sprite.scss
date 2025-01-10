@@ -9,3 +9,31 @@
 .path{
   background-color: rgb(161, 164, 82);
 }
+
+.action {
+  background-color: rgb(181, 75, 238);
+}
+
+.tree {
+  background-image: url('games/tree.png');
+  height: 32px;
+  aspect-ratio: 1/1;
+}
+
+.mushroom {
+  background-image: url('games/mushroom.png');
+  height: 32px;
+  aspect-ratio: 1/1;
+}
+
+.plants {
+  background-image: url('games/plants.png');
+  height: 32px;
+  aspect-ratio: 1/1;
+}
+
+.cow {
+  background-image: url('games/cow.png');
+  height: 32px;
+  aspect-ratio: 1/1;
+}

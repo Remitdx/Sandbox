@@ -1,1 +1,3 @@
-<div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type][0] %>"></div>
+<div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
+  <div class="<%= @type == 0 ? Games::Escape.set_up_biome.sample : "" %>"></div>
+</div>
