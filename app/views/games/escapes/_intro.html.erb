@@ -2,17 +2,17 @@
   <div class="aside">
     <%= render(Games::Keyboards::ArrowsComponent.new(controller:"escape")) %>
   </div>
-  <div class="intro-grid">
+  <div data-escape-target="grid" class="intro-grid">
     <% i = 0 %>
-    <% j = 0 %>
     <% map.each do |column| %>
+      <% j = 0 %>
       <% column.each do |sprite| %>
-        <div id="<%= "#{i}-#{j}" %>" class="grid-item"><%= sprite %></div>
-        <%= render(Games::Maps::SpriteComponent.new(type:sprite)) %>
+        <%= render(Games::Maps::SpriteComponent.new(type:sprite, x: i, y: j)) %>
         <% j += 1 %>
       <% end %>
       <% i += 1 %>
     <% end %>
+    <span data-escape-target="character" class="character down"></span>
   </div>
   <div class="aside">
   </div>
