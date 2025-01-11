@@ -1,0 +1,35 @@
+@for $x from 0 through 23 {
+  @for $y from 0 to 15 {
+
+    .grid-#{$x}-#{$y} {
+      display: grid;
+      grid-template-columns: repeat($x + 1, 32px);
+      grid-template-rows: repeat($y + 1, 32px);
+      border: 2px solid $dm-light-grey;
+    }
+
+    .character-#{$x}-#{$y} {
+      position: absolute;
+      left: $x * 32px;
+      top: $y * 32px;
+      height: 32px;
+      aspect-ratio: 1/1;
+    }
+
+    .character-down {
+      background-image: url('games/Bunny-down.png');
+    }
+
+    .character-up {
+      background-image: url('games/Bunny-up.png');
+    }
+
+    .character-left {
+      background-image: url('games/Bunny-left.png');
+    }
+
+    .character-right {
+      background-image: url('games/Bunny-right.png');
+    }
+  }
+}

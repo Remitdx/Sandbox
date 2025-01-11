@@ -2,16 +2,20 @@
   border: 1px dashed $dm-light-grey;
 }
 
-.grass{
+.sprite-grass{
   background-color: rgb(0, 148, 0);
 }
 
-.path{
+.sprite-path{
   background-color: rgb(161, 164, 82);
 }
 
-.action {
+.sprite-action {
   background-color: rgb(181, 75, 238);
+}
+
+.sprite-wall {
+  background-color: rgb(21, 19, 21);
 }
 
 .tree {

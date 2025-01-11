@@ -13,26 +13,26 @@
     color: $dm-light-grey;
   }
 
-  .pressed {
+  .arrow-pressed {
     translate: 4px 2px;
     box-shadow: none;
     border: 2px solid black;
   }
 
-  .up {
+  .arrow-up {
     left: 33%;
   }
 
-  .left {
+  .arrow-left {
     top: 50%;
   }
 
-  .down {
+  .arrow-down {
     top: 50%;
     left: 33%;
   }
 
-  .right {
+  .arrow-right {
     top: 50%;
     left: 66%
   }

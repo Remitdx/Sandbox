@@ -4,15 +4,15 @@ module Games
     serialize :parameters, type: Hash
 
     SPRITE = {
-      0 => "grass",
-      1 => "path",
-      2 => "path out",
-      3 =>  "wall"
+      0 => "sprite-grass",
+      1 => "sprite-path",
+      2 => "sprite-path out",
+      3 =>  "sprite-wall"
     }
     TASKS = ["computer",  "ventilation", "food", "water"]
     THREATS = ["Chemical war", "ET", "Meteorites"]
 
-    def intro_map
+    def self.intro_map
       [
         [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
         [ 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -30,6 +30,10 @@ module Games
       self.parameters = {
         code: generate_code,
         map: generate_bunker_map,
+        map_x: 18,
+        map_y: 12,
+        character_x: 6,
+        character_y: 9,
         start_time: DateTime.now,
         end_time: nil,
         threat: pick_threat,
@@ -73,8 +77,6 @@ module Games
         [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
         [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
         [ 3, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
         [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
         [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
         [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],

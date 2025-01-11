@@ -1,10 +1,18 @@
 <div data-controller="escape" class="escape-window">
-  <% case @escape.step %>
-  <% when 0 %>
-    <%= render 'games/escapes/intro', map: @map, escape: @escape %>
-  <% when 1 %>
-    <%= render 'games/escapes/in_progress', escape: @escape %>
-  <% when 2 %>
-    <%= render 'games/escapes/results', escape: @escape %>
-  <% end %>
+  <div class="wrapper">
+    <div class="aside">
+      <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"escape")) %>
+    </div>
+    <% case @escape.step %>
+    <% when 0 %>
+      <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
+    <% when 1 %>
+      <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
+    <% when 2 %>
+      <%= render 'games/escapes/results', escape: @escape %>
+    <% end %>
+    <div class="aside">
+      <p>du texte pour comprendre le layout</p>
+    </div>
+  </div>
 </div>

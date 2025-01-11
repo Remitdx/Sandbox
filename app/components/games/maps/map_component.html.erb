@@ -1,0 +1,14 @@
+<div class="position-relative">
+  <div data-escape-target="grid" class="grid-<%= @model.parameters[:map_x] %>-<%= @model.parameters[:map_y] %>">
+    <% i = 0 %>
+    <% @model.parameters[:map].each do |column| %>
+      <% j = 0 %>
+      <% column.each do |sprite| %>
+        <%= render(Games::Maps::SpriteComponent.new(type: sprite, x: i, y: j, model: @model)) %>
+        <% j += 1 %>
+      <% end %>
+      <% i += 1 %>
+    <% end %>
+  </div>
+  <span data-escape-target="character" class="character-<%= @model.parameters[:character_x] %>-<%= @model.parameters[:character_y] %> character-down"></span>
+</div>
