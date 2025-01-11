@@ -61,7 +61,7 @@ export default class extends Controller {
     }
   }
 
-  keyup(event) {
+  keyup() {
     this.upTarget.classList.remove('pressed');
     this.downTarget.classList.remove('pressed');
     this.leftTarget.classList.remove('pressed');

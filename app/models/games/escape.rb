@@ -1,20 +1,16 @@
 module Games
   class Escape < ApplicationRecord
-    serialize :parameters, type: Array
+    require 'date'
+    serialize :parameters, type: Hash
 
     SPRITE = {
-        0 => "grass",
-        1 => "path",
-        2 => "path out"
-      }
-
-    def pick_game_parameters
-      # TODO
-      code = rand(1000..9999)
-    end
-
-    def generate_bunker_map
-    end
+      0 => "grass",
+      1 => "path",
+      2 => "path out",
+      3 =>  "wall"
+    }
+    TASKS = ["computer",  "ventilation", "food", "water"]
+    THREATS = ["Chemical war", "ET", "Meteorites"]
 
     def intro_map
       [
@@ -30,6 +26,64 @@ module Games
       ]
     end
 
+    def set_game_parameters
+      self.parameters = {
+        code: generate_code,
+        map: generate_bunker_map,
+        start_time: DateTime.now,
+        end_time: nil,
+        threat: pick_threat,
+        tasks: pick_tasks
+      }
+    end
+
+    def self.set_up_biome
+      a = []
+      3.times { a << "tree" }
+      a << "cow"
+      60.times { a << "" }
+      2.times { a << "mushroom" }
+      2.times { a << "plants" }
+      return a
+    end
+
+    private
+
+    def pick_tasks
+      TASKS.sample(4)
+    end
+
+    def pick_threat
+      THREATS.sample
+    end
+
+    def generate_code
+      code = []
+      4.times { code << rand(1..9) }
+      code
+    end
+
+    def generate_bunker_map
+      [
+        [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ],
+        [ 3, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
+        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
+        [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ]
+      ]
+    end
+
+
     # if screen téléphone --> fuck off sorry !
 
     # un enfant qui fait de l'urbex et tombe.
@@ -38,11 +92,9 @@ module Games
 
     # musique desactivable
 
-    # piece vue de dessus pokemon style, sprites pour le decor le perso bouge de sprite en sprite avec les flèches.
+    # full hd : 1920 x 1080 pixels soit 60 colonnes pour 33.75 lignes
 
-    # 1. chrono démarre, le générateur d'oxygène est HS. (tuto)
-
-    # 2.
+    # 1. chrono démarre, le générateur d'oxygène est HS.
 
     # prendre conscience de la menace exterieure.
     # la menace est tirée au sort parmis plusieurs : extraterrestres, météorites, guerre chimique,
@@ -59,15 +111,5 @@ module Games
     # step, integer
     # score
     # parameters [time, threat, code, tasks, ...]
-
-    def self.set_up_biome
-      a = []
-      3.times { a << "tree" }
-      a << "cow"
-      60.times { a << "" }
-      2.times { a << "mushroom" }
-      2.times { a << "plants" }
-      return a
-    end
   end
 end

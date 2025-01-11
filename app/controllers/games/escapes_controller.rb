@@ -11,8 +11,14 @@ module Games
     end
 
     def update
-      raise
       @escape = Games::Escape.find(params[:id])
+
+      if @escape.step == 0
+        @escape.step = 1
+        @escape.set_game_parameters
+      end
+      @escape.save
+      redirect_to games_escape_path(escape)
     end
   end
 end
