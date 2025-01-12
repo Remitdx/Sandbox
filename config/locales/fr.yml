@@ -8,7 +8,7 @@ fr:
   title_home: 'Accueil'
   title_cv: 'Curriculum vitae'
   title_philosophy: 'Philosophie'
-  title_project: 'Projets'
+  title_projects: 'Projets'
   title_resources: 'Ressources'
   title_uikit: 'UI Kit'
   title_featureflags: 'Tour de Contrôle'
@@ -170,6 +170,7 @@ fr:
     text4: "Je n'ai pas souhaité l'implémenter ici pour garder une dose de fun !"
 
   escapegame:
+    title: "Escape game"
 
   connect4:
     title: "Puissance 4"

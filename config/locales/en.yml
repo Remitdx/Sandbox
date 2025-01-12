@@ -9,7 +9,7 @@ en:
   title_home: 'Home'
   title_cv: 'Curriculum vitae'
   title_philosophy: 'Philosophy'
-  title_project: 'Projects'
+  title_projects: 'Projects'
   title_resources: 'Resources'
   title_uikit: 'UI Kit'
   title_featureflags: 'Feature Flags'
@@ -168,6 +168,7 @@ en:
     text4: "I did not want to implement it here to keep a dose of fun!"
 
   escapegame:
+    title: "Escape game"
 
   connect4:
     title: "Connect 4"

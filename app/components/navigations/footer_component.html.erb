@@ -1,5 +1,44 @@
-<footer>
-  <div class="footer d-flex justify-content-around align-items-center">
+<footer class="footer">
+  <div class="top-part"></div>
+  <div class="bottom-part"></div>
+  <div class="footer-avatar"></div>
+  <div class="contact footer-detail">
+    <h5>Contact</h5>
+    <p><%= link_to 'https://github.com/Remitdx', target: :_blank do %>
+        <i class="fa-brands fa-github"></i>
+      <% end %></p>
+    <p><%= link_to 'https://www.linkedin.com/in/r%C3%A9mitondeux/', target: :_blank do %>
+      <i class="fa-brands fa-linkedin"></i>
+    <% end %></p>
+    <p><%= link_to 'Malt', 'https://www.malt.fr/profile/remitondeux', target: :_blank %></p>
+    <p><%= link_to 'Codingame','https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', target: :_blank %></p>
+  </div>
+  <div class="pages footer-detail">
+    <h5>Pages</h5>
+    <p><%= link_to t('title_home'), root_path %></p>
+    <p><%= link_to t('title_philosophy'), philosophy_path %></p>
+    <p><%= link_to t('title_cv'), cv_path %></p>
+    <p><%= link_to t('title_projects'), projects_path %></p>
+    <p><%= link_to t('title_uikit'), uikit_path %></p>
+  </div>
+  <div class="games footer-detail">
+    <h5>Games</h5>
+    <p><%= link_to 'Dikkenek (french only)', games_dikkeneks_path %></p>
+    <p><%= link_to t('morbac.title'), games_morbacs_path, data: { turbo_method: :post } %></p>
+    <p><%= link_to t('rolldice.title'), games_rolls_path, data: { turbo_method: :post } %></p>
+  </div>
+  <div class="games-2 footer-detail">
+    <h5>Games</h5>
+    <p><%= link_to t('escapegame.title'), games_escapes_path, data: { turbo_method: :post } %></p>
+    <p><%= link_to t('connect4.title'), games_puissance4s_path, data: { turbo_method: :post } %></p>
+    <p><%= link_to 'Risk', games_risk_games_risks_path, data: { turbo_method: :post } %></p>
+  </div>
+  <div class="legal footer-detail">
+    <h5>Legal</h5>
+    <div class="d-flex align-items-baseline">
+      <p><strong><%=" " + Time.now.strftime("%Y") %></strong></p>
+      <i class="fa-regular fa-copyright mx-1"></i>
+    </div>
     <p><%= t('footer.madeby') %></p>
     <p><%= t('footer.cgu') %></p>
   </div>
