@@ -22,8 +22,8 @@
     <p><%= link_to t('title_uikit'), uikit_path %></p>
   </div>
   <div class="games footer-detail">
-    <h5>Games</h5>
-    <p><%= link_to 'Dikkenek (french only)', games_dikkeneks_path %></p>
+    <h5><%= t("project.games") %></h5>
+    <p><%= link_to t('dikkenek.title'), games_dikkeneks_path %></p>
     <p><%= link_to t('morbac.title'), games_morbacs_path, data: { turbo_method: :post } %></p>
     <p><%= link_to t('rolldice.title'), games_rolls_path, data: { turbo_method: :post } %></p>
   </div>

@@ -172,6 +172,9 @@ fr:
   escapegame:
     title: "Escape game"
 
+  dikkenek:
+    title: Dikkenek
+
   connect4:
     title: "Puissance 4"
     won:

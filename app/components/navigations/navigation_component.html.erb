@@ -13,36 +13,12 @@
       </div>
     </div>
     <div data-menu-target='navigation' class='navigation d-none'>
-      <%= link_to root_path do %>
-        <div class='nav-item item1 <%= current_page?(root_path) ? 'selected' : 'non-selected' %>' data-menu-target='item'>
-          <h2><%= t('title_home') %></h2>
-        </div>
-      <% end %>
-      <%= link_to philosophy_path do %>
-        <div class='nav-item item2 <%= current_page?(philosophy_path) ? 'selected' : 'non-selected' %>' data-menu-target='item'>
-          <h2><%= t('title_philosophy') %></h2>
-        </div>
-      <% end %>
-      <%= link_to cv_path do %>
-        <div class='nav-item item3 <%= current_page?(cv_path) ? 'selected' : 'non-selected' %>' data-menu-target='item'>
-          <h2><%= t('title_cv') %></h2>
-        </div>
-      <% end %>
-      <%= link_to projects_path do %>
-        <div class='nav-item item4 <%= current_page?(projects_path) ? 'selected' : 'non-selected' %>' data-menu-target='item'>
-          <h2><%= t('title_projects') %></h2>
-        </div>
-      <% end %>
-      <%= link_to uikit_path do %>
-        <div class='nav-item item5 <%= current_page?(uikit_path) ? 'selected' : 'non-selected' %>' data-menu-target='item'>
-          <h2><%= t('title_uikit') %></h2>
-        </div>
-      <% end %>
-      <%= link_to contact_path do %>
-        <div class='nav-item item6 <%= current_page?(contact_path) ? 'selected' : 'non-selected' %>' data-menu-target='item' data-action='animationend->menu#animationend'>
-          <h2>Contact</h2>
-        </div>
-      <% end %>
+      <%= render(Navigations::NavigationItemComponent.new(number: "item1", title: t('title_home'), path: root_path )) %>
+      <%= render(Navigations::NavigationItemComponent.new(number: "item2", title: t('title_philosophy'), path: philosophy_path )) %>
+      <%= render(Navigations::NavigationItemComponent.new(number: "item3", title: t('title_cv'), path: cv_path )) %>
+      <%= render(Navigations::NavigationItemComponent.new(number: "item4", title: t('title_projects'), path: projects_path )) %>
+      <%= render(Navigations::NavigationItemComponent.new(number: "item5", title: t('title_uikit'), path: uikit_path )) %>
+      <%= render(Navigations::NavigationItemComponent.new(number: "item6", title: t('title_contact'), path: contact_path )) %>
     </div>
   </div>
 </nav>

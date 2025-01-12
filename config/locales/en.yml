@@ -170,6 +170,9 @@ en:
   escapegame:
     title: "Escape game"
 
+  dikkenek:
+    title: "Dikkenek (french only)"
+
   connect4:
     title: "Connect 4"
     won:
