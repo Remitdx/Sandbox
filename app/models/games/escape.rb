@@ -1,6 +1,6 @@
 module Games
   class Escape < ApplicationRecord
-    require 'date'
+    require "date"
     serialize :parameters, type: Hash
 
     SPRITE = {
@@ -9,8 +9,8 @@ module Games
       2 => "sprite-path out",
       3 =>  "sprite-wall"
     }
-    TASKS = ["computer",  "ventilation", "food", "water"]
-    THREATS = ["Chemical war", "ET", "Meteorites"]
+    TASKS = [ "computer",  "ventilation", "food", "water" ]
+    THREATS = [ "Chemical war", "ET", "Meteorites" ]
 
     def self.intro_map
       [
@@ -48,7 +48,7 @@ module Games
       60.times { a << "" }
       2.times { a << "mushroom" }
       2.times { a << "plants" }
-      return a
+      a
     end
 
     private
@@ -67,6 +67,7 @@ module Games
       code
     end
 
+    # css can handle 16 lines, 24 columns maximum for now.
     def generate_bunker_map
       [
         [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ],
@@ -93,6 +94,8 @@ module Games
     # dans un bunker sous terrain de Régis (en: Brian).
 
     # musique desactivable
+
+    # transition sympa pour la chute vers le bunker
 
     # full hd : 1920 x 1080 pixels soit 60 colonnes pour 33.75 lignes
 

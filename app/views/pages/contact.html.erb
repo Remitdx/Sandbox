@@ -1,6 +1,4 @@
-<nav>
-  <%= render "components/navigation"  %>
-</nav>
+<%= render(Navigations::NavigationComponent.new) %>
 <main>
   <%= render(Titles::H1titleComponent.new(title: 'Contact')) %>
   <section class="section-1">
@@ -33,6 +31,4 @@
     </div>
   </section>
 </main>
-<footer>
-  <%= render 'components/footer'  %>
-</footer>
+<%= render(Navigations::FooterComponent.new) %>

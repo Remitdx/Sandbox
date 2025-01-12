@@ -1,6 +1,4 @@
-<nav>
-  <%= render 'components/navigation'  %>
-</nav>
+<%= render(Navigations::NavigationComponent.new) %>
 <main>
   <%= render 'pages/home/banner', age: @age %>
 </main>

@@ -1,6 +1,4 @@
-<nav>
-  <%= render 'components/navigation'  %>
-</nav>
+<%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('morbac.title') )) %>
 <div class='section-2'>
   <div class='container'>

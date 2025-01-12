@@ -1,6 +1,4 @@
-<nav>
-  <%= render 'components/navigation'  %>
-</nav>
+<%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('rolldice.title') )) %>
 <div class='section-1'>
   <div class='container'>

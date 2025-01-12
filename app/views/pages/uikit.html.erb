@@ -1,6 +1,4 @@
-<nav>
-  <%= render 'components/navigation'  %>
-</nav>
+<%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
 <div class='section-1'>
   <%= render(Titles::H2titleComponent.new(title: 'Buttons' )) %>
@@ -51,3 +49,4 @@
     </div>
   </div>
 </div>
+<%= render(Navigations::FooterComponent.new) %>
