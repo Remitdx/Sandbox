@@ -56,8 +56,8 @@
           6,
           6,
           60,
-          7,
-          7,
+          8,
+          8,
           null,
           null,
           6,
@@ -1942,6 +1942,20 @@
         ],
         "branches": {}
       },
+      "/home/kodoliprane/Sandbox/app/components/navigations/navigation_item_component.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
       "/home/kodoliprane/Sandbox/app/components/texts/paragraph_component.rb": {
         "lines": [
           0,
@@ -2650,6 +2664,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1736667365
+    "timestamp": 1736702009
   }
 }

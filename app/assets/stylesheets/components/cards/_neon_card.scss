@@ -1,0 +1,39 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotation {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
+
+.neon-card {
+  position: relative;
+  background-color: $dm-dark-grey;
+  color: $bg-cream-tone;
+  padding: 2rem;
+  //overflow: hidden;
+  transform-style: preserve-3d;
+
+  &::after, &::before {
+    content: "";
+    position: absolute;
+    inset:-0.25rem;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      $major-dark,
+      $major-light,
+      $complementary,
+      $major-light,
+      $major-dark);
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+    transform: translateZ(-1px);
+  }
+
+  &::after {
+    filter: blur(1rem);
+  }
+}
