@@ -1,6 +1,8 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
 <div class='section-1'>
+    <h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
+    <h2>block__element_modifier_value</h2>
   <%= render(Titles::H2titleComponent.new(title: 'Buttons' )) %>
   <div class='container'>
     <div class='my-1'>
@@ -21,15 +23,8 @@
 <div class='section-2'>
   <%= render(Titles::H2titleComponent.new(title: 'Cards' )) %>
   <div class='container'>
-    <h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
-    <h2>block__element_modifier_value</h2>
-    <div class="nude-card neon-card">
-      <%= "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-          classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
-          professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-          consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-          literature, discovered the undoubtable source." %>
-    </div>
+    <%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %>
+    <%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %>
   </div>
 </div>
 <div class='section-1'>

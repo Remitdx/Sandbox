@@ -13,7 +13,11 @@
   position: relative;
   background-color: $dm-dark-grey;
   color: $bg-cream-tone;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
+  margin: 2rem;
   //overflow: hidden;
   transform-style: preserve-3d;
 
@@ -29,7 +33,7 @@
       $major-light,
       $major-dark);
     border-radius: inherit;
-    animation: rotation 20s linear infinite;
+    animation: rotation 8s linear infinite;
     transform: translateZ(-1px);
   }
 
