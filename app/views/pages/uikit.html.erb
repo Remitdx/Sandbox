@@ -1,30 +1,31 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
-<div class='section-1'>
-    <h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
-    <h2>block__element_modifier_value</h2>
+<div class='section-1 text-center'>
+  <h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
+  <h2>block__element_modifier_value</h2>
   <%= render(Titles::H2titleComponent.new(title: 'Buttons' )) %>
   <div class='container'>
-    <div class='my-1'>
-      <%= render(Buttons::CtaComponent.new(title: 'CTA nude')) %>
-    </div>
-    <div class='my-1'>
-      <%= render(Buttons::CtaComponent.new(title: 'CTA dark', classes: 'btn-dark' )) %>
-      <%= render(Buttons::CtaComponent.new(title: 'CTA light', classes: 'btn-light' )) %>
-      <%= render(Buttons::CtaComponent.new(title: 'CTA complementary', classes: 'btn-complementary' )) %>
-    </div>
-    <div class='my-1'>
-      <%= render(Buttons::CtaComponent.new(title: 'Big CTA dark', classes: 'btn-dark btn-big' )) %>
-      <%= render(Buttons::CtaComponent.new(title: 'Big CTA light', classes: 'btn-light btn-big' )) %>
-      <%= render(Buttons::CtaComponent.new(title: 'Big CTA complementary', classes: 'btn-complementary btn-big' )) %>
+    <div class="row">
+      <div class="col-12"><%= render(Buttons::CtaComponent.new(title: 'CTA nude')) %></div>
+      <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA dark', classes: 'btn-dark' )) %></div>
+      <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA light', classes: 'btn-light' )) %></div>
+      <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA complementary', classes: 'btn-complementary' )) %></div>
+      <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA dark', classes: 'btn-dark btn-big' )) %></div>
+      <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA light', classes: 'btn-light btn-big' )) %></div>
+      <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA complementary', classes: 'btn-complementary btn-big' )) %></div>
     </div>
   </div>
 </div>
 <div class='section-2'>
   <%= render(Titles::H2titleComponent.new(title: 'Cards' )) %>
+</div>
+<div class="section-3">
   <div class='container'>
-    <%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %>
-    <%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %>
+    <div class="row">
+      <div class="col-6 col-md-3"><%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %></div>
+      <div class="col-6 col-md-3"><%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %></div>
+      <div class="col-6 col-md-3"></div>
+    </div>
   </div>
 </div>
 <div class='section-1'>
