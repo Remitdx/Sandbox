@@ -20,8 +20,8 @@
     <h3>Images</h3>
     <p>Grégory Ferreux</p>
     <p>les images de fond sont libres de droit et proviennent de "mobilegamegraphics.itch.io", de "unsplash"</p>
-    <%= render 'components/audio_pannel', music: 'nature-theme.mp3' %>
-    <%= render 'components/audio_pannel', music: 'action-game.mp3' %>
+    <%= render(Audios::PlayerComponent.new(music: 'nature-theme.mp3')) %>
+    <%= render(Audios::PlayerComponent.new(music: 'action-game.mp3')) %>
     <p>Sound Effect from <a href='https://pixabay.com/'>Pixabay</a></p>
   </section>
   <section class="section-1">
