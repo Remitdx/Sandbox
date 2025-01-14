@@ -7,10 +7,22 @@ module Pages
 
     def my_education
       {
-        2024 => I18n.t("education.opquast"),
-        2021 => I18n.t("education.wagon"),
-        2014 => I18n.t("education.hei"),
-        2009 => I18n.t("education.bac")
+        1 => {
+              "start" => Date.new(2024),
+              "title" => I18n.t("education.opquast")
+              },
+        2 => {
+              "start" => Date.new(2021),
+              "title" => I18n.t("education.wagon")
+              },
+        3 => {
+              "start" => Date.new(2014),
+              "title" => I18n.t("education.hei")
+              },
+        4 => {
+              "start" => Date.new(2009),
+              "title" => I18n.t("education.bac")
+              }
       }
     end
   end

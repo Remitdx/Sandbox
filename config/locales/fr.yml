@@ -97,23 +97,23 @@ fr:
   workexp:
     title: 'Parcours professionnel'
     first:
-      job: 'Ingénieur commercial'
+      title: 'Ingénieur commercial'
       description: 'Développer un outil de rédaction de documents contractuels (Word, Excel, programmation VBA).'
       place: 'Lille - France'
     second:
-      job: 'Ingénieur travaux'
+      title: 'Ingénieur travaux'
       description: "Piloter les travaux CVSE sur le chantier d'une extension de l'aéroport de Genève."
       place: 'Genève - Suisse'
     third:
-      job: "Ingénieur d'affaires"
+      title: "Ingénieur d'affaires"
       description: "Gérer des projets de construction de datacenters (Hôpital d'Annecy, Ville de Lausanne, SOS Surveillance)."
       place: 'Lyon/Lausanne - France/Suisse'
     fourth:
-      job: 'Chef de projet adjoint'
+      title: 'Chef de projet adjoint'
       description: "Co-piloter le projet de construction de la Vaudoise aréna (223M CHF) et représenter les intérêts du maître d'ouvrage."
       place: 'Lausanne - Suisse'
     fifth:
-      job: 'Développeur full-stack'
+      title: 'Développeur full-stack'
       description: "Conception et développement de sites web vitrines ou dynamiques. Conception d'API. Testing. Methode agile."
       place: 'Mobile et/ou à distance'
 

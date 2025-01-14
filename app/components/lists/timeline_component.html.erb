@@ -1,2 +1,42 @@
-items en quinconque ou pas (mobile)
-verticale ou horizontale
+<div class='timeline'>
+  <% i = 1 %>
+  <% @list.each do |k,v| %>
+    <div class='items-wrapper'>
+      <% if i.odd? %>
+        <div class='item left'>
+          <p><%= v['start'].year if v['start'].present? %></p>
+        </div>
+        <div class='item right'>
+          <% if @card == "collapsed" %>
+            <%= render(Cards::CollapsedCardComponent.new(classes: @classes,
+                                                  title: v['title'].present? ? v['title'] : "",
+                                                  subtitle: v['company'].present? ? v['company'] : "",
+                                                  info: v['place'].present? ? v['place'] : "",
+                                                  description: v['description'].present? ? v['description'] : "" )) %>
+          <% else %>
+            <div class="<%= @classes %>">
+              <p><%= v['title'].present? ? v['title'] : "" %></p>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class='item left'>
+          <% if @card == "collapsed" %>
+            <%= render(Cards::CollapsedCardComponent.new(classes: @classes,
+                                                  title: v['title'].present? ? v['title'] : "",
+                                                  subtitle: v['company'].present? ? v['company'] : "",
+                                                  info: v['place'].present? ? v['place'] : "",
+                                                  description: v['description'].present? ? v['description'] : "" )) %>
+          <% else %>
+            <div class="<%= @classes %>">
+              <p><%= v['title'].present? ? v['title'] : "" %></p>
+            </div>
+          <% end %>        </div>
+        <div class='item right'>
+          <p><%= v['start'].year %></p>
+        </div>
+      <% end %>
+    </div>
+    <% i += 1 %>
+  <% end %>
+</div>

@@ -8,13 +8,13 @@
   <section class='section-2'>
     <%= render(Titles::H2titleComponent.new(title: t('education.title'))) %>
     <div class='container'>
-      <%= render 'pages/cv/education', education: @education %>
+      <%= render(Lists::TimelineComponent.new(list: @education, classes: "appearing-wrapper")) %>
     </div>
   </section>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: t('workexp.title'))) %>
     <div class='container'>
-      <%= render 'pages/cv/experiences', experiences: @experiences %>
+      <%= render(Lists::TimelineComponent.new(list: @experiences, card: "collapsed", classes: "appearing-wrapper")) %>
     </div>
   </section>
   <section class='section-2'>

@@ -12,7 +12,7 @@ module Pages
               "start" => Date.new(2022, 1),
               "end" => Time.now,
               "company" => "Rémi Tondeux",
-              "job" => I18n.t("workexp.fifth.job"),
+              "title" => I18n.t("workexp.fifth.title"),
               "description" => I18n.t("workexp.fifth.description"),
               "place" => I18n.t("workexp.fifth.place")
             },
@@ -21,7 +21,7 @@ module Pages
               "start" => Date.new(2018, 3),
               "end" => Date.new(2019, 10),
               "company" => "Vaudoise aréna",
-              "job" => I18n.t("workexp.fourth.job"),
+              "title" => I18n.t("workexp.fourth.title"),
               "description" => I18n.t("workexp.fourth.description"),
               "place" => I18n.t("workexp.fourth.place")
             },
@@ -30,7 +30,7 @@ module Pages
               "start" => Date.new(2015, 9),
               "end" => Date.new(2017, 10),
               "company" => "Module-IT",
-              "job" => I18n.t("workexp.third.job"),
+              "title" => I18n.t("workexp.third.title"),
               "description" => I18n.t("workexp.third.description"),
               "place" => I18n.t("workexp.third.place")
             },
@@ -39,7 +39,7 @@ module Pages
               "start" => Date.new(2014, 1),
               "end" => Date.new(2014, 7),
               "company" => "Losinger-Marazzi",
-              "job" => I18n.t("workexp.second.job"),
+              "title" => I18n.t("workexp.second.title"),
               "description" => I18n.t("workexp.second.description"),
               "place" => I18n.t("workexp.second.place")
             },
@@ -48,7 +48,7 @@ module Pages
               "start" => Date.new(2013, 6),
               "end" => Date.new(2013, 12),
               "company" => "Bouygues Construction",
-              "job" => I18n.t("workexp.first.job"),
+              "title" => I18n.t("workexp.first.title"),
               "description" => I18n.t("workexp.first.description"),
               "place" => I18n.t("workexp.first.place")
             }
