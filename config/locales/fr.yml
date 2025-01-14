@@ -6,10 +6,9 @@ fr:
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Accueil'
-  title_cv: 'Curriculum vitae'
+  title_cv: 'CV'
   title_philosophy: 'Philosophie'
   title_projects: 'Projets'
-  title_resources: 'Ressources'
   title_uikit: 'UI Kit'
   title_featureflags: 'Tour de Contrôle'
 

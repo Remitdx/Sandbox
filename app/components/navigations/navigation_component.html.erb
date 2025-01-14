@@ -1,18 +1,19 @@
-<nav>
-  <div class='navigation-wrapper' data-controller='menu'>
+<nav data-controller='components--navigations--navigation'>
+  <div data-action='click->components--navigations--navigation#hide' data-components--navigations--navigation-target='background' class="background-navigation"></div>
+  <div class='navigation-wrapper'>
     <div class='d-flex'>
       <div class='d-flex'>
-        <%= image_tag 'flags/flagFR.svg', class: 'flag', data: { action: 'click->menu#french' } %>
-        <%= image_tag 'flags/flagUK.svg', class: 'flag', data: { action: 'click->menu#english' } %>
+        <%= image_tag 'flags/flagFR.svg', class: 'flag', data: { action: 'click->components--navigations--navigation#french' } %>
+        <%= image_tag 'flags/flagUK.svg', class: 'flag', data: { action: 'click->components--navigations--navigation#english' } %>
       </div>
-      <div data-action='click->menu#reveal' data-menu-target='button' class='nav-button'>
+      <div data-action='click->components--navigations--navigation#reveal' data-components--navigations--navigation-target='button' class='nav-button'>
         <i class='fa-solid fa-bars'></i>
       </div>
-      <div data-action='click->menu#hide' data-menu-target='button' class='nav-button d-none'>
+      <div data-action='click->components--navigations--navigation#hide' data-components--navigations--navigation-target='button' class='nav-button d-none'>
         <i class='fa-solid fa-xmark'></i>
       </div>
     </div>
-    <div data-menu-target='navigation' class='navigation d-none'>
+    <div data-components--navigations--navigation-target='navigation' class='navigation d-none'>
       <%= render(Navigations::NavigationItemComponent.new(number: "item1", title: t('title_home'), path: root_path )) %>
       <%= render(Navigations::NavigationItemComponent.new(number: "item2", title: t('title_philosophy'), path: philosophy_path )) %>
       <%= render(Navigations::NavigationItemComponent.new(number: "item3", title: t('title_cv'), path: cv_path )) %>

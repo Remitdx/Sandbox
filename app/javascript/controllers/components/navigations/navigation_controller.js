@@ -1,12 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['button', 'item', 'navigation']
+  static targets = ['button', 'item', 'navigation', 'background']
 
   reveal() {
     this.buttonTargets.forEach(element => {
       element.classList.toggle('d-none');
     });
+    this.backgroundTarget.style.left = 0;
     this.itemTargets.forEach(element => {
       element.classList.remove('close-animation');
       element.classList.add('open-animation');
@@ -18,6 +19,7 @@ export default class extends Controller {
     this.buttonTargets.forEach(element => {
       element.classList.toggle('d-none');
     });
+    this.backgroundTarget.style.left = "-100vw";
     this.itemTargets.forEach(element => {
       element.classList.remove('open-animation');
       element.classList.add('close-animation');

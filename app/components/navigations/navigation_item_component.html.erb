@@ -1,5 +1,5 @@
 <%= link_to @path do %>
-  <div class='nav-item <%= @number %> <%= current_page?(@path) ? 'selected' : 'non-selected' %>' data-menu-target='item'>
+  <div class='nav-item <%= @number %> <%= current_page?(@path) ? 'selected' : 'non-selected' %>' data-components--navigations--navigation-target='item'>
     <h2><%= @title %></h2>
   </div>
 <% end %>

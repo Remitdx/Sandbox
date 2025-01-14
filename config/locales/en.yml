@@ -7,10 +7,9 @@ en:
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Home'
-  title_cv: 'Curriculum vitae'
+  title_cv: 'CV'
   title_philosophy: 'Philosophy'
   title_projects: 'Projects'
-  title_resources: 'Resources'
   title_uikit: 'UI Kit'
   title_featureflags: 'Feature Flags'
 
