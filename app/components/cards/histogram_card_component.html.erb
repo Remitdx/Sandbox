@@ -1,4 +1,7 @@
-<div class='histogram-card <%= @classes %>' data-skills-target='classic'>
+<div class='histogram-card text-center <%= @classes %>' data-skills-target='classic'>
+  <% if @title.present? %>
+    <h5><%= @title %></h5>
+    <% end %>
   <div class='row'>
     <% @categories.each do |k,v| %>
       <div class='col-6 text-center'>

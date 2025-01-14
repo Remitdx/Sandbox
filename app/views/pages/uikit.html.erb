@@ -24,10 +24,10 @@
         <%= render(Cards::CollapsedCardComponent.new(title: "Collapsed Card", subtitle: "subtitle", info: "info", description: "description")) %>
       </div>
       <div class="col-6 col-md-3">
-        <%= render(Cards::RadarCardComponent.new(categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
+        <%= render(Cards::RadarCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
       </div>
       <div class="col-6 col-md-3">
-        <%= render(Cards::HistogramCardComponent.new(categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
+        <%= render(Cards::HistogramCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
       </div>
     </div>
   </div>

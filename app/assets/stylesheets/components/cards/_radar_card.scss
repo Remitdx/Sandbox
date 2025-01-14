@@ -2,62 +2,65 @@
   background: $bg-cream-tone;
   border-radius: 26px;
   box-shadow: 0 1px 2px 2px $shadow;
-  width: 100%;
-  padding-top: 100%;
-  position: relative;
 
-  p {
-    font-size: var(--fs-xxs);
-  }
+  .wrapper__radar {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
 
-  @for $i from 1 through 5 {
-    .radar-bg-#{$i} {
+    p {
+      font-size: var(--fs-xxs);
+    }
+
+    @for $i from 1 through 5 {
+      .radar-bg-#{$i} {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc((6 - #{$i})*12%);
+        height: calc((6 - #{$i})*12%);
+        border-radius: 50%;
+        border: 0.5px solid $major-dark;
+
+        @if $i % 2==1 {
+          background: $bg-clear-tone;
+        }
+
+        @else {
+          background: $bg-cream-tone;
+        }
+      }
+    }
+
+    @for $skill from 1 through 12 {
+
+      // number of skills to display
+      @for $j from 1 through $skill {
+        //number of childs
+
+        .label-#{$skill}-#{$j} {
+          position: absolute;
+          --a: calc(360deg/#{$skill});
+          --r: 40%;
+          --x: calc(cos(var(--a)*#{$j})*var(--r));
+          --y: calc(sin(var(--a)*#{$j})*var(--r));
+          top: calc(50% + var(--y));
+          left: calc(50% + var(--x));
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .polygon {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: calc((6 - #{$i})*12%);
-      height: calc((6 - #{$i})*12%);
-      border-radius: 50%;
-      border: 0.5px solid $major-dark;
-
-      @if $i % 2==1 {
-        background: $bg-clear-tone;
-      }
-
-      @else {
-        background: $bg-cream-tone;
-      }
+      width: 100%;
+      height: 100%;
+      background: $sunset-round;
+      opacity: 0.6;
     }
-  }
-
-  @for $skill from 1 through 12 {
-
-    // number of skills to display
-    @for $j from 1 through $skill {
-      //number of childs
-
-      .label-#{$skill}-#{$j} {
-        position: absolute;
-        --a: calc(360deg/#{$skill});
-        --r: 40%;
-        --x: calc(cos(var(--a)*#{$j})*var(--r));
-        --y: calc(sin(var(--a)*#{$j})*var(--r));
-        top: calc(50% + var(--y));
-        left: calc(50% + var(--x));
-        transform: translate(-50%, -50%);
-      }
-    }
-  }
-
-  .polygon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: $sunset-round;
-    opacity: 0.6;
   }
 }
