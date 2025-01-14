@@ -1,9 +1,3 @@
-@keyframes reveal-content {
-  100% {
-    height: auto;
-  }
-}
-
 .timeline {
   margin: 1rem auto;
   max-width: 100%;
@@ -38,38 +32,6 @@
       border-left: 2px solid $major-dark;
       padding: 2rem 0 2rem 2rem;
       text-align: start;
-    }
-
-    .card-work {
-      background: $bg-cream-tone;
-      border-radius: 2px;
-      box-shadow: 0 1px 2px 2px $shadow;
-      overflow: hidden;
-      padding: 4px;
-      text-align: center;
-      cursor: pointer;
-
-      .details {
-        transition: all 0.4s ease-in-out;
-      }
-
-      .hidden {
-        max-height: 0;
-        opacity: 0;
-      }
-
-      .revealed {
-        max-height: 100vh;
-        opacity: 1;
-      }
-
-      i {
-        font-size: var(--fs-m);
-      }
-
-      p {
-        font-size: var(--fs-xs);
-      }
     }
   }
 }

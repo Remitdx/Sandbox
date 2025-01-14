@@ -1,32 +1,4 @@
-.card-classic {
-  background: $bg-cream-tone;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px 2px $shadow;
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-
-  .bar {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    height: 4px;
-  }
-
-  .bar-bg {
-    background: $sunset;
-    width: 100%;
-  }
-
-  @for $i from 1 through 9 {
-    .slider-#{$i} {
-      background: $bg-cream-tone;
-      width: calc((10 - #{$i})*10%);
-    }
-  }
-}
-
-.card-radar {
+.radar-card {
   background: $bg-cream-tone;
   border-radius: 26px;
   box-shadow: 0 1px 2px 2px $shadow;
@@ -48,16 +20,22 @@
       height: calc((6 - #{$i})*12%);
       border-radius: 50%;
       border: 0.5px solid $major-dark;
-      @if $i % 2 == 1 {
+
+      @if $i % 2==1 {
         background: $bg-clear-tone;
-      } @else {
+      }
+
+      @else {
         background: $bg-cream-tone;
       }
     }
   }
 
-  @for $skill from 1 through 12 { // number of skills to display
-    @for $j from 1 through $skill { //number of childs
+  @for $skill from 1 through 12 {
+
+    // number of skills to display
+    @for $j from 1 through $skill {
+      //number of childs
 
       .label-#{$skill}-#{$j} {
         position: absolute;
@@ -72,7 +50,7 @@
     }
   }
 
-  .polygon{
+  .polygon {
     position: absolute;
     top: 50%;
     left: 50%;

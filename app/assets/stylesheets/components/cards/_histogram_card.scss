@@ -1,0 +1,27 @@
+.histogram-card {
+  background: $bg-cream-tone;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 2px $shadow;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+
+  .bar {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    height: 4px;
+  }
+
+  .bar-bg {
+    background: $sunset;
+    width: 100%;
+  }
+
+  @for $i from 1 through 9 {
+    .slider-#{$i} {
+      background: $bg-cream-tone;
+      width: calc((10 - #{$i})*10%);
+    }
+  }
+}

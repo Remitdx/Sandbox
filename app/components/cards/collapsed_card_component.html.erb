@@ -1,0 +1,10 @@
+<div data-controller='work' data-action='click->work#toggle' class="collapsed-card <%= @classes %>">
+  <h5><%= @title %></h5>
+  <div class="details hidden" data-work-target='card'>
+    <h5><%= @subtitle %></h5>
+    <h6><%= @info %></h6>
+    <p><%= @description %></p>
+  </div>
+  <i data-work-target='down' class="fa-solid fa-circle-chevron-down"></i>
+  <i data-work-target='up' class="fa-solid fa-circle-chevron-up d-none"></i>
+</div>

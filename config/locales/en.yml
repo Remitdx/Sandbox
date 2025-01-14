@@ -68,6 +68,7 @@ en:
     title: 'Skills'
     intro1: 'In this section, I aim to highlight my skills, even if they are constantly evolving.'
     intro2: 'Click on these two buttons to display charts !'
+    histogram: 'Histogram'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'

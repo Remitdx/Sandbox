@@ -1,0 +1,13 @@
+<div class='histogram-card <%= @classes %>' data-skills-target='classic'>
+  <div class='row'>
+    <% @categories.each do |k,v| %>
+      <div class='col-6 text-center'>
+        <p><%= k %></p>
+      </div>
+      <div class='col-6 position-relative'>
+        <div class='bar bar-bg'></div>
+        <div class='bar slider-<%= v %>'></div>
+      </div>
+    <% end %>
+  </div>
+</div>

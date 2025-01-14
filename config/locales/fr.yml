@@ -68,6 +68,7 @@ fr:
     title: 'Compétences'
     intro1: 'Dans cette section, je vous propose une mise en lumière de mes compétences, bien que celles-ci soient en constante évolution.'
     intro2: 'Cliquez sur ces deux boutons pour les visualiser !'
+    histogram: 'Histogramme'
     back: 'Back-end'
     front: 'Front-end'
     devops: 'DevOps'

@@ -4,7 +4,7 @@
     <%= render(Texts::ParagraphComponent.new(text: t('skills.intro2'))) %>
     <div class='mt-4 d-flex justify-content-center'>
       <div class='mx-2' data-skills-target='btnclassic' data-action='click->skills#classic'>
-        <%= render(Buttons::CtaComponent.new(title: 'Classic', classes: 'btn-dark btn-big' )) %>
+        <%= render(Buttons::CtaComponent.new(title: t('skills.histogram'), classes: 'btn-dark btn-big' )) %>
       </div>
       <div class='mx-2' data-skills-target='btnradar' data-action='click->skills#radar'>
         <%= render(Buttons::CtaComponent.new(title: 'Radar', classes: 'btn-complementary btn-big' )) %>
@@ -15,35 +15,8 @@
         <div class='col-12 col-md-4'>
           <%= render(Titles::H3titleComponent.new(title: skill['title'])) %>
           <% skill.delete('title')  %>
-          <div class='card-classic d-none' data-skills-target='classic'>
-            <div class='row'>
-              <% skill.each do |k,v| %>
-                <div class='col-6 text-center'>
-                  <p><%= k %></p>
-                </div>
-                <div class='col-6 position-relative'>
-                  <div class='bar bar-bg'></div>
-                  <div class='bar slider-<%= v %>'></div>
-                </div>
-              <% end %>
-            </div>
-          </div>
-          <div class='card-radar' data-skills-target='radar'>
-            <% for i in 1..5 do %>
-              <div class='radar-bg-<%= i %>'></div>
-            <% end %>
-            <% j = 1 %>
-            <% polygon = [] %>
-            <% skill.each do |k,v| %>
-              <% point = [((Math::cos(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%', ((Math::sin(j*2*Math::PI/skill.length) * v * 3) + 50).round(2).to_s + '%'] %>
-              <div class='label-<%= skill.length %>-<%= j %>'>
-                <p><%= k %></p>
-              </div>
-              <% polygon << point.join(' ')  %>
-              <% j += 1 %>
-            <% end %>
-            <div class="polygon" style='clip-path: polygon(<%= polygon.join(', ') %>)'></div>
-          </div>
+          <%= render(Cards::HistogramCardComponent.new(categories: skill, classes: "d-none")) %>
+          <%= render(Cards::RadarCardComponent.new(categories: skill)) %>
         </div>
       <% end %>
     </div>

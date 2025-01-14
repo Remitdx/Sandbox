@@ -1,3 +1,7 @@
+.section-1, .section-2, .section-3 {
+  padding-bottom: 3rem;
+}
+
 .section-1 {
   background-color: $bg-clear-tone;
 }
@@ -8,4 +12,11 @@
 
 .section-3 {
   background-color: $dm-black;
+}
+
+@media (min-width: 40em) {
+
+  .section-1, .section-2, .section-3 {
+      padding-bottom: 6rem;
+    }
 }
