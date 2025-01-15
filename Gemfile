@@ -53,6 +53,7 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "view_component"
+gem "solid_queue", "~> 1.1"
 
 # added those after upgrade to ruby 3.4.0
 gem "mutex_m"
