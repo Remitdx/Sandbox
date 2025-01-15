@@ -24,3 +24,43 @@ $dm-light-grey: #BCBCBC;
 $major-gradient: linear-gradient(0deg, rgba(1, 28, 91, 1) 0%, rgba(140, 174, 253, 1) 100%);
 $complementary-gradient: linear-gradient(0deg, rgba(140, 174, 253, 1) 0%, rgba(251, 180, 14, 1) 100%);
 $facebook-gradient: linear-gradient(0deg, rgba(106, 0, 255, 1) 0%, rgba(248, 14, 251, 1) 100%);
+
+
+// for UI Kit demo
+.color {
+  width: 120px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.major-dark {
+  background-color: $major-dark;
+}
+
+.major-dark-lighter {
+  background-color: $major-dark-lighter;
+}
+
+.major-light {
+  background-color: $major-light;
+}
+
+.major-light-darker {
+  background-color: $major-light-darker;
+}
+
+.complementary {
+  background-color: $complementary;
+}
+
+.complementary-lighter {
+  background-color: $complementary-lighter;
+}
+
+.major-gradient {
+  background: $major-gradient;
+}
+
+.complementary-gradient {
+  background: $complementary-gradient;
+}

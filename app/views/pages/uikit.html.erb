@@ -1,8 +1,56 @@
+<h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
+<h2>block__element_modifier_value</h2>
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
-<div class='section-1 text-center'>
-  <h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
-  <h2>block__element_modifier_value</h2>
+<div class="section-1">
+  <%= render(Titles::H2titleComponent.new(title: 'Colors' )) %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3">
+        <div class="color major-dark"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color major-dark-lighter"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color major-light"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color complementary-gradient"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color complementary"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color complementary-lighter"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color major-light-darker"></div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="color major-gradient"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-2">
+  <%= render(Titles::H2titleComponent.new(title: 'Fonts' )) %>
+  <div class="container text-center">
+    <h1 class="handlee">Handlee</h1>
+    <h1 class="heebo">Heebo</h1>
+    <h3 class="press_start_2p">Press start 2P</h3>
+  </div>
+</div>
+<div class='section-1'>
+  <%= render(Titles::H2titleComponent.new(title: 'Titles' )) %>
+  <div class="container">
+    <div class="row">
+      <div class="col-4"><%= render(Titles::H1titleComponent.new(title: "h1 title" )) %></div>
+      <div class="col-4"><%= render(Titles::H2titleComponent.new(title: "h2 title" )) %></div>
+      <div class="col-4"><%= render(Titles::H3titleComponent.new(title: "h3 title" )) %></div>
+    </div>
+  </div>
+  <%= render(Titles::H2titleComponent.new(title: 'Texts' )) %>
   <%= render(Titles::H2titleComponent.new(title: 'Buttons' )) %>
   <div class='container'>
     <div class="row">

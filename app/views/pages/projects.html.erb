@@ -1,6 +1,6 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <main>
-  <%= render(Titles::H1titleComponent.new(title: t('title_project'))) %>
+  <%= render(Titles::H1titleComponent.new(title: t('title_projects'))) %>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: t('project.professionals'))) %>
     <div class='container'>
@@ -25,20 +25,31 @@
   <section class='section-2'>
     <%= render(Titles::H2titleComponent.new(title: t('project.games'))) %>
     <div class='container'>
-      <p>Do you like tactic games ? Need to try this !</p>
-      <%= link_to 'Risk', games_risk_games_risks_path, data: { turbo_method: :post } %>
-      <p>Forgot your dices ? Nevermind all you need is here !</p>
-      <%= link_to 'Roll Dices', games_rolls_path, data: { turbo_method: :post } %>
-      <p>Tic Tac Toe, classic game. Beat our AI !</p>
-      <%= link_to 'Tic Tac Toe', games_morbacs_path, data: { turbo_method: :post } %>
-      <p>Will you be able to escape this place ?</p>
-      <%= link_to 'Escape game', games_escapes_path, data: { turbo_method: :post } %>
-      <p>Puissance 4, classic game. Challenge a friend !</p>
-      <%= link_to 'Puissance 4', games_puissance4s_path, data: { turbo_method: :post } %>
-      <p>The ultimate DIKKENEK game, will you reach the hall of fame ? (only available in french)</p>
-      <%= link_to 'Dikkenek', games_dikkeneks_path %>
+      <div class="games__bento-grid">
+        <div class="game-card game1"></div>
+        <div class="game-card game2"></div>
+        <div class="game-card game3"></div>
+        <div class="game-card game4"></div>
+        <div class="game-card game5"></div>
+        <div class="game-card game6"></div>
+        <div class="game-card game7"></div>
+        <div class="game-card game8"></div>
+        <div class="game-card game9"></div>
+      </div>
     </div>
   </section>
+        <p>Do you like tactic games ? Need to try this !</p>
+        <%= link_to 'Risk', games_risk_games_risks_path, data: { turbo_method: :post } %>
+        <p>Forgot your dices ? Nevermind all you need is here !</p>
+        <%= link_to 'Roll Dices', games_rolls_path, data: { turbo_method: :post } %>
+        <p>Tic Tac Toe, classic game. Beat our AI !</p>
+        <%= link_to 'Tic Tac Toe', games_morbacs_path, data: { turbo_method: :post } %>
+        <p>Will you be able to escape this place ?</p>
+        <%= link_to 'Escape game', games_escapes_path, data: { turbo_method: :post } %>
+        <p>Puissance 4, classic game. Challenge a friend !</p>
+        <%= link_to 'Puissance 4', games_puissance4s_path, data: { turbo_method: :post } %>
+        <p>The ultimate DIKKENEK game, will you reach the hall of fame ? (only available in french)</p>
+        <%= link_to 'Dikkenek', games_dikkeneks_path %>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: "Open source")) %>
     <div class="container">
