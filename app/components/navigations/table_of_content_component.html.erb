@@ -1,0 +1,6 @@
+<ul class="table-of-content sticky-top">
+  <h5><%= t('uikit.tableofcontent') %></h5>
+  <% @sections.each do |subsection| %>
+    <li><%= link_to t("uikit.#{subsection}"), constructed_path(@page, subsection) %></div>
+  <% end%>
+</ul>

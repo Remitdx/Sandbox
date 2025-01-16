@@ -1,12 +1,6 @@
-<h2>IL SERAIT BIEN DE FAIRE LE BEM NAMING DANS LES FICHIERS CSS</h2>
-<h2>block__element_modifier_value</h2>
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
-<div class="table-of-content sticky-top d-flex">
-  <% ["About", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio", "games"].each do |subsection| %>
-    <div><%= link_to t("uikit.#{subsection}"), uikit_path(anchor: t("uikit.#{subsection}").downcase) %></div>
-  <% end%>
-</div>
+<%= render(Navigations::TableOfContentComponent.new(page: "uikit", sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio", "games"])) %>
 <div class="section-1">
   <%= render(Titles::H2titleComponent.new(title: t('uikit.about') )) %>
   <div class="container">
