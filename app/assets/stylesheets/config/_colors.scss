@@ -33,34 +33,34 @@ $facebook-gradient: linear-gradient(0deg, rgba(106, 0, 255, 1) 0%, rgba(248, 14,
   border-radius: 50%;
 }
 
-.major-dark {
+.bg__major-dark {
   background-color: $major-dark;
 }
 
-.major-dark-lighter {
+.bg__major-dark-lighter {
   background-color: $major-dark-lighter;
 }
 
-.major-light {
+.bg__major-light {
   background-color: $major-light;
 }
 
-.major-light-darker {
+.bg__major-light-darker {
   background-color: $major-light-darker;
 }
 
-.complementary {
+.bg__complementary {
   background-color: $complementary;
 }
 
-.complementary-lighter {
+.bg__complementary-lighter {
   background-color: $complementary-lighter;
 }
 
-.major-gradient {
+.bg__major-gradient {
   background: $major-gradient;
 }
 
-.complementary-gradient {
+.bg__complementary-gradient {
   background: $complementary-gradient;
 }

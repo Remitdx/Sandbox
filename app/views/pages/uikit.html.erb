@@ -3,46 +3,65 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
 <div class="section-1">
-  <%= render(Titles::H2titleComponent.new(title: 'Colors' )) %>
+  <div class="container">
+    <p><%= t('uikit.intro1') %></p>
+    <p><%= t('uikit.intro2') %></p>
+    <p><%= t('uikit.intro3') %></p>
+    <p><%= t('uikit.intro4') %></p>
+    <p><%= t('uikit.intro5') %></p>
+    <p><%= t('uikit.intro6') %></p>
+    <div class="table-of-content sticky-top d-flex">
+      <div><%= t('uikit.colors') %></div>
+      <div><%= t('uikit.fonts') %></div>
+      <div><%= t('uikit.titles') %></div>
+      <div><%= t('uikit.texts') %></div>
+      <div><%= t('uikit.buttons') %></div>
+      <div><%= t('uikit.cards') %></div>
+      <div><%= t('uikit.lists') %></div>
+      <div><%= t('uikit.audio') %></div>
+      <div><%= t('uikit.games') %></div>
+    </div>
+  </div>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.colors') )) %>
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
-        <div class="color major-dark"></div>
+        <div class="color bg__major-dark"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color major-dark-lighter"></div>
+        <div class="color bg__major-dark-lighter"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color major-light"></div>
+        <div class="color bg__major-light"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color complementary-gradient"></div>
+        <div class="color bg__complementary-gradient"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color complementary"></div>
+        <div class="color bg__complementary"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color complementary-lighter"></div>
+        <div class="color bg__complementary-lighter"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color major-light-darker"></div>
+        <div class="color bg__major-light-darker"></div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="color major-gradient"></div>
+        <div class="color bg__major-gradient"></div>
       </div>
     </div>
   </div>
 </div>
 <div class="section-2">
-  <%= render(Titles::H2titleComponent.new(title: 'Fonts' )) %>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.fonts') )) %>
   <div class="container text-center">
-    <h1 class="handlee">Handlee</h1>
-    <h1 class="heebo">Heebo</h1>
-    <h3 class="press_start_2p">Press start 2P</h3>
+    <h1 class="ff__handlee">Handlee</h1>
+    <h1 class="ff__heebo">Heebo</h1>
+    <h3 class="ff__press_start_2p">Press start 2P</h3>
   </div>
 </div>
 <div class='section-1'>
-  <%= render(Titles::H2titleComponent.new(title: 'Titles' )) %>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.titles') )) %>
   <div class="container">
     <div class="row">
       <div class="col-4"><%= render(Titles::H1titleComponent.new(title: "h1 title" )) %></div>
@@ -50,8 +69,8 @@
       <div class="col-4"><%= render(Titles::H3titleComponent.new(title: "h3 title" )) %></div>
     </div>
   </div>
-  <%= render(Titles::H2titleComponent.new(title: 'Texts' )) %>
-  <%= render(Titles::H2titleComponent.new(title: 'Buttons' )) %>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.texts') )) %>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.buttons') )) %>
   <div class='container'>
     <div class="row">
       <div class="col-12"><%= render(Buttons::CtaComponent.new(title: 'CTA nude')) %></div>
@@ -65,7 +84,7 @@
   </div>
 </div>
 <div class='section-2'>
-  <%= render(Titles::H2titleComponent.new(title: 'Cards' )) %>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.cards') )) %>
   <div class="container">
     <div class="row">
       <div class="col-6 col-md-3">
@@ -90,8 +109,20 @@
   </div>
 </div>
 <div class='section-1'>
-  <%= render(Titles::H2titleComponent.new(title: 'Bento grid' )) %>
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.lists') )) %>
   <div class='container'>
+    <%= render(Lists::TimelineComponent.new(list: @palmares )) %>
+  </div>
+</div>
+<div class="section-2">
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.audio') )) %>
+  <div class="container">
+    <%= render(Audios::PlayerComponent.new(music: 'action-game.mp3')) %>
+  </div>
+</div>
+<div class="section-1">
+  <%= render(Titles::H2titleComponent.new(title: t('uikit.games') )) %>
+  <div class="container">
 
   </div>
 </div>

@@ -2,7 +2,7 @@
 <main>
   <%= render(Titles::H1titleComponent.new(title: t('title_projects'))) %>
   <section class='section-1'>
-    <%= render(Titles::H2titleComponent.new(title: t('project.professionals'))) %>
+    <%= render(Titles::H2titleComponent.new(title: t('projects.professionals'))) %>
     <div class='container'>
       <div class="row">
         <div class="col-12 col-md-6">
@@ -23,7 +23,7 @@
     </div>
   </section>
   <section class='section-2'>
-    <%= render(Titles::H2titleComponent.new(title: t('project.games'))) %>
+    <%= render(Titles::H2titleComponent.new(title: t('projects.games'))) %>
     <div class='container'>
       <div class="games__bento-grid">
         <div class="game-card game1"></div>
@@ -53,7 +53,7 @@
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: "Open source")) %>
     <div class="container">
-      <p><%= t('project.opensource') %></p>
+      <p><%= t('projects.opensource') %></p>
     </div>
   </section>
 </main>

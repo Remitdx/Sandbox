@@ -23,6 +23,17 @@ class PagesController < ApplicationController
   end
 
   def uikit
+    @palmares = {
+      1 => { "start" => Date.new(2024),
+              "title" => "Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion's league"
+      },
+      2 => { "start" => Date.new(2023),
+              "title" => "Copa del rey, "
+      },
+      3 => { "start" => Date.new(2022),
+              "title" => "Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion's league"
+      }
+    }
   end
 
   def featureflags
