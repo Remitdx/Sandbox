@@ -186,12 +186,13 @@ en:
 ## UI KIT ##
 
   uikit:
+    about: "About"
     intro1: "Construire son propre design system d'interface utilisateur est un exercice que je n'imaginais pas si enrichissant."
-    intro2: "Au dela de stimuler la créativité, c'est un équilibre à trouver pour incarner la direction artistique souhaitée."
+    intro2: "Au delà de stimuler la créativité, c'est un équilibre subtil à trouver pour incarner la direction artistique souhaitée."
     intro3: "Cela me permet d'explorer de nombreux aspects du développement front-end : design responsive, BEM naming convention, compatibilité des navigateurs, accessiblité, dark patterns."
     intro4: "Côté code, l'approche par composants est privilégiée par tous les frameworks modernes et permet de respecter le 'DRY principe' (Don't repeat Yourself) afin d'avoir un code maintenable facilement dans le temps."
     intro5: "En plus de Rails, j'ai utilisé la gemme 'Viewcomponent' créée et maintenue par les équipe de Github (rien que ça !)"
-    intro6: "Ce kit n'est évidemment pas complet ni parfait. Le design est un métier à part entière."
+    intro6: "Ce kit n'est évidemment ni complet ni parfait. Le design est un métier à part entière."
     colors: "Colors"
     fonts: "Fonts"
     titles: "Titles"

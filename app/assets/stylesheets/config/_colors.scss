@@ -6,7 +6,7 @@ $bg-cream-tone: #fcf9f2;
 $major-dark: #011c5b;
 $major-dark-lighter: #01226f;
 $major-light: #8caefd;
-$major-light-darker: #749dfd;
+$major-light-darker: rgb(116, 157, 253);
 $complementary: #fbb40e;
 $complementary-lighter: #fcc33e;
 
@@ -21,8 +21,8 @@ $dm-dark-grey: #2A2B30;
 $dm-light-grey: #BCBCBC;
 
 
-$major-gradient: linear-gradient(0deg, rgba(1, 28, 91, 1) 0%, rgba(140, 174, 253, 1) 100%);
-$complementary-gradient: linear-gradient(0deg, rgba(140, 174, 253, 1) 0%, rgba(251, 180, 14, 1) 100%);
+$major-gradient: linear-gradient(90deg, rgba(1, 28, 91, 1) 0%, rgba(140, 174, 253, 1) 100%);
+$complementary-gradient: linear-gradient(-90deg, rgba(116, 157, 253, 1) 0%, rgba(251, 180, 14, 1) 100%);
 $facebook-gradient: linear-gradient(0deg, rgba(106, 0, 255, 1) 0%, rgba(248, 14, 251, 1) 100%);
 
 

@@ -1,5 +1,5 @@
 <div data-controller='components--audios--player' class="audio-pannel">
-  <span data-action='click->components--audios--player#on' data-components--audios--player-target='on' class="btn btn-primary"><i class="fa-solid fa-volume-high"></i></span>
-  <span data-action='click->components--audios--player#off' data-components--audios--player-target='off' class="btn btn-primary"><i class="fa-solid fa-volume-xmark"></i></span>
+  <span data-action='click->components--audios--player#on' data-components--audios--player-target='on' class="btn btn-complementary"><i class="fa-solid fa-volume-high"></i></span>
+  <span data-action='click->components--audios--player#off' data-components--audios--player-target='off' class="btn btn-dark"><i class="fa-solid fa-volume-xmark"></i></span>
   <%= audio_tag @music, data: { components__audios__player_target: 'music'} %>
 </div>

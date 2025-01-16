@@ -34,6 +34,7 @@ class PagesController < ApplicationController
               "title" => "Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion's league"
       }
     }
+    @lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   end
 
   def featureflags
