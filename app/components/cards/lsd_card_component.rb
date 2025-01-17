@@ -3,5 +3,9 @@ module Cards
     def initialize(whatever: {})
       @whatever = whatever
     end
+
+    def render?
+      true # or false
+    end
   end
 end

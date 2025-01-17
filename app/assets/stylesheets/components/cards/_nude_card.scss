@@ -1,5 +1,11 @@
 .nude-card {
-  height: 40vh;
+  height: 20vh;
   aspect-ratio: 1 / 1.5;
   border-radius: 0.5rem;
+}
+
+@media (min-width: 40em) {
+  .nude-card {
+    height: 40vh;
+  }
 }

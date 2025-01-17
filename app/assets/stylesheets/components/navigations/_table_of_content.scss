@@ -1,0 +1,17 @@
+.table-of-content {
+  background-color: aqua;
+  width: 35%;
+  transform: translateX(-85%);
+  transition: transform 0.4s ease-in-out;
+
+  &:hover {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 40em) {
+
+  .table-of-content {
+    width: 20%;
+  }
+}
