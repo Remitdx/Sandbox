@@ -3,16 +3,20 @@
     <div class="aside">
       <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"games--escape")) %>
     </div>
-    <% case @escape.step %>
-    <% when 0 %>
-      <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
-    <% when 1 %>
-      <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
-    <% when 2 %>
-      <%= render 'games/escapes/results', escape: @escape %>
+    <%= turbo_frame_tag 'map' do %>
+      <% case @escape.room %>
+      <% when 0 %>
+        <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
+      <% when 1 %>
+        <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
+      <% when 2 %>
+        <%= render 'games/escapes/results', escape: @escape %>
+      <% end %>
     <% end %>
     <div class="aside">
-    <%= render(Cards::DialogCardComponent.new(text: t("escapegame.intro"), speaker: "games/Bunny-down.png"))  %>
+      <%= turbo_frame_tag 'dialog' do %>
+        <%= render(Cards::DialogCardComponent.new(text: Games::Escape::TEXTS[@escape.text], speaker: "games/Bunny-down.png"))  %>
+      <% end %>
     </div>
   </div>
 </div>

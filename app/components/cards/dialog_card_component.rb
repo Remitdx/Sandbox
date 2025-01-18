@@ -5,5 +5,9 @@ module Cards
       @classes = classes
       @speaker = speaker
     end
+
+    def render?
+      @text.present? || content
+    end
   end
 end

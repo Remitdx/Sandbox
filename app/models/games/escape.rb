@@ -11,6 +11,10 @@ module Games
     }
     TASKS = [ "computer",  "ventilation", "food", "water" ]
     THREATS = [ "Chemical war", "ET", "Meteorites" ]
+    TEXTS = [
+      I18n.t("escapegame.intro"),
+      I18n.t("escapegame.shiny")
+    ]
 
     def self.intro_map
       [

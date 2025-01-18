@@ -1,6 +1,9 @@
 <% if @type == 2 %>
   <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
     <%= form_with url: games_escape_path(@model), method: :put do |form| %>
+      <%= form.hidden_field :input, value: "", data: { games__escape_target: "input" } %>
+      <%= form.hidden_field :character_x, value: "", data: { games__escape_target: "characterX" } %>
+      <%= form.hidden_field :character_y, value: "", data: { games__escape_target: "characterY" } %>
       <%= form.submit "", class: "d-none", data: { games__escape_target: "submit" } %>
     <% end %>
   </div>

@@ -1,0 +1,2 @@
+<%= turbo_stream.update 'dialog', render(Cards::DialogCardComponent.new(text: Games::Escape::TEXTS[@escape.text], speaker: "games/Bunny-down.png")) if params[:input] == 'text' %>
+<%= turbo_stream.update 'map', render(Games::Maps::MapComponent.new(model: @escape))  if params[:input] == 'room' %>

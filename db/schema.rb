@@ -49,7 +49,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
   end
 
   create_table "escapes", force: :cascade do |t|
-    t.integer "step"
+    t.integer "room"
+    t.integer "text"
     t.integer "score"
     t.text "parameters"
     t.datetime "created_at", null: false
