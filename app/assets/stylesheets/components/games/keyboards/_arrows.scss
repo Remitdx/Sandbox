@@ -1,7 +1,8 @@
 .arrow-buttons {
   position: relative;
-  width: 100%;
+  height: clamp(90px, 15vh, 150px);
   aspect-ratio: 3/2;
+  margin: 0 auto;
 
   .button {
     position: absolute;

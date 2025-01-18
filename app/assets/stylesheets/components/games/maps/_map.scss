@@ -6,6 +6,7 @@
       grid-template-columns: repeat($x + 1, 32px);
       grid-template-rows: repeat($y + 1, 32px);
       border: 2px solid $dm-light-grey;
+      width: 100%;
     }
 
     .character-#{$x}-#{$y} {

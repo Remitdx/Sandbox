@@ -1,7 +1,7 @@
-<div data-controller="escape" class="escape-window">
+<div data-controller="games--escape" class="escape-window">
   <div class="wrapper">
     <div class="aside">
-      <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"escape")) %>
+      <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"games--escape")) %>
     </div>
     <% case @escape.step %>
     <% when 0 %>
@@ -12,7 +12,7 @@
       <%= render 'games/escapes/results', escape: @escape %>
     <% end %>
     <div class="aside">
-      <p>du texte pour comprendre le layout</p>
+    <%= render(Cards::DialogCardComponent.new(text: t("escapegame.intro"), speaker: "games/Bunny-down.png"))  %>
     </div>
   </div>
 </div>

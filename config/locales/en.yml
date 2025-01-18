@@ -169,6 +169,8 @@ en:
 
   escapegame:
     title: "Escape game"
+    intro: "Ok, we have been out for a while now, everyone must be worried. Time to go back home !"
+    shiny: "Wait, what is that shiny thing ?"
 
   dikkenek:
     title: "Dikkenek (french only)"
