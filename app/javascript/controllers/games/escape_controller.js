@@ -7,7 +7,7 @@ const getCoordinates = (element) => {
 }
 
 export default class extends Controller {
-  static targets = ['up', 'down', 'left', 'right', 'grid', 'character', 'characterX', 'characterY', 'input', 'submit']
+  static targets = ['up', 'down', 'left', 'right', 'grid', 'character', 'characterX', 'characterY', 'step', 'submit']
 
   move(event) {
     if (event.key == "ArrowUp" || event.key == "ArrowDown" || event.key == "ArrowLeft" || event.key == "ArrowRight") {
@@ -56,14 +56,14 @@ export default class extends Controller {
 
     const newCoordinates = getCoordinates(this.characterTarget);
     if (newCoordinates[0] == 5 && newCoordinates[1] == 6) {
-      this.inputTarget.value = "text";
+      this.stepTarget.value = 1;
       this.characterXTarget.value = newCoordinates[1];
       this.characterYTarget.value = newCoordinates[0];
       this.submitTarget.parentElement.parentElement.classList.add('sprite-shiny');
       this.submitTarget.click();
     }
     if (newCoordinates[0] == 2 && newCoordinates[1] == 11) {
-      this.inputTarget.value = "room";
+      this.stepTarget.value = 2;
       this.submitTarget.click();
     }
   }

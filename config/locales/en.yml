@@ -171,6 +171,8 @@ en:
     title: "Escape game"
     intro: "Ok, we have been out for a while now, everyone must be worried. Time to go back home !"
     shiny: "Wait, what is that shiny thing ?"
+    bunker:
+      one: "What is this place ? I need to find a way out !"
 
   dikkenek:
     title: "Dikkenek (french only)"

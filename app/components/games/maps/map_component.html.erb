@@ -1,7 +1,7 @@
 <div class="position-relative">
   <div data-games--escape-target="grid" class="grid-<%= @model.parameters[:map_x] %>-<%= @model.parameters[:map_y] %>">
     <% i = 0 %>
-    <% @model.parameters[:map].each do |column| %>
+    <% @model.map.each do |column| %>
       <% j = 0 %>
       <% column.each do |sprite| %>
         <%= render(Games::Maps::SpriteComponent.new(type: sprite, x: i, y: j, model: @model)) %>

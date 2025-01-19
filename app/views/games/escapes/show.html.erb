@@ -4,14 +4,7 @@
       <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"games--escape")) %>
     </div>
     <%= turbo_frame_tag 'map' do %>
-      <% case @escape.room %>
-      <% when 0 %>
-        <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
-      <% when 1 %>
-        <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
-      <% when 2 %>
-        <%= render 'games/escapes/results', escape: @escape %>
-      <% end %>
+      <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
     <% end %>
     <div class="aside">
       <%= turbo_frame_tag 'dialog' do %>

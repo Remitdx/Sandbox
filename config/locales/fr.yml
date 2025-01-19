@@ -175,6 +175,9 @@ fr:
   dikkenek:
     title: "Dikkenek"
     intro: "Bon, ça fait un moment qu'on est dehors, tout le monde doit être inquiet. Il est temps de rentrer à la maison !"
+    shiny: "Hein, c'est quoi ce truc brillant ?"
+    bunker:
+      one: "Où suis-je tombé ? Je dois trouver un moyen de sortir !"
 
   connect4:
     title: "Puissance 4"
