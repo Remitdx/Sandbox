@@ -1,3 +1,3 @@
-<%= turbo_stream.append 'computer', render(Games::Screens::ComputerComponent.new(model: @escape)) if ["2"].include?(params[:step]) %>
-<%= turbo_stream.update 'dialog', render(Cards::DialogCardComponent.new(text: Games::Escapes::Constants::TEXTS[@escape.text], speaker: "games/Bunny-down.png")) if ["1", "2"].include?(params[:step]) %>
-<%= turbo_stream.update 'map', render(Games::Maps::MapComponent.new(model: @escape))  if ["2"].include?(params[:step]) %>
+<%= turbo_stream.append 'computer', render(Games::Screens::ComputerComponent.new(model: @escape)) if @escape.turbo_computer %>
+<%= turbo_stream.update 'map', render(Games::Maps::MapComponent.new(model: @escape))  if @escape.turbo_map %>
+<%= turbo_stream.update 'text', render(Cards::DialogCardComponent.new(text: Games::Escapes::Constants::TEXTS[@escape.text], speaker: "games/Bunny-down.png")) if @escape.turbo_text %>

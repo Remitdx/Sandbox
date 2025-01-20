@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <div class="grid-<%= @model.parameters[:map_x] %>-<%= @model.parameters[:map_y] %>">
+  <div class="grid-<%= @model.map.first.length - 1 %>-<%= @model.map.length - 1 %>">
     <% i = 0 %>
     <% @model.map.each do |column| %>
       <% j = 0 %>
@@ -10,5 +10,5 @@
       <% i += 1 %>
     <% end %>
   </div>
-  <span data-games--escape-target="character" class="character-<%= @model.parameters[:character_x] %>-<%= @model.parameters[:character_y] %> character-down"></span>
+  <span data-games--escape-target="character" class="character-<%= @model.character_x %>-<%= @model.character_y %> character-down"></span>
 </div>

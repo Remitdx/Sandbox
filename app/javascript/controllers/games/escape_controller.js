@@ -6,8 +6,24 @@ const getCoordinates = (element) => {
   return [x, y]
 }
 
+const triggerSubmit = (coordinates) => {
+  if (coordinates[0] == 5 && coordinates[1] == 6 ||
+      coordinates[0] == 2 && coordinates[1] == 11 ||
+      coordinates[0] == 0 && coordinates[1] == 3 ||
+      coordinates[0] == 12 && coordinates[1] == 1 ||
+      coordinates[0] == 8 && coordinates[1] == 11 ||
+      coordinates[0] == 12 && coordinates[1] == 15 ||
+      coordinates[0] == 2 && coordinates[1] == 18 ||
+      coordinates[0] == 3 && coordinates[1] == 18 ||
+      coordinates[0] == 0 && coordinates[1] == 8 ) {
+    return true
+  }  else {
+    return false
+  }
+}
+
 export default class extends Controller {
-  static targets = ['up', 'down', 'left', 'right', 'character', 'characterX', 'characterY', 'step', 'submit']
+  static targets = ['up', 'down', 'left', 'right', 'character', 'characterX', 'characterY', 'submit']
 
   move(event) {
     if (event.key == "ArrowUp" || event.key == "ArrowDown" || event.key == "ArrowLeft" || event.key == "ArrowRight") {
@@ -55,16 +71,13 @@ export default class extends Controller {
     };
 
     const newCoordinates = getCoordinates(this.characterTarget);
-    if (newCoordinates[0] == 5 && newCoordinates[1] == 6) {
-      this.stepTarget.value = 1;
+
+    if (triggerSubmit(newCoordinates)) {
       this.characterXTarget.value = newCoordinates[1];
       this.characterYTarget.value = newCoordinates[0];
       this.submitTarget.click();
     }
-    if (newCoordinates[0] == 2 && newCoordinates[1] == 11) {
-      this.stepTarget.value = 2;
-      this.submitTarget.click();
-    }
+
   }
 
   keyup() {

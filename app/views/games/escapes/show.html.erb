@@ -9,7 +9,7 @@
       <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
     <% end %>
     <div class="aside">
-      <%= turbo_frame_tag 'dialog' do %>
+      <%= turbo_frame_tag 'text' do %>
         <%= render(Cards::DialogCardComponent.new(text: Games::Escapes::Constants::TEXTS[@escape.text], speaker: "games/Bunny-down.png"))  %>
       <% end %>
     </div>

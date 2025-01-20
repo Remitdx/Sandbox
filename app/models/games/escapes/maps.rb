@@ -42,6 +42,35 @@ module Games
         ]
       end
 
+      def self.pantry_map
+        [
+          [ 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3 ],
+          [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+          [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+          [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+          [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+          [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+          [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
+          [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ]
+        ]
+      end
+
+      def self.tech_map
+        [[]]
+      end
+
+      def self.leisure_map
+        [[]]
+      end
+
+      MAPS = {
+        "intro" => intro_map,
+        "bunker" => bunker_map,
+        "pantry" => pantry_map,
+        "tech" => tech_map,
+        "leisure" => leisure_map
+      }
+
       def self.set_up_biome
         a = []
         3.times { a << "tree" }
