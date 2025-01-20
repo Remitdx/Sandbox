@@ -15,7 +15,10 @@ const triggerSubmit = (grid, coordinates) => {
       grid == "grid-18-12" && coordinates[0] == 12 && coordinates[1] == 15 ||
       grid == "grid-18-12" && coordinates[0] == 2 && coordinates[1] == 18 ||
       grid == "grid-18-12" && coordinates[0] == 3 && coordinates[1] == 18 ||
-      grid == "grid-18-12" && coordinates[0] == 0 && coordinates[1] == 8 ) {
+      grid == "grid-18-12" && coordinates[0] == 0 && coordinates[1] == 8 ||
+      grid == "grid-10-7" && coordinates[0] == 0 && coordinates[1] == 8 ||
+      grid == "grid-6-7" && coordinates[0] == 7 && coordinates[1] == 5 ||
+      grid == "grid-15-10" && coordinates[0] == 0 && coordinates[1] == 1 ) {
     return true
   }  else {
     return false

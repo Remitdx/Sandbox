@@ -174,6 +174,15 @@ en:
     bunker:
       one: "What is this place ? I need to find a way out !"
       two: "Wow this look very old but might be the computer that could operate over this bunker."
+    tech:
+      in: "Electricity stuff, ventilation, heating system ... Yep, that's the technical room for sure !"
+      out: "This place makes me sick, let's get out !"
+    pantry:
+      in: "Great, a kitchen and food everywhere, I still need to find a clue here !"
+      out: "This place makes me sick, let's get out !"
+    leisure:
+      in: "It's so huge here, there is even a tennis court wtf is wrong with that Regis ?! Let's find our piece of code !"
+      out: "This place makes me sick, let's get out !"
 
   dikkenek:
     title: "Dikkenek (french only)"
