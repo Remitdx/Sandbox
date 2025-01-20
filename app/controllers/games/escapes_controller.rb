@@ -15,9 +15,7 @@ module Games
       @escape = Games::Escape.find(params[:id])
       event = @escape.recognize_event(params[:id], params[:character_x].to_i, params[:character_y].to_i)
 
-      unless event.empty?
-        @escape.update(Games::Escapes::Constants::RESPONSES[event.keys.first])
-      end
+      @escape.update(Games::Escapes::Constants::RESPONSES[event.keys.first]) unless event.empty?
 
       respond_to do |format|
         format.html { redirect_to games_escape_path(@escape) }

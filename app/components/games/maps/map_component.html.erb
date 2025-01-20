@@ -1,5 +1,5 @@
 <div class="position-relative">
-  <div class="grid-<%= @model.map.first.length - 1 %>-<%= @model.map.length - 1 %>">
+  <div data-games--escape-target="grid" class="grid-<%= @model.map.first.length - 1 %>-<%= @model.map.length - 1 %>">
     <% i = 0 %>
     <% @model.map.each do |column| %>
       <% j = 0 %>
