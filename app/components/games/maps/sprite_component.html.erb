@@ -1,5 +1,5 @@
 <% if @type == 2 %>
-  <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
+  <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escapes::Maps::SPRITE[@type] %>">
     <%= form_with url: games_escape_path(@model), method: :put do |form| %>
       <%= form.hidden_field :step, value: "", data: { games__escape_target: "step" } %>
       <%= form.hidden_field :character_x, value: "", data: { games__escape_target: "characterX" } %>
@@ -8,7 +8,7 @@
     <% end %>
   </div>
 <% else %>
-  <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escape::SPRITE[@type] %>">
-      <div class="<%= @type == 0 ? Games::Escape.set_up_biome.sample : "" %>"></div>
+  <div id=<%="#{@x}-#{@y}"%> class="sprite <%= Games::Escapes::Maps::SPRITE[@type] %>">
+      <div class="<%= @type == 0 ? Games::Escapes::Maps.set_up_biome.sample : "" %>"></div>
   </div>
 <% end %>

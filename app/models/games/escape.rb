@@ -3,34 +3,6 @@ module Games
     require "date"
     serialize :parameters, type: Hash
 
-    SPRITE = {
-      0 => "sprite-grass",
-      1 => "sprite-path",
-      2 => "sprite-path sprite-shiny",
-      3 =>  "sprite-wall"
-    }
-    TASKS = [ "computer",  "ventilation", "food", "water" ]
-    THREATS = [ "Chemical war", "ET", "Meteorites" ]
-    TEXTS = [
-      I18n.t("escapegame.intro"),
-      I18n.t("escapegame.shiny"),
-      I18n.t("escapegame.bunker.one")
-    ]
-
-    def self.intro_map
-      [
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 2, 0, 0, 0, 0 ],
-        [ 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 ],
-        [ 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 ],
-        [ 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0 ],
-        [ 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0 ],
-        [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
-      ]
-    end
-
     def set_game_parameters
       self.parameters = {
         code: generate_code,
@@ -45,42 +17,14 @@ module Games
       }
     end
 
-    def self.set_up_biome
-      a = []
-      3.times { a << "tree" }
-      a << "cow"
-      60.times { a << "" }
-      2.times { a << "mushroom" }
-      2.times { a << "plants" }
-      a
-    end
-
-    def self.bunker_map
-      [
-        [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ],
-        [ 3, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
-        [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 1, 1, 1, 3 ],
-        [ 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 ]
-      ]
-    end
-
     private
 
     def pick_tasks
-      TASKS.sample(4)
+      Games::Escapes::Constants::TASKS.sample(4)
     end
 
     def pick_threat
-      THREATS.sample
+      Games::Escapes::Constants::THREATS.sample
     end
 
     def generate_code

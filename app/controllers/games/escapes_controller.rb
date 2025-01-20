@@ -1,8 +1,8 @@
 module Games
   class EscapesController < ApplicationController
     def create
-      escape = Games::Escape.create(step: 0, text: 0, map: Games::Escape.intro_map,
-                                    parameters: {map_x: 15, map_y: 8, character_x: 1, character_y: 1 })
+      escape = Games::Escape.create(step: 0, text: 0, map: Games::Escapes::Maps.intro_map,
+                                    parameters: { map_x: 15, map_y: 8, character_x: 1, character_y: 1 })
 
                                     redirect_to games_escape_path(escape)
     end
@@ -26,7 +26,7 @@ module Games
         @escape.set_game_parameters
         @escape.text += 1
         @escape.step += 1
-        @escape.map = Games::Escape.bunker_map
+        @escape.map = Games::Escapes::Maps.bunker_map
       end
 
       @escape.save

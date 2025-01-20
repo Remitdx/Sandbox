@@ -1,14 +1,16 @@
 <div data-controller="games--escape" class="escape-window">
   <div class="wrapper">
     <div class="aside">
-      <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"games--escape")) %>
+      <%= turbo_frame_tag 'computer' do %>
+        <%= render(Games::Keyboards::ArrowsComponent.new(js_controller:"games--escape")) %>
+      <% end %>
     </div>
     <%= turbo_frame_tag 'map' do %>
       <%= render(Games::Maps::MapComponent.new(model: @escape)) %>
     <% end %>
     <div class="aside">
       <%= turbo_frame_tag 'dialog' do %>
-        <%= render(Cards::DialogCardComponent.new(text: Games::Escape::TEXTS[@escape.text], speaker: "games/Bunny-down.png"))  %>
+        <%= render(Cards::DialogCardComponent.new(text: Games::Escapes::Constants::TEXTS[@escape.text], speaker: "games/Bunny-down.png"))  %>
       <% end %>
     </div>
   </div>
