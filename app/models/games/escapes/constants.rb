@@ -18,6 +18,14 @@ module Games
         50 => I18n.t("escapegame.tech.out")
       }
 
+      COMPUTERS = {
+        0 => "",
+        20 => I18n.t("escapegame.computer.hello") # Array to display multiple screens ?
+        # 31 => I18n.t("escapegame.computer"),
+        # 41 => I18n.t("escapegame.computer"),
+        # 51 => I18n.t("escapegame.computer")
+      }
+
       EVENTS = {
         10 => { map: Games::Escapes::Maps::MAPS["intro"], character_x: 6, character_y: 5 }, # see shiny thing
         11 => { map: Games::Escapes::Maps::MAPS["intro"], character_x: 11, character_y: 2 }, # fall into bunker
@@ -33,18 +41,18 @@ module Games
       }
 
       RESPONSES = {
-        0 => { map: Games::Escapes::Maps::MAPS["intro"], character_x: 1, character_y: 1, text: 0, turbo_computer: false, turbo_map: false, turbo_text: false },
-        10 => { character_x: 6, character_y: 5, text: 10, turbo_computer: false, turbo_map: false, turbo_text: true },
-        11 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 6, character_y: 9, text: 11, turbo_computer: false, turbo_map: true, turbo_text: true },
-        20 => { character_x: 11, character_y: 8, text: 20, turbo_computer: true, turbo_map: false, turbo_text: true },
-        21 => { map: Games::Escapes::Maps::MAPS["pantry"], character_x: 8, character_y: 0, text: 21, turbo_computer: false, turbo_map: true, turbo_text: true },
-        22 => { map: Games::Escapes::Maps::MAPS["leisure"], character_x: 1, character_y: 0, text: 22, turbo_computer: false, turbo_map: true, turbo_text: true },
-        23 => { map: Games::Escapes::Maps::MAPS["tech"], character_x: 5, character_y: 7, text: 23, turbo_computer: false, turbo_map: true, turbo_text: true },
-        # 24 => { map: Games::Escapes::Maps::MAPS["hangar"], character_x: 6, character_y: 9, text: 24, turbo_computer: false, turbo_map: true, turbo_text: true },
-        # 25 => { map: Games::Escapes::Maps::MAPS["hangar"], character_x: 6, character_y: 9, text: 25, turbo_computer: false, turbo_map: true, turbo_text: true },
-        30 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 1, character_y: 12, text: 30, turbo_computer: false, turbo_map: true, turbo_text: true },
-        40 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 15, character_y: 12, text: 40, turbo_computer: false, turbo_map: true, turbo_text: true },
-        50 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 3, character_y: 0, text: 50, turbo_computer: false, turbo_map: true, turbo_text: true }
+        0 => { map: Games::Escapes::Maps::MAPS["intro"], character_x: 1, character_y: 1, computer: 0, text: 0, turbo_computer: false, turbo_map: false, turbo_text: false },
+        10 => { character_x: 6, character_y: 5, computer: 0, text: 10, turbo_computer: false, turbo_map: false, turbo_text: true },
+        11 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 6, character_y: 9, computer: 0, text: 11, turbo_computer: false, turbo_map: true, turbo_text: true },
+        20 => { character_x: 11, character_y: 8, computer: 20, text: 20, turbo_computer: true, turbo_map: false, turbo_text: true },
+        21 => { map: Games::Escapes::Maps::MAPS["pantry"], character_x: 8, character_y: 1, computer: 0, text: 21, turbo_computer: true, turbo_map: true, turbo_text: true },
+        22 => { map: Games::Escapes::Maps::MAPS["leisure"], character_x: 1, character_y: 1, computer: 0, text: 22, turbo_computer: true, turbo_map: true, turbo_text: true },
+        23 => { map: Games::Escapes::Maps::MAPS["tech"], character_x: 5, character_y: 6, computer: 0, text: 23, turbo_computer: true, turbo_map: true, turbo_text: true },
+        # 24 => { map: Games::Escapes::Maps::MAPS["hangar"], character_x: 6, character_y: 9, text: 24, turbo_computer: true, turbo_map: true, turbo_text: true },
+        # 25 => { map: Games::Escapes::Maps::MAPS["hangar"], character_x: 6, character_y: 9, text: 25, turbo_computer: true, turbo_map: true, turbo_text: true },
+        30 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 1, character_y: 11, computer: 0, text: 30, turbo_computer: true, turbo_map: true, turbo_text: true },
+        40 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 15, character_y: 11, computer: 0, text: 40, turbo_computer: true, turbo_map: true, turbo_text: true },
+        50 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 3, character_y: 1, computer: 0, text: 50, turbo_computer: true, turbo_map: true, turbo_text: true }
       }
 
     end

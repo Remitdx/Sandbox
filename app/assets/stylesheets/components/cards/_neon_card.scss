@@ -22,6 +22,10 @@
   //overflow: hidden;
   transform-style: preserve-3d;
 
+  p {
+    color: $bg-cream-tone;
+  }
+
   &::after, &::before {
     content: "";
     position: absolute;

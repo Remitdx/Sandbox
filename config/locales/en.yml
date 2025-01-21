@@ -181,8 +181,11 @@ en:
       in: "Great, a kitchen and food everywhere, I still need to find a clue here !"
       out: "This place makes me sick, let's get out !"
     leisure:
-      in: "It's so huge here, there is even a tennis court wtf is wrong with that Regis ?! Let's find our piece of code !"
+      in: "It's so huge here, there is even a tennis court ! Let's find our piece of code !"
       out: "This place makes me sick, let's get out !"
+    computer:
+      hello: "Hello Regis, glad to see you here ! I have one job, well two : to keep you safe and entertained despite of the raging outside world!"
+
 
   dikkenek:
     title: "Dikkenek (french only)"

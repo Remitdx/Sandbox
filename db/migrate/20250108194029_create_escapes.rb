@@ -5,6 +5,7 @@ class CreateEscapes < ActiveRecord::Migration[8.0]
       t.integer :character_x
       t.integer :character_y
       t.integer :text
+      t.integer :computer
       t.boolean :turbo_computer
       t.boolean :turbo_map
       t.boolean :turbo_text

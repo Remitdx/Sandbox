@@ -53,6 +53,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
     t.integer "character_x"
     t.integer "character_y"
     t.integer "text"
+    t.integer "computer"
     t.boolean "turbo_computer"
     t.boolean "turbo_map"
     t.boolean "turbo_text"

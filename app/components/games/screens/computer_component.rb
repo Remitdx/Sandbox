@@ -4,6 +4,10 @@ module Games
       def initialize(model:)
         @model = model
       end
+
+      def render?
+        !Games::Escapes::Constants::COMPUTERS[@model.computer].empty?
+      end
     end
   end
 end
