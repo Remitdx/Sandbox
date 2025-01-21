@@ -19,8 +19,8 @@ module Games
       }
 
       COMPUTERS = {
-        0 => "",
-        20 => I18n.t("escapegame.computer.hello") # Array to display multiple screens ?
+        0 => [],
+        20 => [I18n.t("escapegame.computer.hello1"), I18n.t("escapegame.computer.hello2"), I18n.t("escapegame.computer.hello3"), I18n.t("escapegame.computer.hello")] # Array to display multiple screens ?
         # 31 => I18n.t("escapegame.computer"),
         # 41 => I18n.t("escapegame.computer"),
         # 51 => I18n.t("escapegame.computer")

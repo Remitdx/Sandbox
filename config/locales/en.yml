@@ -184,7 +184,9 @@ en:
       in: "It's so huge here, there is even a tennis court ! Let's find our piece of code !"
       out: "This place makes me sick, let's get out !"
     computer:
-      hello: "Hello Regis, glad to see you here ! I have one job, well two : to keep you safe and entertained despite of the raging outside world!"
+      hello1: "Hello Regis, glad to see you here ! I have one job, well two : to keep you safe and entertained despite of the raging outside world!"
+      hello2: "Feel yourself at home ! It's designed to let you enjoy underground life"
+      hello3: "In case you still want to go out you need to enter a 4 digits password."
 
 
   dikkenek:

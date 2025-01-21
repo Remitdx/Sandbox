@@ -1,2 +1,17 @@
-<%= render(Cards::NeonCardComponent.new(whatever: Games::Escapes::Constants::COMPUTERS[@model.computer])) %>
-<% # for each render multiple neon card with arrow to switch %>
+<div data-controller="games--computer">
+  <% if Games::Escapes::Constants::COMPUTERS[@model.computer].size > 1 %>
+    <div class="d-flex justify-content-between pb-2">
+      <div data-games--computer-target="previous" data-action="click->games--computer#previous">
+        <%= render(Buttons::CtaComponent.new(title: '<i class="fa-solid fa-hand-point-left"></i>', classes:"btn-dark" )) %>
+      </div>
+      <div data-games--computer-target="next" data-action="click->games--computer#next">
+        <%= render(Buttons::CtaComponent.new(title: '<i class="fa-solid fa-hand-point-right"></i>', classes:"btn-dark" )) %>
+      </div>
+    </div>
+  <% end %>
+  <% Games::Escapes::Constants::COMPUTERS[@model.computer].each do |screen| %>
+    <div data-games--computer-target="screen" class="d-none">
+      <%= render(Cards::NeonCardComponent.new(whatever: screen)) %>
+    </div>
+  <% end %>
+</div>
