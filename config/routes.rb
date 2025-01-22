@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     end
 
     namespace :utilities do
+      resources :tournaments, only: [ :index, :create, :show, :update ]
       resources :rolls, only: [ :create, :show, :update ] do
         resources :roll_dices, only: [ :new, :create, :edit, :update ]
       end

@@ -59,9 +59,6 @@ en:
     civil_engineer: 'I use to be a civil engineer and fortunately nowadays web applications are all about putting bricks together !'
     keep_calm: 'Now everything is well organised, keep calm and enjoy the ride!'
 
-  button:
-    build_app: 'Build app !'
-
   ## CURRICULUM VITAE ##
   skills:
     title: 'Skills'
@@ -189,9 +186,11 @@ en:
       hello2: "Feel yourself at home ! It's designed to let you enjoy underground life"
       hello3: "In case you still want to go out you need to enter a 4 digits password."
 
-
   dikkenek:
     title: "Dikkenek (french only)"
+
+  tournament:
+    title: "Tournament toolbox"
 
   connect4:
     title: "Connect 4"

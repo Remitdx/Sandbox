@@ -59,9 +59,6 @@ fr:
                     Par chance, les applications Web consistent également à assembler des briques !"
     keep_calm: "Maintenant que tout est bien organisé, accroche toi, on part à l'aventure !"
 
-  button:
-    build_app: 'Créer une app'
-
   ## CURRICULUM VITAE ##
   skills:
     title: 'Compétences'
@@ -150,7 +147,7 @@ fr:
   projects:
     professionals: 'Professionnels'
     games: 'Jeux'
-    utility: "Utilitaire"
+    utility: "Utilitaires"
     opensource: "J'adore l'esprit. Vivement une belle collaboration !"
 
   rolldice:
@@ -172,13 +169,16 @@ fr:
 
   escapegame:
     title: "Escape game"
-
-  dikkenek:
-    title: "Dikkenek"
     intro: "Bon, ça fait un moment qu'on est dehors, tout le monde doit être inquiet. Il est temps de rentrer à la maison !"
     shiny: "Hein, c'est quoi ce truc brillant ?"
     bunker:
       one: "Où suis-je tombé ? Je dois trouver un moyen de sortir !"
+
+  dikkenek:
+    title: "Dikkenek"
+
+  tournament:
+    title: "Gestion de tournoi"
 
   connect4:
     title: "Puissance 4"

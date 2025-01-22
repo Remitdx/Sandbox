@@ -22,15 +22,16 @@
     <p><%= link_to t('title_uikit'), uikit_path %></p>
   </div>
   <div class="games footer-detail">
-    <h5><%= t("project.games") %></h5>
+    <h5><%= t("projects.games") %></h5>
     <p><%= link_to t('dikkenek.title'), games_dikkeneks_path %></p>
     <p><%= link_to t('morbac.title'), games_morbacs_path, data: { turbo_method: :post } %></p>
     <p><%= link_to t('escapegame.title'), games_escapes_path, data: { turbo_method: :post } %></p>
     <p><%= link_to t('connect4.title'), games_puissance4s_path, data: { turbo_method: :post } %></p>
   </div>
   <div class="utility footer-detail">
-    <h5><%= t("project.utility") %></h5>
+    <h5><%= t("projects.utility") %></h5>
     <p><%= link_to t('rolldice.title'), utilities_rolls_path, data: { turbo_method: :post } %></p>
+    <p><%= link_to t('tournament.title'), utilities_tournaments_path %></p>
   </div>
   <div class="legal footer-detail">
     <h5>Legal</h5>

@@ -31,22 +31,12 @@
   100% { left: 30%; }
 }
 
-@keyframes postgreMove {
-  100% { top: 80%; }
-}
-
 @keyframes railsMove {
   100% { left: 80%; }
 }
 
 @keyframes htmlcssMove {
   100% { transform: scale(1); }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  90% { opacity: 0 }
-  100% { opacity: 100%;}
 }
 
 .wall {
@@ -56,7 +46,7 @@
   border: $major-dark solid 1px;
   border-radius: 4px;
   background-color: $bg-clear-tone;
-  overflow: hidden;
+  overflow: clip;
   margin-bottom: 1rem;
 
   p {
@@ -81,42 +71,61 @@
   }
 
   .ruby {
-    top: 80%;
     left: -20%;
-    animation: rubyMove 0.4s ease-in forwards;
+    top: 80%;
+    animation: rubyMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 35%;
   }
 
   .postgre {
-    top: -20%;
+    top: 80%;
     left: 55%;
-    animation: postgreMove 0.4s ease-in 0.45s forwards;
+    transform: scale(0);
+    animation: htmlcssMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 35%;
   }
 
   .rails {
     top: 80%;
     left: 120%;
-    animation: railsMove 0.4s ease-in 0.9s forwards;
+    animation: railsMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 35%;
   }
 
   .html {
     top: 60%;
     left: 42.5%;
     transform: scale(0);
-    animation: htmlcssMove 0.4s linear 1.35s forwards;
+    animation: htmlcssMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 35%;
   }
 
   .css {
     top: 60%;
     left: 67.5%;
     transform: scale(0);
-    animation: htmlcssMove 0.4s linear 1.45s forwards;
+    animation: htmlcssMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 35%;
   }
 
   .js {
     top: 39%;
     left: 25%;
     opacity: 0;
-    animation: jsMove 2s linear 1.9s forwards;
+    animation: jsMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 35%;
   }
 
   .crane {
@@ -126,9 +135,17 @@
     left: 7%;
     transform: rotateY(90deg);
     transform-origin: 33%;
+    animation: craneMove linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover 10%;
+    animation-range-end: contain 45%;
   }
+}
 
-  .crane-move { animation: craneMove 2.4s linear 1.9s forwards; }
-
-  .fade-in { animation: fadeIn 5.4s linear forwards; }
+@media (min-width: 40em) {
+  .wall {
+    .crane {
+      animation-range-start: cover 15%;
+    }
+  }
 }

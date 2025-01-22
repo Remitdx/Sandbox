@@ -1,11 +1,9 @@
-<div class='wall' data-controller='wall' data-action='click->wall#animate'>
-  <%= image_tag 'philosophy/wall/crane.png', class: 'crane', data: { wall_target: 'crane' } %>
-  <%= image_tag 'philosophy/wall/CSS.png', class: 'brick', data: { wall_target: 'css' } %>
-  <%= image_tag 'philosophy/wall/HTML.png', class: 'brick', data: { wall_target: 'html' } %>
-  <%= image_tag 'philosophy/wall/Ruby.png', class: 'brick', data: { wall_target: 'ruby' } %>
-  <%= image_tag 'philosophy/wall/Rails.png', class: 'brick', data: { wall_target: 'rails' } %>
-  <%= image_tag 'philosophy/wall/JS.png', class: 'brick', data: { wall_target: 'js' } %>
-  <%= image_tag 'philosophy/wall/postgre.png', class: 'brick', data: { wall_target: 'postgre' } %>
-  <p data-wall-target='btn'><%= t('button.build_app') %></p>
-  <p class='d-none fade-in' data-wall-target='reload'><i class="fa-solid fa-rotate-right"></i></p>
+<div class='wall'>
+  <%= image_tag 'philosophy/wall/crane.png', class: 'crane' %>
+  <%= image_tag 'philosophy/wall/CSS.png', class: 'brick css' %>
+  <%= image_tag 'philosophy/wall/HTML.png', class: 'brick html' %>
+  <%= image_tag 'philosophy/wall/Ruby.png', class: 'brick ruby' %>
+  <%= image_tag 'philosophy/wall/Rails.png', class: 'brick rails' %>
+  <%= image_tag 'philosophy/wall/JS.png', class: 'brick js' %>
+  <%= image_tag 'philosophy/wall/postgre.png', class: 'brick postgre' %>
 </div>
