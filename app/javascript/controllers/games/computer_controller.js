@@ -23,7 +23,6 @@ export default class extends Controller {
   next() {
     this.previousTarget.classList.remove("d-none");
     this.nextTarget.classList.remove("d-none");
-    console.log('previous');
     const active = this.screenTargets.filter(element => !element.classList.value.match("d-none"))[0];
 
     if (active == this.screenTargets[this.screenTargets.length - 2]) {

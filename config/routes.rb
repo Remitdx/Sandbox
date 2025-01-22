@@ -12,21 +12,10 @@ Rails.application.routes.draw do
     get "featureflags", to: "pages#featureflags"
 
     namespace :games do
-      namespace :risk_games do
-        resources :risks, only: [ :create, :edit, :update, :show ]
-        resources :players, only: [ :create, :destroy ]
-        resources :maps, only: [ :create ]
-        resources :tiles, only: [ :show ]
-      end
-
       resources :dikkeneks, only: [ :index, :create, :show, :update ]
-
       resources :escapes, only: [ :create, :show, :update ]
-
       resources :morbacs, only: [ :create, :update, :show ], path: "tictactoe"
-
       resources :puissance4s, only: [ :create, :update, :show ]
-
       resources :rolls, only: [ :create, :show, :update ] do
         resources :roll_dices, only: [ :new, :create, :edit, :update ]
       end

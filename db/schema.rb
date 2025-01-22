@@ -14,27 +14,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  create_table "actions", force: :cascade do |t|
-    t.string "type"
-    t.bigint "unit_id"
-    t.bigint "tile_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["tile_id"], name: "index_actions_on_tile_id"
-    t.index ["unit_id"], name: "index_actions_on_unit_id"
-  end
-
-  create_table "dices", force: :cascade do |t|
-    t.integer "value"
-    t.integer "faces"
-    t.boolean "locked"
-    t.string "color"
-    t.bigint "action_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["action_id"], name: "index_dices_on_action_id"
-  end
-
   create_table "dikkeneks", force: :cascade do |t|
     t.string "pseudo"
     t.text "quotes"
@@ -63,18 +42,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "maps", force: :cascade do |t|
-    t.string "weather"
-    t.integer "maxplayer"
-    t.integer "size"
-    t.integer "lines"
-    t.integer "columns"
-    t.bigint "risk_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["risk_id"], name: "index_maps_on_risk_id"
-  end
-
   create_table "morbacs", force: :cascade do |t|
     t.integer "value", default: [5, 5, 5, 5, 5, 5, 5, 5, 5], array: true
     t.integer "gameover", default: 2
@@ -83,26 +50,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "players", force: :cascade do |t|
-    t.string "pseudo"
-    t.bigint "risk_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["risk_id"], name: "index_players_on_risk_id"
-  end
-
   create_table "puissance4s", force: :cascade do |t|
     t.integer "gameover"
     t.integer "grid", array: true
     t.string "players", default: ["p1", "p2"], array: true
     t.integer "lastplay", array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "risks", force: :cascade do |t|
-    t.integer "mode"
-    t.integer "complexity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -241,29 +193,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
     t.index ["expires_at"], name: "index_solid_queue_semaphores_on_expires_at"
     t.index ["key", "value"], name: "index_solid_queue_semaphores_on_key_and_value"
     t.index ["key"], name: "index_solid_queue_semaphores_on_key", unique: true
-  end
-
-  create_table "tiles", force: :cascade do |t|
-    t.string "field"
-    t.boolean "built"
-    t.string "resource"
-    t.integer "x"
-    t.integer "y"
-    t.bigint "map_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["map_id"], name: "index_tiles_on_map_id"
-  end
-
-  create_table "units", force: :cascade do |t|
-    t.integer "attack"
-    t.integer "health"
-    t.integer "crit"
-    t.integer "moral"
-    t.bigint "player_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["player_id"], name: "index_units_on_player_id"
   end
 
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
