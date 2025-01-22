@@ -5,10 +5,10 @@
       <span class="align-self-end">/ <%= roll_dice.faces if roll_dice.faces.present? %></span>
     </div>
     <div class='p-absolute edit-delete'>
-      <%= link_to edit_games_roll_roll_dice_path(roll_dice.roll_id, roll_dice) do %>
+      <%= link_to edit_utilities_roll_roll_dice_path(roll_dice.roll_id, roll_dice) do %>
         <%= render(Buttons::CtaComponent.new(title: '<i class="fa-regular fa-pen-to-square"></i>', classes: 'btn-dark' )) %>
       <% end %>
-      <%= link_to games_roll_dice_path(roll_dice), data: { turbo_method: :delete } do %>
+      <%= link_to utilities_roll_dice_path(roll_dice), data: { turbo_method: :delete } do %>
         <%= render(Buttons::CtaComponent.new(title: '<i class="fa-solid fa-trash-can"></i>', classes: 'btn-dark' )) %>
       <% end %>
     </div>

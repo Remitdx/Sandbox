@@ -1,0 +1,4 @@
+<%= turbo_stream.remove 'new_dice' %>
+<%= turbo_stream.prepend 'dices', partial: 'utilities/roll_dices/roll_dice', locals: { roll_dice: @dice } %>
+<%= turbo_stream.prepend 'dices', partial: 'utilities/roll_dices/new_dice', locals: { roll: @roll } %>
+<%= turbo_stream.update 'scores', partial: 'utilities/rolls/scores', locals: { scores: @scores } %>

@@ -1,4 +1,4 @@
-module Games
+module Utilities
   class RollDicesController < ApplicationController
     include Games
 
@@ -7,15 +7,15 @@ module Games
     before_action :set_scores, only: [ :update, :create, :destroy ]
 
     def new
-      @dice = Games::RollDice.new
+      @dice = Utilities::RollDice.new
     end
 
     def create
-      @dice = Games::RollDice.new(dice_params)
+      @dice = Utilities::RollDice.new(dice_params)
       @dice.roll_id = params[:roll_id]
       if @dice.save
         respond_to do |format|
-          format.html { redirect_to games_roll_path(@dice.roll_id) }
+          format.html { redirect_to utilities_roll_path(@dice.roll_id) }
           format.turbo_stream
         end
       else
@@ -29,7 +29,7 @@ module Games
     def update
       if @dice.update(dice_params.merge(value: nil))
         respond_to do |format|
-          format.html { redirect_to games_roll_path(@dice.roll_id) }
+          format.html { redirect_to utilities_roll_path(@dice.roll_id) }
           format.turbo_stream
         end
       else
@@ -40,7 +40,7 @@ module Games
     def destroy
       @dice.destroy
       respond_to do |format|
-        format.html { redirect_to games_roll_path }
+        format.html { redirect_to utilities_roll_path }
         format.turbo_stream
       end
     end
@@ -52,15 +52,15 @@ module Games
     end
 
     def set_roll
-      @roll = Games::Roll.find(params[:roll_id])
+      @roll = Utilities::Roll.find(params[:roll_id])
     end
 
     def set_scores
-      @scores = Games::RollDicesController.reset_scores
+      @scores = Utilities::RollDicesController.reset_scores
     end
 
     def dice_params
-      params.require(:games_roll_dice).permit(:faces, :color)
+      params.require(:utilities_roll_dice).permit(:faces, :color)
     end
   end
 end

@@ -4,13 +4,13 @@
   <div class='container'>
     <p class= 'text-center pt-3'><%= t('rolldice.text1') %></p>
     <div class='d-flex py-3 justify-content-around align-items-center'>
-      <%= link_to games_roll_path(@roll), data: { turbo_method: :put } do %>
+      <%= link_to utilities_roll_path(@roll), data: { turbo_method: :put } do %>
         <%= render(Buttons::CtaComponent.new(title: t('rolldice.roll'), classes: 'btn-big btn-complementary' )) %>
       <% end %>
-      <%= render 'games/rolls/scores', scores: @scores %>
+      <%= render 'utilities/rolls/scores', scores: @scores %>
     </div>
     <%= turbo_frame_tag 'dices', class: 'row' do %>
-      <%= render 'games/roll_dices/index', dices: @dices %>
+      <%= render 'utilities/roll_dices/index', dices: @dices %>
     <% end %>
   </div>
 </div>

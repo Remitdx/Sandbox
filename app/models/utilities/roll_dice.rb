@@ -1,4 +1,4 @@
-module Games
+module Utilities
   class RollDice < ApplicationRecord
     belongs_to :roll
 
