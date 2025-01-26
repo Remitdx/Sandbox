@@ -3,15 +3,15 @@ module Games
     require "date"
     serialize :parameters, type: Hash
 
-    def recognize_event(id, character_x,character_y)
-      Games::Escapes::Constants::EVENTS.filter { |k,v| v[:map] == Games::Escape.find(id).map && v[:character_x] == character_x && v[:character_y] == character_y }
+    def recognize_event(id, character_x, character_y)
+      Games::Escapes::Constants::EVENTS.filter { |k, v| v[:map] == Games::Escape.find(id).map && v[:character_x] == character_x && v[:character_y] == character_y }
     end
 
     def set_game_parameters
       self.parameters = {
         code: generate_code,
         start_time: DateTime.now,
-        end_time: nil,
+        end_time: nil
       }
     end
 

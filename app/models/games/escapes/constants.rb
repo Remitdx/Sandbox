@@ -20,7 +20,7 @@ module Games
 
       COMPUTERS = {
         0 => [],
-        20 => [I18n.t("escapegame.computer.hello1"), I18n.t("escapegame.computer.hello2"), I18n.t("escapegame.computer.hello3"), I18n.t("escapegame.computer.hello")] # Array to display multiple screens ?
+        20 => [ I18n.t("escapegame.computer.hello1"), I18n.t("escapegame.computer.hello2"), I18n.t("escapegame.computer.hello3"), I18n.t("escapegame.computer.hello") ] # Array to display multiple screens ?
         # 31 => I18n.t("escapegame.computer"),
         # 41 => I18n.t("escapegame.computer"),
         # 51 => I18n.t("escapegame.computer")
@@ -54,7 +54,6 @@ module Games
         40 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 15, character_y: 11, computer: 0, text: 40, turbo_computer: true, turbo_map: true, turbo_text: true },
         50 => { map: Games::Escapes::Maps::MAPS["bunker"], character_x: 3, character_y: 1, computer: 0, text: 50, turbo_computer: true, turbo_map: true, turbo_text: true }
       }
-
     end
   end
 end

@@ -1,6 +1,6 @@
 module Others
   class PreviewComponent < ViewComponent::Base
-    def initialize()
+    def initialize
     end
   end
 end
