@@ -26,15 +26,22 @@
     <%= render(Titles::H2titleComponent.new(title: t('projects.games'))) %>
     <div class='container'>
       <div class="games__bento-grid">
-        <div class="game-card game1"></div>
-        <div class="game-card game2"></div>
-        <div class="game-card game3"></div>
-        <div class="game-card game4"></div>
-        <div class="game-card game5"></div>
-        <div class="game-card game6"></div>
-        <div class="game-card game7"></div>
-        <div class="game-card game8"></div>
-        <div class="game-card game9"></div>
+        <div class="game-card tictactoe">
+          <%= image_tag 'projects/TicTacToe_carre.png' %>
+        </div>
+        <div class="game-card escape-game">
+          <%= image_tag 'projects/Escape_game.png' %>
+        </div>
+        <div class="game-card dikkenek">
+          <%= image_tag 'projects/Dikkenek1.png' %>
+        </div>
+        <div class="game-card dice-roller">
+          <%= image_tag 'projects/Dice_roller.png' %>
+        </div>
+        <div class="game-card connect4">
+          <%= image_tag 'projects/Connect4.png' %>
+        </div>
+
       </div>
     </div>
   </section>
