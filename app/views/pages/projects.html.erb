@@ -26,37 +26,28 @@
     <%= render(Titles::H2titleComponent.new(title: t('projects.games'))) %>
     <div class='container'>
       <div class="games__bento-grid">
-        <div class="game-card tictactoe">
+        <%= link_to games_morbacs_path, class: "game-card tictactoe", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/TicTacToe_carre.png' %>
-        </div>
-        <div class="game-card escape-game">
+        <% end %>
+        <%= link_to games_escapes_path, class: "game-card escape-game", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Escape_game.png' %>
-        </div>
-        <div class="game-card dikkenek">
+        <% end %>
+        <%= link_to games_dikkeneks_path, class: "game-card dikkenek" do %>
           <%= image_tag 'projects/Dikkenek1.png' %>
-        </div>
-        <div class="game-card dice-roller">
+        <% end %>
+        <%= link_to utilities_rolls_path, class: "game-card dice-roller", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Dice_roller.png' %>
-        </div>
-        <div class="game-card connect4">
+        <% end %>
+        <%= link_to games_puissance4s_path, class: "game-card connect4", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Connect4.png' %>
+        <% end %>
+        <div class="game-card next">
+          <%= image_tag 'flags/flagFR.svg' %>
         </div>
-
       </div>
     </div>
   </section>
-    <p>Forgot your dices ? Nevermind all you need is here !</p>
-    <%= link_to 'Roll Dices', utilities_rolls_path, data: { turbo_method: :post } %>
-    <p>Need tools to organize your next tournament event ? Have a look here !</p>
     <%= link_to t('tournament.title'), utilities_tournaments_path %>
-    <p>Tic Tac Toe, classic game. Beat our AI !</p>
-    <%= link_to 'Tic Tac Toe', games_morbacs_path, data: { turbo_method: :post } %>
-    <p>Will you be able to escape this place ?</p>
-    <%= link_to 'Escape game', games_escapes_path, data: { turbo_method: :post } %>
-    <p>Puissance 4, classic game. Challenge a friend !</p>
-    <%= link_to 'Puissance 4', games_puissance4s_path, data: { turbo_method: :post } %>
-    <p>The ultimate DIKKENEK game, will you reach the hall of fame ? (only available in french)</p>
-    <%= link_to 'Dikkenek', games_dikkeneks_path %>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: "Open source")) %>
     <div class="container">
