@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     namespace :games do
       resources :dikkeneks, only: [ :index, :create, :show, :update ]
+      resources :puzzles, only: [ :index, :create, :show, :update ]
       resources :escapes, only: [ :create, :show, :update ]
       resources :morbacs, only: [ :create, :update, :show ], path: "tictactoe"
       resources :puissance4s, only: [ :create, :update, :show ]

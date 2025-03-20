@@ -15,7 +15,6 @@
 
 
 .games__bento-grid {
-  width: 50%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: repeat(6, auto);
@@ -62,5 +61,11 @@
 
   .next {
     grid-area: 6 / 5 / 7 / 7;
+  }
+}
+
+@media (min-width: 40em) {
+  .games__bento-grid {
+    width: 50%;
   }
 }

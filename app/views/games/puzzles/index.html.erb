@@ -1,0 +1,7 @@
+<%= render(Navigations::NavigationComponent.new) %>
+<%= render(Titles::H1titleComponent.new(title: t('puzzle.title') )) %>
+<div class="section-2">
+  <div class="container">
+    <%= render 'games/puzzles/new', puzzle: @puzzle  %>
+  </div>
+</div>

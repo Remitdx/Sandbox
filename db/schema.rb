@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_20_155754) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -55,6 +55,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_15_130625) do
     t.integer "grid", array: true
     t.string "players", default: ["p1", "p2"], array: true
     t.integer "lastplay", array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "puzzles", force: :cascade do |t|
+    t.integer "gameover"
+    t.string "pseudo"
+    t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

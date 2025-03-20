@@ -1,0 +1,5 @@
+<%= simple_form_for(puzzle) do |f| %>
+  <%= f.input :pseudo, label: false, placeholder: 'Pseudo' %>
+  <%= f.input :size, label: false, placeholder: 'Size' %>
+  <%= f.submit 'Jouer', class:'btn-cta btn-dark btn-large' %>
+<% end %>

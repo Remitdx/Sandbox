@@ -180,6 +180,9 @@ fr:
   tournament:
     title: "Gestion de tournoi"
 
+  puzzle:
+    title: "Puzzle glissant"
+
   connect4:
     title: "Puissance 4"
     won:

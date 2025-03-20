@@ -47,6 +47,7 @@
       </div>
     </div>
   </section>
+    <%= link_to t('puzzle.title'), games_puzzles_path %>
     <%= link_to t('tournament.title'), utilities_tournaments_path %>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: "Open source")) %>

@@ -192,6 +192,9 @@ en:
   tournament:
     title: "Tournament toolbox"
 
+  puzzle:
+    title: "Sliding puzzle"
+
   connect4:
     title: "Connect 4"
     won:
