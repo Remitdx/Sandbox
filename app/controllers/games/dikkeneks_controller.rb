@@ -7,13 +7,15 @@ module Games
     end
 
     def create
+      @podium = Games::Dikkenek.where.not(score: nil).order(score: :desc).first(3)
+      @last_played = Games::Dikkenek.where.not(score: nil).last(3)
       @dikkenek = Games::Dikkenek.new(pseudo: dikkenek_params[:pseudo].capitalize, gameover: 0)
       @dikkenek.pick_10_quotes
       @dikkenek.average_difficulty
       if @dikkenek.save
         redirect_to games_dikkenek_path(@dikkenek)
       else
-        # render index:, status: :unprocessable_entity
+        render 'games/dikkeneks/index', status: :unprocessable_entity
       end
     end
 
