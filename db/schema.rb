@@ -63,6 +63,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_20_155754) do
     t.integer "gameover"
     t.string "pseudo"
     t.integer "size"
+    t.integer "value", array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
