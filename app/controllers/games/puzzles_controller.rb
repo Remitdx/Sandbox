@@ -22,7 +22,6 @@ module Games
     def update
       @puzzle = Games::Puzzle.find(params[:id])
 
-
       if @puzzle.gameover == 2 || params[:reset]
         params[:reset] ? @puzzle.reset_game : @puzzle.compute_turns(params[:pos].to_i)
         @puzzle.save

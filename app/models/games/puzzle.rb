@@ -12,12 +12,11 @@ module Games
     end
 
     def compute_turns(index)
-      raise
-      valid_play?(self.value, index) ? @puzzle.swap_tiles(params[:pos].to_i) : @puzzle
+      valid_play?(self, index) ? swap_tiles(self, index) : self
       # play valid ?
       # permuter 0 et la tile cliquée
       # gameover ? partie gagnée ?
-      self
+      # self
     end
 
     private
@@ -32,8 +31,17 @@ module Games
     def solvable?
     end
 
-    def valid_play?(array, index)
+    def valid_play?(puzzle, index)
+      index_x = index % puzzle.size
+      index_y = index / puzzle.size
+      empty_tile = puzzle.value.index(0)
+      empty_tile_x = empty_tile % puzzle.size
+      empty_tile_y = empty_tile / puzzle.size
+      (index_x - empty_tile_x).abs + (index_y - empty_tile_y).abs == 1
     end
 
+    def swap_tiles(puzzle, index)
+      raise
+    end
   end
 end
