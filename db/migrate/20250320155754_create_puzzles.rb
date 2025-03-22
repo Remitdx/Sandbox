@@ -4,6 +4,7 @@ class CreatePuzzles < ActiveRecord::Migration[8.0]
       t.integer :gameover
       t.string :pseudo
       t.integer :size
+      t.integer :counter
       t.integer :value, array: true
 
       t.timestamps

@@ -2,12 +2,16 @@
 <%= render(Titles::H1titleComponent.new(title: t('puzzle.title') )) %>
 <div class="section-2">
   <div class="container">
+    <div>
+      <p><%= 'WIN !' if @puzzle.gameover == 0 %></p>
+      <p><%= @puzzle.counter %></p>
+    </div>
     <div class="puzzle-wrapper py-3">
       <div class="puzzle size-<%= @puzzle.size %>">
         <% i = 0 %>
         <% @puzzle.value.each do |tile| %>
           <%= link_to games_puzzle_path(pos: i), data: { turbo_method: :patch } do %>
-            <div class="puzzle-tile"><%= tile %></div>
+            <div class="puzzle-tile <%= 'tile-zero' if tile == 0 %>"><%= tile %></div>
           <% end %>
           <% i += 1 %>
         <% end %>

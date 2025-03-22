@@ -2,10 +2,16 @@
 
   .puzzle {
     display: grid;
+    border: 2px solid $major-dark;
 
     .puzzle-tile {
       border: 1px solid $major-dark;
       aspect-ratio: 1/1;
+      background-color: $bg-clear-tone;
+    }
+
+    .tile-zero {
+      background-color: $major-light;
     }
   }
 
