@@ -6,8 +6,7 @@ module Games
 
     def create
       @puzzle = Games::Puzzle.new(puzzle_params)
-      @puzzle.gameover = 0
-      @puzzle.generate_solvable_shuffle
+      @puzzle.reset_game
 
       if @puzzle.save
         redirect_to games_puzzle_path(@puzzle)
@@ -18,6 +17,18 @@ module Games
 
     def show
       @puzzle = Games::Puzzle.find(params[:id])
+    end
+
+    def update
+      @puzzle = Games::Puzzle.find(params[:id])
+
+
+      if @puzzle.gameover == 2 || params[:reset]
+        params[:reset] ? @puzzle.reset_game : @puzzle.compute_turns(params[:pos].to_i)
+        @puzzle.save
+      end
+
+      redirect_to games_puzzle_path(@puzzle)
     end
 
     private
