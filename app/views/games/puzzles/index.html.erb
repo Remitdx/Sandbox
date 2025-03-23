@@ -2,6 +2,13 @@
 <%= render(Titles::H1titleComponent.new(title: t('puzzle.title') )) %>
 <div class="section-2">
   <div class="container">
-    <%= render 'games/puzzles/new', puzzle: @puzzle  %>
+    <div class="puzzle-new py-3">
+      <%= render 'games/puzzles/new', puzzle: @puzzle  %>
+    </div>
+    <div class="best-scores">
+      <p>Best 5x5 : <%= @best5.pseudo if @best5 %> - <%= @best5.counter if @best5 %> coups</p>
+      <p>Best 4x4 : <%= @best4.pseudo if @best4 %> - <%= @best4.counter if @best4 %> coups</p>
+      <p>Best 3x3 : <%= @best3.pseudo if @best3 %> - <%= @best3.counter if @best3 %> coups</p>
+    </div>
   </div>
 </div>

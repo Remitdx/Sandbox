@@ -2,11 +2,15 @@ module Games
   class PuzzlesController < ApplicationController
     def index
       @puzzle = Games::Puzzle.new
+      @best5 = Games::Puzzle.where(size: 5, gameover: 0).order(counter: :asc).first
+      @best4 = Games::Puzzle.where(size: 4, gameover: 0).order(counter: :asc).first
+      @best3 = Games::Puzzle.where(size: 3, gameover: 0).order(counter: :asc).first
     end
 
     def create
       @puzzle = Games::Puzzle.new(puzzle_params)
-      @puzzle.reset_game
+      @puzzle.generate_solvable_shuffle
+      @puzzle.gameover = 2
 
       if @puzzle.save
         redirect_to games_puzzle_path(@puzzle)
@@ -22,8 +26,8 @@ module Games
     def update
       @puzzle = Games::Puzzle.find(params[:id])
 
-      if @puzzle.gameover == 2 || params[:reset]
-        params[:reset] ? @puzzle.reset_game : @puzzle.compute_turns(params[:pos].to_i)
+      if @puzzle.gameover == 2
+        @puzzle.compute_turns(params[:pos].to_i)
         @puzzle.save
       end
 

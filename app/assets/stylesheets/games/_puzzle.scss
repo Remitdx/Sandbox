@@ -8,10 +8,20 @@
       border: 1px solid $major-dark;
       aspect-ratio: 1/1;
       background-color: $bg-clear-tone;
+      background-size: cover;
     }
 
-    .tile-zero {
-      background-color: $major-light;
+    .tile-3-0, .tile-4-0, .tile-5-0 {
+      background-color: $major-dark;
+    }
+
+    @for $i from 3 through 5 {
+      @for $j from 1 through 24 {
+
+        .tile-#{$i}-#{$j} {
+          background-image: url('games/puzzle/#{$i}-#{$j}.png');
+        }
+      }
     }
   }
 
@@ -33,7 +43,7 @@
 
 @media (min-width: 40em) {
 
-  .puzzle {
+  .puzzle, .puzzle-new {
     margin: 0 auto;
     width: 30%;
   }

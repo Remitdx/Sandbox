@@ -5,19 +5,11 @@ module Games
     validates :gameover, presence: true
     validates :size, inclusion: { in: 3..5 }
 
-    def reset_game
-      generate_solvable_shuffle
-      self.gameover = 2
-      self
-    end
-
     def compute_turns(index)
       valid_play?(self, index) ? swap_tiles(self, index) : self
       self.gameover = 0 if game_win?(self)
       self
     end
-
-    private
 
     def generate_solvable_shuffle
       self.counter = 0
@@ -29,19 +21,21 @@ module Games
       self
     end
 
+    private
+
     def solvable?(puzzle)
       inversions = count_inversions(puzzle)
 
       (puzzle.size.odd? && inversions.even?) ||
-      (puzzle.size.even? && inversions.even? && (puzzle.value.index(0) % puzzle.size).odd?) ||
-      (puzzle.size.even? && inversions.odd? && (puzzle.value.index(0) % puzzle.size).even?)
+      (puzzle.size.even? && inversions.even? && (puzzle.value.index(0) / puzzle.size).even?) ||
+      (puzzle.size.even? && inversions.odd? && (puzzle.value.index(0) / puzzle.size).odd?)
     end
 
     def count_inversions(puzzle)
       count = 0
       for i in 0...(puzzle.size * puzzle.size)
         for j in (i + 1)..(puzzle.size * puzzle.size)
-          if puzzle.value[j] && puzzle.value[i] && puzzle.value[i] > puzzle.value[j]
+          if puzzle.value[j] && puzzle.value[i] && puzzle.value[j] != 0 && puzzle.value[i] != 0 && puzzle.value[i] > puzzle.value[j]
             count += 1
           end
         end
