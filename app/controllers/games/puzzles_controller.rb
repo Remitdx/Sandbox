@@ -11,7 +11,7 @@ module Games
       if @puzzle.save
         redirect_to games_puzzle_path(@puzzle)
       else
-        render 'games/puzzles/index', status: :unprocessable_entity
+        render "games/puzzles/index", status: :unprocessable_entity
       end
     end
 

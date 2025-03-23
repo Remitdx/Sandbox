@@ -21,7 +21,7 @@ module Games
 
     def generate_solvable_shuffle
       self.counter = 0
-      self.value = *(0..(self.size * self.size - 1))
+      self.value = *(0...(self.size * self.size))
       self.value.shuffle!
       until solvable?(self)
         self.value.shuffle!
@@ -30,13 +30,23 @@ module Games
     end
 
     def solvable?(puzzle)
+      inversions = count_inversions(puzzle)
+
+      (puzzle.size.odd? && inversions.even?) ||
+      (puzzle.size.even? && inversions.even? && (puzzle.value.index(0) % puzzle.size).odd?) ||
+      (puzzle.size.even? && inversions.odd? && (puzzle.value.index(0) % puzzle.size).even?)
+    end
+
+    def count_inversions(puzzle)
       count = 0
-      for i in 0...(puzzle.size * puzzle.size - 1)
-        if puzzle.value[i] > puzzle.value[i+1] && puzzle.value[i] != 0 && puzzle.value[i+1] != 0
-          count += 1
+      for i in 0...(puzzle.size * puzzle.size)
+        for j in (i + 1)..(puzzle.size * puzzle.size)
+          if puzzle.value[j] && puzzle.value[i] && puzzle.value[i] > puzzle.value[j]
+            count += 1
+          end
         end
       end
-      count.even?
+      count
     end
 
     def valid_play?(puzzle, index)
