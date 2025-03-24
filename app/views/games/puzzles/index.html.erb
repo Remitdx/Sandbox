@@ -5,10 +5,13 @@
     <div class="puzzle-new py-3">
       <%= render 'games/puzzles/new', puzzle: @puzzle  %>
     </div>
-    <div class="best-scores">
-      <p>Best 5x5 : <%= @best5.pseudo if @best5 %> - <%= @best5.counter if @best5 %> coups</p>
-      <p>Best 4x4 : <%= @best4.pseudo if @best4 %> - <%= @best4.counter if @best4 %> coups</p>
-      <p>Best 3x3 : <%= @best3.pseudo if @best3 %> - <%= @best3.counter if @best3 %> coups</p>
+    <div class="best-scores text-center p-3">
+      <p><strong><%= t('puzzle.best5')%></strong></p>
+      <p><%= @best5 ? @best5.pseudo + " - " + @best5.counter.to_s + t('puzzle.moves') : "-" %></p>
+      <p><strong><%= t('puzzle.best4')%></strong></p>
+      <p><%= @best4 ? @best4.pseudo + " - " + @best4.counter.to_s + t('puzzle.moves') : "-" %></p>
+      <p><strong><%= t('puzzle.best3')%></strong></p>
+      <p><%= @best3 ? @best3.pseudo + " - " + @best3.counter.to_s + t('puzzle.moves') : "-" %></p>
     </div>
   </div>
 </div>

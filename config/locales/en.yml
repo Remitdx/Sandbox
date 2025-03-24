@@ -194,6 +194,10 @@ en:
 
   puzzle:
     title: "Sliding puzzle"
+    best5: "Best player puzzle 5x5"
+    best4: "Best player puzzle 4x4"
+    best3: "Best player puzzle 3x3"
+    moves: " moves"
 
   connect4:
     title: "Connect 4"
