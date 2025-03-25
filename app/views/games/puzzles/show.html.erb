@@ -5,7 +5,7 @@
     <div>
       <p>Hello <%= @puzzle.pseudo %> !</p>
       <p><%= 'WIN !' if @puzzle.gameover == 0 %></p>
-      <p>Coups joués : <%= @puzzle.counter %></p>
+      <p><%= @puzzle.counter.to_s + t('puzzle.moves').pluralize if @puzzle.counter > 0 %></p>
     </div>
     <div class="puzzle-wrapper py-3">
       <div class="puzzle size-<%= @puzzle.size %>">
