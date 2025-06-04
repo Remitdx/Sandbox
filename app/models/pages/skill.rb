@@ -34,7 +34,7 @@ module Pages
         "Tailwind" => 5,
         "JavaScript" => 7,
         "Hotwire" => 9,
-        "React" => 2,
+        "React" => 5,
         "JQuery" => 6
       }
     end
