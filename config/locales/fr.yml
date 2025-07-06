@@ -11,6 +11,8 @@ fr:
   title_projects: 'Projets'
   title_uikit: 'UI Kit'
   title_featureflags: 'Tour de Contrôle'
+  title_contact: 'Contact'
+
 
   ## FOOTER ##
   footer:

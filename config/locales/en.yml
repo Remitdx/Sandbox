@@ -12,6 +12,7 @@ en:
   title_projects: 'Projects'
   title_uikit: 'UI Kit'
   title_featureflags: 'Feature Flags'
+  title_contact: 'Contact'
 
   ## FOOTER ##
   footer:
