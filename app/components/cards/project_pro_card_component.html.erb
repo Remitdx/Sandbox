@@ -1,0 +1,10 @@
+<div>
+  <h3><%= @title %></h3>
+  <div class="project-pro <%= @classes %>"></div>
+  <p><%= @description %></p>
+  <p><%= @period %></p>
+  <% @testimonials.each do |t| %>
+    <%= render(Texts::QuoteComponent.new(quote: t[:quote], author: t[:author])) %>
+  <% end %>
+  <%= link_to "Visit", @link, target: :_blank %>
+</div>

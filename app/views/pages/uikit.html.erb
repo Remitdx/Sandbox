@@ -2,10 +2,10 @@
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
 <div class="uikit__grid">
   <div class="table-of-content">
-    <%= render(Navigations::TableOfContentComponent.new(page: "uikit", sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio", "games"])) %>
+    <%= render(Navigations::TableOfContentComponent.new(page: "uikit", sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio"])) %>
   </div>
   <div class="uikit__grid-content container">
-    <div class="section-1">
+    <div class="section-2">
       <%= render(Titles::H2titleComponent.new(title: t('uikit.about') )) %>
       <div class="container">
         <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro1'))) %>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div class="section-1">
+    <div class="section-2">
       <%= render(Titles::H2titleComponent.new(title: t('uikit.fonts') )) %>
       <div class="container">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -60,12 +60,10 @@
         </div>
       </div>
     </div>
-    <div class="section-1">
+    <div class="section-2">
       <%= render(Titles::H2titleComponent.new(title: t('uikit.texts') )) %>
     <div class="container">
         <%= render(Texts::QuoteComponent.new(quote: t('quote.gears'), author: 'Steve Jobs')) %>
-
-
     </div>
     </div>
     <div class="section-2">
@@ -82,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class='section-1'>
+    <div class='section-2'>
       <%= render(Titles::H2titleComponent.new(title: t('uikit.cards') )) %>
       <div class="container">
         <div class="row">
@@ -113,16 +111,10 @@
         <%= render(Lists::TimelineComponent.new(list: @palmares )) %>
       </div>
     </div>
-    <div class="section-1">
+    <div class="section-2">
       <%= render(Titles::H2titleComponent.new(title: t('uikit.audio') )) %>
       <div class="container">
         <%= render(Audios::PlayerComponent.new(music: 'action-game.mp3')) %>
-      </div>
-    </div>
-    <div class="section-2">
-      <%= render(Titles::H2titleComponent.new(title: t('uikit.games') )) %>
-      <div class="container">
-        <%= render(Others::PreviewComponent.new) %>
       </div>
     </div>
   </div>

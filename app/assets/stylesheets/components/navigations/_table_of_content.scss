@@ -1,3 +1,8 @@
 .table-of-content {
-  grid-area: 1/1/2/1;
+  padding: 0.5rem;
+  background-color: $bg-clear-tone;
+
+  h5 {
+    font-size: medium;
+  }
 }

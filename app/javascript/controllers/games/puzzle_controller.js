@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 const revealAndFadeAway = (target) => {
   target.classList.remove('d-none');
-  setTimeout(() => target.classList.add('d-none'), 3000);
+  setTimeout(() => target.classList.add('d-none'), 4000);
 }
 
 export default class extends Controller {

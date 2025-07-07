@@ -5,20 +5,11 @@
     <%= render(Titles::H2titleComponent.new(title: t('projects.professionals'))) %>
     <div class='container'>
       <div class="row">
-        <div class="col-12 col-md-6">
-          <%= render(Titles::H3titleComponent.new(title: 'Centre Mormal')) %>
-          <%= link_to 'https://centremormal.fr/', target: :_blank do %>
-            <div class='card-project cm'></div>
+          <% @projects_pro.each do |project| %>
+            <div class="col-12 col-md-6">
+              <%= render(Cards::ProjectProCardComponent.new(project:project)) %>
+            </div>
           <% end %>
-          <p>Site vitrine - conception et développement en tant que freelance - 2022</p>
-        </div>
-        <div class="col-12 col-md-6">
-          <%= render(Titles::H3titleComponent.new(title: 'Mon Projet Anah')) %>
-          <%= link_to 'https://monprojet.anah.gouv.fr/', target: :_blank do %>
-            <div class='card-project mpa'></div>
-          <% end %>
-          <p>Plateforme digitale- développement fullstack en équipe de 15 en méthode agile - 2023</p>
-        </div>
       </div>
     </div>
   </section>

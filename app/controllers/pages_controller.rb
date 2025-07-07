@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   end
 
   def projects
+    @projects_pro = Pages::Project.new.projects_pro
   end
 
   def contact

@@ -152,6 +152,45 @@ fr:
     utility: "Utilitaires"
     opensource: "J'adore l'esprit. Vivement une belle collaboration !"
 
+  centremormal:
+    description: "Site vitrine - conception et développement en tant que freelance"
+    testimonial: "Rémi nous a conçu et developpé le site web du Centre Mormal.
+      Il a été à l'écoute de nos besoins et sa solution fonctionne parfaitement depuis 2022.
+      Nous sommes autonomes pour faire évoluer les données concernant les praticiens avec simplicité et efficacité."
+    author: "Sylvie TONDEUX - Docteur"
+
+  monprojetanah:
+    description: "Plateforme digitale- développement fullstack en équipe de 15 en méthode agile"
+    testimonial1: "J'ai travaillé avec Rémi Tondeux sur la plateforme MonProjetAnah pendant plus d'un
+      an en tant que Designer et Product Designer.(30 janvier 2023 - 1 mars 2024)
+      Rémi est un professionnel méticuleux et proactif, qui a été un véritable atout pour le
+      projet. Dans les phases d'analyse des besoins, il a accompagné les équipes fonctionnelles et
+      a su nous challenger de façon pertinente et claire sur la partie technique.
+      Sa capacité à développer les fonctionnalités qui lui étaient confiées n'a jamais été re-
+      mise en question. Il a également participé activement à la mise en place de processus pertinents pour le bon fonctionnement de l'équipe agile en général.
+      Humainement, Rémi a toujours été un membre très apprécié de l'équipe, toujours
+      disponible et prêt à aider ses collègues. Je le recommande chaudement pour un poste dans votre entreprise."
+    author1: "Paul FARO - Webdesigner/BA"
+    testimonial2: "J'ai eu le plaisir de travailler avec Rémi en tant que collègue développeur sur un projet mené par One Point pour le compte de l'ANAH.
+      Dès le départ, j'ai apprécié collaborer avec lui, tant pour ses qualités humaines que pour ses compétences techniques.
+      Rémi est quelqu'un de fiable, attentif à la parole des autres et capable de se remettre en question. Il a joué un rôle actif et bienveillant dans les prises de décision collectives tout au long du projet, contribuant à un climat de travail constructif et respectueux.
+      Sur le plan technique, bien qu'il ait été recruté en tant que développeur junior, Rémi a rapidement su monter en compétences et devenir autonome sur des sujets complexes. Il a toujours su prendre du recul, écouter les retours de ses collègues plus expérimentés, et appliquer les conseils avec discernement. Cette posture lui a permis d'évoluer rapidement tout en restant très disponible pour l'équipe.
+      Je recommande Rémi sans aucune hésitation pour tout poste de développeur, en particulier dans un environnement où l'esprit d'équipe, l'humilité et la capacité d'adaptation sont essentiels."
+    author2: "Pierre DEVEIX - Developpeur"
+    testimonial3: "Avec Rémi, nous avons travaillé ensemble de juillet 2023 à février 2024 sur le projet SEL ANAH chez le client commun Onepoint, tous les deux en tant que développeurs.
+      Durant cette période, j'ai vraiment apprécié notre collaboration professionnelle. En tant que développeur junior, Rémi était curieux et à l'écoute pour améliorer ses compétences et renforcer son soutien à l'équipe. Son expérience dans son métier précédent lui permettait de bien communiquer sa connaissance du produit aux nouveaux arrivants comme je l'étais en juillet 2023. Il faisait preuve d'autonomie et de prise d'initiative dans son rôle de développeur.
+      Sur le plan personnel, le savoir-être de Rémi est très agréable. Il a de la considération pour les autres, il est capable d'avoir des échanges matures et sincères, et emprunt d'une bonne camaraderie pour profiter des moments de la vie.
+      Rémi est une personne avec qui j'aurais du plaisir à travailler de nouveau si l'occasion se présentait. C'est le genre de personne qui permet à une équipe de bien fonctionner et d'atteindre ses objectifs collectifs. Je recommande donc Rémi car je pense que vous ne pourrez qu'apprécier le côtoyer et collaborer avec lui."
+    author3: "Yann Boudey - Developpeur"
+    testimonial4: "J'ai collaboré avec Rémi dans le cadre d'un projet public, où nous occupions tous les deux des postes de développeurs fullstack Ruby on Rails, pendant 6 mois. Dès mon arrivée sur la mission, Rémi a su se montrer disponible, bienveillant et pédagogue.
+      Rémi était une personne impliquée dans le projet de part sa curiosité, ainsi que sa capacité à transmettre ses connaissances et d'autre part il était à l'écoute et prêt à aider les collègues si besoin.
+      Je recommande Rémi qui, je suis sûre, contribuera au développement du projet et à la dynamique de l'équipe."
+    author4: "Carine LE CHARLES - Developpeuse"
+    testimonial5: "J'ai eu l'occasion de travailler avec Rémi sur le projet SEL de l'ANAH au début de l'année 2024. Il était déjà en poste lorsque j'ai rejoint l'équipe.
+      Dès mon arrivée, Rémi a été l'une des personnes qui a le plus facilité mon intégration, en m'aidant à prendre mes marques et à comprendre les spécificités du projet. Il s'est toujours montré disponible, professionnel, patient et à l'écoute, répondant avec bienveillance à mes questions. Nos sessions de travail en pair-programming ont été particulièrement enrichissantes, tant sur le plan technique que sur le plan humain.
+      En résumé, Rémi est un collègue dont les compétences sont indéniables, et avec qui il est particulièrement agréable de collaborer grâce à sa communication fluide et son esprit d'équipe."
+    author5: "Kévin ABERGEL - Developpeur"
+
   rolldice:
     title: "Simulateur de dés"
     text1: "Ajoute autant de dés que nécessaire et lance les !"
