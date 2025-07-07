@@ -1,124 +1,130 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
-<%= render(Navigations::TableOfContentComponent.new(page: "uikit", sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio", "games"])) %>
-<div class="section-1">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.about') )) %>
-  <div class="container">
-    <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro1'))) %>
-    <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro2'))) %>
-    <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro3'))) %>
-    <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro4'))) %>
-    <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro5'))) %>
-    <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro6'))) %>
+<div class="uikit__grid">
+  <div class="table-of-content">
+    <%= render(Navigations::TableOfContentComponent.new(page: "uikit", sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio", "games"])) %>
   </div>
-</div>
-<div class="section-2">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.colors') )) %>
-  <div class="container">
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="color bg__major-dark-lighter"></div>
-      <div class="color bg__major-dark"></div>
-      <div class="color bg__major-gradient"></div>
-      <div class="color bg__major-light"></div>
+  <div class="uikit__grid-content container">
+    <div class="section-1">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.about') )) %>
+      <div class="container">
+        <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro1'))) %>
+        <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro2'))) %>
+        <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro3'))) %>
+        <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro4'))) %>
+        <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro5'))) %>
+        <%= render(Texts::ParagraphComponent.new(text: t('uikit.intro6'))) %>
+      </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="color bg__complementary-lighter"></div>
-      <div class="color bg__complementary"></div>
-      <div class="color bg__complementary-gradient"></div>
-      <div class="color bg__major-light-darker"></div>
+    <div class="section-2">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.colors') )) %>
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="color bg__major-dark-lighter"></div>
+          <div class="color bg__major-dark"></div>
+          <div class="color bg__major-gradient"></div>
+          <div class="color bg__major-light"></div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="color bg__complementary-lighter"></div>
+          <div class="color bg__complementary"></div>
+          <div class="color bg__complementary-gradient"></div>
+          <div class="color bg__major-light-darker"></div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="section-1">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.fonts') )) %>
-  <div class="container">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <h1 class="ff__handlee py-2">Handlee</h1>
-      <p class="ff__handlee"><%= @lorem %></p>
+    <div class="section-1">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.fonts') )) %>
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <h1 class="ff__handlee py-2">Handlee</h1>
+          <p class="ff__handlee"><%= @lorem %></p>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <h1 class="ff__heebo py-2">Heebo</h1>
+          <p class="ff__heebo"><%= @lorem %></p>
+        </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <h3 class="ff__press_start_2p py-2">Press start 2P</h3>
+          <p class="ff__press_start_2p fs__xxs"><%= @lorem %></p>
+        </div>
+      </div>
     </div>
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <h1 class="ff__heebo py-2">Heebo</h1>
-      <p class="ff__heebo"><%= @lorem %></p>
+    <div class='section-2'>
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.titles') )) %>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4"><%= render(Titles::H1titleComponent.new(title: "h1 title" )) %></div>
+          <div class="col-12 col-md-4"><%= render(Titles::H2titleComponent.new(title: "h2 title" )) %></div>
+          <div class="col-12 col-md-4"><%= render(Titles::H3titleComponent.new(title: "h3 title" )) %></div>
+        </div>
+      </div>
     </div>
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-      <h3 class="ff__press_start_2p py-2">Press start 2P</h3>
-      <p class="ff__press_start_2p fs__xxs"><%= @lorem %></p>
-    </div>
-  </div>
-</div>
-<div class='section-2'>
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.titles') )) %>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-md-4"><%= render(Titles::H1titleComponent.new(title: "h1 title" )) %></div>
-      <div class="col-12 col-md-4"><%= render(Titles::H2titleComponent.new(title: "h2 title" )) %></div>
-      <div class="col-12 col-md-4"><%= render(Titles::H3titleComponent.new(title: "h3 title" )) %></div>
-    </div>
-  </div>
-</div>
-<div class="section-1">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.texts') )) %>
- <div class="container">
-    <%= render(Texts::QuoteComponent.new(quote: t('quote.gears'), author: 'Steve Jobs')) %>
+    <div class="section-1">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.texts') )) %>
+    <div class="container">
+        <%= render(Texts::QuoteComponent.new(quote: t('quote.gears'), author: 'Steve Jobs')) %>
 
 
- </div>
-</div>
-<div class="section-2">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.buttons') )) %>
-  <div class='container'>
-    <div class="row">
-      <div class="col-12"><%= render(Buttons::CtaComponent.new(title: 'CTA nude')) %></div>
-      <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA dark', classes: 'btn-dark' )) %></div>
-      <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA light', classes: 'btn-light' )) %></div>
-      <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA complementary', classes: 'btn-complementary' )) %></div>
-      <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA dark', classes: 'btn-dark btn-big' )) %></div>
-      <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA light', classes: 'btn-light btn-big' )) %></div>
-      <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA complementary', classes: 'btn-complementary btn-big' )) %></div>
     </div>
-  </div>
-</div>
-<div class='section-1'>
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.cards') )) %>
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-3">
-        <%= render(Cards::CollapsedCardComponent.new(title: "Collapsed Card", subtitle: "subtitle", info: "info", description: "description")) %>
-      </div>
-      <div class="col-6 col-md-3">
-        <%= render(Cards::RadarCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
-      </div>
-      <div class="col-6 col-md-3">
-        <%= render(Cards::HistogramCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
+    </div>
+    <div class="section-2">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.buttons') )) %>
+      <div class='container'>
+        <div class="row">
+          <div class="col-12"><%= render(Buttons::CtaComponent.new(title: 'CTA nude')) %></div>
+          <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA dark', classes: 'btn-dark' )) %></div>
+          <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA light', classes: 'btn-light' )) %></div>
+          <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA complementary', classes: 'btn-complementary' )) %></div>
+          <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA dark', classes: 'btn-dark btn-big' )) %></div>
+          <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA light', classes: 'btn-light btn-big' )) %></div>
+          <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA complementary', classes: 'btn-complementary btn-big' )) %></div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="section-3">
-  <div class='container'>
-    <div class="row">
-      <div class="col-6 col-md-3"><%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %></div>
-      <div class="col-6 col-md-3"><%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %></div>
-      <div class="col-6 col-md-3"></div>
+    <div class='section-1'>
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.cards') )) %>
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <%= render(Cards::CollapsedCardComponent.new(title: "Collapsed Card", subtitle: "subtitle", info: "info", description: "description")) %>
+          </div>
+          <div class="col-6 col-md-3">
+            <%= render(Cards::RadarCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
+          </div>
+          <div class="col-6 col-md-3">
+            <%= render(Cards::HistogramCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class='section-2'>
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.lists') )) %>
-  <div class='container'>
-    <%= render(Lists::TimelineComponent.new(list: @palmares )) %>
-  </div>
-</div>
-<div class="section-1">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.audio') )) %>
-  <div class="container">
-    <%= render(Audios::PlayerComponent.new(music: 'action-game.mp3')) %>
-  </div>
-</div>
-<div class="section-2">
-  <%= render(Titles::H2titleComponent.new(title: t('uikit.games') )) %>
-  <div class="container">
-    <%= render(Others::PreviewComponent.new) %>
+    <div class="section-3">
+      <div class='container'>
+        <div class="row">
+          <div class="col-6 col-md-3"><%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %></div>
+          <div class="col-6 col-md-3"><%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %></div>
+          <div class="col-6 col-md-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class='section-2'>
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.lists') )) %>
+      <div class='container'>
+        <%= render(Lists::TimelineComponent.new(list: @palmares )) %>
+      </div>
+    </div>
+    <div class="section-1">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.audio') )) %>
+      <div class="container">
+        <%= render(Audios::PlayerComponent.new(music: 'action-game.mp3')) %>
+      </div>
+    </div>
+    <div class="section-2">
+      <%= render(Titles::H2titleComponent.new(title: t('uikit.games') )) %>
+      <div class="container">
+        <%= render(Others::PreviewComponent.new) %>
+      </div>
+    </div>
   </div>
 </div>
 <%= render(Navigations::FooterComponent.new) %>

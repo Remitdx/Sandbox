@@ -41,13 +41,15 @@
         <%= link_to games_puissance4s_path, class: "game-card connect4", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Connect4.png' %>
         <% end %>
-        <div class="game-card next">
-          <%= image_tag 'flags/flagFR.svg' %>
-        </div>
+        <%= link_to games_puzzles_path, class: "game-card sliding-puzzle" do %>
+          <%= image_tag 'projects/sliding-puzzle.jpg' %>
+        <% end %>
+        <%= link_to 'https://remitdx.github.io/react-rpg/', class: "game-card react-rpg" do %>
+          <%= image_tag 'projects/react_rpg.jpg' %>
+        <% end %>
       </div>
     </div>
   </section>
-    <%= link_to t('puzzle.title'), games_puzzles_path %>
     <%= link_to t('tournament.title'), utilities_tournaments_path %>
   <section class='section-1'>
     <%= render(Titles::H2titleComponent.new(title: "Open source")) %>
