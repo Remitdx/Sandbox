@@ -184,10 +184,13 @@ fr:
 
   puzzle:
     title: "Puzzle glissant"
+    hi: "Salut"
     best5: "Meilleur joueur puzzle 5x5"
     best4: "Meilleur joueur puzzle 4x4"
     best3: "Meilleur joueur puzzle 3x3"
+    move: " coup"
     moves: " coups"
+    hint: "Indice"
 
   connect4:
     title: "Puissance 4"

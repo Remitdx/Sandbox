@@ -1,3 +1,7 @@
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
 .puzzle-new {
   margin: 0 auto;
   width: 60%;
@@ -12,10 +16,33 @@
 }
 
 .puzzle-wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  .full-image {
+    aspect-ratio: 1/1;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: fadeOut 1.5s linear 1.5s forwards;
+  }
+  .image-3 {
+    background-image: url('games/puzzle/3.png');
+  }
+  .image-4 {
+    background-image: url('games/puzzle/4.png');
+  }
+  .image-5 {
+    background-image: url('games/puzzle/5.png');
+  }
 
   .puzzle {
     display: grid;
     border: 2px solid $major-dark;
+    z-index: -1;
 
     .puzzle-tile {
       border: 1px solid $major-dark;
@@ -56,8 +83,7 @@
 
 @media (min-width: 40em) {
 
-  .puzzle, .puzzle-new, .best-scores {
-    margin: 0 auto;
-    width: 30%;
+  .puzzle-wrapper {
+    width: 60vh;
   }
 }

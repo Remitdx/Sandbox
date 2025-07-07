@@ -1,13 +1,14 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('puzzle.title') )) %>
-<div class="section-2">
-  <div class="container">
+<div class="section-2 pt-3">
+  <div data-controller="games--puzzle" class="container d-flex flex-column flex-md-row justify-content-around align-items-center">
     <div>
-      <p>Hello <%= @puzzle.pseudo %> !</p>
+      <p><%=t('puzzle.hi')%> <%= @puzzle.pseudo %> !</p>
       <p><%= 'WIN !' if @puzzle.gameover == 0 %></p>
-      <p><%= @puzzle.counter.to_s + t('puzzle.moves').pluralize if @puzzle.counter > 0 %></p>
+      <p><%= @puzzle.counter.to_s + t('puzzle.move') if @puzzle.counter == 1 %></p>
+      <p><%= @puzzle.counter.to_s + t('puzzle.move').pluralize if @puzzle.counter > 1 %></p>
     </div>
-    <div class="puzzle-wrapper py-3">
+    <div class="puzzle-wrapper m-3">
       <div class="puzzle size-<%= @puzzle.size %>">
         <% i = 0 %>
         <% @puzzle.value.each do |tile| %>
@@ -17,9 +18,10 @@
           <% i += 1 %>
         <% end %>
       </div>
-      <div class="model">
-        <% # ajouter la possibilité de voir l'image entière en aide %>
-      </div>
+      <div data-games--puzzle-target="image" class="d-none full-image image-<%=@puzzle.size%>"> </div>
+    </div>
+    <div data-action='click->games--puzzle#hint'>
+      <%= render(Buttons::CtaComponent.new(title: t('puzzle.hint'), classes:"btn-light" )) %>
     </div>
   </div>
 </div>

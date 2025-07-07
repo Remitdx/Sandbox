@@ -195,10 +195,13 @@ en:
 
   puzzle:
     title: "Sliding puzzle"
+    hi: "Hi"
     best5: "Best player puzzle 5x5"
     best4: "Best player puzzle 4x4"
     best3: "Best player puzzle 3x3"
+    move: " move"
     moves: " moves"
+    hint: "Hint"
 
   connect4:
     title: "Connect 4"
