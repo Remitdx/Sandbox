@@ -9,6 +9,17 @@ module Pages
       [ centre_mormal, mon_projet_anah ]
     end
 
+    def project_placeholder
+      {
+        "title" => I18n.t("placeholder.title"),
+        "classes" => "project-placeholder",
+        "description" => I18n.t("placeholder.description"),
+        "testimonials" => [],
+        "period" => Time.now.strftime("%Y"),
+        "link" => ''
+      }
+    end
+
     private
 
     def centre_mormal

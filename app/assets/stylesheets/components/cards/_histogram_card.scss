@@ -1,10 +1,10 @@
 .histogram-card {
   background: $bg-cream-tone;
-  border-radius: 2px;
+  border-radius: 0.5rem;
   box-shadow: 0 1px 2px 2px $shadow;
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 0.5rem;
 
   .bar {
     position: absolute;
@@ -20,7 +20,7 @@
 
   @for $i from 1 through 9 {
     .slider-#{$i} {
-      background: $bg-cream-tone;
+      background: $bg-clear-tone;
       width: calc((10 - #{$i})*10%);
     }
   }

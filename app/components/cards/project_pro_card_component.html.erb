@@ -1,10 +1,35 @@
-<div>
-  <h3><%= @title %></h3>
-  <div class="project-pro <%= @classes %>"></div>
-  <p><%= @description %></p>
-  <p><%= @period %></p>
-  <% @testimonials.each do |t| %>
-    <%= render(Texts::QuoteComponent.new(quote: t[:quote], author: t[:author])) %>
-  <% end %>
-  <%= link_to "Visit", @link, target: :_blank %>
+<div data-controller="components--cards--flipcard" class="card__project-pro">
+  <div data-components--cards--flipcard-target="card" class="flip-card">
+    <div class="flip-card-front py-1">
+      <div class="d-flex justify-content-between align-items-center px-2 py-1">
+        <h3><%= @title %></h3>
+        <p><%= @period %></p>
+      </div>
+      <div class="project-pro-bg px-2 my-3 <%= @classes %>"></div>
+      <div class="px-2 py-1">
+        <p><%= @description %></p>
+      </div>
+      <div class="d-flex justify-content-between align-items-center px-2 py-1">
+        <% if @link.empty? %>
+          <%= link_to contact_path, class:'text-center' do %>
+            <%= render(Buttons::CtaComponent.new(title: 'Contact', classes:"btn-light" )) %>
+          <% end %>
+        <% else %>
+          <%= link_to @link, target: :_blank do %>
+            <%= render(Buttons::CtaComponent.new(title: t('projects.buttons.visit'), classes:"btn-dark" )) %>
+          <% end %>
+        <% end %>
+        <% unless @testimonials.empty? %>
+          <div data-action="click->components--cards--flipcard#flip">
+            <%= render(Buttons::CtaComponent.new(title: t('projects.buttons.testimonials'), classes:"btn-complementary" )) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div data-action="click->components--cards--flipcard#flip" class="flip-card-back py-2">
+      <% @testimonials.each do |t| %>
+        <%= render(Texts::QuoteComponent.new(quote: t[:quote], author: t[:author])) %>
+      <% end %>
+    </div>
+  </div>
 </div>

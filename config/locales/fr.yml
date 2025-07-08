@@ -151,16 +151,25 @@ fr:
     games: 'Jeux'
     utility: "Utilitaires"
     opensource: "J'adore l'esprit. Vivement une belle collaboration !"
+    buttons:
+      visit: "Visiter"
+      testimonials: "Recommandations"
+
+  placeholder:
+    title: "Votre projet ?"
+    description: "Parlons de vos besoins."
 
   centremormal:
-    description: "Site vitrine - conception et développement en tant que freelance"
+    description: "Site vitrine pour maison de santé, avec CRUD simple pour la gestion des praticiens. Conception et développement en freelance."
     testimonial: "Rémi nous a conçu et developpé le site web du Centre Mormal.
       Il a été à l'écoute de nos besoins et sa solution fonctionne parfaitement depuis 2022.
       Nous sommes autonomes pour faire évoluer les données concernant les praticiens avec simplicité et efficacité."
     author: "Sylvie TONDEUX - Docteur"
 
   monprojetanah:
-    description: "Plateforme digitale- développement fullstack en équipe de 15 en méthode agile"
+    description: "Plateforme digitale de l'état pour la distribution d'une quinzaine d'aides à la rénovation des logements privés (thermique et accessibilité).
+      Comptes et autorisations pour les différents utilisateurs (demandeurs, entreprises, instructeurs, etc ...).
+      Developpement Fullstack et intégration dans une équipe agile de 15 personnes"
     testimonial1: "J'ai travaillé avec Rémi Tondeux sur la plateforme MonProjetAnah pendant plus d'un
       an en tant que Designer et Product Designer.(30 janvier 2023 - 1 mars 2024)
       Rémi est un professionnel méticuleux et proactif, qui a été un véritable atout pour le

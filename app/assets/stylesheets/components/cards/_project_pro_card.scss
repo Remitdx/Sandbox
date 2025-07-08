@@ -1,0 +1,56 @@
+.card__project-pro {
+  perspective: 1000px;
+  height: 80vh;
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card {
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border: 2px solid $major-dark;
+      background-color: $bg-cream-tone;
+      border-radius: 0.5rem;
+      box-shadow: 2px 2px 2px 0 $shadow;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .project-pro-bg {
+      aspect-ratio: 16/9;
+      width: 100%;
+      background-size: cover;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      cursor: pointer;
+    }
+  }
+}
+
+.cm {
+  background-image: url(projects/centremormal.jpg);
+}
+
+.mpa {
+  background-image: url(projects/mpa.jpg);
+}
+
+.project-placeholder {
+  background-image: url(projects/placeholder.jpg);
+}

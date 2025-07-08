@@ -5,11 +5,14 @@
     <%= render(Titles::H2titleComponent.new(title: t('projects.professionals'))) %>
     <div class='container'>
       <div class="row">
-          <% @projects_pro.each do |project| %>
-            <div class="col-12 col-md-6">
-              <%= render(Cards::ProjectProCardComponent.new(project:project)) %>
-            </div>
-          <% end %>
+        <% @projects_pro.each do |project| %>
+          <div class="col-12 col-md-4">
+            <%= render(Cards::ProjectProCardComponent.new(project:project)) %>
+          </div>
+        <% end %>
+        <div class="col-12 col-md-4">
+          <%= render(Cards::ProjectProCardComponent.new(project:@project_placeholder)) %>
+        </div>
       </div>
     </div>
   </section>

@@ -1,6 +1,7 @@
 .radar-card {
   background: $bg-cream-tone;
-  border-radius: 26px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
   box-shadow: 0 1px 2px 2px $shadow;
 
   .wrapper__radar {

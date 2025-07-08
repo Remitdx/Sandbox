@@ -1,10 +1,10 @@
-<div class='histogram-card text-center <%= @classes %>' data-skills-target='classic'>
+<div class='histogram-card <%= @classes %>' data-skills-target='classic'>
   <% if @title.present? %>
-    <h5><%= @title %></h5>
-    <% end %>
-  <div class='row'>
+    <h5 class="text-center"><%= @title %></h5>
+  <% end %>
+  <div class='row g-0'>
     <% @categories.each do |k,v| %>
-      <div class='col-6 text-center'>
+      <div class='col-6'>
         <p><%= k %></p>
       </div>
       <div class='col-6 position-relative'>

@@ -18,6 +18,7 @@ class PagesController < ApplicationController
 
   def projects
     @projects_pro = Pages::Project.new.projects_pro
+    @project_placeholder = Pages::Project.new.project_placeholder
   end
 
   def contact
