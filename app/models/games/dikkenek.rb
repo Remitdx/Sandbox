@@ -16,6 +16,16 @@ module Games
       self.how_many_good_answers
     end
 
+    def average_players_accuracy
+      extracted_accuracies = Games::Dikkenek.pluck(:accuracy).reject {|e| e.nil? }
+      (extracted_accuracies.sum / extracted_accuracies.size).round(1)
+    end
+
+    def average_players_timer
+      extracted_timers = Games::Dikkenek.pluck(:answers).reject {|e| e.empty? }.map {|e| e.last[:delay]}
+      (extracted_timers.sum / (extracted_timers.size * 1000.00)).round(2)
+    end
+
     def average_difficulty
       return self if quotes.empty?
 
@@ -49,7 +59,7 @@ module Games
           score += (608 - gap) * (1 + self.quotes[i][:difficulty] / 10)
         end
       end
-      self.score = score * 40000/self.answers.last[:delay]
+      self.score = score * 60000/self.answers.last[:delay]
       self
     end
 

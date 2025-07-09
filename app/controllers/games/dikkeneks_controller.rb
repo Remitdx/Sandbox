@@ -22,6 +22,8 @@ module Games
     def show
       @characters = Games::Dikkeneks::Data::CHARACTERS.sort
       @dikkenek = Games::Dikkenek.find(params[:id])
+      @average_players_accuracy = @dikkenek.average_players_accuracy
+      @average_players_timer = @dikkenek.average_players_timer
     end
 
     def update

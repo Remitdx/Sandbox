@@ -27,20 +27,24 @@ export default class extends Controller {
     this.quotesTargets[index].classList.remove("d-none");
   }
 
-  previous() {
+  previous(e) {
+    e.target.classList.add("bump")
     const index = this.stepsTargets.findIndex(step => step.classList.contains("active"));
     this.stepsTargets[index].classList.remove("active");
     this.stepsTargets[(index + 9) % 10].classList.add("active");
     this.quotesTargets[index].classList.add("d-none");
     this.quotesTargets[(index + 9) % 10].classList.remove("d-none");
+    setTimeout(() => e.target.classList.remove('bump'), 200);
   }
 
-  next() {
+  next(e) {
+    e.target.classList.add("bump")
     const index = this.stepsTargets.findIndex(step => step.classList.contains("active"));
     this.stepsTargets[index].classList.remove("active");
     this.stepsTargets[(index + 1) % 10].classList.add("active");
     this.quotesTargets[index].classList.add("d-none");
     this.quotesTargets[(index + 1) % 10].classList.remove("d-none");
+    setTimeout(() => e.target.classList.remove('bump'), 200);
   }
 
   connect() {

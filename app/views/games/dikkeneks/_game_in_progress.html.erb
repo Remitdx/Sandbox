@@ -18,7 +18,7 @@
             <% characters.each do |character| %>
               <div class="col-4 col-md-2 d-flex flex-column align-items-center">
                 <%= form.label :"characters-#{i}", character %>
-                <%= image_tag "dikkenek/#{character}.jpg", class: 'dikkenek-avatar', data: { action: "click->games--dikkenek#radioButtons", games__dikkenek_target: "characters" } %>
+                <%= image_tag "dikkenek/#{character}.jpg", class: 'clickable dikkenek-avatar', data: { action: "click->games--dikkenek#radioButtons", games__dikkenek_target: "characters" } %>
                 <%= form.radio_button :"characters-#{i}", character, required: true, class: "d-none" %>
               </div>
             <% end %>

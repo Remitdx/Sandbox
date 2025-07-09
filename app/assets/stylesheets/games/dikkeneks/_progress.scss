@@ -1,5 +1,13 @@
-.dikkenek-progress {
+@keyframes bump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 
+.dikkenek-progress {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(dikkenek/Dikkenek.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,15 +54,20 @@
       input[type='range'] {
         width: 80%;
         height: 10%;
+        cursor: grab;
       }
     }
 
+    .bump {
+      animation: bump 0.1s linear;
+    }
     .dikkenek-submit {
       height: 15vh;
 
       i {
         font-size: 3rem;
         color: $bg-cream-tone;
+        cursor: pointer;
       }
     }
 
