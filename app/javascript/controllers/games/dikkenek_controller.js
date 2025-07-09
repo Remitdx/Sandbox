@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["start", "end", "quotes", "steps", "characters"]
+  static targets = ["start", "end", "quotes", "steps", "characters", "submit"]
 
   radioButtons(e) {
     e.target.nextElementSibling.checked = true;
@@ -13,10 +13,18 @@ export default class extends Controller {
     e.target.classList.add("dikkenek-selected");
     const index = e.target.parentElement.parentElement.parentElement.id.match(/\d+/)[0] - 1;
     this.stepsTargets[index].classList.add("checked")
+    let unlock = true
+    this.stepsTargets.forEach(step => {
+      unlock = !step.classList.contains('checked') ? false : unlock
+    })
+    if (unlock) {
+      this.submitTarget.disabled = false
+      this.submitTarget.classList.add('btn-complementary')
+    }
   }
 
   stepper(e) {
-    const index = e.target.innerHTML - 1 ;
+    const index = e.currentTarget.innerHTML.match(/\d+/)[0] - 1 ;
     this.stepsTargets.forEach(step => {
       step.classList.remove("active");
     });

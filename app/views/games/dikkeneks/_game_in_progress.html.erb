@@ -3,7 +3,7 @@
     <% for i in 1..10 do %>
       <div class="step d-flex align-items-center justify-content-center <%= "active" if i == 1 %>" data-games--dikkenek-target="steps" data-action="click->games--dikkenek#stepper"><p><%= i %></p></div>
       <div class="tick"><%= i == 10 ? "" : "-" %></div>
-    <% end%>
+    <% end %>
   </div>
   <div>
     <%= form_with url: games_dikkenek_path(dikkenek), method: :put do |form| %>
@@ -32,7 +32,7 @@
     </div>
     <div class="dikkenek-submit d-flex justify-content-around align-items-center">
       <i class="fa-solid fa-circle-arrow-left" data-action="click->games--dikkenek#previous"></i>
-      <%= form.submit "Valider", class: "btn-cta btn-big btn-complementary", data: { action: "click->games--dikkenek#submitForm" } %>
+      <%= form.submit "Valider", disabled: true, class: "btn-cta btn-big", data: { games__dikkenek_target: "submit", action: "click->games--dikkenek#submitForm" } %>
       <i class="fa-solid fa-circle-arrow-right" data-action="click->games--dikkenek#next"></i>
     </div>
     <% end %>
