@@ -1,6 +1,10 @@
-<ul class="sticky-top">
-  <h5><%= t('uikit.tableofcontent') %></h5>
-  <% @sections.each do |subsection| %>
-    <li><%= link_to t("uikit.#{subsection}"), constructed_path(@page, subsection) %></li>
-  <% end%>
-</ul>
+<div class="table-of-content flex-shrink-1">
+  <ul class="sticky-top">
+    <h5><%= t('uikit.tableofcontent') %></h5>
+    <% @sections.each do |subsection| %>
+      <%= link_to constructed_path(@language, @page, t("uikit.#{subsection}")) do %>
+        <li data-tableofcontent-target="items"><%=t("uikit.#{subsection.downcase}")%></li>
+      <% end %>
+    <% end%>
+  </ul>
+</div>

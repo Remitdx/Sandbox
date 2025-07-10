@@ -1,12 +1,12 @@
 module Cards
   class ProjectProCardComponent < ViewComponent::Base
     def initialize(project: {})
-      @title = project["title"]
-      @classes = project["classes"]
-      @description = project["description"]
-      @testimonials = project["testimonials"]
-      @period = project["period"]
-      @link = project["link"]
+      @title = project[:title] || "Title?"
+      @classes = project[:classes]
+      @description = project[:description] || "missing decription"
+      @testimonials = project[:testimonials] || []
+      @period = project[:period] || "Date?"
+      @link = project[:link] || ""
     end
   end
 end
