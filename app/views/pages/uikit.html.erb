@@ -4,7 +4,7 @@
   <%= render(Navigations::TableOfContentComponent.new(
       url: request.original_url,
     page: "uikit",
-    sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists", "audio"]
+    sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists"]
   )) %>
   <div data-action="scrollend@window->tableofcontent#followscroll" class="flex-grow-1">
     <div data-tableofcontent-target="sections" class="section-2">
@@ -114,12 +114,6 @@
       <%= render(Titles::H2titleComponent.new(title: t('uikit.lists') )) %>
       <div class='container'>
         <%= render(Lists::TimelineComponent.new(list: @palmares )) %>
-      </div>
-    </div>
-    <div data-tableofcontent-target="sections" class="section-2">
-      <%= render(Titles::H2titleComponent.new(title: t('uikit.audio') )) %>
-      <div class="container">
-        <%= render(Audios::PlayerComponent.new(music: 'action-game.mp3')) %>
       </div>
     </div>
   </div>
