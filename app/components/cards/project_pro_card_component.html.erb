@@ -1,6 +1,6 @@
-<div data-controller="components--cards--flipcard" class="card__project-pro">
-  <div data-components--cards--flipcard-target="card" class="flip-card">
-    <div class="flip-card-front py-1">
+<div data-controller="components--cards--flipcard" data-components--cards--flipcard-target="card" class="card__project-pro">
+  <div data-components--cards--flipcard-target="flipcard" class="flip-card">
+    <div data-components--cards--flipcard-target="cardfront"class="flip-card-front py-1">
       <div class="d-flex justify-content-between align-items-center px-2 py-1">
         <h3><%= @title %></h3>
         <p><%= @period %></p>
@@ -20,13 +20,13 @@
           <% end %>
         <% end %>
         <% unless @testimonials.empty? %>
-          <div data-action="click->components--cards--flipcard#flip">
+          <div data-action="click->components--cards--flipcard#fliptoback">
             <%= render(Buttons::CtaComponent.new(title: t('projects.buttons.testimonials'), classes:"btn-complementary" )) %>
           </div>
         <% end %>
       </div>
     </div>
-    <div data-action="click->components--cards--flipcard#flip" class="flip-card-back py-2">
+    <div data-components--cards--flipcard-target="cardback" data-action="click->components--cards--flipcard#fliptofront" class="flip-card-back py-2">
       <% @testimonials.each do |t| %>
         <%= render(Texts::QuoteComponent.new(quote: t[:quote], author: t[:author])) %>
       <% end %>
