@@ -2,7 +2,7 @@ module Utilities
   class RollsController < ApplicationController
     include Games
 
-    before_action :set_roll, :set_dices, only: [ :show, :update ]
+    before_action :set_roll, only: [ :show, :update ]
 
     def create
       @roll = Utilities::Roll.create
@@ -10,12 +10,14 @@ module Utilities
     end
 
     def show
+      @dices = Utilities::RollDice.where(roll_id: @roll).ordered
       @scores = scores_calculation(@dices)
     end
 
     def update
+      @dices = Utilities::RollDice.includes([:roll]).where(roll_id: @roll).ordered
       roll_all_dices(@dices)
-      Utilities::RollDice.transaction do
+      Utilities::RollDice.includes([:roll]).transaction do
         @dices.each { |dice| dice.save }
       end
       @scores = scores_calculation(@dices)
@@ -48,10 +50,6 @@ module Utilities
 
     def set_roll
       @roll = Utilities::Roll.find(params[:id])
-    end
-
-    def set_dices
-      @dices = Utilities::RollDice.where(roll_id: @roll).ordered
     end
 
     def roll_all_dices(dices)
