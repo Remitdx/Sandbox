@@ -18,6 +18,7 @@ module Games
 
     def average_players_accuracy
       extracted_accuracies = Games::Dikkenek.pluck(:accuracy).reject {|e| e.nil? }
+      return 0 if extracted_accuracies.empty?
       (extracted_accuracies.sum / extracted_accuracies.size).round(1)
     end
 
