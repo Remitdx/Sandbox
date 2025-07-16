@@ -2,7 +2,7 @@
 <%= render(Titles::H1titleComponent.new(title: t('title_uikit') )) %>
 <div data-controller="tableofcontent" class="d-flex">
   <%= render(Navigations::TableOfContentComponent.new(
-      url: request.original_url,
+    url: request.original_url,
     page: "uikit",
     sections: ["about", "colors", "fonts", "titles", "texts", "buttons", "cards", "lists"]
   )) %>
@@ -71,14 +71,13 @@
     <div data-tableofcontent-target="sections" class="section-2">
       <%= render(Titles::H2titleComponent.new(title: t('uikit.buttons') )) %>
       <div class='container'>
-        <div class="row">
-          <div class="col-12"><%= render(Buttons::CtaComponent.new(title: 'CTA nude')) %></div>
-          <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA dark', classes: 'btn-dark' )) %></div>
-          <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA light', classes: 'btn-light' )) %></div>
-          <div class="col-6 col-md-3"><%= render(Buttons::CtaComponent.new(title: 'CTA complementary', classes: 'btn-complementary' )) %></div>
-          <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA dark', classes: 'btn-dark btn-big' )) %></div>
-          <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA light', classes: 'btn-light btn-big' )) %></div>
-          <div class='col-6 col-md-3'><%= render(Buttons::CtaComponent.new(title: 'Big CTA complementary', classes: 'btn-complementary btn-big' )) %></div>
+        <div class="row gy-2">
+          <div class="col-12 col-md-4"><%= render(Buttons::CtaComponent.new(title: 'CTA dark', classes: 'btn-dark' )) %></div>
+          <div class="col-12 col-md-4"><%= render(Buttons::CtaComponent.new(title: 'CTA light', classes: 'btn-light' )) %></div>
+          <div class="col-12 col-md-4"><%= render(Buttons::CtaComponent.new(title: 'CTA complementary', classes: 'btn-complementary' )) %></div>
+          <div class='col-12 col-md-4'><%= render(Buttons::CtaComponent.new(title: 'Big CTA dark', classes: 'btn-dark btn-big' )) %></div>
+          <div class='col-12 col-md-4'><%= render(Buttons::CtaComponent.new(title: 'Big CTA light', classes: 'btn-light btn-big' )) %></div>
+          <div class='col-12 col-md-4'><%= render(Buttons::CtaComponent.new(title: 'Big CTA complementary', classes: 'btn-complementary btn-big' )) %></div>
         </div>
       </div>
     </div>
@@ -86,16 +85,16 @@
       <%= render(Titles::H2titleComponent.new(title: t('uikit.cards') )) %>
       <div class="container">
         <div class="row g-3">
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-4">
             <%= render(Cards::CollapsedCardComponent.new(title: "Collapsed Card", subtitle: "subtitle", info: "info", description: "description")) %>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-4">
             <%= render(Cards::RadarCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-4">
             <%= render(Cards::HistogramCardComponent.new(title: "Team strenghs", categories: { teamplay: 8, attack: 6, defense: 7, freekick: 4, spirit: 9 })) %>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="col-12 col-md-4">
             <%= render(Cards::ProjectProCardComponent.new(project: { title: "New project", period: Time.now.strftime("%Y"), classes: 'project-placeholder', description:"describe your project", link: root_path, testimonials: [quote:"E=mc²", author:"Einstein"] })) %>
           </div>
         </div>
@@ -104,9 +103,8 @@
     <div class="section-3">
       <div class='container'>
         <div class="row">
-          <div class="col-6 col-md-3"><%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %></div>
-          <div class="col-6 col-md-3"><%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %></div>
-          <div class="col-6 col-md-3"></div>
+          <div class="col-12 col-md-3"><%= render(Cards::NeonCardComponent.new(whatever: "Neon Card")) %></div>
+          <div class="col-12 col-md-3"><%= render(Cards::LsdCardComponent.new(whatever: "LSD Card")) %></div>
         </div>
       </div>
     </div>
