@@ -143,10 +143,20 @@ en:
 
   ## PROJETCS ##
   projects:
-    professionals: 'Professionals'
-    games: 'Games'
-    utility: "Utility"
-    opensource: "Love the spirit around it. I can't wait to start contributing !"
+    professionals:
+      title: 'Professionals'
+      intro: "Here are the professional projects I've led or participated in.
+        The testimonials section describes the experiences from my clients, partners, or colleagues point of vue."
+    games:
+      title: 'Games'
+      intro: "This section is the result of numerous side projects.
+        The experience here is mostly fun, both during development and once the game is playable."
+    utility:
+      title: "Utility"
+      intro: "Below are some personal projects for practical purposes. Forgot your dices? I might have what you need!"
+    opensource:
+      title: "Open source"
+      intro: "I love the spirit and generosity behind this approach. I would love to take part in some projects very soon!"
     buttons:
       visit: "Visit"
       testimonials: "Testimonials"

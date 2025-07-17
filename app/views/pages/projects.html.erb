@@ -2,8 +2,9 @@
 <main>
   <%= render(Titles::H1titleComponent.new(title: t('title_projects'))) %>
   <section class='section-1'>
-    <%= render(Titles::H2titleComponent.new(title: t('projects.professionals'))) %>
+    <%= render(Titles::H2titleComponent.new(title: t('projects.professionals.title'))) %>
     <div class='container'>
+      <%= render(Texts::ParagraphComponent.new(text: t('projects.professionals.intro'))) %>
       <div class="row gy-3">
         <% @projects_pro.each do |project| %>
           <div class="col-12 col-md-4">
@@ -17,8 +18,9 @@
     </div>
   </section>
   <section class='section-2'>
-    <%= render(Titles::H2titleComponent.new(title: t('projects.games'))) %>
+    <%= render(Titles::H2titleComponent.new(title: t('projects.games.title'))) %>
     <div class='container'>
+      <%= render(Texts::ParagraphComponent.new(text: t('projects.games.intro'))) %>
       <div class="bento-grid">
         <%= link_to games_morbacs_path, class: "bento-grid_card tictactoe", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/TicTacToe_carre.png' %>
@@ -42,8 +44,9 @@
     </div>
   </section>
   <section class="section-1">
+    <%= render(Titles::H2titleComponent.new(title: t('projects.utility.title'))) %>
     <div class="container">
-      <%= render(Titles::H2titleComponent.new(title: t('projects.utility'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('projects.utility.intro'))) %>
       <div class="bento-grid">
         <%= link_to utilities_rolls_path, class: "bento-grid_card dice-roller", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Dice_roller.png' %>
@@ -53,9 +56,9 @@
     </div>
   </section>
   <section class='section-2'>
-    <%= render(Titles::H2titleComponent.new(title: "Open source")) %>
+    <%= render(Titles::H2titleComponent.new(title: t('projects.opensource.title'))) %>
     <div class="container">
-      <p><%= t('projects.opensource') %></p>
+      <%= render(Texts::ParagraphComponent.new(text: t('projects.opensource.intro'))) %>
     </div>
   </section>
 </main>

@@ -146,10 +146,20 @@ fr:
   ## PROJETCS ##
 
   projects:
-    professionals: 'Professionnels'
-    games: 'Jeux'
-    utility: "Utilitaires"
-    opensource: "J'adore l'esprit. Vivement une belle collaboration !"
+    professionals:
+      title: 'Professionnels'
+      intro: "Voici les projets professionels que j'ai mené ou auxquels j'ai participé.
+       La partie recommandations relate l'expérience vécues par mes clients, partenaires ou collègues."
+    games:
+      title: 'Jeux'
+      intro: "Cette section résulte de nombreux side-projects.
+        L'experience ici est principalement ludique, aussi bien pendant le développement q'une fois le produit terminé."
+    utility:
+      title: "Utilitaires"
+      intro: "Ci-dessous, des projets personnels à des fins utilitaires. Besoin de dés ? J'ai exactement ce qu'il vous faut !"
+    opensource:
+      title: "Open source"
+      intro: "J'adore l'esprit et la générosité derrière cette démarche. J'aimerai prendre part à des projets très prochainement !"
     buttons:
       visit: "Visiter"
       testimonials: "Recommandations"
