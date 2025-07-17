@@ -17,7 +17,6 @@ en:
   ## FOOTER ##
   footer:
     madeby: 'Made by myself'
-    cgu: 'Conditions of use'
 
   ## PHILOSOPHY ##
   intro:
@@ -236,7 +235,7 @@ en:
       hello3: "In case you still want to go out you need to enter a 4 digits password."
 
   dikkenek:
-    title: "Dikkenek (french only)"
+    title: "Dikkenek"
 
   tournament:
     title: "Tournament toolbox"

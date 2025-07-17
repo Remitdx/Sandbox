@@ -4,10 +4,9 @@
   <h5 class="d-flex align-items-center pages-title">Pages</h5>
   <h5 class="d-flex align-items-center games-title"><%= t("projects.games") %></h5>
   <h5 class="d-flex align-items-center utility-title"><%= t("projects.utility") %></h5>
-  <h5 class="d-flex align-items-center legal-title">Legal</h5>
-  <div class="d-flex align-items-center bottom-part"></div>
+  <div class="d-flex align-items-center middle-part"></div>
   <div class="d-flex align-items-center footer-avatar"></div>
-  <div class="contact footer-detail">
+  <div class="contact py-2">
     <p><%= link_to 'https://github.com/Remitdx', target: :_blank do %>
         <p>Github <i class="fa-brands fa-github"></i></p>
       <% end %></p>
@@ -17,30 +16,32 @@
     <p><%= link_to 'Malt', 'https://www.malt.fr/profile/remitondeux', target: :_blank %></p>
     <p><%= link_to 'Codingame','https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', target: :_blank %></p>
   </div>
-  <div class="pages footer-detail">
+  <div class="pages py-2">
     <p><%= link_to t('title_home'), root_path %></p>
     <p><%= link_to t('title_philosophy'), philosophy_path %></p>
     <p><%= link_to t('title_cv'), cv_path %></p>
     <p><%= link_to t('title_projects'), projects_path %></p>
     <p><%= link_to t('title_uikit'), uikit_path %></p>
   </div>
-  <div class="games footer-detail">
+  <div class="games py-2">
     <p><%= link_to t('dikkenek.title'), games_dikkeneks_path %></p>
+    <p><%= link_to 'React RPG', url:'https://remitdx.github.io/react-rpg/' %></p>
     <p><%= link_to t('morbac.title'), games_morbacs_path, data: { turbo_method: :post } %></p>
-    <p><%= link_to t('escapegame.title'), games_escapes_path, data: { turbo_method: :post } %></p>
-    <p><%= link_to t('puzzle.title'), games_puzzles_path %></p>
-    <p><%= link_to t('connect4.title'), games_puissance4s_path, data: { turbo_method: :post } %></p>
   </div>
-  <div class="utility footer-detail">
+  <div class="games-2 py-2">
+    <p><%= link_to t('connect4.title'), games_puissance4s_path, data: { turbo_method: :post } %></p>
+    <p><%= link_to t('puzzle.title'), games_puzzles_path %></p>
+    <p><%= link_to t('escapegame.title'), games_escapes_path, data: { turbo_method: :post } %></p>
+  </div>
+  <div class="utility py-2">
     <p><%= link_to t('rolldice.title'), utilities_rolls_path, data: { turbo_method: :post } %></p>
     <p><%= link_to t('tournament.title'), utilities_tournaments_path %></p>
   </div>
-  <div class="legal footer-detail">
+  <div class="bottom-part d-flex justify-content-around align-items-center">
+    <p><%= t('footer.madeby') %></p>
     <div class="d-flex align-items-baseline">
       <p><strong><%= Time.now.strftime("%Y") %></strong> copyright</p>
       <i class="fa-regular fa-copyright mx-1"></i>
     </div>
-    <p><%= t('footer.madeby') %></p>
-    <p><%= t('footer.cgu') %></p>
   </div>
 </footer>
