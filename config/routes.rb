@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     root to: "pages#home"
     get "cv", to: "pages#cv"
     get "philosophy", to: "pages#philosophy"
+    get "analytics", to: "pages#analytics"
     get "projects", to: "pages#projects"
     get "contact", to: "pages#contact"
     get "uikit", to: "pages#uikit"
