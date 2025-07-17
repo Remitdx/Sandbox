@@ -6,7 +6,7 @@ module Pages
     end
 
     def my_skills
-      [ back, front, devops, soft, collaboration, management ]
+      [ back, front, devops, soft, management ]
     end
 
     private
@@ -16,11 +16,11 @@ module Pages
         "title" => I18n.t("skills.back"),
         "Ruby" => 8,
         "Rails" => 9,
-        "ActiveRecord" => 7,
+        "Background jobs" => 5,
         "Rspec" => 7,
         "SQL" => 5,
         "Python" => 4,
-        "C++" => 2
+        "C++" => 3
       }
     end
 
@@ -29,23 +29,23 @@ module Pages
         "title" => I18n.t("skills.front"),
         "HTML" => 9,
         "CSS" => 8,
-        "Scss" => 7,
         "Bootstrap" => 8,
         "Tailwind" => 5,
         "JavaScript" => 7,
-        "Hotwire" => 9,
-        "React" => 5,
-        "JQuery" => 6
+        "Hotwire/Turbo/Stimulus" => 9,
+        "React" => 6,
+        "JQuery" => 5
       }
     end
 
     def devops
       {
         "title" => I18n.t("skills.devops"),
-        "Gitlab CI" => 4,
-        "Docker" => 2,
+        "CI/CD" => 5,
+        "Docker" => 3,
         "Kubernetes" => 1,
         "Heroku" => 7,
+        "Git/Github" => 7,
         "Jenkins" => 1,
         "Sentry" => 4
       }
@@ -59,19 +59,7 @@ module Pages
         I18n.t("skills.problem") => 9,
         I18n.t("skills.adapt") => 7,
         I18n.t("skills.creative") => 5,
-        I18n.t("skills.curious") => 6
-      }
-    end
-
-    def collaboration
-      {
-        "title" => I18n.t("skills.collaboration"),
-        "Git" => 6,
-        "Gitlab / Github" => 8,
-        "Jira" => 5,
-        "Slack" => 8,
-        "Outlook" => 6,
-        "Discord" => 7
+        I18n.t("skills.curious") => 7
       }
     end
 
