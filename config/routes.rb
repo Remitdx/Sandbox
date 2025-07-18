@@ -8,9 +8,11 @@ Rails.application.routes.draw do
     get "philosophy", to: "pages#philosophy"
     get "analytics", to: "pages#analytics"
     get "projects", to: "pages#projects"
-    get "contact", to: "pages#contact"
     get "uikit", to: "pages#uikit"
     get "featureflags", to: "pages#featureflags"
+    get "legal", to: "pages#legal"
+
+    resources :contacts, only: [:index, :new, :create]
 
     namespace :games do
       resources :dikkeneks, only: [ :index, :create, :show, :update ]

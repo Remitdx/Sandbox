@@ -278,7 +278,20 @@ fr:
     cards: "Cartes"
     lists: "Listes"
 
-  ## CONTACT ##
+  ## CONTACTS ##
+
+  contacts:
+    title: "Contact"
+    form:
+      title: "Contactez moi"
+      surname: "Nom"
+      name: "Prénom"
+      company: "Entreprise"
+      job: "métier"
+      message: "Votre message ..."
+      submit: "Envoyer"
+    meet: "Rencontrez moi"
+    findme: "Retrouvez moi"
 
   ## FEATURES FLAGS ##
 

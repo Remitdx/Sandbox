@@ -289,7 +289,20 @@ en:
     cards: "Cards"
     lists: "Lists"
 
-  ## CONTACT ##
+  ## CONTACTS ##
+
+  contacts:
+    title: "Contact"
+    form:
+      title: "Get in touch"
+      surname: "Surname"
+      name: "Name"
+      company: "Compagny"
+      job: "Job"
+      message: "Your message ..."
+      submit: "Send"
+    meet: "Let's meet"
+    findme: "Find me there"
 
   ## FEATURES FLAGS ##
 

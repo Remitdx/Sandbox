@@ -1,0 +1,28 @@
+<%= render(Navigations::NavigationComponent.new) %>
+<main>
+  <%= render(Titles::H1titleComponent.new(title: t('contacts.title'))) %>
+  <section class="section-1">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('contacts.form.title'))) %>
+      <%= render 'contacts/new', contact: @contact  %>
+    </div>
+  </section>
+  <section class="section-2">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('contacts.meet'))) %>
+      <i class="fa-solid fa-mug-saucer"></i>
+      <i class="fa-regular fa-handshake"></i>
+      <p><%=t('contacts.meet')%></p>
+    </div>
+  </section>
+  <section class="section-1">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('contacts.findme'))) %>
+      <i class="fa-brands fa-github"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      <%= link_to 'Codingame','https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', target: :_blank %>
+      <%= link_to 'Malt', 'https://www.malt.fr/profile/remitondeux', target: :_blank %>
+    </div>
+  </section>
+</main>
+<%= render(Navigations::FooterComponent.new) %>

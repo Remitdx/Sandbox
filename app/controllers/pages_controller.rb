@@ -23,9 +23,6 @@ class PagesController < ApplicationController
     @project_placeholder = Pages::Project.new.project_placeholder
   end
 
-  def contact
-  end
-
   def uikit
     @palmares = {
       1 => { "start" => Date.new(2024),
@@ -44,8 +41,12 @@ class PagesController < ApplicationController
   def featureflags
   end
 
+  def legal
+  end
+
   def analytics
     @analytics = Analytic.last(3)
+    @contacts = Contact.last(10)
   end
 
   private
