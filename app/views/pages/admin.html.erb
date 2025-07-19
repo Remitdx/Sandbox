@@ -1,0 +1,53 @@
+<%= render(Navigations::NavigationComponent.new) %>
+<main>
+  <%= render(Titles::H1titleComponent.new(title: 'Admin pannel')) %>
+  <div class="section-1">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: 'Visits')) %>
+      <div class="row">
+        <% @analytics.each do |month| %>
+        <div class="col-12 col-md-4 card m-2">
+          <h5><%= month.created_at.strftime("%Y %B")%></h5>
+          <p>home : <%= month.home %></p>
+          <p>philosophy : <%= month.philosophy %></p>
+          <p>cv : <%= month.cv %></p>
+          <p>projects : <%= month.projects %></p>
+          <p>uikit : <%= month.uikit %></p>
+          <p>contact : <%= month.contact %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="section-2">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: 'Contacts')) %>
+      <% unless @contacts.empty? %>
+        <div class="row">
+          <% @contacts.each do |contact| %>
+            <div class="col-12 col-md-4 card m-2">
+              <p><%= "#{contact.surname.upcase} #{contact.name}" %></p>
+              <p><%= "#{contact.company if contact.company.present?} - #{contact.job if contact.job.present?}" %></p>
+              <p><%= contact.message %></p>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="text-center">
+          <p>no messages yet</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="section-1">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('admin.featureflags'))) %>
+    </div>
+  </div>
+  <div class="section-2">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('admin.events'))) %>
+    </div>
+  </div>
+</main>
+<%= render(Navigations::FooterComponent.new) %>

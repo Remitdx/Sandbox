@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :increment_visit_counter, only: [:home, :cv, :philosophy, :projects, :uikit, :contact]
+  before_action :increment_visit_counter, only: [:home, :cv, :philosophy, :projects, :uikit]
 
   def home
     @age = calculate_age
@@ -38,15 +38,12 @@ class PagesController < ApplicationController
     @lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   end
 
-  def featureflags
-  end
-
   def legal
   end
 
-  def analytics
-    @analytics = Analytic.last(3)
-    @contacts = Contact.last(10)
+  def admin
+    @analytics = Analytic.order(created_at: :desc).limit(3)
+    @contacts = Contact.order(created_at: :desc).limit(10) #WHERE NOT Viewed
   end
 
   private

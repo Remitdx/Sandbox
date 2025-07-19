@@ -287,14 +287,14 @@ fr:
       surname: "Nom"
       name: "Prénom"
       company: "Entreprise"
-      job: "métier"
+      job: "Métier"
       message: "Votre message ..."
       submit: "Envoyer"
     meet: "Rencontrez moi"
     findme: "Retrouvez moi"
 
-  ## FEATURES FLAGS ##
+  ## ADMIN ##
 
-  featureflags:
-    events: "Evènements"
-    features: "Fonctionnalités"
+  admin:
+    featureflags: "featureflags"
+    events: "Events"

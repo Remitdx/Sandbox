@@ -304,8 +304,8 @@ en:
     meet: "Let's meet"
     findme: "Find me there"
 
-  ## FEATURES FLAGS ##
+  ## ADMIN ##
 
-  featureflags:
+  admin:
+    featureflags: "featureflags"
     events: "Events"
-    features: "Features"
