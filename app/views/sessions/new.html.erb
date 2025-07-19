@@ -1,11 +1,17 @@
 <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
 <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
 
-<%= form_with url: session_path do |form| %>
-  <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "Enter your email address", value: params[:email_address] %><br>
-  <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Enter your password", maxlength: 72 %><br>
-  <%= form.submit "Sign in" %>
-<% end %>
-<br>
-
-<%= link_to "Forgot password?", new_password_path %>
+<%= render(Navigations::NavigationComponent.new) %>
+<main>
+  <%= render(Titles::H1titleComponent.new(title: 'Private space')) %>
+  <div class="section-1">
+    <div class="container p-3">
+      <%= form_with url: session_path do |form| %>
+        <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "Not", value: params[:email_address] %>
+        <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Welcome" %>
+        <%= form.submit "Sign in" %>
+      <% end %>
+    </div>
+  </div>
+</main>
+<%= render(Navigations::FooterComponent.new) %>

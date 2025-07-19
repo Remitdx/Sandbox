@@ -4,9 +4,9 @@
   <div class="section-1">
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: 'Visits')) %>
-      <div class="row">
+      <div class="row g-5">
         <% @analytics.each do |month| %>
-        <div class="col-12 col-md-4 card m-2">
+        <div class="col-12 col-md-4 card">
           <h5><%= month.created_at.strftime("%Y %B")%></h5>
           <p>home : <%= month.home %></p>
           <p>philosophy : <%= month.philosophy %></p>
@@ -23,12 +23,11 @@
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: 'Contacts')) %>
       <% unless @contacts.empty? %>
-        <div class="row">
+        <div class="row g-5">
           <% @contacts.each do |contact| %>
-            <div class="col-12 col-md-4 card m-2">
-              <p><%= "#{contact.surname.upcase} #{contact.name}" %></p>
-              <p><%= "#{contact.company if contact.company.present?} - #{contact.job if contact.job.present?}" %></p>
-              <p><%= contact.message %></p>
+            <div class="col-12 col-md-4 card">
+              <%= render(Texts::QuoteComponent.new(quote: contact.message, author: "#{contact.surname.upcase} #{contact.name}" )) %>
+              <p class="text-center"><%= "#{contact.company if contact.company.present?} - #{contact.job if contact.job.present?}" %></p>
             </div>
           <% end %>
         </div>
