@@ -1,5 +1,7 @@
 module Games
   class DikkeneksController < ApplicationController
+    allow_unauthenticated_access
+
     def index
       @dikkenek = Games::Dikkenek.new
       @podium = Games::Dikkenek.where.not(score: nil).order(score: :desc).first(3)

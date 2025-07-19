@@ -1,6 +1,6 @@
 module Cards
   class ProjectProCardComponent < ViewComponent::Base
-    def initialize(project: {title: "Title?", classes: "", description: "missing decription", testimonials: [], period:"Date?", link: ""})
+    def initialize(project: { title: "Title?", classes: "", description: "missing decription", testimonials: [], period: "Date?", link: "" })
       @title = project["title"] || project[:title]
       @classes = project["classes"] || project[:classes]
       @description = project["description"] || project[:description]

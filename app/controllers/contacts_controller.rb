@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  allow_unauthenticated_access
+
   def index
     @contact = Contact.new
   end

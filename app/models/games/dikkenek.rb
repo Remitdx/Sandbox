@@ -17,13 +17,13 @@ module Games
     end
 
     def average_players_accuracy
-      extracted_accuracies = Games::Dikkenek.pluck(:accuracy).reject {|e| e.nil? }
+      extracted_accuracies = Games::Dikkenek.pluck(:accuracy).reject { |e| e.nil? }
       return 0 if extracted_accuracies.empty?
       (extracted_accuracies.sum / extracted_accuracies.size).round(1)
     end
 
     def average_players_timer
-      extracted_timers = Games::Dikkenek.pluck(:answers).reject {|e| e.empty? }.map {|e| e.last[:delay]}
+      extracted_timers = Games::Dikkenek.pluck(:answers).reject { |e| e.empty? }.map { |e| e.last[:delay] }
       (extracted_timers.sum / (extracted_timers.size * 1000.00)).round(2)
     end
 

@@ -1,5 +1,6 @@
 module Utilities
   class RollDicesController < ApplicationController
+    allow_unauthenticated_access
     include Games
 
     before_action :set_dice, only: [ :edit, :update, :destroy ]

@@ -1,5 +1,7 @@
 module Games
   class EscapesController < ApplicationController
+    allow_unauthenticated_access
+
     def create
       escape = Games::Escape.new(Games::Escapes::Constants::RESPONSES[0])
       escape.set_game_parameters

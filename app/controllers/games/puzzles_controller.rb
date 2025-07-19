@@ -1,5 +1,7 @@
 module Games
   class PuzzlesController < ApplicationController
+    allow_unauthenticated_access
+
     def index
       @puzzle = Games::Puzzle.new
       @best5 = Games::Puzzle.where(size: 5, gameover: 0).order(counter: :asc).first

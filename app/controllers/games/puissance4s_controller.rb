@@ -1,5 +1,7 @@
 module Games
   class Puissance4sController < ApplicationController
+    allow_unauthenticated_access
+
     def create
       puissance_4 = Games::Puissance4.create(grid: Games::Puissance4.new_grid, gameover: 2)
       redirect_to games_puissance4_path(puissance_4)

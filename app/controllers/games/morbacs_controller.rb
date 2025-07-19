@@ -1,5 +1,7 @@
 module Games
   class MorbacsController < ApplicationController
+    allow_unauthenticated_access
+
     def create
       morbac = Games::Morbac.create()
       redirect_to games_morbac_path(morbac)

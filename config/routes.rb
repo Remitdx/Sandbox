@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ('/')
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
     get "featureflags", to: "pages#featureflags"
     get "legal", to: "pages#legal"
 
-    resources :contacts, only: [:index, :new, :create]
+    resources :contacts, only: [ :index, :new, :create ]
 
     namespace :games do
       resources :dikkeneks, only: [ :index, :create, :show, :update ]

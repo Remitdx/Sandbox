@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  before_action :increment_visit_counter, only: [:home, :cv, :philosophy, :projects, :uikit]
+  allow_unauthenticated_access only: [ :home, :cv, :philosophy, :projects, :uikit, :legal ]
+  before_action :increment_visit_counter, only: [ :home, :cv, :philosophy, :projects, :uikit, :legal ]
 
   def home
     @age = calculate_age
@@ -43,7 +44,7 @@ class PagesController < ApplicationController
 
   def admin
     @analytics = Analytic.order(created_at: :desc).limit(3)
-    @contacts = Contact.order(created_at: :desc).limit(10) #WHERE NOT Viewed
+    @contacts = Contact.order(created_at: :desc).limit(10) # WHERE NOT Viewed
   end
 
   private

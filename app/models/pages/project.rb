@@ -16,7 +16,7 @@ module Pages
         "description" => I18n.t("placeholder.description"),
         "testimonials" => [],
         "period" => Time.now.strftime("%Y"),
-        "link" => ''
+        "link" => ""
       }
     end
 
@@ -27,9 +27,9 @@ module Pages
         "title" => "Centre Mormal",
         "classes" => "cm",
         "description" => I18n.t("centremormal.description"),
-        "testimonials" => [{quote: I18n.t("centremormal.testimonial"), author: I18n.t("centremormal.author")}],
+        "testimonials" => [ { quote: I18n.t("centremormal.testimonial"), author: I18n.t("centremormal.author") } ],
         "period" => "2022",
-        "link" => 'https://centremormal.fr/'
+        "link" => "https://centremormal.fr/"
       }
     end
 
@@ -39,14 +39,14 @@ module Pages
         "classes" => "mpa",
         "description" => I18n.t("monprojetanah.description"),
         "testimonials" => [
-          {quote: I18n.t("monprojetanah.testimonial1"), author: I18n.t("monprojetanah.author1")},
-          {quote: I18n.t("monprojetanah.testimonial2"), author: I18n.t("monprojetanah.author2")},
-          {quote: I18n.t("monprojetanah.testimonial3"), author: I18n.t("monprojetanah.author3")},
-          {quote: I18n.t("monprojetanah.testimonial4"), author: I18n.t("monprojetanah.author4")},
-          {quote: I18n.t("monprojetanah.testimonial5"), author: I18n.t("monprojetanah.author5")}
+          { quote: I18n.t("monprojetanah.testimonial1"), author: I18n.t("monprojetanah.author1") },
+          { quote: I18n.t("monprojetanah.testimonial2"), author: I18n.t("monprojetanah.author2") },
+          { quote: I18n.t("monprojetanah.testimonial3"), author: I18n.t("monprojetanah.author3") },
+          { quote: I18n.t("monprojetanah.testimonial4"), author: I18n.t("monprojetanah.author4") },
+          { quote: I18n.t("monprojetanah.testimonial5"), author: I18n.t("monprojetanah.author5") }
         ],
         "period" => "2023-2024",
-        "link" => 'https://monprojet.anah.gouv.fr/'
+        "link" => "https://monprojet.anah.gouv.fr/"
       }
     end
   end

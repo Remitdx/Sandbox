@@ -1,5 +1,6 @@
 module Utilities
   class RollsController < ApplicationController
+    allow_unauthenticated_access
     include Games
 
     before_action :set_roll, only: [ :show, :update ]
@@ -15,9 +16,9 @@ module Utilities
     end
 
     def update
-      @dices = Utilities::RollDice.includes([:roll]).where(roll_id: @roll).ordered
+      @dices = Utilities::RollDice.includes([ :roll ]).where(roll_id: @roll).ordered
       roll_all_dices(@dices)
-      Utilities::RollDice.includes([:roll]).transaction do
+      Utilities::RollDice.includes([ :roll ]).transaction do
         @dices.each { |dice| dice.save }
       end
       @scores = scores_calculation(@dices)

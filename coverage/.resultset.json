@@ -32,6 +32,28 @@
           null
         ]
       },
+      "/home/kodoliprane/Sandbox/app/models/analytic.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/kodoliprane/Sandbox/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/kodoliprane/Sandbox/app/models/contact.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/home/kodoliprane/Sandbox/app/controllers/concerns/games.rb": {
         "lines": [
           1,
@@ -71,6 +93,7 @@
           1,
           0,
           0,
+          0,
           null,
           null,
           1,
@@ -107,8 +130,8 @@
           6,
           6,
           60,
-          6,
-          6,
+          3,
+          3,
           null,
           null,
           6,
@@ -137,13 +160,6 @@
           6,
           null,
           null,
-          null
-        ]
-      },
-      "/home/kodoliprane/Sandbox/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
           null
         ]
       },
@@ -618,22 +634,10 @@
           null,
           null,
           null,
-          null,
           1,
           null,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
           null,
           null,
           null,
@@ -1939,8 +1943,17 @@
           null
         ]
       },
-      "/home/kodoliprane/Sandbox/app/components/audios/player_component.rb": {
+      "/home/kodoliprane/Sandbox/app/channels/application_cable/connection.rb": {
         "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
           0,
           0,
           0,
@@ -2208,17 +2221,6 @@
         ],
         "branches": {}
       },
-      "/home/kodoliprane/Sandbox/app/components/others/preview_component.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {}
-      },
       "/home/kodoliprane/Sandbox/app/components/texts/paragraph_component.rb": {
         "lines": [
           0,
@@ -2286,7 +2288,92 @@
         "lines": [
           0,
           0,
+          0,
           null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/kodoliprane/Sandbox/app/controllers/concerns/authentication.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/kodoliprane/Sandbox/app/controllers/contacts_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -2304,6 +2391,8 @@
         "lines": [
           0,
           0,
+          null,
+          null,
           0,
           0,
           0,
@@ -2353,6 +2442,8 @@
           0,
           0,
           0,
+          null,
+          0,
           0,
           0,
           0,
@@ -2384,6 +2475,8 @@
           0,
           0,
           0,
+          null,
+          0,
           0,
           0,
           0,
@@ -2411,6 +2504,8 @@
         "lines": [
           0,
           0,
+          0,
+          null,
           0,
           0,
           0,
@@ -2441,6 +2536,8 @@
         "lines": [
           0,
           0,
+          0,
+          null,
           0,
           0,
           0,
@@ -2490,6 +2587,9 @@
           0,
           0,
           0,
+          null,
+          0,
+          0,
           0,
           null,
           0,
@@ -2512,25 +2612,53 @@
           null,
           0,
           0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           0,
           0,
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null,
           0,
           0,
           0,
           null,
           0,
           0,
-          null,
+          0,
           0,
           null,
           0,
@@ -2540,8 +2668,73 @@
         ],
         "branches": {}
       },
+      "/home/kodoliprane/Sandbox/app/controllers/passwords_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/kodoliprane/Sandbox/app/controllers/sessions_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
       "/home/kodoliprane/Sandbox/app/controllers/utilities/roll_dices_controller.rb": {
         "lines": [
+          0,
           0,
           0,
           0,
@@ -2616,14 +2809,11 @@
           0,
           0,
           0,
-          null,
           0,
           null,
           0,
-          0,
-          0,
-          0,
           null,
+          0,
           0,
           0,
           0,
@@ -2631,15 +2821,6 @@
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
           0,
           null,
           0,
@@ -2654,13 +2835,24 @@
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null,
           0,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -2678,7 +2870,51 @@
         ],
         "branches": {}
       },
+      "/home/kodoliprane/Sandbox/app/controllers/utilities/tournaments_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
       "/home/kodoliprane/Sandbox/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/kodoliprane/Sandbox/app/mailers/passwords_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/kodoliprane/Sandbox/app/models/current.rb": {
         "lines": [
           0,
           0,
@@ -2920,6 +3156,25 @@
         ],
         "branches": {}
       },
+      "/home/kodoliprane/Sandbox/app/models/session.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/kodoliprane/Sandbox/app/models/user.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0
+        ],
+        "branches": {}
+      },
       "/home/kodoliprane/Sandbox/app/models/utilities/roll.rb": {
         "lines": [
           0,
@@ -2954,6 +3209,6 @@
         "branches": {}
       }
     },
-    "timestamp": 1752222969
+    "timestamp": 1752914738
   }
 }

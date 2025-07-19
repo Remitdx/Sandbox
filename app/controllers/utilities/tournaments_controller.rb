@@ -1,5 +1,6 @@
 module Utilities
   class TournamentsController < ApplicationController
+    allow_unauthenticated_access
 
     def index
     end
@@ -14,6 +15,5 @@ module Utilities
     end
 
     private
-
   end
 end
