@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ('/')
   scope "(:locale)", locale: /en|fr/ do
+    match '/404', via: :all, to: 'errors#not_found'
+    match '/422', via: :all, to: 'errors#unprocessable_entity'
+    match '/500', via: :all, to: 'errors#internal_server_error'
     root to: "pages#home"
     get "admin", to: "pages#admin"
     get "cv", to: "pages#cv"

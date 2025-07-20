@@ -1,0 +1,11 @@
+<%= render(Navigations::NavigationComponent.new) %>
+<main>
+  <%= render(Titles::H1titleComponent.new(title: "#{response.status}")) %>
+  <div class="section-1">
+    <div class="container text-center p-3">
+      <%= render(Titles::H3titleComponent.new(title: "#{action_name.humanize}")) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('errors.whoops'))) %>
+    </div>
+  </div>
+</main>
+<%= render(Navigations::FooterComponent.new) %>

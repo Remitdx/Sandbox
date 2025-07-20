@@ -297,7 +297,7 @@ en:
       title: "Get in touch"
       surname: "Surname"
       name: "Name"
-      company: "Compagny"
+      company: "Company"
       job: "Job"
       message: "Your message ..."
       submit: "Send"
@@ -309,3 +309,9 @@ en:
   admin:
     featureflags: "featureflags"
     events: "Events"
+
+  ## ERRORS ##
+
+  errors:
+    whoops: "Whoops! Something went wrong."
+    describe: "If you have time to describe what just happened, please use the form below."

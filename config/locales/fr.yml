@@ -298,3 +298,9 @@ fr:
   admin:
     featureflags: "featureflags"
     events: "Events"
+
+  ## ERRORS ##
+
+  errors:
+    whoops: "Oups ! Un problème est survenu."
+    describe: "Si vous avez le temps, merci d'utiliser le formulaire ci-dessous pour décrire ce qui s'est passé."

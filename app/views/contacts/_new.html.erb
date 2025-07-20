@@ -1,8 +1,10 @@
-<%= simple_form_for(contact) do |f| %>
-  <%= f.input :surname, label: false, placeholder: t('contacts.form.surname') %>
-  <%= f.input :name, label: false, placeholder: t('contacts.form.name') %>
-  <%= f.input :company, label: false, placeholder: t('contacts.form.company') %>
-  <%= f.input :job, label: false, placeholder: t('contacts.form.job') %>
-  <%= f.input :message, label: false, placeholder: t('contacts.form.message') %>
-  <%= f.submit t('contacts.form.submit'), class:'btn-cta btn-dark btn-large' %>
-<% end %>
+<div class="contact-form">
+  <%= simple_form_for(contact) do |f| %>
+    <%= f.input :surname, label: false, placeholder: t('contacts.form.surname') %>
+    <%= f.input :name, label: false, placeholder: t('contacts.form.name') %>
+    <%= f.input :company, label: false, placeholder: t('contacts.form.company') %>
+    <%= f.input :job, label: false, placeholder: t('contacts.form.job') %>
+    <%= f.input :message, label: false, placeholder: t('contacts.form.message') %>
+    <%= f.submit t('contacts.form.submit'), class:'btn-cta btn-dark btn-large' %>
+  <% end %>
+</div>

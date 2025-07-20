@@ -29,6 +29,12 @@
               <p>escape game : <%= "#{month.escapes_create || 0 }" %></p>
             </div>
           </div>
+            <div class="text-center p-2">
+              <h6>Errors</h6>
+              <p>500 : <%= month.errors_internal_server_error || 0 %></p>
+              <p>404 : <%= month.errors_not_found || 0 %></p>
+              <p>422 : <%= month.errors_unprocessable_entity || 0 %></p>
+            </div>
           </div>
         <% end %>
       </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_19_083151) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_20_100111) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -34,6 +34,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_19_083151) do
     t.integer "dikkeneks_create"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "errors_internal_server_error"
+    t.integer "errors_not_found"
+    t.integer "errors_unprocessable_entity"
   end
 
   create_table "contacts", force: :cascade do |t|
