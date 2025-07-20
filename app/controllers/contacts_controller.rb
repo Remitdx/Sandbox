@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  skip_analytics only: [:create]
   allow_unauthenticated_access
 
   def index

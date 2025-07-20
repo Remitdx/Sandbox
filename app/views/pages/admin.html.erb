@@ -7,14 +7,29 @@
       <div class="row g-5">
         <% @analytics.each do |month| %>
         <div class="col-12 col-md-4 card">
-          <h5><%= month.created_at.strftime("%Y %B")%></h5>
-          <p>home : <%= month.home %></p>
-          <p>philosophy : <%= month.philosophy %></p>
-          <p>cv : <%= month.cv %></p>
-          <p>projects : <%= month.projects %></p>
-          <p>uikit : <%= month.uikit %></p>
-          <p>contact : <%= month.contact %></p>
-        </div>
+          <h5 class="text-center"><%= month.created_at.strftime("%Y %B")%></h5>
+          <div class="d-flex justify-content-between">
+            <div>
+              <h6>Pages</h6>
+              <p>home : <%= month.pages_home || 0 %></p>
+              <p>philosophy : <%= month.pages_philosophy || 0 %></p>
+              <p>cv : <%= month.pages_cv %></p>
+              <p>projects : <%= month.pages_projects || 0 %></p>
+              <p>uikit : <%= month.pages_uikit || 0 %></p>
+              <p>contact : <%= month.contacts_index || 0 %></p>
+              <p>legal : <%= month.pages_legal || 0 %></p>
+            </div>
+            <div>
+              <h6>Projects</h6>
+              <p>dikkenek : <%= "#{month.dikkeneks_index || 0 } / #{month.dikkeneks_create || 0 }" %></p>
+              <p>puzzle : <%= "#{month.puzzles_index || 0 } / #{month.puzzles_create || 0 }" %></p>
+              <p>tournament : <%= "#{month.tournaments_index || 0 } / #{month.tournaments_create || 0 }" %></p>
+              <p>morbac : <%= "#{month.morbacs_create || 0 }" %></p>
+              <p>puissance 4 : <%= "#{month.puissance4s_create || 0 }" %></p>
+              <p>escape game : <%= "#{month.escapes_create || 0 }" %></p>
+            </div>
+          </div>
+          </div>
         <% end %>
       </div>
     </div>

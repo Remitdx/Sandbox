@@ -1,5 +1,6 @@
 module Utilities
   class RollDicesController < ApplicationController
+    skip_analytics
     allow_unauthenticated_access
     include Games
 

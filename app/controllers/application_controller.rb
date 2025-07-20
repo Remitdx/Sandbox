@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   include Authentication
+  include Analytics
+
   before_action :set_locale
 
   def default_url_options

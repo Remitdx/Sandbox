@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
+  skip_analytics only: [:admin]
   allow_unauthenticated_access only: [ :home, :cv, :philosophy, :projects, :uikit, :legal ]
-  before_action :increment_visit_counter, only: [ :home, :cv, :philosophy, :projects, :uikit, :legal ]
 
   def home
     @age = calculate_age
@@ -49,33 +49,7 @@ class PagesController < ApplicationController
 
   private
 
-  def increment_visit_counter
-    return nil if handle_session.nil?
-    current_analytic = last_or_new_analytics
-
-    increment(current_analytic, action_name)
-  end
-
   def calculate_age
     ((Time.now - Time.new(1991, 7, 20))/31557600).floor
-  end
-
-  def handle_session
-    page_identifier = "#{controller_name}_#{action_name}"
-    return nil if session["visited_#{page_identifier}"]
-    session["visited_#{page_identifier}"] = true
-  end
-
-  def last_or_new_analytics
-    analytics_this_month? ? Analytic.last : Analytic.create(home: 0, cv: 0, philosophy: 0, projects: 0, contact: 0, uikit: 0)
-  end
-
-  def analytics_this_month?
-    return false if Analytic.count == 0
-    Analytic.last.created_at.month == Time.current.month
-  end
-
-  def increment(analytic, action)
-    analytic.increment!(action.to_sym)
   end
 end
