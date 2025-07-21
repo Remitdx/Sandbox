@@ -286,10 +286,15 @@ fr:
       title: "Contactez moi"
       surname: "Nom"
       name: "Prénom"
+      email: "Adresse e-mail"
       company: "Entreprise"
       job: "Métier"
       message: "Votre message ..."
       submit: "Envoyer"
+      alert: "Message envoyé !"
+    confirm: "Êtes vous sûr ?"
+    destroy: "Message détruit !"
+    viewed: "Message marqué comme vu."
     meet: "Rencontrez moi"
     findme: "Retrouvez moi"
 
@@ -304,3 +309,14 @@ fr:
   errors:
     whoops: "Oups ! Un problème est survenu."
     describe: "Si vous avez le temps, merci d'utiliser le formulaire ci-dessous pour décrire ce qui s'est passé."
+
+  ## ACTIVE RECORD ##
+
+  activerecord:
+    attributes:
+      contact:
+        surname: "Nom"
+        name: "Prénom"
+    errors:
+      messages:
+        blank: "doit être renseigné."

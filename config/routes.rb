@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     get "featureflags", to: "pages#featureflags"
     get "legal", to: "pages#legal"
 
-    resources :contacts, only: [ :index, :new, :create ]
+    resources :contacts, only: [ :index, :new, :create, :update, :destroy ]
 
     namespace :games do
       resources :dikkeneks, only: [ :index, :create, :show, :update ]

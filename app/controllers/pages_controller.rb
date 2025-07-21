@@ -44,7 +44,7 @@ class PagesController < ApplicationController
 
   def admin
     @analytics = Analytic.order(created_at: :desc).limit(3)
-    @contacts = Contact.order(created_at: :desc).limit(10) # WHERE NOT Viewed
+    @contacts = Contact.where(new: true).order(created_at: :desc).limit(10)
   end
 
   private

@@ -297,10 +297,15 @@ en:
       title: "Get in touch"
       surname: "Surname"
       name: "Name"
+      email: "e-mail address"
       company: "Company"
       job: "Job"
       message: "Your message ..."
       submit: "Send"
+      alert: "Message sent!"
+    confirm: "Are you sure?"
+    destroy: "Message destroyed!"
+    viewed: "Message marked as viewed."
     meet: "Let's meet"
     findme: "Find me there"
 
@@ -315,3 +320,6 @@ en:
   errors:
     whoops: "Whoops! Something went wrong."
     describe: "If you have time to describe what just happened, please use the form below."
+
+  validations:
+    notblank: "Can't be blank."

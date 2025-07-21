@@ -21,7 +21,7 @@ module Analytics
   end
 
   def handle_session(page_identifier)
-    return true if controller_name === "errors"
+    return true if controller_name === "errors" # can count multiple errors in same session
     return nil if session["visited_#{page_identifier}"]
     session["visited_#{page_identifier}"] = true
   end

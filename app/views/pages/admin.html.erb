@@ -4,36 +4,36 @@
   <div class="section-1">
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: 'Visits')) %>
-      <div class="row g-5">
+      <div class="row">
         <% @analytics.each do |month| %>
-        <div class="col-12 col-md-4 card">
-          <h5 class="text-center"><%= month.created_at.strftime("%Y %B")%></h5>
-          <div class="d-flex justify-content-between">
-            <div>
-              <h6>Pages</h6>
-              <p>home : <%= month.pages_home || 0 %></p>
-              <p>philosophy : <%= month.pages_philosophy || 0 %></p>
-              <p>cv : <%= month.pages_cv %></p>
-              <p>projects : <%= month.pages_projects || 0 %></p>
-              <p>uikit : <%= month.pages_uikit || 0 %></p>
-              <p>contact : <%= month.contacts_index || 0 %></p>
-              <p>legal : <%= month.pages_legal || 0 %></p>
-            </div>
-            <div>
-              <h6>Projects</h6>
-              <p>dikkenek : <%= "#{month.dikkeneks_index || 0 } / #{month.dikkeneks_create || 0 }" %></p>
-              <p>puzzle : <%= "#{month.puzzles_index || 0 } / #{month.puzzles_create || 0 }" %></p>
-              <p>tournament : <%= "#{month.tournaments_index || 0 } / #{month.tournaments_create || 0 }" %></p>
-              <p>morbac : <%= "#{month.morbacs_create || 0 }" %></p>
-              <p>puissance 4 : <%= "#{month.puissance4s_create || 0 }" %></p>
-              <p>escape game : <%= "#{month.escapes_create || 0 }" %></p>
-            </div>
-          </div>
-            <div class="text-center p-2">
-              <h6>Errors</h6>
-              <p>500 : <%= month.errors_internal_server_error || 0 %></p>
-              <p>404 : <%= month.errors_not_found || 0 %></p>
-              <p>422 : <%= month.errors_unprocessable_entity || 0 %></p>
+          <div class="col-12 col-md-4 card">
+            <h5 class="text-center"><%= month.created_at.strftime("%Y %B")%></h5>
+            <div class="d-flex justify-content-between">
+              <div>
+                <h6>Pages</h6>
+                <p>home : <%= month.pages_home || 0 %></p>
+                <p>philosophy : <%= month.pages_philosophy || 0 %></p>
+                <p>cv : <%= month.pages_cv %></p>
+                <p>projects : <%= month.pages_projects || 0 %></p>
+                <p>uikit : <%= month.pages_uikit || 0 %></p>
+                <p>contact : <%= month.contacts_index || 0 %></p>
+                <p>legal : <%= month.pages_legal || 0 %></p>
+              </div>
+              <div>
+                <h6>Projects</h6>
+                <p>dikkenek : <%= "#{month.dikkeneks_index || 0 } / #{month.dikkeneks_create || 0 }" %></p>
+                <p>puzzle : <%= "#{month.puzzles_index || 0 } / #{month.puzzles_create || 0 }" %></p>
+                <p>tournament : <%= "#{month.tournaments_index || 0 } / #{month.tournaments_create || 0 }" %></p>
+                <p>morbac : <%= "#{month.morbacs_create || 0 }" %></p>
+                <p>puissance 4 : <%= "#{month.puissance4s_create || 0 }" %></p>
+                <p>escape game : <%= "#{month.escapes_create || 0 }" %></p>
+              </div>
+              <div>
+                <h6>Errors</h6>
+                <p>500 : <%= month.errors_internal_server_error || 0 %></p>
+                <p>404 : <%= month.errors_not_found || 0 %></p>
+                <p>422 : <%= month.errors_unprocessable_entity || 0 %></p>
+              </div>
             </div>
           </div>
         <% end %>
@@ -44,11 +44,20 @@
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: 'Contacts')) %>
       <% unless @contacts.empty? %>
-        <div class="row g-5">
+        <div class="row">
           <% @contacts.each do |contact| %>
-            <div class="col-12 col-md-4 card">
+            <div class="col-12 col-md-4 card p-2">
               <%= render(Texts::QuoteComponent.new(quote: contact.message, author: "#{contact.surname.upcase} #{contact.name}" )) %>
               <p class="text-center"><%= "#{contact.company if contact.company.present?} - #{contact.job if contact.job.present?}" %></p>
+              <p class="text-center"><%= contact.email %></p>
+              <div class="d-flex justify-content-between">
+                <%= link_to contact_path(contact), data: { turbo_method: :put } do %>
+                  <%= render(Buttons::CtaComponent.new(title: '<i class="fa-solid fa-check"></i>', classes: 'btn-dark' )) %>
+                <% end %>
+                <%= link_to contact_path(contact), data: { turbo_confirm: t('contacts.confirm'), turbo_method: :delete } do %>
+                  <%= render(Buttons::CtaComponent.new(title: '<i class="fa-solid fa-trash-can"></i>', classes: 'btn-dark' )) %>
+                <% end %>
+              </div>
             </div>
           <% end %>
         </div>
