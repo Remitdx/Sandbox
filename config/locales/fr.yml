@@ -282,6 +282,7 @@ fr:
 
   contacts:
     title: "Contact"
+    intro: "Pour une collaboration professionnelle, un bug découvert ou tout autre demande merci d'utiliser le fomulaire ci-dessous."
     form:
       title: "Contactez moi"
       surname: "Nom"

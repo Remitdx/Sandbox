@@ -293,6 +293,7 @@ en:
 
   contacts:
     title: "Contact"
+    intro: "For professional purpose, bug-report or anything else please use the form bellow."
     form:
       title: "Get in touch"
       surname: "Surname"

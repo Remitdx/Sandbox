@@ -4,6 +4,8 @@
   <section class="section-1">
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: t('contacts.form.title'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('contacts.intro'))) %>
+      <br>
       <%= render 'contacts/new', contact: @contact  %>
     </div>
   </section>
