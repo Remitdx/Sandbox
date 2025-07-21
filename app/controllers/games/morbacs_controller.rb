@@ -1,6 +1,6 @@
 module Games
   class MorbacsController < ApplicationController
-    skip_analytics only: [:show, :update]
+    skip_analytics only: [ :show, :update ]
     allow_unauthenticated_access
 
     def create

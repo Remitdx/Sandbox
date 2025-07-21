@@ -1,6 +1,6 @@
 module Utilities
   class RollsController < ApplicationController
-    skip_analytics only: [:show, :update]
+    skip_analytics only: [ :show, :update ]
     allow_unauthenticated_access
     include Games
 

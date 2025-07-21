@@ -1,6 +1,6 @@
 class ErrorsController < ApplicationController
   allow_unauthenticated_access
-  before_action :contact_empty_shell, only: [:internal_server_error]
+  before_action :contact_empty_shell, only: [ :internal_server_error ]
 
   def internal_server_error
     render status: 500
