@@ -1,5 +1,5 @@
 <%= render(Navigations::NavigationComponent.new) %>
-<main>
+<main class="contact">
   <%= render(Titles::H1titleComponent.new(title: t('contacts.title'))) %>
   <section class="section-1">
     <div class="container">
@@ -10,20 +10,38 @@
     </div>
   </section>
   <section class="section-2">
-    <div class="container">
+    <div class="container d-flex flex-column align-items-center">
       <%= render(Titles::H2titleComponent.new(title: t('contacts.meet'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('contacts.always'))) %>
+      <br>
       <i class="fa-solid fa-mug-saucer"></i>
+      <%= render(Texts::ParagraphComponent.new(text: t('contacts.coffee'))) %>
+      <br>
+      <i class="fa-solid fa-computer"></i>
+      <%= render(Texts::ParagraphComponent.new(text: t('contacts.visio'))) %>
+      <br>
       <i class="fa-regular fa-handshake"></i>
-      <p><%=t('contacts.meet')%></p>
+      <%= render(Texts::ParagraphComponent.new(text: t('contacts.event'))) %>
+      <br>
     </div>
   </section>
   <section class="section-1">
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: t('contacts.findme'))) %>
-      <i class="fa-brands fa-github"></i>
-      <i class="fa-brands fa-linkedin"></i>
-      <%= link_to 'Codingame','https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', target: :_blank %>
-      <%= link_to 'Malt', 'https://www.malt.fr/profile/remitondeux', target: :_blank %>
+      <div class="d-flex flex-column align-items-center justify-content-around">
+        <%= link_to 'https://github.com/Remitdx', class: "clickable text-center item", target: :_blank do %>
+          <h5>Github <i class="fa-brands fa-github"></i></h5>
+        <% end %>
+        <%= link_to 'https://www.linkedin.com/in/r%C3%A9mitondeux/', class: "clickable text-center item", target: :_blank do %>
+          <h5>Linked <i class="fa-brands fa-linkedin"></i></h5>
+        <% end %>
+        <%= link_to 'https://www.malt.fr/profile/remitondeux', class: "clickable text-center item", target: :_blank do %>
+          <%= image_tag 'contacts/malt.webp', class: "item-image" %>
+        <% end %>
+        <%= link_to 'https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', class: "clickable text-center item", target: :_blank do %>
+          <%= image_tag 'contacts/codingame.jpg', class: "item-image" %>
+        <% end %>
+      </div>
     </div>
   </section>
 </main>

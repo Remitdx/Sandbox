@@ -279,12 +279,11 @@ fr:
     lists: "Listes"
 
   ## CONTACTS ##
-
   contacts:
     title: "Contact"
     intro: "Pour une collaboration professionnelle, un bug découvert ou tout autre demande merci d'utiliser le fomulaire ci-dessous."
     form:
-      title: "Contactez moi"
+      title: "Me contacter"
       surname: "Nom"
       name: "Prénom"
       email: "Adresse e-mail"
@@ -296,8 +295,14 @@ fr:
     confirm: "Êtes vous sûr ?"
     destroy: "Message détruit !"
     viewed: "Message marqué comme vu."
-    meet: "Rencontrez moi"
-    findme: "Retrouvez moi"
+    meet: "Me rencontrer"
+    findme: "Me retrouver"
+    always: "Qui que vous soyez : recruteur, collègue dans l'informatique, créatif à la recherche d'un dev ou visiteur égaré.
+      Une rencontre, une main tendue peut mener à de belles opportunités."
+    coffee: "Disponible physiquement, autour d'un café ou autre boisson réconfortante."
+    visio: "Egalement par visio, si cela est plus pratique ou si la distance est trop importante."
+    event: "A l'improviste au détour d'un évènement."
+
 
   ## LEGAL ##
   legal:

@@ -307,6 +307,11 @@ en:
     viewed: "Message marked as viewed."
     meet: "Let's meet"
     findme: "Find me there"
+    always: "Whoever you are: a recruiter, a colleague in IT, a creative looking for a developer, or a lost visitor.
+      A meeting or a helping hand can lead to great opportunities."
+    coffee: "Available to meet for coffee or other comforting drink."
+    visio: "Also by videoconference, if it is more convenient or because of the distance."
+    event: "Unexpectedly at a random event."
 
   ## LEGAL ##
   legal:

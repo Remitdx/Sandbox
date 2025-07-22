@@ -1,0 +1,46 @@
+.contact {
+
+  .contact-form {
+    background-color: $bg-cream-tone;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 2px $shadow;}
+
+  i {
+    font-size: var(--fs-xl);
+    color: $major-dark;
+  }
+
+  .item {
+    width: 80%;
+    aspect-ratio: 4/1;
+    margin: 1rem auto;
+    text-decoration: none;
+    color: $major-dark;
+
+    h5 {
+      margin: 0;
+    }
+
+    .item-image {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+
+
+@media (min-width: 40em) {
+  .contact {
+
+    .contact-form {
+      width: 40vw;
+      margin: 0 auto;
+    }
+
+    .item {
+      margin: 1.5rem auto;
+      width: 30%;
+    }
+  }
+}
