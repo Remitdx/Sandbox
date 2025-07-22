@@ -299,20 +299,45 @@ fr:
     meet: "Rencontrez moi"
     findme: "Retrouvez moi"
 
-  ## ADMIN ##
+  ## LEGAL ##
+  legal:
+    title: "Mentions légales"
+    stakeholders:
+      title: "Parties prenantes"
+      intro: "En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique,
+         il est précisé aux utilisateurs du site www.remi-tondeux.com
+         l'identité des différents intervenants dans le cadre de sa réalisation."
+      owner: "Propriétaire : Rémi Tondeux"
+      provider: "Prestataire : Rémi Tondeux, N° Siret : 909 253 494 000 19"
+      host: "Hébergement du site : Heroku-Salesforce ; The Landmark @ 1 Market St. ; Suite 300 ; San Francisco, CA 94105, Etats-Unis"
+    datas:
+      title: "Données personnelles"
+      text1: "Aucunes données personnelles ne sont collectées sans le consentement des utilisateurs de ce site."
+      text2: "Un outil d'analyse du traffic, codé par mes soins et sans tierce partie, utilise les cookies de session afin de s'assurer de l'unicité des visites.
+       Cet outil se veut minimaliste et n'enregistre aucunes données privées."
+      text3: "Les jeux proposés enregistrent l'état de la partie, éventuellement un pseudo ou un score réalisé.
+       La seule finalité étant de proposer un classement des joueurs."
+      text4: "Vous pouvez faire valoir votre droit à l'oubli en m'écrivant via le formulaire de contact."
+    elements:
+      title: "Elements graphiques"
+      banner: "La bannière principale est un photographie de moi-même réalisée par Grérory Ferreux."
+      images: "La majorité des images provient de banques d'images libres de droits telles que:
+        Unsplash, mobilegraphiquegame.itch.io"
+      ai: "D'autres images ont été générées par IA en essayant de ne pas imiter de marques protégées."
+      logos: "Les logos sont issus de Fontawesome."
+      fonts: "Les polices d'écritures sont fournies par Google."
 
+  ## ADMIN ##
   admin:
     featureflags: "featureflags"
     events: "Events"
 
   ## ERRORS ##
-
   errors:
     whoops: "Oups ! Un problème est survenu."
     describe: "Si vous avez le temps, merci d'utiliser le formulaire ci-dessous pour décrire ce qui s'est passé."
 
   ## ACTIVE RECORD ##
-
   activerecord:
     attributes:
       contact:

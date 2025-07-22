@@ -1,22 +1,32 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <main>
   <section class="section-1">
+      <%= render(Titles::H1titleComponent.new(title: t('legal.title'))) %>
     <div class="container">
-      <%= render(Titles::H2titleComponent.new(title: 'Mentions Légales')) %>
-      <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique,
-         il est précisé aux utilisateurs du site www.remi-tondeux.com
-         l'identité des différents intervenants dans le cadre de sa réalisation.</p>
-      <p>Propriétaire : Rémi Tondeux</p>
-      <p>Prestataire : Rémi Tondeux, N° Siret : 909 253 494 000 19</p>
-      <p>Hébergement du site : Heroku-Salesforce ; The Landmark @ 1 Market St. ; Suite 300 ; San Francisco, CA 94105, Etats-Unis</p>
-      <%= render(Titles::H2titleComponent.new(title: 'Cookies')) %>
-      <%= render(Titles::H2titleComponent.new(title: 'Cookies')) %>
-      <h3>Images</h3>
-      <p>Grégory Ferreux</p>
-      <p>les images de fond sont libres de droit et proviennent de "mobilegamegraphics.itch.io", de "unsplash"</p>
-      <div class="h2-title">
-        <h2></h2>
-      </div>
+      <%= render(Titles::H2titleComponent.new(title: t('legal.stakeholders.title'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.stakeholders.intro'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.stakeholders.owner'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.stakeholders.provider'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.stakeholders.host'))) %>
+    </div>
+  </section>
+  <section class="section-2">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('legal.datas.title'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.datas.text1'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.datas.text2'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.datas.text3'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.datas.text4'))) %>
+    </div>
+  </section>
+  <section class="section-1">
+    <div class="container">
+      <%= render(Titles::H2titleComponent.new(title: t('legal.elements.title'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.elements.banner'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.elements.images'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.elements.ai'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.elements.logos'))) %>
+      <%= render(Texts::ParagraphComponent.new(text: t('legal.elements.fonts'))) %>
     </div>
   </section>
 </main>

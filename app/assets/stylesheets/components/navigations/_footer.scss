@@ -33,7 +33,12 @@
     p {
       color: $bg-cream-tone;
 
+      a {
+        color: inherit;
+      }
     }
+
+
     i {
       font-size: 0.6rem;
       color: $bg-cream-tone;

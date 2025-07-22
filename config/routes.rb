@@ -12,10 +12,8 @@ Rails.application.routes.draw do
     get "admin", to: "pages#admin"
     get "cv", to: "pages#cv"
     get "philosophy", to: "pages#philosophy"
-    get "analytics", to: "pages#analytics"
     get "projects", to: "pages#projects"
     get "uikit", to: "pages#uikit"
-    get "featureflags", to: "pages#featureflags"
     get "legal", to: "pages#legal"
 
     resources :contacts, only: [ :index, :new, :create, :update, :destroy ]
