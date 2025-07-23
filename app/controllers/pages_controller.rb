@@ -1,9 +1,18 @@
 class PagesController < ApplicationController
-  skip_analytics only: [ :admin ]
-  allow_unauthenticated_access only: [ :home, :cv, :philosophy, :projects, :uikit, :legal ]
+  skip_analytics only: [ :admin, :download_pdf ]
+  allow_unauthenticated_access only: [ :home, :download_pdf, :cv, :philosophy, :projects, :uikit, :legal ]
 
   def home
     @age = calculate_age
+  end
+
+  def download_pdf
+    send_file(
+    Rails.root.join('public', 'CV_Tondeux_Remi.pdf'),
+    filename: 'CV_Tondeux_Remi.pdf',
+    type: 'application/pdf',
+    disposition: 'attachment'
+    )
   end
 
   def cv

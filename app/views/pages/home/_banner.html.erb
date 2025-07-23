@@ -3,4 +3,12 @@
     <p><%= t('title1_html') %></p>
     <p><%= t('title2_html') %></p>
     <p><%= age %> <%= t('age') %></p>
+    <div class="d-flex flex-column flex-md-row">
+      <%= link_to contacts_path do %>
+        <%= render(Buttons::CtaComponent.new(title: 'Contact', classes: 'btn btn-ruby' )) %>
+      <% end %>
+      <%= link_to download_pdf_path do %>
+        <%= render(Buttons::CtaComponent.new(title: t('download_cv'), classes: 'btn btn-ruby' )) %>
+      <% end %>
+    </div>
 </header>

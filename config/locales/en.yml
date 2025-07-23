@@ -3,7 +3,7 @@ en:
   title1_html: 'Engineer and full-stack developer'
   title2_html: '<strong><i class="fa-regular fa-gem"></i> Ruby on Rails</strong> lover, Internet builder'
   age: 'years old'
-
+  download_cv: "Download CV"
 
   ## NAVIGATION AND TITLES ##
   title_home: 'Home'

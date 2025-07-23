@@ -15,13 +15,26 @@
 
   p {
     font-family: var(--ff-handwrite);
-    font-size: var(--fs-m);
+    font-size: 1.25rem;
     color: $bg-clear-tone;
     text-shadow: 0 0 2px black;
   }
 
   strong {
     color: #C60000; // RoR color
+  }
+
+  .btn-ruby {
+    margin: 0.5rem;
+    background-color: #C60000;
+    color: $bg-clear-tone;
+    border: 1px solid #C60000;
+    opacity: 0.85;
+    width: 100%;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -32,6 +45,15 @@
 
     h1 {
       margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.625rem;
+    }
+
+    .btn-ruby {
+      width: auto;
+      margin-left: 0;
     }
   }
 }
