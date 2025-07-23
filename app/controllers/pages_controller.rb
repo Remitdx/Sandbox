@@ -8,10 +8,10 @@ class PagesController < ApplicationController
 
   def download_pdf
     send_file(
-    Rails.root.join('public', 'CV_Tondeux_Remi.pdf'),
-    filename: 'CV_Tondeux_Remi.pdf',
-    type: 'application/pdf',
-    disposition: 'attachment'
+    Rails.root.join("public", "CV_Tondeux_Remi.pdf"),
+    filename: "CV_Tondeux_Remi.pdf",
+    type: "application/pdf",
+    disposition: "attachment"
     )
   end
 

@@ -13,7 +13,7 @@
       <img src="./assets/0.13.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2025-07-22T14:58:14+02:00">2025-07-22T14:58:14+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2025-07-23T18:09:32+02:00">2025-07-23T18:09:32+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,14 +22,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  18.76%
+  18.63%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.97
+         1.96
        </span>
     </span> hits/line
     )
@@ -42,11 +42,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>1221</b> relevant lines,
+    <b>1229</b> relevant lines,
     <span class="green"><b>229</b> lines covered</span> and
-    <span class="red"><b>992</b> lines missed. </span>
+    <span class="red"><b>1000</b> lines missed. </span>
     (<span class="red">
-  18.76%
+  18.63%
 </span>
 )
   </div>
@@ -446,10 +446,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#084e7cd6ea2e704c1f3b16a32a952f214b591911" class="src_link" title="app/controllers/pages_controller.rb">app/controllers/pages_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">55</td>
-            <td class="cell--number">46</td>
+            <td class="cell--number">64</td>
+            <td class="cell--number">54</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">46</td>
+            <td class="cell--number">54</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -615,7 +615,7 @@
             <td class="cell--number">58</td>
             <td class="cell--number">53</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">9.38</td>
+            <td class="cell--number">9.48</td>
             
           </tr>
         
@@ -818,7 +818,7 @@
     <span class="group_name">Controllers</span>
     (<span class="covered_percent">
       <span class="red">
-  1.0%
+  0.98%
 </span>
 
      </span>
@@ -838,11 +838,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>501</b> relevant lines,
+    <b>509</b> relevant lines,
     <span class="green"><b>5</b> lines covered</span> and
-    <span class="red"><b>496</b> lines missed. </span>
+    <span class="red"><b>504</b> lines missed. </span>
     (<span class="red">
-  1.0%
+  0.98%
 </span>
 )
   </div>
@@ -989,10 +989,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#084e7cd6ea2e704c1f3b16a32a952f214b591911" class="src_link" title="app/controllers/pages_controller.rb">app/controllers/pages_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">55</td>
-            <td class="cell--number">46</td>
+            <td class="cell--number">64</td>
+            <td class="cell--number">54</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">46</td>
+            <td class="cell--number">54</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -1139,7 +1139,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.93
+         4.94
        </span>
     </span> hits/line
     )
@@ -1230,7 +1230,7 @@
             <td class="cell--number">58</td>
             <td class="cell--number">53</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">9.38</td>
+            <td class="cell--number">9.48</td>
             
           </tr>
         
@@ -8892,9 +8892,9 @@
     
 
     <div class="t-line-summary">
-      <b>46</b> relevant lines.
+      <b>54</b> relevant lines.
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>46</b> lines missed.</span>
+      <span class="red"><b>54</b> lines missed.</span>
     </div>
 
     
@@ -8930,7 +8930,7 @@
 
             
 
-            <code class="ruby">  allow_unauthenticated_access only: [ :home, :cv, :philosophy, :projects, :uikit, :legal ]</code>
+            <code class="ruby">  allow_unauthenticated_access only: [ :home, :download_pdf, :cv, :philosophy, :projects, :uikit, :legal ]</code>
           </li>
         </div>
       
@@ -8990,7 +8990,7 @@
 
             
 
-            <code class="ruby">  def cv</code>
+            <code class="ruby">  def download_pdf</code>
           </li>
         </div>
       
@@ -9000,7 +9000,7 @@
 
             
 
-            <code class="ruby">    @skills = Pages::Skill.new.my_skills</code>
+            <code class="ruby">    send_file(</code>
           </li>
         </div>
       
@@ -9010,7 +9010,7 @@
 
             
 
-            <code class="ruby">    @education = Pages::Education.new.my_education</code>
+            <code class="ruby">    Rails.root.join(&quot;public&quot;, &quot;CV_Tondeux_Remi.pdf&quot;),</code>
           </li>
         </div>
       
@@ -9020,7 +9020,7 @@
 
             
 
-            <code class="ruby">    @experiences = Pages::Experience.new.my_experiences</code>
+            <code class="ruby">    filename: &quot;CV_Tondeux_Remi.pdf&quot;,</code>
           </li>
         </div>
       
@@ -9030,7 +9030,7 @@
 
             
 
-            <code class="ruby">    @hobbies = Pages::Hobby.new.my_hobbies</code>
+            <code class="ruby">    type: &quot;application/pdf&quot;,</code>
           </li>
         </div>
       
@@ -9040,17 +9040,17 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    disposition: &quot;attachment&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="missed" data-hits="0" data-linenumber="15">
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    )</code>
           </li>
         </div>
       
@@ -9060,17 +9060,17 @@
 
             
 
-            <code class="ruby">  def philosophy</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="17">
             
 
             
 
-            <code class="ruby">    @conception = Pages::Step.new.conception_steps</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9080,7 +9080,7 @@
 
             
 
-            <code class="ruby">    @development = Pages::Step.new.development_steps</code>
+            <code class="ruby">  def cv</code>
           </li>
         </div>
       
@@ -9090,7 +9090,7 @@
 
             
 
-            <code class="ruby">    @maintenance = Pages::Step.new.maintenance_steps</code>
+            <code class="ruby">    @skills = Pages::Skill.new.my_skills</code>
           </li>
         </div>
       
@@ -9100,17 +9100,17 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    @education = Pages::Education.new.my_education</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="missed" data-hits="0" data-linenumber="21">
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    @experiences = Pages::Experience.new.my_experiences</code>
           </li>
         </div>
       
@@ -9120,7 +9120,7 @@
 
             
 
-            <code class="ruby">  def projects</code>
+            <code class="ruby">    @hobbies = Pages::Hobby.new.my_hobbies</code>
           </li>
         </div>
       
@@ -9130,17 +9130,17 @@
 
             
 
-            <code class="ruby">    @projects_pro = Pages::Project.new.projects_pro</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="24">
             
 
             
 
-            <code class="ruby">    @project_placeholder = Pages::Project.new.project_placeholder</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9150,17 +9150,17 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  def philosophy</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="missed" data-hits="0" data-linenumber="26">
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    @conception = Pages::Step.new.conception_steps</code>
           </li>
         </div>
       
@@ -9170,7 +9170,7 @@
 
             
 
-            <code class="ruby">  def uikit</code>
+            <code class="ruby">    @development = Pages::Step.new.development_steps</code>
           </li>
         </div>
       
@@ -9180,7 +9180,7 @@
 
             
 
-            <code class="ruby">    @palmares = {</code>
+            <code class="ruby">    @maintenance = Pages::Step.new.maintenance_steps</code>
           </li>
         </div>
       
@@ -9190,17 +9190,17 @@
 
             
 
-            <code class="ruby">      1 =&gt; { &quot;start&quot; =&gt; Date.new(2024),</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="30">
             
 
             
 
-            <code class="ruby">              &quot;title&quot; =&gt; &quot;Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion&#39;s league&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9210,7 +9210,7 @@
 
             
 
-            <code class="ruby">      },</code>
+            <code class="ruby">  def projects</code>
           </li>
         </div>
       
@@ -9220,7 +9220,7 @@
 
             
 
-            <code class="ruby">      2 =&gt; { &quot;start&quot; =&gt; Date.new(2023),</code>
+            <code class="ruby">    @projects_pro = Pages::Project.new.projects_pro</code>
           </li>
         </div>
       
@@ -9230,7 +9230,7 @@
 
             
 
-            <code class="ruby">              &quot;title&quot; =&gt; &quot;Copa del rey, &quot;</code>
+            <code class="ruby">    @project_placeholder = Pages::Project.new.project_placeholder</code>
           </li>
         </div>
       
@@ -9240,17 +9240,17 @@
 
             
 
-            <code class="ruby">      },</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="35">
             
 
             
 
-            <code class="ruby">      3 =&gt; { &quot;start&quot; =&gt; Date.new(2022),</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9260,7 +9260,7 @@
 
             
 
-            <code class="ruby">              &quot;title&quot; =&gt; &quot;Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion&#39;s league&quot;</code>
+            <code class="ruby">  def uikit</code>
           </li>
         </div>
       
@@ -9270,7 +9270,7 @@
 
             
 
-            <code class="ruby">      }</code>
+            <code class="ruby">    @palmares = {</code>
           </li>
         </div>
       
@@ -9280,7 +9280,7 @@
 
             
 
-            <code class="ruby">    }</code>
+            <code class="ruby">      1 =&gt; { &quot;start&quot; =&gt; Date.new(2024),</code>
           </li>
         </div>
       
@@ -9290,7 +9290,7 @@
 
             
 
-            <code class="ruby">    @lorem = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;</code>
+            <code class="ruby">              &quot;title&quot; =&gt; &quot;Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion&#39;s league&quot;</code>
           </li>
         </div>
       
@@ -9300,17 +9300,17 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      },</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="missed" data-hits="0" data-linenumber="41">
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      2 =&gt; { &quot;start&quot; =&gt; Date.new(2023),</code>
           </li>
         </div>
       
@@ -9320,7 +9320,7 @@
 
             
 
-            <code class="ruby">  def legal</code>
+            <code class="ruby">              &quot;title&quot; =&gt; &quot;Copa del rey, &quot;</code>
           </li>
         </div>
       
@@ -9330,17 +9330,17 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      },</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="missed" data-hits="0" data-linenumber="44">
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      3 =&gt; { &quot;start&quot; =&gt; Date.new(2022),</code>
           </li>
         </div>
       
@@ -9350,7 +9350,7 @@
 
             
 
-            <code class="ruby">  def admin</code>
+            <code class="ruby">              &quot;title&quot; =&gt; &quot;Supercopa de España, Liga, Supercopa de Europa, Mundiales de clubes, Champion&#39;s league&quot;</code>
           </li>
         </div>
       
@@ -9360,7 +9360,7 @@
 
             
 
-            <code class="ruby">    @analytics = Analytic.order(created_at: :desc).limit(3)</code>
+            <code class="ruby">      }</code>
           </li>
         </div>
       
@@ -9370,7 +9370,7 @@
 
             
 
-            <code class="ruby">    @contacts = Contact.where(new: true).order(created_at: :desc).limit(10)</code>
+            <code class="ruby">    }</code>
           </li>
         </div>
       
@@ -9380,12 +9380,22 @@
 
             
 
+            <code class="ruby">    @lorem = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="49">
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="50">
             
 
             
@@ -9395,22 +9405,12 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="50">
+          <li class="missed" data-hits="0" data-linenumber="51">
             
 
             
 
-            <code class="ruby">  private</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-
-            
-
-            <code class="ruby"></code>
+            <code class="ruby">  def legal</code>
           </li>
         </div>
       
@@ -9420,17 +9420,17 @@
 
             
 
-            <code class="ruby">  def calculate_age</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="53">
             
 
             
 
-            <code class="ruby">    ((Time.now - Time.new(1991, 7, 20))/31557600).floor</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9440,12 +9440,102 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  def admin</code>
           </li>
         </div>
       
         <div>
           <li class="missed" data-hits="0" data-linenumber="55">
+            
+
+            
+
+            <code class="ruby">    @analytics = Analytic.order(created_at: :desc).limit(3)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="56">
+            
+
+            
+
+            <code class="ruby">    @contacts = Contact.where(new: true).order(created_at: :desc).limit(10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="57">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="59">
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="61">
+            
+
+            
+
+            <code class="ruby">  def calculate_age</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="62">
+            
+
+            
+
+            <code class="ruby">    ((Time.now - Time.new(1991, 7, 20))/31557600).floor</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="63">
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="64">
             
 
             
@@ -13096,9 +13186,9 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="59">
+          <li class="covered" data-hits="7" data-linenumber="59">
             
-              <span class="hits">4</span>
+              <span class="hits">7</span>
             
 
             
@@ -13108,9 +13198,9 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="60">
+          <li class="covered" data-hits="7" data-linenumber="60">
             
-              <span class="hits">4</span>
+              <span class="hits">7</span>
             
 
             

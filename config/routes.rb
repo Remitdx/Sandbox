@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     match "/404", via: :all, to: "errors#not_found"
     match "/422", via: :all, to: "errors#unprocessable_entity"
     match "/500", via: :all, to: "errors#internal_server_error"
-    get 'download_pdf', to: 'pages#download_pdf'
+    get "download_pdf", to: "pages#download_pdf"
 
     root to: "pages#home"
     get "admin", to: "pages#admin"
