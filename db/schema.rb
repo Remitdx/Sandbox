@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_21_082324) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_23_041905) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -37,6 +37,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_21_082324) do
     t.integer "errors_internal_server_error"
     t.integer "errors_not_found"
     t.integer "errors_unprocessable_entity"
+    t.integer "pages_download_pdf"
   end
 
   create_table "contacts", force: :cascade do |t|

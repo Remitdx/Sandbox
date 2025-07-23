@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_analytics only: [ :admin, :download_pdf ]
+  skip_analytics only: [ :admin ]
   allow_unauthenticated_access only: [ :home, :download_pdf, :cv, :philosophy, :projects, :uikit, :legal ]
 
   def home
