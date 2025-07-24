@@ -70,6 +70,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "rspec-rails", "~> 7.0.0"
   gem "byebug", "~> 11.1", ">= 11.1.3"
+  gem "brakeman"
 end
 
 group :development do
