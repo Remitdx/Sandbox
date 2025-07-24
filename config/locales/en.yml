@@ -352,3 +352,9 @@ en:
 
   validations:
     notblank: "Can't be blank."
+
+  ## ALERTS ##
+  alerts:
+    banner:
+      work: "Work in progress"
+      dev: "This page is still in development"

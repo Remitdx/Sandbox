@@ -343,6 +343,12 @@ fr:
     whoops: "Oups ! Un problème est survenu."
     describe: "Si vous avez le temps, merci d'utiliser le formulaire ci-dessous pour décrire ce qui s'est passé."
 
+  ## ALERTS ##
+  alerts:
+    banner:
+      work: "Travaux en cours"
+      dev: "Cette page est en cours de développement"
+
   ## ACTIVE RECORD ##
   activerecord:
     attributes:

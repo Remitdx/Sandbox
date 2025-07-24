@@ -1,5 +1,6 @@
 <%= render(Navigations::NavigationComponent.new) %>
 <%= render(Titles::H1titleComponent.new(title: t('tournament.title') )) %>
+<%= render(Alerts::BannerComponent.new(title: t('alerts.banner.work'), text: t('alerts.banner.dev') )) %>
 <%= render(Titles::H2titleComponent.new(title: t('tournament.tournament') )) %>
 <p>select type : championship / tournament / double elimination</p>
 <%= render(Titles::H2titleComponent.new(title: t('tournament.teamdraft') )) %>
