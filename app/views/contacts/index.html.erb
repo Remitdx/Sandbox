@@ -14,13 +14,13 @@
       <%= render(Titles::H2titleComponent.new(title: t('contacts.meet'))) %>
       <%= render(Texts::ParagraphComponent.new(text: t('contacts.always'))) %>
       <br>
-      <i class="fa-solid fa-mug-saucer"></i>
+      <i class="fa-solid fa-mug-saucer appearing-wrapper"></i>
       <%= render(Texts::ParagraphComponent.new(text: t('contacts.coffee'))) %>
       <br>
-      <i class="fa-solid fa-computer"></i>
+      <i class="fa-solid fa-computer appearing-wrapper"></i>
       <%= render(Texts::ParagraphComponent.new(text: t('contacts.visio'))) %>
       <br>
-      <i class="fa-regular fa-handshake"></i>
+      <i class="fa-regular fa-handshake appearing-wrapper"></i>
       <%= render(Texts::ParagraphComponent.new(text: t('contacts.event'))) %>
       <br>
     </div>
@@ -29,16 +29,16 @@
     <div class="container">
       <%= render(Titles::H2titleComponent.new(title: t('contacts.findme'))) %>
       <div class="d-flex flex-column align-items-center justify-content-around">
-        <%= link_to 'https://github.com/Remitdx', class: "clickable text-center item", target: :_blank do %>
+        <%= link_to 'https://github.com/Remitdx', class: "clickable text-center item appearing-wrapper", target: :_blank do %>
           <h5>Github <i class="fa-brands fa-github"></i></h5>
         <% end %>
-        <%= link_to 'https://www.linkedin.com/in/r%C3%A9mitondeux/', class: "clickable text-center item", target: :_blank do %>
+        <%= link_to 'https://www.linkedin.com/in/r%C3%A9mitondeux/', class: "clickable text-center item appearing-wrapper", target: :_blank do %>
           <h5>Linked <i class="fa-brands fa-linkedin"></i></h5>
         <% end %>
-        <%= link_to 'https://www.malt.fr/profile/remitondeux', class: "clickable text-center item", target: :_blank do %>
+        <%= link_to 'https://www.malt.fr/profile/remitondeux', class: "clickable text-center item appearing-wrapper", target: :_blank do %>
           <%= image_tag 'contacts/malt.webp', class: "item-image" %>
         <% end %>
-        <%= link_to 'https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', class: "clickable text-center item", target: :_blank do %>
+        <%= link_to 'https://www.codingame.com/profile/4f80d3223829cd144c55b46f7e96eaea8214325', class: "clickable text-center item appearing-wrapper", target: :_blank do %>
           <%= image_tag 'contacts/codingame.jpg', class: "item-image" %>
         <% end %>
       </div>

@@ -22,22 +22,22 @@
     <div class='container'>
       <%= render(Texts::ParagraphComponent.new(text: t('projects.games.intro'))) %>
       <div class="bento-grid">
-        <%= link_to games_morbacs_path, class: "bento-grid_card tictactoe", data: { turbo_method: :post } do %>
+        <%= link_to games_morbacs_path, class: "appearing-wrapper bento-grid_card tictactoe", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/TicTacToe_carre.png' %>
         <% end %>
-        <%= link_to games_escapes_path, class: "bento-grid_card escape-game", data: { turbo_method: :post } do %>
+        <%= link_to games_escapes_path, class: "appearing-wrapper bento-grid_card escape-game", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Escape_game.png' %>
         <% end %>
-        <%= link_to games_dikkeneks_path, class: "bento-grid_card dikkenek" do %>
+        <%= link_to games_dikkeneks_path, class: "appearing-wrapper bento-grid_card dikkenek" do %>
           <%= image_tag 'projects/Dikkenek1.png' %>
         <% end %>
-        <%= link_to games_puissance4s_path, class: "bento-grid_card connect4", data: { turbo_method: :post } do %>
+        <%= link_to games_puissance4s_path, class: "appearing-wrapper bento-grid_card connect4", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Connect4.png' %>
         <% end %>
-        <%= link_to games_puzzles_path, class: "bento-grid_card sliding-puzzle" do %>
+        <%= link_to games_puzzles_path, class: "appearing-wrapper bento-grid_card sliding-puzzle" do %>
           <%= image_tag 'projects/sliding-puzzle.jpg' %>
         <% end %>
-        <%= link_to 'https://remitdx.github.io/react-rpg/', class: "bento-grid_card react-rpg" do %>
+        <%= link_to 'https://remitdx.github.io/react-rpg/', class: "appearing-wrapper bento-grid_card react-rpg" do %>
           <%= image_tag 'projects/react_rpg.jpg' %>
         <% end %>
       </div>
@@ -48,7 +48,7 @@
     <div class="container">
       <%= render(Texts::ParagraphComponent.new(text: t('projects.utility.intro'))) %>
       <div class="bento-grid">
-        <%= link_to utilities_rolls_path, class: "bento-grid_card dice-roller", data: { turbo_method: :post } do %>
+        <%= link_to utilities_rolls_path, class: "appearing-wrapper bento-grid_card dice-roller", data: { turbo_method: :post } do %>
           <%= image_tag 'projects/Dice_roller.png' %>
         <% end %>
         <%= link_to t('tournament.title'), utilities_tournaments_path %>
